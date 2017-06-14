@@ -567,11 +567,11 @@ The element required-config-property contains a declaration of a single
 configuration property used for specifying a required configuration
 property name.
 
-Usage of required-config-property is deprecated since the Connectors 1.6 
+Usage of required-config-property is deprecated since Connectortors 1.6
 specification. The resource adapter implementation is recommended to use 
 the @NotNull Bean Validation annotation or its XML validation descriptor 
 equivalent to indicate that a configuration property is required to be 
-specified by the deployer. See the Connectors specification for more 
+specified by the deployer. See Connectortors specification for more
 information.
 
 Used in: activationspec
