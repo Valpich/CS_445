@@ -6,6 +6,7 @@ import iit.cs445.model.orders.OrderType;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "product")
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Product extends BaseEntity<Long> {
 
