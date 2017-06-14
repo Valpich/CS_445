@@ -2,17 +2,345 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b515210d-be3c-4260-980b-0d9ee0718f50" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/CS_445_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Hibernate_5_2_9_5_2_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Spring_4_3_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Spring_MVC_4_3_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CS_445.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_Latest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/configuration/ApplicationConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/configuration/PersistenceConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controller/BracketController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controller/IndexController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/model/Accessory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/model/BaseEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/model/Bracket.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/messages.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/js/jquery-2.0.3.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle0/glassfish.bundleids" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle0/glassfish.bundleids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/inhabitants" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/inhabitants" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/CS_445_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/CS_445_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CS_445.iml" afterPath="$PROJECT_DIR$/CS_445.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml.bak" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/local-password" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/local-password" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid.prev" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid.prev" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/logs/server.log" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/logs/server.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle0/provisioning.properties" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle0/provisioning.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle1/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle1/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle10/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle10/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle100/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle100/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle101/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle101/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle102/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle102/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle103/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle103/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle104/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle104/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle105/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle105/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle106/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle106/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle107/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle107/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle108/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle108/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle109/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle109/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle11/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle11/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle110/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle110/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle111/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle111/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle112/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle112/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle113/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle113/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle114/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle114/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle115/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle115/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle116/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle116/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle117/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle117/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle118/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle118/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle119/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle119/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle12/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle12/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle120/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle120/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle121/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle121/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle122/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle122/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle123/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle123/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle124/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle124/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle125/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle125/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle126/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle126/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle127/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle127/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle128/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle128/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle129/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle129/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle13/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle13/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle130/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle130/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle131/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle131/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle132/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle132/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle133/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle133/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle134/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle134/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle135/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle135/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle136/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle136/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle137/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle137/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle138/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle138/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle139/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle139/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle14/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle14/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle140/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle140/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle141/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle141/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle142/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle142/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle143/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle143/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle144/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle144/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle145/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle145/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle146/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle146/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle147/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle147/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle148/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle148/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle149/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle149/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle15/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle15/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle150/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle150/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle151/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle151/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle152/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle152/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle153/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle153/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle154/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle154/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle155/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle155/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle156/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle156/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle157/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle157/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle158/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle158/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle159/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle159/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle16/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle16/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle160/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle160/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle161/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle161/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle162/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle162/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle163/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle163/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle164/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle164/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle165/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle165/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle166/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle166/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle167/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle167/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle168/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle168/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle169/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle169/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle17/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle17/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle170/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle170/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle171/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle171/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle172/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle172/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle173/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle173/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle174/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle174/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle175/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle175/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle176/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle176/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle177/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle177/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle178/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle178/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle179/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle179/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle18/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle18/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle180/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle180/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle181/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle181/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle182/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle182/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle183/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle183/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle184/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle184/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle185/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle185/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle186/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle186/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle187/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle187/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle188/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle188/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle189/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle189/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle19/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle19/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle190/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle190/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle191/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle191/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle192/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle192/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle193/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle193/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle194/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle194/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle195/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle195/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle196/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle196/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle197/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle197/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle198/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle198/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle199/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle199/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle2/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle2/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle20/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle20/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle200/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle200/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle201/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle201/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle202/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle202/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle203/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle203/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle204/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle204/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle205/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle205/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle206/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle206/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle207/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle207/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle208/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle208/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle209/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle209/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle21/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle21/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle210/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle210/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle211/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle211/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle212/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle212/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle213/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle213/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle214/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle214/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle215/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle215/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle216/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle216/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle217/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle217/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle218/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle218/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle219/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle219/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle22/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle22/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle220/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle220/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle221/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle221/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle222/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle222/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle223/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle223/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle224/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle224/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle225/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle225/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle226/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle226/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle227/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle227/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle228/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle228/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle229/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle229/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle23/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle23/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle230/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle230/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle231/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle231/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle232/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle232/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle233/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle233/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle234/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle234/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle235/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle235/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle236/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle236/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle237/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle237/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle238/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle238/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle239/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle239/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle24/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle24/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle240/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle240/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle241/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle241/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle242/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle242/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle243/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle243/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle244/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle244/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle245/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle245/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle246/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle246/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle247/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle247/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle248/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle248/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle249/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle249/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle25/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle25/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle250/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle250/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle251/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle251/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle252/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle252/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle253/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle253/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle254/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle254/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle255/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle255/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle256/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle256/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle257/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle257/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle258/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle258/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle259/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle259/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle26/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle26/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle260/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle260/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle261/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle261/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle262/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle262/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle263/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle263/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle264/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle264/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle265/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle265/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle266/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle266/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle267/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle267/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle268/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle268/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle269/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle269/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle27/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle27/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle270/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle270/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle271/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle271/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle272/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle272/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle273/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle273/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle274/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle274/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle275/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle275/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle276/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle276/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle277/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle277/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle278/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle278/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle279/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle279/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle28/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle28/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle280/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle280/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle281/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle281/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle282/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle282/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle283/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle283/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle284/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle284/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle285/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle285/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle286/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle286/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle287/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle287/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle288/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle288/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle289/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle289/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle29/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle29/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle290/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle290/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle291/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle291/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle292/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle292/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle293/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle293/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle294/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle294/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle295/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle295/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle296/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle296/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle297/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle297/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle298/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle298/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle299/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle299/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle299/data/config/org_apache_felix_cm_impl_DynamicBindings.config" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle299/data/config/org_apache_felix_cm_impl_DynamicBindings.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle3/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle3/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle30/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle30/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle300/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle300/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle301/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle301/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle302/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle302/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle303/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle303/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle304/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle304/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle305/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle305/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle31/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle31/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle32/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle32/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle33/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle33/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle34/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle34/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle35/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle35/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle36/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle36/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle37/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle37/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle38/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle38/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle39/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle39/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle4/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle4/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle40/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle40/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle41/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle41/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle42/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle42/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle43/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle43/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle44/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle44/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle45/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle45/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle46/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle46/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle47/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle47/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle48/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle48/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle49/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle49/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle5/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle5/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle50/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle50/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle51/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle51/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle52/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle52/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle53/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle53/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle54/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle54/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle55/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle55/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle56/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle56/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle57/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle57/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle58/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle58/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle59/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle59/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle6/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle6/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle60/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle60/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle61/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle61/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle62/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle62/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle63/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle63/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle64/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle64/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle65/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle65/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle66/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle66/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle67/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle67/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle68/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle68/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle69/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle69/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle7/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle7/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle70/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle70/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle71/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle71/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle72/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle72/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle73/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle73/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle74/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle74/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle75/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle75/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle76/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle76/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle77/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle77/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle78/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle78/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle79/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle79/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle8/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle8/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle80/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle80/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle81/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle81/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle82/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle82/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle83/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle83/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle84/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle84/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle85/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle85/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle86/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle86/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle87/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle87/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle88/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle88/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle89/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle89/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle9/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle9/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle90/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle90/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle91/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle91/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle92/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle92/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle93/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle93/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle94/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle94/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle95/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle95/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle96/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle96/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle97/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle97/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle98/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle98/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle99/bundle.info" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/osgi-cache/felix/bundle99/bundle.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +349,112 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/BaseEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Accessory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/Accessory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/configuration/ApplicationConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersistenceConfiguration.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/configuration/PersistenceConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="31" column="57" lean-forward="false" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BracketController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controller/BracketController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="565">
+              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bracket.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/Bracket.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controller/IndexController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messages.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messages.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/messages.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -36,16 +470,48 @@
       <projects_view />
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/BaseEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/Outlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controller/OutletController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/configuration/ApplicationConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/Accessory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controller/BracketController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/Bracket.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/configuration/PersistenceConfiguration.java" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="825" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -68,13 +534,251 @@
       <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cs445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cs445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cs445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="configuration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="FullScreen" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="iit.cs445.model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/iit/cs445/controller" />
+      <recent name="$PROJECT_DIR$/src/main/java/iit/cs445/configuration" />
+      <recent name="$PROJECT_DIR$/src/main/java/iit/cs445/model" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/web/WEB-INF" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -88,12 +792,67 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="GlassFish Server.CS_445_Server">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -119,6 +878,174 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GlassfishConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="DOMAIN" value="" />
+        <option name="PRESERVE" value="false" />
+        <option name="COMPATIBILITY" value="false" />
+        <option name="VIRTUAL_SERVER" />
+        <option name="USERNAME" value="admin" />
+        <option name="PASSWORD" value="" />
+      </server-settings>
+      <predefined_log_file id="GlassFish" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -140,12 +1067,80 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="CS_445" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -176,6 +1171,96 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="false" name="CS_445_Server" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 4.1.2" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="CS_445:war exploded">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="DOMAIN" value="domain1" />
+        <option name="PRESERVE" value="false" />
+        <option name="COMPATIBILITY" value="false" />
+        <option name="VIRTUAL_SERVER" />
+        <option name="USERNAME" value="admin" />
+        <option name="PASSWORD" value="" />
+      </server-settings>
+      <predefined_log_file id="GlassFish" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9009" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="CS_445:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="GlassFish Server.CS_445_Server" />
+    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -187,19 +1272,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1497465574629</updated>
-      <workItem from="1497465578673" duration="16000" />
+      <workItem from="1497465578673" duration="1860000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16000" />
+    <option name="totallyTimeSpent" value="1860000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="825" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936507" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -210,12 +1296,13 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282532" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29191092" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -240,5 +1327,240 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/static/js/jquery-2.0.3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/messages.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/configuration/ApplicationConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controller/BracketController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/Accessory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/Bracket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/configuration/PersistenceConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="31" column="57" lean-forward="false" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>CS_445:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web (CS_445)|Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web|CS_445</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>mysql:mysql-connector-java:Latest</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
