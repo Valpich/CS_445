@@ -1,8 +1,8 @@
 package iit.cs445.controller;
 
-import iit.cs445.model.Bracket;
-import iit.cs445.model.DigitalDVR;
-import iit.cs445.model.StorageType;
+import iit.cs445.model.products.Bracket;
+import iit.cs445.model.products.DigitalDVR;
+import iit.cs445.model.products.StorageType;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,7 +51,7 @@ public class BracketController {
     public ModelAndView remove() {
         ModelAndView modelAndView = new ModelAndView("index");
         Session session = localSessionFactoryBean.getObject().openSession();
-        String query = "select outlet from Bracket outlet";
+        String query = "select bracket from Bracket bracket";
         List results = session.createQuery(query).list();
         if(results != null){
             Bracket bracket = (Bracket) results.get(0);
@@ -66,7 +66,7 @@ public class BracketController {
     public ModelAndView modify() {
         ModelAndView modelAndView = new ModelAndView("index");
         Session session = localSessionFactoryBean.getObject().openSession();
-        String query = "select outlet from Bracket outlet";
+        String query = "select bracket from Bracket bracket";
         List results = session.createQuery(query).list();
         if(results != null){
             Bracket bracket = (Bracket) results.get(0);
