@@ -3,7 +3,6 @@ package iit.cs445.model.users;
 import iit.cs445.model.BaseEntity;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Table(name = "user_account")

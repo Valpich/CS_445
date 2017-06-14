@@ -1,18 +1,13 @@
 package iit.cs445.model.products;
 
 
-import iit.cs445.model.products.Accessory;
-
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "monitor")
-public class Monitor extends Accessory<Long> {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Long id;
+public class Monitor extends Accessory implements Installable, Repairable {
 
     @Column(name = "description")
     private String description;
@@ -22,15 +17,6 @@ public class Monitor extends Accessory<Long> {
 
     @Column(name = "max_resolution")
     private String maxResolution;
-
-    @Override
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getDescription() {
         return description;
@@ -54,5 +40,14 @@ public class Monitor extends Accessory<Long> {
 
     public void setMaxResolution(String maxResolution) {
         this.maxResolution = maxResolution;
+    }
+
+    @Override
+    public String toString() {
+        return "Monitor{" +
+                "description='" + description + '\'' +
+                ", size=" + size +
+                ", maxResolution='" + maxResolution + '\'' +
+                "} " + super.toString();
     }
 }

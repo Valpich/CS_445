@@ -5,11 +5,11 @@ import java.util.List;
 
 public interface Repairable {
 
-    default public Float repairPrice(){
+    default Float repairPrice() {
         return new Float(0);
     }
 
-    default public List<Equipment> equipments(){
+    default List<Equipment> repairEquipments() {
         return new ArrayList<>();
     }
 }

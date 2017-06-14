@@ -1,18 +1,13 @@
 package iit.cs445.model.products;
 
 
-import iit.cs445.model.products.Accessory;
-
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "lens")
-public class Lens extends Accessory<Long> {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Long id;
+public class Lens extends Accessory implements Installable, Repairable {
 
     @Column(name = "description")
     private String description;
@@ -22,16 +17,6 @@ public class Lens extends Accessory<Long> {
 
     @Column(name = "magnification")
     private Float magnification;
-
-
-    @Override
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getDescription() {
         return description;
@@ -55,5 +40,14 @@ public class Lens extends Accessory<Long> {
 
     public void setMagnification(Float magnification) {
         this.magnification = magnification;
+    }
+
+    @Override
+    public String toString() {
+        return "Lens{" +
+                "description='" + description + '\'' +
+                ", focal=" + focal +
+                ", magnification=" + magnification +
+                "} " + super.toString();
     }
 }

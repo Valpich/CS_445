@@ -1,18 +1,13 @@
 package iit.cs445.model.products;
 
 
-import iit.cs445.model.products.Accessory;
-
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "power_supply")
-public class PowerSupply extends Accessory<Long> {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Long id;
+public class PowerSupply extends Accessory implements Installable, Repairable {
 
     @Column(name = "description")
     private String description;
@@ -23,15 +18,6 @@ public class PowerSupply extends Accessory<Long> {
     @Column(name = "voltage")
     private Float voltage;
 
-    @Override
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -40,4 +26,12 @@ public class PowerSupply extends Accessory<Long> {
         this.description = description;
     }
 
+    @Override
+    public String toString() {
+        return "PowerSupply{" +
+                "description='" + description + '\'' +
+                ", maximum_output='" + maximum_output + '\'' +
+                ", voltage=" + voltage +
+                "} " + super.toString();
+    }
 }

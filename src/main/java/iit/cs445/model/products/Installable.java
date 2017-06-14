@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface Installable {
-    
-    default public Float installPrice(){
+
+    default Float installPrice() {
         return new Float(0);
     }
 
-    default public List<Equipment> equipments(){
+    default List<Equipment> installEquipments() {
         return new ArrayList<>();
     }
 }

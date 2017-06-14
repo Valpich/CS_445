@@ -52,5 +52,14 @@ public abstract class BaseEntity<ID> {
     public void preUpdate() {
         this.modificationTime = new Date();
     }
+
+    @Override
+    public String toString() {
+        return "BaseEntity{" +
+                "creationTime=" + creationTime +
+                ", modificationTime=" + modificationTime +
+                ", version=" + version +
+                '}';
+    }
 }
 

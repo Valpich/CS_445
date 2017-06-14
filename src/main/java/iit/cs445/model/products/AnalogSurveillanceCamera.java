@@ -1,28 +1,16 @@
 package iit.cs445.model.products;
 
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "analog_surveillance_camera")
-public class AnalogSurveillanceCamera extends SecurityCamera<Long> {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Long id;
+public class AnalogSurveillanceCamera extends SecurityCamera implements Repairable, Installable {
 
     @Column(name = "description")
     private String description;
-
-    @Override
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getDescription() {
         return description;
@@ -32,4 +20,10 @@ public class AnalogSurveillanceCamera extends SecurityCamera<Long> {
         this.description = description;
     }
 
+    @Override
+    public String toString() {
+        return "AnalogSurveillanceCamera{" +
+                "description='" + description + '\'' +
+                "} " + super.toString();
+    }
 }

@@ -18,5 +18,12 @@ public abstract class Service<ID> extends BaseEntity {
     public void setPrice(Integer price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "Service{" +
+                "price=" + price +
+                "} " + super.toString();
+    }
 }
 

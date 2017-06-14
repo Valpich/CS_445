@@ -1,28 +1,16 @@
 package iit.cs445.model.products;
 
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "digital_dvr")
-public class DigitalDVR extends DVR<Long> {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Long id;
+public class DigitalDVR extends DVR implements Installable, Repairable {
 
     @Column(name = "description")
     private String description;
-
-    @Override
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getDescription() {
         return description;
@@ -32,4 +20,10 @@ public class DigitalDVR extends DVR<Long> {
         this.description = description;
     }
 
+    @Override
+    public String toString() {
+        return "DigitalDVR{" +
+                "description='" + description + '\'' +
+                "} " + super.toString();
+    }
 }

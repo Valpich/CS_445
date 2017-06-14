@@ -1,33 +1,19 @@
 package iit.cs445.model.products;
 
 
-import iit.cs445.model.products.Accessory;
-
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "cable")
-public class Cable extends Accessory<Long> {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Long id;
+public class Cable extends Accessory implements Installable, Repairable {
 
     @Column(name = "description")
     private String description;
 
     @Column(name = "length")
     private Float length;
-
-    @Override
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getDescription() {
         return description;
@@ -43,5 +29,13 @@ public class Cable extends Accessory<Long> {
 
     public void setLength(Float length) {
         this.length = length;
+    }
+
+    @Override
+    public String toString() {
+        return "Cable{" +
+                "description='" + description + '\'' +
+                ", length=" + length +
+                "} " + super.toString();
     }
 }
