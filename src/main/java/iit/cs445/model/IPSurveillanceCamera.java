@@ -32,11 +32,4 @@ public class IPSurveillanceCamera extends SecurityCamera<Long> {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "IPSurveillanceCamera{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                '}';
-    }
 }

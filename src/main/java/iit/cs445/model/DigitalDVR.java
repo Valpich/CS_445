@@ -32,11 +32,4 @@ public class DigitalDVR extends DVR<Long> {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "DigitalDVR{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                '}';
-    }
 }

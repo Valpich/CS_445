@@ -15,6 +15,9 @@ public class Cable extends Accessory<Long> {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "length")
+    private Float length;
+
     @Override
     public Long getId() {
         return id;
@@ -32,11 +35,11 @@ public class Cable extends Accessory<Long> {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "Cable{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                '}';
+    public Float getLength() {
+        return length;
+    }
+
+    public void setLength(Float length) {
+        this.length = length;
     }
 }

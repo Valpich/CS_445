@@ -4,8 +4,8 @@ package iit.cs445.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "lense")
-public class Lense extends Accessory<Long> {
+@Table(name = "lens")
+public class Lens extends Accessory<Long> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -14,6 +14,13 @@ public class Lense extends Accessory<Long> {
 
     @Column(name = "description")
     private String description;
+
+    @Column(name = "focal")
+    private Float focal;
+
+    @Column(name = "magnification")
+    private Float magnification;
+
 
     @Override
     public Long getId() {
@@ -32,11 +39,19 @@ public class Lense extends Accessory<Long> {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "Lense{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                '}';
+    public Float getFocal() {
+        return focal;
+    }
+
+    public void setFocal(Float focal) {
+        this.focal = focal;
+    }
+
+    public Float getMagnification() {
+        return magnification;
+    }
+
+    public void setMagnification(Float magnification) {
+        this.magnification = magnification;
     }
 }

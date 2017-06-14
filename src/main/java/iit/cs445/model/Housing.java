@@ -32,11 +32,4 @@ public class Housing extends Accessory<Long> {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "Housing{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                '}';
-    }
 }

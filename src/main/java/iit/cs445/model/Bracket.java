@@ -32,11 +32,4 @@ public class Bracket extends Accessory<Long> {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "Outlet{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                '}';
-    }
 }

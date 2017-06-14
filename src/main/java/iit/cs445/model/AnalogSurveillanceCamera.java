@@ -32,11 +32,4 @@ public class AnalogSurveillanceCamera extends SecurityCamera<Long> {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "AnalogSurveillanceCamera{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                '}';
-    }
 }

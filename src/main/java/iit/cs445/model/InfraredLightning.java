@@ -32,11 +32,4 @@ public class InfraredLightning extends Accessory<Long> {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "InfraredLightning{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                '}';
-    }
 }

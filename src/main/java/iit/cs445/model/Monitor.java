@@ -15,6 +15,12 @@ public class Monitor extends Accessory<Long> {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "size")
+    private Float size;
+
+    @Column(name = "max_resolution")
+    private String maxResolution;
+
     @Override
     public Long getId() {
         return id;
@@ -32,11 +38,19 @@ public class Monitor extends Accessory<Long> {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "Monitor{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                '}';
+    public Float getSize() {
+        return size;
+    }
+
+    public void setSize(Float size) {
+        this.size = size;
+    }
+
+    public String getMaxResolution() {
+        return maxResolution;
+    }
+
+    public void setMaxResolution(String maxResolution) {
+        this.maxResolution = maxResolution;
     }
 }

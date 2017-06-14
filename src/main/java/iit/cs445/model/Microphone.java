@@ -1,6 +1,8 @@
 package iit.cs445.model;
 
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 import javax.persistence.*;
 
 @Entity
@@ -14,6 +16,12 @@ public class Microphone extends Accessory<Long> {
 
     @Column(name = "description")
     private String description;
+
+    @Column(name = "battery")
+    private Boolean battery;
+
+    @Column(name = "microphone_type")
+    private MicrophoneType microphoneType;
 
     @Override
     public Long getId() {
@@ -32,11 +40,4 @@ public class Microphone extends Accessory<Long> {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "Microphone{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                '}';
-    }
 }

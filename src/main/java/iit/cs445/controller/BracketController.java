@@ -1,6 +1,8 @@
 package iit.cs445.controller;
 
 import iit.cs445.model.Bracket;
+import iit.cs445.model.DigitalDVR;
+import iit.cs445.model.StorageType;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -29,6 +32,17 @@ public class BracketController {
         Session session = localSessionFactoryBean.getObject().openSession();
         Transaction tx = session.beginTransaction();
         session.save(bracket);
+        tx.commit();
+        DigitalDVR dvr = new DigitalDVR();
+        ArrayList<StorageType> types = new ArrayList();
+        types.add(StorageType.DISK_DRIVE);
+        types.add(StorageType.SSD);
+        dvr.setStorageTypes(types);
+        dvr.setCreationTime(new Date());
+        dvr.setModificationTime(dvr.getCreationTime());
+        session = localSessionFactoryBean.getObject().openSession();
+        tx = session.beginTransaction();
+        session.save(dvr);
         tx.commit();
         return modelAndView;
     }

@@ -32,11 +32,4 @@ public class Connector extends Accessory<Long> {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "Connector{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                '}';
-    }
 }

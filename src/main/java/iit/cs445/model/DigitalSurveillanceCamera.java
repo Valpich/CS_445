@@ -32,11 +32,4 @@ public class DigitalSurveillanceCamera extends SecurityCamera<Long> {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "DigitalSurveillanceCamera{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                '}';
-    }
 }

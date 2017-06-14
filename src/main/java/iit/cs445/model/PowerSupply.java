@@ -15,6 +15,12 @@ public class PowerSupply extends Accessory<Long> {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "maximum_output")
+    private String maximum_output;
+
+    @Column(name = "voltage")
+    private Float voltage;
+
     @Override
     public Long getId() {
         return id;
@@ -32,11 +38,4 @@ public class PowerSupply extends Accessory<Long> {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "PowerSupply{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                '}';
-    }
 }
