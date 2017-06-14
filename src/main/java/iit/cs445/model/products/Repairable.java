@@ -1,7 +1,15 @@
 package iit.cs445.model.products;
 
-/**
- * Created by valentinpichavant on 6/14/17.
- */
-public class Repairable {
+import java.util.ArrayList;
+import java.util.List;
+
+public interface Repairable {
+
+    default public Float repairPrice(){
+        return new Float(0);
+    }
+
+    default public List<Equipment> equipments(){
+        return new ArrayList<>();
+    }
 }

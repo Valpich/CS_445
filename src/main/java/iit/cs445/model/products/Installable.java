@@ -3,9 +3,9 @@ package iit.cs445.model.products;
 import java.util.ArrayList;
 import java.util.List;
 
-public interface Repairable {
-
-    default public Float repairPrice(){
+public interface Installable {
+    
+    default public Float installPrice(){
         return new Float(0);
     }
 
