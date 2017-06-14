@@ -14821,3 +14821,114 @@ com.sun.enterprise.admin.cli.AdminMain]]
 [2017-06-14T17:57:26.138-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1497481046138] [levelValue: 800] [[
   CS_445_war_exploded was successfully deployed in 9,762 milliseconds.]]
 
+[2017-06-14T18:12:40.116-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.web] [tid: _ThreadID=42 _ThreadName=admin-listener(1)] [timeMillis: 1497481960116] [levelValue: 800] [[
+  WebModule[null] ServletContext.log():Destroying Spring FrameworkServlet 'dispatcher']]
+
+[2017-06-14T18:12:40.118-0500] [glassfish 4.1] [INFO] [] [org.springframework.web.context.support.XmlWebApplicationContext] [tid: _ThreadID=42 _ThreadName=admin-listener(1)] [timeMillis: 1497481960118] [levelValue: 800] [[
+  Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Wed Jun 14 17:57:20 CDT 2017]; root of context hierarchy]]
+
+[2017-06-14T18:12:40.129-0500] [glassfish 4.1] [INFO] [] [org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl] [tid: _ThreadID=42 _ThreadName=admin-listener(1)] [timeMillis: 1497481960129] [levelValue: 800] [[
+  HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down']]
+
+[2017-06-14T18:12:40.176-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960176] [levelValue: 800] [[
+  Hibernate: drop table if exists `AnalogDVR_analogRecordFormats`]]
+
+[2017-06-14T18:12:40.190-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960190] [levelValue: 800] [[
+  Hibernate: drop table if exists `AnalogDVR_storageTypes`]]
+
+[2017-06-14T18:12:40.193-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960193] [levelValue: 800] [[
+  Hibernate: drop table if exists `DigitalDVR_storageTypes`]]
+
+[2017-06-14T18:12:40.195-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960195] [levelValue: 800] [[
+  Hibernate: drop table if exists `HybridDVR_storageTypes`]]
+
+[2017-06-14T18:12:40.197-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960197] [levelValue: 800] [[
+  Hibernate: drop table if exists `Product`]]
+
+[2017-06-14T18:12:40.198-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960198] [levelValue: 800] [[
+  Hibernate: drop table if exists `analog_dvr`]]
+
+[2017-06-14T18:12:40.200-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960200] [levelValue: 800] [[
+  Hibernate: drop table if exists `analog_surveillance_camera`]]
+
+[2017-06-14T18:12:40.201-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960201] [levelValue: 800] [[
+  Hibernate: drop table if exists `bracket`]]
+
+[2017-06-14T18:12:40.204-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960204] [levelValue: 800] [[
+  Hibernate: drop table if exists `cable`]]
+
+[2017-06-14T18:12:40.208-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960208] [levelValue: 800] [[
+  Hibernate: drop table if exists `connector`]]
+
+[2017-06-14T18:12:40.211-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960211] [levelValue: 800] [[
+  Hibernate: drop table if exists `digital_dvr`]]
+
+[2017-06-14T18:12:40.212-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960212] [levelValue: 800] [[
+  Hibernate: drop table if exists `digital_surveillance_camera`]]
+
+[2017-06-14T18:12:40.214-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960214] [levelValue: 800] [[
+  Hibernate: drop table if exists `hibernate_sequence`]]
+
+[2017-06-14T18:12:40.216-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960216] [levelValue: 800] [[
+  Hibernate: drop table if exists `housing`]]
+
+[2017-06-14T18:12:40.217-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960217] [levelValue: 800] [[
+  Hibernate: drop table if exists `hybrid_dvr`]]
+
+[2017-06-14T18:12:40.219-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960219] [levelValue: 800] [[
+  Hibernate: drop table if exists `infrared_lightning`]]
+
+[2017-06-14T18:12:40.220-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960220] [levelValue: 800] [[
+  Hibernate: drop table if exists `ip_surveillance_camera`]]
+
+[2017-06-14T18:12:40.222-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960222] [levelValue: 800] [[
+  Hibernate: drop table if exists `lens`]]
+
+[2017-06-14T18:12:40.223-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960223] [levelValue: 800] [[
+  Hibernate: drop table if exists `microphone`]]
+
+[2017-06-14T18:12:40.224-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960224] [levelValue: 800] [[
+  Hibernate: drop table if exists `monitor`]]
+
+[2017-06-14T18:12:40.226-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960226] [levelValue: 800] [[
+  Hibernate: drop table if exists `order`]]
+
+[2017-06-14T18:12:40.227-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960227] [levelValue: 800] [[
+  Hibernate: drop table if exists `other_service`]]
+
+[2017-06-14T18:12:40.228-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960228] [levelValue: 800] [[
+  Hibernate: drop table if exists `power_supply`]]
+
+[2017-06-14T18:12:40.230-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960230] [levelValue: 800] [[
+  Hibernate: drop table if exists `security_system_installation`]]
+
+[2017-06-14T18:12:40.231-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960231] [levelValue: 800] [[
+  Hibernate: drop table if exists `surveillance_system_repair`]]
+
+[2017-06-14T18:12:40.233-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=42 _ThreadName=Thread-8] [timeMillis: 1497481960233] [levelValue: 800] [[
+  Hibernate: drop table if exists `user_account`]]
+
+[2017-06-14T18:12:40.277-0500] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=42 _ThreadName=admin-listener(1)] [timeMillis: 1497481960277] [levelValue: 900] [[
+  The web application [/CS_445_war_exploded] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-06-14T18:12:41.763-0500] [glassfish 4.1] [INFO] [NCLS-REST-00001] [javax.enterprise.admin.rest] [tid: _ThreadID=45 _ThreadName=admin-listener(4)] [timeMillis: 1497481961763] [levelValue: 800] [[
+  Listening to REST requests at context: /command/domain.]]
+
+[2017-06-14T18:12:41.863-0500] [glassfish 4.1] [INFO] [NCLS-CORE-00092] [javax.enterprise.system.core] [tid: _ThreadID=124 _ThreadName=Thread-30] [timeMillis: 1497481961863] [levelValue: 800] [[
+  Server shutdown initiated]]
+
+[2017-06-14T18:12:41.866-0500] [glassfish 4.1] [INFO] [NCLS-BOOTSTRAP-00028] [javax.enterprise.bootstrap] [tid: _ThreadID=124 _ThreadName=Thread-30] [timeMillis: 1497481961866] [levelValue: 800] [[
+  Unregistered com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@2ab2710 from service registry.]]
+
+[2017-06-14T18:12:41.867-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=124 _ThreadName=Thread-8] [timeMillis: 1497481961867] [levelValue: 800] [[
+  FileMonitoring shutdown]]
+
+[2017-06-14T18:12:41.902-0500] [glassfish 4.1] [INFO] [NCLS-JMX-00002] [javax.enterprise.system.jmx] [tid: _ThreadID=124 _ThreadName=Thread-30] [timeMillis: 1497481961902] [levelValue: 800] [[
+  JMXStartupService: Stopped JMXConnectorServer: null]]
+
+[2017-06-14T18:12:41.902-0500] [glassfish 4.1] [INFO] [NCLS-JMX-00001] [javax.enterprise.system.jmx] [tid: _ThreadID=124 _ThreadName=Thread-30] [timeMillis: 1497481961902] [levelValue: 800] [[
+  JMXStartupService and JMXConnectors have been shut down.]]
+
+[2017-06-14T18:12:41.942-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=131 _ThreadName=Thread-8] [timeMillis: 1497481961942] [levelValue: 800] [[
+  JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool]]]
+
