@@ -29,24 +29,7 @@ public class BracketController {
         Bracket bracket = new Bracket();
         bracket.setCreationTime(new Date());
         bracket.setModificationTime(bracket.getCreationTime());
-        Session session = localSessionFactoryBean.getObject().openSession();
-        Transaction tx = session.beginTransaction();
-        session.save(bracket);
-        tx.commit();
         bracket.saveNew();
-        bracket.update();
-        bracket.delete();
-        DigitalDVR dvr = new DigitalDVR();
-        ArrayList<StorageType> types = new ArrayList();
-        types.add(StorageType.DISK_DRIVE);
-        types.add(StorageType.SSD);
-        dvr.setStorageTypes(types);
-        dvr.setCreationTime(new Date());
-        dvr.setModificationTime(dvr.getCreationTime());
-        session = localSessionFactoryBean.getObject().openSession();
-        tx = session.beginTransaction();
-        session.save(dvr);
-        tx.commit();
         return modelAndView;
     }
 
@@ -58,9 +41,7 @@ public class BracketController {
         List results = session.createQuery(query).list();
         if(results != null){
             Bracket bracket = (Bracket) results.get(0);
-            Transaction tx = session.beginTransaction();
-            session.delete(bracket);
-            tx.commit();
+            bracket.update();
         }
         return modelAndView;
     }
@@ -73,9 +54,7 @@ public class BracketController {
         List results = session.createQuery(query).list();
         if(results != null){
             Bracket bracket = (Bracket) results.get(0);
-            Transaction tx = session.beginTransaction();
-            session.update(bracket);
-            tx.commit();
+            bracket.delete();
         }
         return modelAndView;
     }
