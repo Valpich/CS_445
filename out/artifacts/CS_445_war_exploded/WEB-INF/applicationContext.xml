@@ -8,5 +8,6 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:component-scan base-package="iit.cs445.configuration"/>
-
+    <context:spring-configured />
+    <context:load-time-weaver aspectj-weaving="on" />
 </beans>
