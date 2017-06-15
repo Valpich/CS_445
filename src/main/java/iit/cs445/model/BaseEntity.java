@@ -1,10 +1,23 @@
 package iit.cs445.model;
 
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+
 import javax.persistence.*;
 import java.util.Date;
 
+@Configurable
 @MappedSuperclass
 public abstract class BaseEntity<ID> {
+
+
+    @SuppressWarnings("SpringJavaAutowiringInspection")
+    @Autowired
+    @Transient
+    LocalSessionFactoryBean localSessionFactoryBean;
 
     @Column(name = "creation_time", nullable = false)
     private Date creationTime;
@@ -60,6 +73,27 @@ public abstract class BaseEntity<ID> {
                 ", modificationTime=" + modificationTime +
                 ", version=" + version +
                 '}';
+    }
+
+    public void saveNew(){
+        Session session = localSessionFactoryBean.getObject().openSession();
+        Transaction tx = session.beginTransaction();
+        session.save(this);
+        tx.commit();
+    }
+
+    public void update(){
+        Session session = localSessionFactoryBean.getObject().openSession();
+        Transaction tx = session.beginTransaction();
+        session.update(this);
+        tx.commit();
+    }
+
+    public void delete(){
+        Session session = localSessionFactoryBean.getObject().openSession();
+        Transaction tx = session.beginTransaction();
+        session.delete(this);
+        tx.commit();
     }
 }
 

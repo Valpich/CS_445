@@ -33,7 +33,9 @@ public class BracketController {
         Transaction tx = session.beginTransaction();
         session.save(bracket);
         tx.commit();
-        bracket.persist();
+        bracket.saveNew();
+        bracket.update();
+        bracket.delete();
         DigitalDVR dvr = new DigitalDVR();
         ArrayList<StorageType> types = new ArrayList();
         types.add(StorageType.DISK_DRIVE);
