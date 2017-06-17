@@ -2,179 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b515210d-be3c-4260-980b-0d9ee0718f50" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/controllers/BracketControllerTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/jsp/CS_445_war_exploded/org/apache/jsp/WEB_002dINF/jsp/index_jsp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/policy/CS_445_war_exploded/CS_445_war_exploded/granted.policy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/OrderService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/users/UserService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/configuration/ApplicationConfiguration.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/configuration/PersistenceConfiguration$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/configuration/PersistenceConfiguration.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controller/BracketController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controller/IndexController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/exceptions/DuplicateEmailException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/BaseEntity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/orders/Order.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/orders/OrderService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/orders/OrderStatus.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/orders/OrderType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Accessory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/AnalogDVR.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/AnalogRecordFormat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/AnalogSurveillanceCamera.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Bracket.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Cable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Connector.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/DVR.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/DigitalDVR.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/DigitalSurveillanceCamera.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Equipment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Housing.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/HybridDVR.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/IPSurveillanceCamera.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/InfraredLightning.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Installable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Lens.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Microphone.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/MicrophoneType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Monitor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/PowerSupply.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Product.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Repairable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/SecurityCamera.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/StorageType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/services/CustomService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/services/SecuritySystemInstallation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/services/Service.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/services/SurveillanceDesign.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/services/SurveillanceSystemRepair.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/users/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/users/UserService.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/configuration/ApplicationConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/configurations/ApplicationConfiguration.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/configuration/PersistenceConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/configurations/PersistenceConfiguration.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controller/BracketController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/BracketController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controller/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/IndexController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/BaseEntity.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/BaseEntity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/Order.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/Order.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/OrderStatus.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderStatus.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/OrderType.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Accessory.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Accessory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/AnalogDVR.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/AnalogDVR.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/AnalogRecordFormat.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/AnalogRecordFormat.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/AnalogSurveillanceCamera.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/AnalogSurveillanceCamera.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Bracket.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Bracket.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Cable.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Cable.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Connector.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Connector.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/DVR.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/DVR.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/DigitalDVR.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/DigitalDVR.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/DigitalSurveillanceCamera.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/DigitalSurveillanceCamera.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Equipment.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Equipment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Housing.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Housing.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/HybridDVR.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/HybridDVR.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/IPSurveillanceCamera.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/IPSurveillanceCamera.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/InfraredLightning.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/InfraredLightning.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Installable.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Installable.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Lens.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Lens.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Microphone.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Microphone.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/MicrophoneType.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/MicrophoneType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Monitor.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Monitor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/PowerSupply.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/PowerSupply.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Product.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Product.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Repairable.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Repairable.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/SecurityCamera.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/SecurityCamera.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/StorageType.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/StorageType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/services/CustomService.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/CustomService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/services/SecuritySystemInstallation.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/SecuritySystemInstallation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/services/Service.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/Service.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/services/SurveillanceDesign.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/SurveillanceDesign.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/services/SurveillanceSystemRepair.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/SurveillanceSystemRepair.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/users/User.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_Latest.xml" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_Latest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjrt_Latest.xml" afterPath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjrt_Latest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjweaver_Latest.xml" afterPath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjweaver_Latest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CS_445.iml" afterPath="$PROJECT_DIR$/CS_445.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/config/osgi.properties" afterPath="$PROJECT_DIR$/glassfish4/glassfish/config/osgi.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/default-web.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/default-web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml.bak" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml.bak" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/local-password" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/local-password" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid.prev" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid.prev" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/wss-server-config-1.0.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/wss-server-config-1.0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/wss-server-config-2.0.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/wss-server-config-2.0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/logs/server.log" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/logs/server.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/appclient/wss-client-config-1.0.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/appclient/wss-client-config-1.0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/appclient/wss-client-config-2.0.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/appclient/wss-client-config-2.0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/connector_1_0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/connector_1_0.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/connector_1_5.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/connector_1_5.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/connector_1_6.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/connector_1_6.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/glassfish-application-client-container_1_3.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/glassfish-application-client-container_1_3.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/glassfish-ejb-jar_3_1-1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/glassfish-ejb-jar_3_1-1.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/glassfish-resources_1_5.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/glassfish-resources_1_5.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/glassfish-web-app_3_0-1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/glassfish-web-app_3_0-1.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-application-client-container_1_0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-application-client-container_1_0.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-application-client-container_1_1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-application-client-container_1_1.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-application-client-container_1_2.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-application-client-container_1_2.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-cmp-mapping_1_0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-cmp-mapping_1_0.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-cmp-mapping_1_1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-cmp-mapping_1_1.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-cmp-mapping_1_2.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-cmp-mapping_1_2.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-connector_1_0-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-connector_1_0-0.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-connector_1_5-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-connector_1_5-0.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_2_0-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_2_0-0.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_2_0-1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_2_0-1.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_2_1-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_2_1-0.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_2_1-1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_2_1-1.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_3_0-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_3_0-0.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_3_1-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_3_1-0.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-loadbalancer_1_0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-loadbalancer_1_0.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-loadbalancer_1_1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-loadbalancer_1_1.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_0.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_1.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_2.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_2.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_3.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_3.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_4.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_4.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-server_1_0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-server_1_0.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_3-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_3-0.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_3-1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_3-1.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_4-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_4-0.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_4-1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_4-1.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_5-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_5-0.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_3_0-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_3_0-0.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/install/templates/resources/custom/javabean_custom_resource.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/install/templates/resources/custom/javabean_custom_resource.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/install/templates/resources/custom/primitives_string_custom_resource.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/install/templates/resources/custom/primitives_string_custom_resource.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/install/templates/resources/custom/url_custom-resource.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/install/templates/resources/custom/url_custom-resource.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/10.3/persistence-configuration/1.0/persistence-configuration.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/10.3/persistence-configuration/1.0/persistence-configuration.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/10.3/weblogic-javaee/1.0/weblogic-javaee.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/10.3/weblogic-javaee/1.0/weblogic-javaee.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/10.3/weblogic-web-app/1.0/weblogic-web-app.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/10.3/weblogic-web-app/1.0/weblogic-web-app.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/90/weblogic-application.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/90/weblogic-application.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/90/weblogic-web-app.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/90/weblogic-web-app.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/910/weblogic-application.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/910/weblogic-application.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/910/weblogic-web-app.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/910/weblogic-web-app.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/920/weblogic-application.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/920/weblogic-application.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/920/weblogic-web-app.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/920/weblogic-web-app.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/XMLSchema.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/XMLSchema.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/persistence-configuration/1.0/persistence-configuration.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/persistence-configuration/1.0/persistence-configuration.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.0/weblogic-javaee.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.0/weblogic-javaee.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.1/weblogic-javaee.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.1/weblogic-javaee.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.2/weblogic-javaee.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.2/weblogic-javaee.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.3/weblogic-javaee.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.3/weblogic-javaee.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.4/weblogic-javaee.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.4/weblogic-javaee.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.5/weblogic-javaee.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.5/weblogic-javaee.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.0/weblogic-web-app.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.0/weblogic-web-app.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.1/weblogic-web-app.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.1/weblogic-web-app.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.2/weblogic-web-app.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.2/weblogic-web-app.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.3/weblogic-web-app.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.3/weblogic-web-app.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.4/weblogic-web-app.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.4/weblogic-web-app.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.5/weblogic-web-application.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.5/weblogic-web-application.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/mq/lib/dtd/sun_jmsbridge_1_0.dtd" afterPath="$PROJECT_DIR$/glassfish4/mq/lib/dtd/sun_jmsbridge_1_0.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/mq/lib/props/broker/default.properties" afterPath="$PROJECT_DIR$/glassfish4/mq/lib/props/broker/default.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/static/js/jquery-2.0.3.js" afterPath="$PROJECT_DIR$/web/static/js/jquery-2.0.3.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -192,7 +20,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/services/Service.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+              <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
               <folding>
                 <element signature="e#286#287#0" expanded="true" />
                 <element signature="e#314#315#0" expanded="true" />
@@ -291,7 +119,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="8" lean-forward="true" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="29" />
+              <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -1216,12 +1044,12 @@
       <workItem from="1497574400188" duration="15000" />
       <workItem from="1497595063836" duration="44000" />
       <workItem from="1497658140625" duration="2043000" />
-      <workItem from="1497660298279" duration="2123000" />
+      <workItem from="1497660298279" duration="2551000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21723000" />
+    <option name="totallyTimeSpent" value="22151000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1607,7 +1435,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/services/Service.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
           <folding>
             <element signature="e#286#287#0" expanded="true" />
             <element signature="e#314#315#0" expanded="true" />
@@ -1664,7 +1492,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="8" lean-forward="true" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="29" />
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="29" />
           <folding />
         </state>
       </provider>
