@@ -64,7 +64,7 @@
       and none of the <xwss:Sign> elements will be used.
       If Auth-Source=Content then the <xwss:Sign> element will be used
 
-   3.  The different variations of <xwss:Encrypt> elements in this configuration file are to accomodate
+   3.  The different variations of <xwss:Encrypt> elements in tconfigurationstion file are to accomodate
        default encryption of the UsernameToken.
 
    4.  The actual certificate alias to be used for any Signature operation can be modified during AuthModule
@@ -74,8 +74,8 @@
 
    6. Debug Dumping of Messages can be enabled by setting the "debug" property in the Module Options Map to "true" during
       AuthModule initialization.
-   7. The Actual configuration file to be used by an Authmodule can be changed by setting the property "security.config" in
-      the Module Options Map to point to the configuration file location. 
+   7. The Actconfigurationstion file to be used by an Authmodule can be changed by setting the property "security.config" in
+      the Module Options Map to point to configurationstion file location.
    8. When the "security.config" property is not set during module initialization then a client auth module will use wss-client-config-2.0.xml
       by default.
    9. When the "security.config" property is not set during module initialization then a server auth module will use wss-server-config-2.0.xml by default.

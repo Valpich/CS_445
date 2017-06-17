@@ -2,7 +2,179 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b515210d-be3c-4260-980b-0d9ee0718f50" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controller/BracketController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controller/BracketController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/controllers/BracketControllerTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/jsp/CS_445_war_exploded/org/apache/jsp/WEB_002dINF/jsp/index_jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/policy/CS_445_war_exploded/CS_445_war_exploded/granted.policy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/OrderService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/users/UserService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/configuration/ApplicationConfiguration.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/configuration/PersistenceConfiguration$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/configuration/PersistenceConfiguration.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controller/BracketController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controller/IndexController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/exceptions/DuplicateEmailException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/BaseEntity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/orders/Order.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/orders/OrderService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/orders/OrderStatus.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/orders/OrderType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Accessory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/AnalogDVR.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/AnalogRecordFormat.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/AnalogSurveillanceCamera.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Bracket.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Cable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Connector.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/DVR.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/DigitalDVR.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/DigitalSurveillanceCamera.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Equipment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Housing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/HybridDVR.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/IPSurveillanceCamera.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/InfraredLightning.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Installable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Lens.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Microphone.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/MicrophoneType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Monitor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/PowerSupply.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Product.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/Repairable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/SecurityCamera.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/products/StorageType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/services/CustomService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/services/SecuritySystemInstallation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/services/Service.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/services/SurveillanceDesign.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/services/SurveillanceSystemRepair.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/users/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/model/users/UserService.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/configuration/ApplicationConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/configurations/ApplicationConfiguration.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/configuration/PersistenceConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/configurations/PersistenceConfiguration.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controller/BracketController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/BracketController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controller/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/IndexController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/BaseEntity.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/BaseEntity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/Order.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/Order.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/OrderStatus.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderStatus.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/OrderType.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Accessory.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Accessory.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/AnalogDVR.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/AnalogDVR.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/AnalogRecordFormat.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/AnalogRecordFormat.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/AnalogSurveillanceCamera.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/AnalogSurveillanceCamera.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Bracket.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Bracket.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Cable.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Cable.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Connector.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Connector.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/DVR.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/DVR.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/DigitalDVR.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/DigitalDVR.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/DigitalSurveillanceCamera.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/DigitalSurveillanceCamera.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Equipment.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Equipment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Housing.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Housing.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/HybridDVR.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/HybridDVR.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/IPSurveillanceCamera.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/IPSurveillanceCamera.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/InfraredLightning.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/InfraredLightning.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Installable.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Installable.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Lens.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Lens.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Microphone.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Microphone.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/MicrophoneType.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/MicrophoneType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Monitor.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Monitor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/PowerSupply.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/PowerSupply.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Product.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Product.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Repairable.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Repairable.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/SecurityCamera.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/SecurityCamera.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/StorageType.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/StorageType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/services/CustomService.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/CustomService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/services/SecuritySystemInstallation.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/SecuritySystemInstallation.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/services/Service.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/Service.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/services/SurveillanceDesign.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/SurveillanceDesign.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/services/SurveillanceSystemRepair.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/SurveillanceSystemRepair.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/model/users/User.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_Latest.xml" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_Latest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjrt_Latest.xml" afterPath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjrt_Latest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjweaver_Latest.xml" afterPath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjweaver_Latest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CS_445.iml" afterPath="$PROJECT_DIR$/CS_445.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/config/osgi.properties" afterPath="$PROJECT_DIR$/glassfish4/glassfish/config/osgi.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/default-web.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/default-web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml.bak" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/local-password" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/local-password" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid.prev" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid.prev" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/wss-server-config-1.0.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/wss-server-config-1.0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/wss-server-config-2.0.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/wss-server-config-2.0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/logs/server.log" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/logs/server.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/appclient/wss-client-config-1.0.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/appclient/wss-client-config-1.0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/appclient/wss-client-config-2.0.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/appclient/wss-client-config-2.0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/connector_1_0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/connector_1_0.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/connector_1_5.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/connector_1_5.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/connector_1_6.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/connector_1_6.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/glassfish-application-client-container_1_3.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/glassfish-application-client-container_1_3.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/glassfish-ejb-jar_3_1-1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/glassfish-ejb-jar_3_1-1.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/glassfish-resources_1_5.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/glassfish-resources_1_5.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/glassfish-web-app_3_0-1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/glassfish-web-app_3_0-1.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-application-client-container_1_0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-application-client-container_1_0.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-application-client-container_1_1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-application-client-container_1_1.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-application-client-container_1_2.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-application-client-container_1_2.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-cmp-mapping_1_0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-cmp-mapping_1_0.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-cmp-mapping_1_1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-cmp-mapping_1_1.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-cmp-mapping_1_2.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-cmp-mapping_1_2.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-connector_1_0-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-connector_1_0-0.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-connector_1_5-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-connector_1_5-0.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_2_0-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_2_0-0.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_2_0-1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_2_0-1.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_2_1-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_2_1-0.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_2_1-1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_2_1-1.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_3_0-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_3_0-0.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_3_1-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-ejb-jar_3_1-0.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-loadbalancer_1_0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-loadbalancer_1_0.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-loadbalancer_1_1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-loadbalancer_1_1.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_0.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_1.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_2.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_2.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_3.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_3.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_4.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-resources_1_4.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-server_1_0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-server_1_0.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_3-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_3-0.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_3-1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_3-1.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_4-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_4-0.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_4-1.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_4-1.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_5-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_2_5-0.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_3_0-0.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/dtds/sun-web-app_3_0-0.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/install/templates/resources/custom/javabean_custom_resource.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/install/templates/resources/custom/javabean_custom_resource.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/install/templates/resources/custom/primitives_string_custom_resource.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/install/templates/resources/custom/primitives_string_custom_resource.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/install/templates/resources/custom/url_custom-resource.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/install/templates/resources/custom/url_custom-resource.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/10.3/persistence-configuration/1.0/persistence-configuration.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/10.3/persistence-configuration/1.0/persistence-configuration.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/10.3/weblogic-javaee/1.0/weblogic-javaee.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/10.3/weblogic-javaee/1.0/weblogic-javaee.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/10.3/weblogic-web-app/1.0/weblogic-web-app.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/10.3/weblogic-web-app/1.0/weblogic-web-app.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/90/weblogic-application.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/90/weblogic-application.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/90/weblogic-web-app.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/90/weblogic-web-app.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/910/weblogic-application.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/910/weblogic-application.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/910/weblogic-web-app.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/910/weblogic-web-app.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/920/weblogic-application.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/920/weblogic-application.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/920/weblogic-web-app.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/920/weblogic-web-app.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/XMLSchema.dtd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/XMLSchema.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/persistence-configuration/1.0/persistence-configuration.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/persistence-configuration/1.0/persistence-configuration.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.0/weblogic-javaee.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.0/weblogic-javaee.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.1/weblogic-javaee.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.1/weblogic-javaee.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.2/weblogic-javaee.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.2/weblogic-javaee.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.3/weblogic-javaee.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.3/weblogic-javaee.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.4/weblogic-javaee.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.4/weblogic-javaee.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.5/weblogic-javaee.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-javaee/1.5/weblogic-javaee.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.0/weblogic-web-app.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.0/weblogic-web-app.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.1/weblogic-web-app.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.1/weblogic-web-app.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.2/weblogic-web-app.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.2/weblogic-web-app.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.3/weblogic-web-app.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.3/weblogic-web-app.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.4/weblogic-web-app.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.4/weblogic-web-app.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.5/weblogic-web-application.xsd" afterPath="$PROJECT_DIR$/glassfish4/glassfish/lib/schemas/weblogic-web-app/1.5/weblogic-web-application.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/mq/lib/dtd/sun_jmsbridge_1_0.dtd" afterPath="$PROJECT_DIR$/glassfish4/mq/lib/dtd/sun_jmsbridge_1_0.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/mq/lib/props/broker/default.properties" afterPath="$PROJECT_DIR$/glassfish4/mq/lib/props/broker/default.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/static/js/jquery-2.0.3.js" afterPath="$PROJECT_DIR$/web/static/js/jquery-2.0.3.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,53 +187,32 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="AnalogRecordFormat.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/AnalogRecordFormat.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Service.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/services/Service.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+              <folding>
+                <element signature="e#286#287#0" expanded="true" />
+                <element signature="e#314#315#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Equipment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Equipment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bracket.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Bracket.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/BaseEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-553">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="method#prePersist#0;class#BaseEntity#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+              <caret line="2" column="60" lean-forward="false" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Cable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Cable.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Cable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
               <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
@@ -70,51 +221,77 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BracketController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controller/BracketController.java">
+      <file leaf-file-name="BracketController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/BracketController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="51" column="76" lean-forward="false" selection-start-line="51" selection-start-column="76" selection-end-line="51" selection-end-column="76" />
+            <state relative-caret-position="585">
+              <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controller/IndexController.java">
+      <file leaf-file-name="DuplicateEmailException.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/exceptions/DuplicateEmailException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Installable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Installable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+              <folding>
+                <element signature="e#153#154#0" expanded="true" />
+                <element signature="e#188#189#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Repairable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Repairable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+              <folding>
+                <element signature="e#236#237#0" expanded="true" />
+                <element signature="e#276#277#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SecurityCamera.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/SecurityCamera.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Connector.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Connector.java">
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DigitalSurveillanceCamera.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/DigitalSurveillanceCamera.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DigitalDVR.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/DigitalDVR.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+            <state relative-caret-position="0">
+              <caret line="0" column="8" lean-forward="true" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -127,8 +304,9 @@
       <list>
         <option value="spring-beans.schema" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
+        <option value="Arquillian JUnit Test Class" />
       </list>
     </option>
   </component>
@@ -143,27 +321,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/PowerSupply.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/Product.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/Accessory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/SecurityCamera.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/DVR.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/Microphone.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/DuplicateEmailException.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/exceptions/DuplicateEmailException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/users/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/users/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/OrderService.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Equipment.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/Status.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/OrderStatus.java" />
         <option value="$PROJECT_DIR$/src/main/resources/messages.properties" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/OrderType.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Repairable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Installable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/Order.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Accessory.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/AnalogSurveillanceCamera.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Cable.java" />
@@ -179,21 +348,30 @@
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Microphone.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Monitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/PowerSupply.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/SecurityCamera.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/services/OtherService.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/services/CustomService.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/services/SecuritySystemInstallation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/services/Service.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/services/SurveillanceDesign.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/services/SurveillanceSystemRepair.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Product.java" />
         <option value="$PROJECT_DIR$/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/Enumerated.class" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/AnalogDVR.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Bracket.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/BaseEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controller/BracketController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Installable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/users/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/BaseEntity.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iit/cs445/controller/BracketControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/OrderManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/users/UserManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/services/Service.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/model/products/SecurityCamera.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/BracketController.java" />
       </list>
     </option>
   </component>
@@ -343,6 +521,10 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -391,6 +573,10 @@
               <option name="myItemId" value="cs445" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -418,7 +604,63 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="exceptions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cs445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cs445" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -430,7 +672,7 @@
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
@@ -439,20 +681,17 @@
     <property name="FullScreen" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/iit/cs445" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src" />
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="iit.cs445.controller" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="iit.cs445.model.products" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="iit.cs445.model.services" />
-      <recent name="iit.cs445.model.products" />
-      <recent name="iit.cs445.model.users" />
-      <recent name="iit.cs445.model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders" />
@@ -460,6 +699,16 @@
       <recent name="$PROJECT_DIR$/src/main/java/iit/cs445/configuration" />
       <recent name="$PROJECT_DIR$/src/main/java/iit/cs445/model" />
       <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="iit.cs445.model.services" />
+      <recent name="iit.cs445.model.products" />
+      <recent name="iit.cs445.model.users" />
+      <recent name="iit.cs445.model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -726,6 +975,7 @@
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
       <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -854,6 +1104,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -954,12 +1210,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1497465574629</updated>
-      <workItem from="1497465578673" duration="17311000" />
+      <workItem from="1497465578673" duration="17404000" />
+      <workItem from="1497486826822" duration="64000" />
+      <workItem from="1497547232040" duration="30000" />
+      <workItem from="1497574400188" duration="15000" />
+      <workItem from="1497595063836" duration="44000" />
+      <workItem from="1497658140625" duration="2043000" />
+      <workItem from="1497660298279" duration="2123000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17311000" />
+    <option name="totallyTimeSpent" value="21723000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -979,13 +1241,12 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282532" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29191092" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29191092" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -995,9 +1256,10 @@
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282532" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1008,7 +1270,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1016,225 +1280,45 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="234" column="18" lean-forward="false" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
-          <folding>
-            <element signature="e#10065#10066#0" expanded="false" />
-            <element signature="e#10148#10149#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/Override.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="50" column="18" lean-forward="false" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/exceptions/DuplicateEmailException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/users/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#679#680#0" expanded="false" />
-            <element signature="e#704#705#0" expanded="false" />
-            <element signature="e#738#739#0" expanded="false" />
-            <element signature="e#766#767#0" expanded="false" />
-            <element signature="e#798#799#0" expanded="false" />
-            <element signature="e#826#827#0" expanded="false" />
-            <element signature="e#868#869#0" expanded="false" />
-            <element signature="e#902#903#0" expanded="false" />
-            <element signature="e#938#939#0" expanded="false" />
-            <element signature="e#970#971#0" expanded="false" />
-            <element signature="e#1020#1021#0" expanded="false" />
-            <element signature="e#1062#1063#0" expanded="false" />
-            <element signature="e#1097#1098#0" expanded="false" />
-            <element signature="e#1128#1129#0" expanded="false" />
-            <element signature="e#1176#1177#0" expanded="false" />
-            <element signature="e#1216#1217#0" expanded="false" />
-            <element signature="e#1251#1252#0" expanded="false" />
-            <element signature="e#1282#1283#0" expanded="false" />
-            <element signature="e#1330#1331#0" expanded="false" />
-            <element signature="e#1370#1371#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/users/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/MicrophoneType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Installable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/OrderStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="76" lean-forward="false" selection-start-line="2" selection-start-column="76" selection-end-line="2" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/OrderType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/DVR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Equipment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="60" lean-forward="false" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/HybridDVR.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/InfraredLightning.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/InfraredLightning.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/IPSurveillanceCamera.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/IPSurveillanceCamera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Lens.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Lens.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
           <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Microphone.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Microphone.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
           <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Monitor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Monitor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
           <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/services/CustomService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/services/SecuritySystemInstallation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/services/Service.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/services/SurveillanceDesign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="33" column="18" lean-forward="false" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/services/SurveillanceSystemRepair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-          <folding>
-            <element signature="e#604#605#0" expanded="true" />
-            <element signature="e#650#651#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/PowerSupply.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/PowerSupply.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1242,43 +1326,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="53" column="19" lean-forward="false" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/StorageType.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/StorageType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/SecurityCamera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Repairable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#235#236#0" expanded="true" />
-            <element signature="e#275#276#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1286,7 +1340,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1294,7 +1347,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1306,23 +1358,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Housing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/configuration/PersistenceConfiguration.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/configurations/PersistenceConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="31" column="57" lean-forward="false" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
@@ -1330,18 +1366,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/configuration/ApplicationConfiguration.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/configurations/ApplicationConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1354,28 +1382,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Accessory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding>
-            <element signature="e#191#192#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/AnalogDVR.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/AnalogDVR.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/AnalogSurveillanceCamera.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/AnalogSurveillanceCamera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Connector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/DigitalSurveillanceCamera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/DigitalDVR.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
@@ -1383,31 +1418,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Connector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/DigitalSurveillanceCamera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/DigitalDVR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controller/IndexController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
@@ -1415,15 +1426,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Cable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/AnalogRecordFormat.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/AnalogRecordFormat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
@@ -1431,38 +1434,253 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/products/Bracket.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Bracket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/BaseEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-553">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="method#prePersist#0;class#BaseEntity#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/model/orders/Order.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        <state relative-caret-position="75">
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Housing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controller/BracketController.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="51" column="76" lean-forward="false" selection-start-line="51" selection-start-column="76" selection-end-line="51" selection-end-column="76" />
+        <state relative-caret-position="75">
+          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="76" lean-forward="false" selection-start-line="2" selection-start-column="76" selection-end-line="2" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/services/SurveillanceDesign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="33" column="18" lean-forward="false" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/services/SecuritySystemInstallation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/services/CustomService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="method#prePersist#0;class#BaseEntity#0" expanded="false" />
+            <element signature="method#toString#0;class#BaseEntity#0" expanded="false" />
+            <element signature="method#saveNew#0;class#BaseEntity#0" expanded="false" />
+            <element signature="method#update#0;class#BaseEntity#0" expanded="false" />
+            <element signature="method#delete#0;class#BaseEntity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Test.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/services/SurveillanceSystemRepair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/controllers/BracketControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="62" column="18" lean-forward="false" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <element signature="e#1253#1254#0" expanded="true" />
+            <element signature="e#1284#1285#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/DVR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Accessory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/SecurityCamera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/services/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding>
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#314#315#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Equipment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="60" lean-forward="false" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Cable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Installable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding>
+            <element signature="e#153#154#0" expanded="true" />
+            <element signature="e#188#189#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Repairable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+          <folding>
+            <element signature="e#236#237#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="true" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/BracketController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/exceptions/DuplicateEmailException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1521,11 +1739,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Hibernate|CS_445</last-edited>
+          <last-edited>CS_445</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

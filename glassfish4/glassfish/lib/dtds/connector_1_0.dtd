@@ -111,8 +111,7 @@ Used in: authentication-mechanism
 <!ELEMENT authentication-mechanism-type (#PCDATA)>
 
 <!--
-The element config-property contains a declaration of a single
-configuration property for a ManagedConnectionFactory instance.
+The element config-property contains a declaration of a sinconfigurationstion property for a ManagedConnectionFactory instance.
 
 Each ManagedConnectionFactory instance creates connections to a
 specific EIS instance based on the properties configured on the
@@ -123,9 +122,9 @@ Factory instances (that create connections to different instances of
 the same EIS).
 
 The declaration consists of an optional description, name, type
-and an optional value of the configuration property. If the resource
+and an optional value of configurationstion property. If the resource
 adapter provider does not specify a value than the deployer is
-responsible for providing a valid value for a configuration property.
+responsible for providing a valid value foconfigurationstion property.
 
 Any bounds or well-defined values of properties should be described
 in the description element.
@@ -136,7 +135,7 @@ Used in: resourceadapter
 config-property-type, config-property-value?)>
 
 <!--
-The element config-property-name contains the name of a configuration
+The element config-property-name contains the name oconfigurationstion
 property.
 
 The connector architecture defines a set of well-defined properties
@@ -158,7 +157,7 @@ Example: <config-property-name>ServerName</config-property-name>
 
 <!--
 The element config-property-type contains the fully qualified Java
-type of a configuration property as required by ManagedConnection-
+type oconfigurationstion property as required by ManagedConnection-
 Factory instance.
 
 The following are the legal values of config-property-type:
@@ -173,7 +172,7 @@ Example: <config-property-type>java.lang.String</config-property-type>
 <!ELEMENT config-property-type (#PCDATA)>
 
 <!--
-The element config-property-value contains the value of a configuration
+The element config-property-value contains the value oconfigurationstion
 entry.
 
 Used in: config-property

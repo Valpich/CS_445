@@ -79,7 +79,7 @@ spec-version, eis-type, version, license?, resourceadapter)>
 <!--
 The element activationspec specifies an activation specification.
 The information includes fully qualified Java class name of an activation
-specification and a set of required configuration property names.
+specification and a set of requiconfigurationstion property names.
 
 Used in: messagelistener
 -->
@@ -102,7 +102,7 @@ Example: <activationspec-class>com.wombat.ActivationSpecImpl
 The element adminobject specifies information about an administered object.
 Administered objects are specific to a messaging style or message provider.
 This contains information on the Java type  of the interface implemented by
-an administered object, its Java class name, and configuration properties.
+an administered object, its Java class name, configurationstion properties.
 
 Used in: resourceadapter
 -->
@@ -167,14 +167,13 @@ Used in: authentication-mechanism
 <!ELEMENT authentication-mechanism-type (#PCDATA)>
 
 <!--
-The element config-property contains a declaration of a single
-configuration property that may be used for providing configuration
+The element config-property contains a declaration of a sinconfigurationstion property that may be used for providconfigurationstion
 information.
 
 The declaration consists of an optional description, name, type
-and an optional value of the configuration property. If the resource
+and an optional value of configurationstion property. If the resource
 adapter provider does not specify a value than the deployer is
-responsible for providing a valid value for a configuration property.
+responsible for providing a valid value foconfigurationstion property.
 
 Any bounds or well-defined values of properties should be described
 in the description element.
@@ -185,7 +184,7 @@ Used in: adminobject, connection-definition, resourceadapter
 config-property-type, config-property-value?)>
 
 <!--
-The element config-property-name contains the name of a configuration
+The element config-property-name contains the name oconfigurationstion
 property.
 
 The connector architecture defines a set of well-defined properties
@@ -207,7 +206,7 @@ Example: <config-property-name>ServerName</config-property-name>
 
 <!--
 The element config-property-type contains the fully qualified Java
-type of a configuration property.
+type oconfigurationstion property.
 
 The following are the legal values of config-property-type:
    java.lang.Boolean, java.lang.String, java.lang.Integer,
@@ -221,9 +220,9 @@ Example: <config-property-type>java.lang.String</config-property-type>
 <!ELEMENT config-property-type (#PCDATA)>
 
 <!--
-The element config-property-value contains the value of a configuration
+The element config-property-value contains the value oconfigurationstion
 entry. Note, it is possible for a resource adapter deployer to
-override this configuration information during deployment.
+override tconfigurationstion information during deployment.
 
 Used in: config-property
 
@@ -491,8 +490,7 @@ Used in: outbound-resourceadapter
 <!ELEMENT reauthentication-support (#PCDATA)>
 
 <!--
-The element required-config-property contains a declaration of a single
-configuration property used for specifying a required configuration
+The element required-config-property contains a declaration of a sinconfigurationstion property used for specifying a requiconfigurationstion
 property name.
 
 Used in: activationspec
@@ -505,7 +503,7 @@ Example: <required-config-property>Destination
 <!--
 The element resourceadapter specifies information about the resource
 adapter. The information includes fully qualified resource adapter Java
-class name, configuration properties, information specific
+class naconfigurationstion properties, information specific
 to the implementation of the resource adapter library as specified
 through the outbound-resourceadapter and inbound-resourceadapter elements,
 and an optional set of administered objects.

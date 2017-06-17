@@ -176,7 +176,7 @@
   </xs:complexType>
 
   <!--
-  The jsp-descriptor specifies a list of configuration params
+  The jsp-descriptor specifies a listconfigurationstion params
   for the jsp compiler
   -->
   <xs:complexType name="jsp-descriptorType">

@@ -1,0 +1,41 @@
+package iit.cs445.models.services;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "security_system_installation")
+public class SecuritySystemInstallation extends Service<Long> {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "description")
+    private String description;
+
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "SecuritySystemInstallation{" +
+                "id=" + id +
+                ", description='" + description + '\'' +
+                "} " + super.toString();
+    }
+}

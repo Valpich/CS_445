@@ -56,7 +56,7 @@
   <!-- ============ Built In Context Init Parameter Definitions =========== -->
 
 
-  <!-- Init parameter to force the XML validation of JSF configuration  --> 
+  <!-- Init parameter to force the XML validation of configurationstion  -->
   <!-- ressources.                                                      -->
 
   <context-param>
@@ -132,7 +132,7 @@
   <!--                       in that directory. This overrides              -->
   <!--                        globalXsltFile[null]                          -->
   <!--                                                                      -->
-  <!--   globalXsltFile      Site wide configuration version of             -->
+  <!--   globalXsltFile      Site wconfigurationstion version of             -->
   <!--                       localXsltFile This argument is expected        -->
   <!--                       to be a physical file. [null]                  -->
 

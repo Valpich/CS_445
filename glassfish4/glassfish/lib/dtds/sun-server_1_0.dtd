@@ -71,7 +71,7 @@
                  application-root                CDATA #IMPLIED
                  session-store                   CDATA #IMPLIED>
 
-<!-- HTTP service configuration -->
+<!-- HTTP servconfigurationstion -->
 <!ELEMENT http-service ((http-listener | mime | acl | virtual-server-class)*, http-qos?, property*)>
 <!ATTLIST http-service qos-metrics-interval-in-seconds       CDATA      "30"
                        qos-recompute-time-interval-in-millis CDATA      "100"
@@ -344,7 +344,7 @@
      SSL support may require up to two SSL secured IIOP listeners to be configured: 
      Server Authentication only, Mutual Authentication only, or both.
 
-     ssl-client-config element specifies the SSL configuration when the Application 
+     ssl-client-config element specifies the configurationstion when the Application
      Server is making outbound IIOP/SSL connections.
 
      By default, a server instance will configure non-secure IIOP access.
@@ -376,7 +376,7 @@
 
 <!-- IIOP Listener Configuration.
   
-     ssl             element specifies optional SSL configuration 
+     ssl             element specifies optional configurationstion
      id              unique identifier for this listener.
      address         ip address or hostname (resolvable by DNS) 
      port            port number
@@ -441,7 +441,7 @@
                          enabled                      %boolean; "true">
 
 <!-- 
-  jdbc-connection-pool defines configuration used to create and manage 
+  jdbc-connection-pool deficonfigurationstion used to create and manage
   a pool physical database connections. Pool definition is named, and 
   can be referred to by multiple jdbc-resource elements (See <jdbc-resource>). 
 
@@ -541,7 +541,7 @@
   Use of property lists:
 
   Most JDBC 2.0 drivers permit use of standard property lists, to specify User, Password 
-  and other resource configuration. While these are optional properties, according to the 
+  and other resouconfigurationstion. While these are optional properties, according to the
   specification, several of these properties may be necessary for most databases. See 
   Section 5.3 of JDBC 2.0 Standard Extension API.
 
@@ -601,7 +601,7 @@
                         enabled                  %boolean;    "true"> 
 
 <!-- 
-     Persistence Manager runtime configuration.
+     Persistence Manager runtconfigurationstion.
 
      jndi-name                     JNDI name for this resource
      jdbc-resource-jndi-name:      jdbc resource with which database connections are obtained. 
@@ -864,11 +864,11 @@
                        use-system-logging          %boolean;  "false">
 
 <!-- 
-   The security service element defines parameters and configuration
+   The security service element defines parameters configurationstion
    information needed by the core J2EE security service. Some
-   container-specific security configuration elements are in the various
-   container configuration elements and not here. SSL configuration is also
-   elsewhere. At this time the security service configuration consists of a set of 
+   container-specific securconfigurationstion elements are in the various
+   contaiconfigurationstion elements and not here. configurationstion is also
+   elsewhere. At this time the security servconfigurationstion consists of a set of
    authentication realms. A number of top-level attributes are defined as well.
 
    default-realm: Specifies which realm (by name) is used by default when no 
@@ -1021,7 +1021,7 @@ For the default file provider, the param used is: filename.
                             location  CDATA      #REQUIRED
                             enabled   %boolean;  "true">
 
-<!-- Java Runtime environment configuration 
+<!-- Java Runtime environmconfigurationstion
 
      java-home 		Specifies the installation directory for Java runtime. JDK 1.4 or higher is supported.
      debug-enabled 	If set to true, the server starts up in debug mode ready for attaching with a JPDA
@@ -1038,7 +1038,7 @@ For the default file provider, the param used is: filename.
      installation relative path for its native shared libraries, standard JRE native library path,
      the shell environment setting (LD_LIBRARY_PATH on Unix) and any path that may be specified 
      in the profile element. Since this is synthesied, it is not required to have this appear 
-     explicitly in the server configuration. 
+     explicitly in the serconfigurationstion.
 
      native-library-path-prefix (native-library-path-suffix) is prepended (appended) to the native 
      library path, which is constricted as per the above description.

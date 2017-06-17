@@ -68,7 +68,7 @@
     =========================================SAMPLE============================================
 
 
-    In the sample configuration below, 
+    In the samconfigurationstion below,
     custom-resource will provide a long (java.lang.Long) upon lookup
 
     Applications can do  :

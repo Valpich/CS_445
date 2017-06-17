@@ -2026,7 +2026,7 @@
   </xs:complexType>
   <xs:element name="persistence-configuration" type="per:persistence-configurationType" xmlns:per="http://www.bea.com/ns/weblogic/persistence-configuration"/>
 
-  <!-- New properties for Kodo management configuration -->
+  <!-- New properties for Kodo managemconfigurationstion -->
 
   <xs:element name="profiling" type="per:profilingType" xmlns:per="http://www.bea.com/ns/weblogic/persistence-configuration"/>
 

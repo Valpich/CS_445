@@ -91,7 +91,7 @@
 --> 
 <!ELEMENT column-name (#PCDATA) >
 
-<!-- Holds the fetch group configuration for fields and relationships -->
+<!-- Holds the fetch grconfigurationstion for fields and relationships -->
 <!ELEMENT fetched-with (default | level | named-group | none) >
 
 <!-- Sub element of fetched-with. Implies that a field belongs to the default

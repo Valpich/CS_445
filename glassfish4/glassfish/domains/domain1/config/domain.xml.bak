@@ -44,6 +44,7 @@
   </resources>
   <servers>
     <server config-ref="server-config" name="server">
+      <application-ref ref="clarene_war_exploded" virtual-servers="server"></application-ref>
       <resource-ref ref="jdbc/__TimerPool"></resource-ref>
       <resource-ref ref="jdbc/__default"></resource-ref>
       <resource-ref ref="jms/__defaultConnectionFactory"></resource-ref>
@@ -433,5 +434,15 @@
     <secure-admin-principal dn="CN=localhost-instance,OU=GlassFish,O=Oracle Corporation,L=Santa Clara,ST=California,C=US"></secure-admin-principal>
   </secure-admin>
   <clusters></clusters>
-  <applications></applications>
+  <applications>
+    <application context-root="/clarene_war_exploded" object-type="user" name="clarene_war_exploded" directory-deployed="true" location="file:/Users/valentinpichavant/Desktop/clarene/out/artifacts/clarene_war_exploded/">
+      <property name="appLocation" value="file:/Users/valentinpichavant/Desktop/clarene/out/artifacts/clarene_war_exploded/"></property>
+      <property name="archiveType" value="war"></property>
+      <property name="defaultAppName" value="clarene_war_exploded"></property>
+      <module name="clarene_war_exploded">
+        <engine sniffer="security"></engine>
+        <engine sniffer="web"></engine>
+      </module>
+    </application>
+  </applications>
 </domain>

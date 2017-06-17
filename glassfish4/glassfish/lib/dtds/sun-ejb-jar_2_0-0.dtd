@@ -356,7 +356,7 @@ user name and password to be used when none are specified while accesing a resou
 <!ELEMENT default-resource-principal ( name,  password)>
 
 <!--
-ior-security-config element describes the security configuration information for the IOR.
+ior-security-config element describes the securconfigurationstion information for the IOR.
 -->  
 <!ELEMENT ior-security-config ( transport-config? , as-context?, sas-context?  )> 
 
@@ -412,7 +412,7 @@ is USERNAME_PASSWORD
 
 <!--
 realm element describes the realm in which the user is authenticated. Must be 
-a valid realm that is registered in server configuration.
+a valid realm that is registered in serconfigurationstion.
 -->  
 <!ELEMENT realm ( #PCDATA )> 
 

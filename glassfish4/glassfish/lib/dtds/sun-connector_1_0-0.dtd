@@ -42,12 +42,12 @@
 <!ENTITY % boolean "(yes | no | on | off | 1 | 0 | true | false)">
 
 <!-- Each deployed Resource Adapter (RAR) Module, will have ias-ra.xml 
-     associated with it, which specifies several dynamic configuration 
+     associated with it, which specifies several dynaconfigurationstion
      properties. Key aspects are pool sizing and security role maps.
  -->
 <!ELEMENT sun-connector (resource-adapter, role-map?)>
 
-<!-- Resource adapter configuration 
+<!-- Resource adapconfigurationstion
 
      jndi-name          name by which, this adapter will appear in JNDI tree
      max-pool-size      maximum size of connection to EIS

@@ -23,6 +23,20 @@
     <facet type="Spring" name="Spring">
       <configuration />
     </facet>
+    <facet type="web" name="Web2">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/glassfish4/glassfish/lib/install/applications/__admingui/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/glassfish4/glassfish/lib/install/applications/__admingui" relative="/" />
+        </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/src/main/java" />
+          <root url="file://$MODULE_DIR$/src/main/resources" />
+        </sourceRoots>
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
@@ -41,5 +55,6 @@
     <orderEntry type="library" name="mysql:mysql-connector-java:Latest" level="project" />
     <orderEntry type="library" name="org.aspectj:aspectjweaver:Latest" level="project" />
     <orderEntry type="library" name="org.aspectj:aspectjrt:Latest" level="project" />
+    <orderEntry type="library" name="Arquillian JUnit:Latest" level="project" />
   </component>
 </module>

@@ -66,7 +66,7 @@
     =========================================SAMPLE============================================
 
 
-    In the sample configuration below, 
+    In the samconfigurationstion below,
     JavaBean org.glassfish.resource.custom.test.Customer
     has attributes (along with getters and setters)
 

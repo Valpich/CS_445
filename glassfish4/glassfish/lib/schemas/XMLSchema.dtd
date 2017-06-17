@@ -106,7 +106,7 @@
 
 %xs-datatypes;
 
-<!-- the duplication below is to produce an unambiguous content model
+<!-- the duplication below is to produce an unambiguous contmodelsodel
      which allows annotation everywhere -->
 <!ELEMENT %schema; ((%include; | %import; | %redefine; | %annotation;)*,
                     ((%simpleType; | %complexType;
@@ -167,7 +167,7 @@
           %complexContentAttrs;>
 
 <!-- restriction should use the branch defined above, not the simple
-     one from part2; extension should use the full model  -->
+     one from part2; extension should use the fmodelsodel  -->
 
 <!ELEMENT %simpleContent; ((%annotation;)?, (%restriction;|%extension;))>
 <!ATTLIST %simpleContent;
@@ -243,12 +243,12 @@
           id          ID                     #IMPLIED
           %sequenceAttrs;>
 
-<!-- an anonymous grouping in a model, or
+<!-- an anonymous grouping imodelsodel, or
      a top-level named group definition, or a reference to same -->
 
 <!-- Note that if order is 'all', group is not allowed inside.
      If order is 'all' THIS group must be alone (or referenced alone) at
-     the top level of a content model -->
+     the top level of a contmodelsodel -->
 <!-- If order is 'all', minOccurs==maxOccurs==1 on element/any inside -->
 <!-- Should allow minOccurs=0 inside order='all' . . . -->
 

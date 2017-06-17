@@ -1068,7 +1068,7 @@
 	</complexType>
 
   <!--
-  The sesson-descriptor specifies a list of configuration params
+  The sesson-descriptor specifies a listconfigurationstion params
   for servlet sessions.
   -->
   <complexType name="session-descriptorType">

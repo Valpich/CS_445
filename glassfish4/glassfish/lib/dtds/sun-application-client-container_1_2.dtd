@@ -38,7 +38,7 @@
 <!ENTITY % boolean "(yes | no | on | off | 1 | 0 | true | false)">
 <!ENTITY % severity "(FINEST|FINER|FINE|CONFIG|INFO|WARNING|SEVERE|ALERT|FATAL)">
 
-<!-- iAS Application client container configuration 
+<!-- iAS Application client contaiconfigurationstion
     send-password   Specifies whether client authentication credentials should 
                     be sent to the server. Without credential all accesses to 
                     protected EJBs will result in exceptions.
@@ -48,7 +48,7 @@
 <!ELEMENT client-container (target-server+, auth-realm?, client-credential?, log-service?, message-security-config*, property*)>
 <!ATTLIST client-container send-password %boolean; "true"> 
 
-<!-- Target server's IIOP listener configuration 
+<!-- Target server's IIOP listeconfigurationstion
     name        Application server instance name 
     address     ip address or hostname (resolvable by DNS) of the ORB
     port        port number of the ORB
@@ -73,7 +73,7 @@
                             password  CDATA   #REQUIRED
                             realm     CDATA   #IMPLIED>
                                 
-<!-- Logging service configuration. 
+<!-- Logging servconfigurationstion.
 
      file   By default log file will be at $APPCLIENT_ROOT/logs/client.log
             Can use this attribute to specify an alternate location.
@@ -84,7 +84,7 @@
 <!ATTLIST log-service  file                      CDATA      #IMPLIED
                        level                     %severity; "SEVERE">
 
-<!-- SSL security  configuration for IIOP/SSL communication with 
+<!-- SSL securiconfigurationstion for IIOP/SSL communication with
      the target-server.
  -->
 <!ELEMENT security (ssl, cert-db)>
@@ -149,7 +149,7 @@
                   password   CDATA #REQUIRED>
 
 <!-- JAAS is available on Application Client Container. 
-     Optional configuration for JAAS authentication realm.
+     Optioconfigurationstion for JAAS authentication realm.
      
      name       defines the name of this realm
      classname  defines the java class which implements this realm
@@ -207,7 +207,7 @@ Used in: security-service
 	  default-client-provider CDATA #IMPLIED>
 
 <!--
-The provider-config element defines the configuration of
+The provider-config element defines configurationstion of
 an authentication provider.
 
 The provider-id attibute contains an identifier that can be used to

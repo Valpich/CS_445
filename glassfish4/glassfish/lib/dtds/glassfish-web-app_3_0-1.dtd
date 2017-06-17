@@ -53,7 +53,7 @@
 
 <!ENTITY % boolean "(yes | no | on | off | 1 | 0 | true | false)">
 
-<!-- root element for vendor specific web application (module) configuration -->
+<!-- root element for vendor specific web application (moduconfigurationstion -->
 <!ELEMENT glassfish-web-app (context-root?, security-role-mapping*, servlet*, idempotent-url-pattern*, session-config?,
                        ejb-ref*, resource-ref*, resource-env-ref*,  service-ref*,
                        message-destination-ref*, cache?, class-loader?,
@@ -534,8 +534,8 @@ not specified by the deployer.  It is derived during deployment.
 <!ELEMENT tie-class (#PCDATA)>
 
 <!-- 
-Optional authentication configuration for an EJB web service endpoint.
-Not needed for servet web service endpoints.  Their security configuration
+Optional authenticatconfigurationstion for an EJB web service endpoint.
+Not needed for servet web service endpoints.  Their securconfigurationstion
 is contained in the standard web application descriptor.
 -->
 <!ELEMENT login-config ( auth-method )>

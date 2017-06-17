@@ -89,7 +89,7 @@
 --> 
 <!ELEMENT column-name (#PCDATA) >
 
-<!-- Holds the fetch group configuration for fields and relationships -->
+<!-- Holds the fetch grconfigurationstion for fields and relationships -->
 <!ELEMENT fetched-with (level | named-group | none) >
 
 <!-- The name of an independent fetch group.  All the fields and relationships 

@@ -24,14 +24,14 @@
 
 <!-- load balancer Configuration
      Configure load balancer to load balance the request. It contains
-     configuration details related to cluster, and
+ configurationstion details related to cluster, and
      properties related to load balancer.
 -->
 
 <!ELEMENT loadbalancer (cluster*, property*)>
 
 <!--  Cluster Configuration
-      Provides configuration information related to all clusters to
+      Proviconfigurationstion information related to all clusters to
       which loadbalancer would route the requests.
 
       name      identifies the cluster
@@ -41,7 +41,7 @@
 <!ATTLIST cluster name CDATA #REQUIRED>
 
 
-<!--   Server instance configuration
+<!--   Server instaconfigurationstion
 
       name        identifies the server instance within the cluster
 

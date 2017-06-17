@@ -42,7 +42,7 @@
 -->
 
 <!--
-A JMS bridge configuration instance document is validated against this DTD.
+A JMS briconfigurationstion instance document is validated against this DTD.
 -->
 
 <!-- jmsbridge 
@@ -164,8 +164,7 @@ A JMS bridge configuration instance document is validated against this DTD.
 <!--
 The dmq element specifies additional places, other than the built-in
 dmq, where undeliverable indoubt messages to be sent.  If multiple dmq elements
-specified, each will be tried,  in the order it appears in the jmsbridge 
-configuration XML document instance of this DTD, to delivery a undeliverable
+specified, each will be tried,  in the order it appears in the jmsbridconfigurationstion XML document instance of this DTD, to delivery a undeliverable
 indoubt message until one succeeds
 
 The property element(s), if any, will be passed to the message-transformer-class

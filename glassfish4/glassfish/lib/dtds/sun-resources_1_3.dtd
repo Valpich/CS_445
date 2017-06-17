@@ -169,7 +169,7 @@
 
 
 <!-- persistence-manager-factory-resource
-    Persistence Manager runtime configuration.                        
+    Persistence Manager runtconfigurationstion.
 
   attributes
     factory-class                                                              
@@ -250,7 +250,7 @@
 
 
 <!-- jdbc-connection-pool
-    jdbc-connection-pool defines configuration used to create and     
+    jdbc-connection-pool deficonfigurationstion used to create and
     manage a pool physical database connections. Pool definition is   
     named, and can be referred to by multiple jdbc-resource elements  
     (See <jdbc-resource>).                                            
@@ -264,7 +264,7 @@
   children
     property                                                                   
         Most JDBC 2.0 drivers permit use of standard property lists,  
-        to specify User, Password and other resource configuration.   
+        to specify User, Password and other resouconfigurationstion.
         While these are optional properties, according to the         
         specification, several of these properties may be necessary   
         for most databases. See Section 5.3 of JDBC 2.0 Standard      
@@ -513,7 +513,7 @@
 
 
 <!-- connector-connection-pool
-    connector-connection-pool defines configuration used to create    
+    connector-connection-pool deficonfigurationstion used to create
     and manage a pool of connections to a EIS. Pool definition is     
     named, and can be referred to by multiple connector-resource      
     elements (See connector-resource).                                
@@ -531,7 +531,7 @@
   children
     property                                                                   
         Properties are used to override the ManagedConnectionFactory  
-        javabean configuration settings.                              
+        javabconfigurationstion settings.
 
         When one or more of these properties are specified, they are passed as 
         is using set<Name>(<Value>) methods to the Resource Adapter's          
