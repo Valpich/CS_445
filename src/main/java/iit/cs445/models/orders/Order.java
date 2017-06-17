@@ -27,11 +27,12 @@ public class Order extends BaseEntity<Long> {
     @JoinColumn(name = "id")
     private List<Product> products;
 
-    @Column(name = "billing_address")
+    @OneToOne
+    @JoinColumn(name = "id")
     private Address billingAddress;
 
-
-    @Column(name = "shipping_address")
+    @OneToOne
+    @JoinColumn(name = "id")
     private Address shippingAddress;
 
     @Override
