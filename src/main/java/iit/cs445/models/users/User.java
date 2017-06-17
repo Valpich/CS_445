@@ -3,6 +3,7 @@ package iit.cs445.models.users;
 import iit.cs445.models.BaseEntity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "user_account")
@@ -24,6 +25,11 @@ public class User extends BaseEntity<Long> {
 
     @Column(name = "password")
     private String password;
+
+    @Column(name = "address")
+    @OneToMany
+    @JoinColumn(name = "id")
+    private List<Address> address;
 
     @Override
     public Long getId() {
@@ -66,4 +72,11 @@ public class User extends BaseEntity<Long> {
         this.password = password;
     }
 
+    public List<Address> getAddress() {
+        return address;
+    }
+
+    public void setAddress(List<Address> address) {
+        this.address = address;
+    }
 }

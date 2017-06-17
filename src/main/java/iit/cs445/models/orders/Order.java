@@ -2,6 +2,7 @@ package iit.cs445.models.orders;
 
 import iit.cs445.models.BaseEntity;
 import iit.cs445.models.products.Product;
+import iit.cs445.models.users.Address;
 
 import javax.persistence.*;
 import java.util.List;
@@ -26,6 +27,13 @@ public class Order extends BaseEntity<Long> {
     @JoinColumn(name = "id")
     private List<Product> products;
 
+    @Column(name = "billing_address")
+    private Address billingAddress;
+
+
+    @Column(name = "shipping_address")
+    private Address shippingAddress;
+
     @Override
     public Long getId() {
         return id;
@@ -35,37 +43,5 @@ public class Order extends BaseEntity<Long> {
         this.id = id;
     }
 
-    public OrderStatus getStatus() {
-        return status;
-    }
 
-    public void setStatus(OrderStatus status) {
-        this.status = status;
-    }
-
-    public OrderType getOrderType() {
-        return orderType;
-    }
-
-    public void setOrderType(OrderType orderType) {
-        this.orderType = orderType;
-    }
-
-    public List<Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<Product> products) {
-        this.products = products;
-    }
-
-    @Override
-    public String toString() {
-        return "Order{" +
-                "id=" + id +
-                ", status=" + status +
-                ", orderType=" + orderType +
-                ", products=" + products +
-                "} " + super.toString();
-    }
 }
