@@ -17,7 +17,7 @@ public class User extends BaseEntity<Long> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "user_id")
     private Long id;
 
     @Column(name = "email", length = 100, nullable = false, unique = true)
@@ -38,7 +38,7 @@ public class User extends BaseEntity<Long> {
     @Cascade({org.hibernate.annotations.CascadeType.ALL})
     private List<Address> address;
 
-    @Column(name = "user_orders")
+    @Column(name = "orders")
     @OneToMany
     @JoinColumn(name = "order_id")
     @Cascade({org.hibernate.annotations.CascadeType.ALL})

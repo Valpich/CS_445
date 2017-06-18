@@ -1,7 +1,7 @@
 package iit.cs445.models.orders;
 
 import iit.cs445.models.BaseEntity;
-import iit.cs445.models.products.Product;
+import iit.cs445.models.products.Ordered_Products;
 import iit.cs445.models.users.Address;
 import org.hibernate.annotations.Cascade;
 
@@ -12,7 +12,7 @@ import java.util.List;
 @Table(name = "order")
 public class Order extends BaseEntity<Long> {
 
-    @Id
+    @Id()
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Long id;
@@ -23,11 +23,9 @@ public class Order extends BaseEntity<Long> {
     @Column(name = "order_type")
     private OrderType orderType;
 
-    @Column(name = "products")
-    @OneToMany
-    @JoinColumn(name = "id_products")
-    @Cascade({org.hibernate.annotations.CascadeType.ALL})
-    private List<Product> products;
+    @OneToMany(cascade = {CascadeType.ALL}, mappedBy="orderId")
+    @PrimaryKeyJoinColumn
+    private List<Ordered_Products> orderedProducts;
 
     @OneToOne
     @JoinColumn(name = "id")
