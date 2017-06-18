@@ -79,6 +79,7 @@ public abstract class BaseEntity<ID> {
         Transaction tx = session.beginTransaction();
         session.save(this);
         tx.commit();
+        session.close();
     }
 
     public void update(){
@@ -86,6 +87,7 @@ public abstract class BaseEntity<ID> {
         Transaction tx = session.beginTransaction();
         session.update(this);
         tx.commit();
+        session.close();
     }
 
     public void delete(){
@@ -93,6 +95,8 @@ public abstract class BaseEntity<ID> {
         Transaction tx = session.beginTransaction();
         session.delete(this);
         tx.commit();
+        session.close();
     }
+
 }
 

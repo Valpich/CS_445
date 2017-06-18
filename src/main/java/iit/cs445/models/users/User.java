@@ -1,8 +1,14 @@
 package iit.cs445.models.users;
 
 import iit.cs445.models.BaseEntity;
+import iit.cs445.models.orders.Order;
+import iit.cs445.models.products.Product;
+import org.hibernate.annotations.*;
 
 import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.List;
 
 @Entity
@@ -28,8 +34,15 @@ public class User extends BaseEntity<Long> {
 
     @Column(name = "address")
     @OneToMany
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "address_ids")
+    @Cascade({org.hibernate.annotations.CascadeType.ALL})
     private List<Address> address;
+
+    @Column(name = "user_orders")
+    @OneToMany
+    @JoinColumn(name = "order_id")
+    @Cascade({org.hibernate.annotations.CascadeType.ALL})
+    private List<Order> orders;
 
     @Override
     public Long getId() {
@@ -78,5 +91,13 @@ public class User extends BaseEntity<Long> {
 
     public void setAddress(List<Address> address) {
         this.address = address;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
     }
 }

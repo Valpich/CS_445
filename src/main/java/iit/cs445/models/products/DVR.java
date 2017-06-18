@@ -1,5 +1,7 @@
 package iit.cs445.models.products;
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Enumerated;
@@ -11,6 +13,7 @@ public abstract class DVR extends Product {
 
     @Column(name = "storage_types")
     @Enumerated
+    @Cascade({org.hibernate.annotations.CascadeType.ALL})
     @ElementCollection(targetClass = StorageType.class)
     private List<StorageType> storageTypes;
 

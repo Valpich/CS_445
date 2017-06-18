@@ -1,6 +1,8 @@
 package iit.cs445.models.products;
 
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -14,6 +16,7 @@ public class AnalogDVR extends DVR {
     @Column(name = "record_format")
     @Enumerated
     @ElementCollection(targetClass = AnalogRecordFormat.class)
+    @Cascade({org.hibernate.annotations.CascadeType.ALL})
     private List<AnalogRecordFormat> analogRecordFormats;
 
     public String getDescription() {

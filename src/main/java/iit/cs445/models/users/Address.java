@@ -19,7 +19,7 @@ public class Address extends BaseEntity<Long> {
     @Column(name = "street_address")
     private String streetAddress;
 
-    @Column(name = "first+name")
+    @Column(name = "first_name")
     private String firstName;
 
     @Column(name = "last_name")
