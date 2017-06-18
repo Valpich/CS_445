@@ -10,4 +10,8 @@ public interface UserService {
 
     default Boolean deleteUser(User user){return false;}
 
+    default User findUserByMail(String email){return null;}
+
+    default Boolean authenticateUser(User user, String password){return false;}
+
 }

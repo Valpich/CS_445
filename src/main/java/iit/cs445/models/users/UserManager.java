@@ -20,4 +20,14 @@ public class UserManager implements UserService {
         user.delete();
         return true;
     }
+
+    @Override
+    public User findUserByMail(String email) {
+        return null;
+    }
+
+    @Override
+    public Boolean authenticateUser(User user, String password) {
+        return null;
+    }
 }
