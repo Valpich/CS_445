@@ -1,9 +1,8 @@
 package iit.cs445.models.orders;
 
 import iit.cs445.models.BaseEntity;
-import iit.cs445.models.products.Ordered_Products;
+import iit.cs445.models.products.OrderedProducts;
 import iit.cs445.models.users.Address;
-import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.List;
@@ -25,7 +24,7 @@ public class Order extends BaseEntity<Long, Order> {
 
     @OneToMany(cascade = {CascadeType.ALL}, mappedBy="orderId")
     @PrimaryKeyJoinColumn
-    private List<Ordered_Products> orderedProducts;
+    private List<OrderedProducts> orderedProducts;
 
     @OneToOne
     @JoinColumn(name = "id")
@@ -60,11 +59,11 @@ public class Order extends BaseEntity<Long, Order> {
         this.orderType = orderType;
     }
 
-    public List<Ordered_Products> getOrderedProducts() {
+    public List<OrderedProducts> getOrderedProducts() {
         return orderedProducts;
     }
 
-    public void setOrderedProducts(List<Ordered_Products> orderedProducts) {
+    public void setOrderedProducts(List<OrderedProducts> orderedProducts) {
         this.orderedProducts = orderedProducts;
     }
 

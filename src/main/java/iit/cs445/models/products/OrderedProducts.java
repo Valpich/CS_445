@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "ordered_products")
-public class Ordered_Products {
+public class OrderedProducts {
 
 
     @Id
@@ -70,7 +70,7 @@ public class Ordered_Products {
 
     @Override
     public String toString() {
-        return "Ordered_Products{" +
+        return "OrderedProducts{" +
                 "id=" + id +
                 ", orderId=" + orderId +
                 ", price=" + price +
@@ -84,7 +84,7 @@ public class Ordered_Products {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Ordered_Products that = (Ordered_Products) o;
+        OrderedProducts that = (OrderedProducts) o;
 
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (orderId != null ? !orderId.equals(that.orderId) : that.orderId != null) return false;

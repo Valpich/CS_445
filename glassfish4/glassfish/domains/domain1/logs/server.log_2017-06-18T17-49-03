@@ -16406,11 +16406,11 @@ java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'coucou@hotma
   HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect]]
 
 [2017-06-18T17:34:16.577-0500] [glassfish 4.1] [WARNING] [] [org.springframework.web.context.support.XmlWebApplicationContext] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1497825256577] [levelValue: 900] [[
-  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.Ordered_Products.order]]
+  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.OrderedProducts.order]]
 
 [2017-06-18T17:34:16.586-0500] [glassfish 4.1] [SEVERE] [] [org.springframework.web.servlet.DispatcherServlet] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1497825256586] [levelValue: 1000] [[
   Context initialization failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.Ordered_Products.order
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.OrderedProducts.order
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
@@ -16484,7 +16484,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.Ordered_Products.order
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.OrderedProducts.order
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
@@ -16497,7 +16497,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
 	... 72 more
-Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.Ordered_Products.order
+Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.OrderedProducts.order
 	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1760)
 	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:925)
 	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:752)
@@ -16518,7 +16518,7 @@ Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyT
 
 [2017-06-18T17:34:16.588-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1497825256588] [levelValue: 1000] [[
   WebModule[/CS_445_war_exploded]StandardWrapper.Throwable
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.Ordered_Products.order
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.OrderedProducts.order
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
@@ -16592,7 +16592,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.Ordered_Products.order
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.OrderedProducts.order
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
@@ -16605,7 +16605,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
 	... 72 more
-Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.Ordered_Products.order
+Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.OrderedProducts.order
 	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1760)
 	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:925)
 	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:752)
@@ -16626,7 +16626,7 @@ Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyT
 
 [2017-06-18T17:34:16.589-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1497825256589] [levelValue: 1000] [[
   WebModule[/CS_445_war_exploded]Servlet /CS_445_war_exploded threw load() exception
-org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.Ordered_Products.order
+org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.OrderedProducts.order
 	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1760)
 	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:925)
 	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:752)
@@ -16734,7 +16734,7 @@ org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne proper
 
 [2017-06-18T17:34:16.591-0500] [glassfish 4.1] [SEVERE] [AS-WEB-CORE-00108] [javax.enterprise.web.core] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1497825256591] [levelValue: 1000] [[
   ContainerBase.addChild: start: 
-org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.Ordered_Products.order
+org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.OrderedProducts.order
 	at org.apache.catalina.core.StandardContext.start(StandardContext.java:5985)
 	at com.sun.enterprise.web.WebModule.start(WebModule.java:691)
 	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1041)
@@ -16785,11 +16785,11 @@ org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: 
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.Ordered_Products.order
+Caused by: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.OrderedProducts.order
 	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5740)
 	at org.apache.catalina.core.StandardContext.start(StandardContext.java:5977)
 	... 49 more
-Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.Ordered_Products.order
+Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.OrderedProducts.order
 	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1760)
 	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:925)
 	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:752)
@@ -16841,8 +16841,8 @@ Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyT
 ]]
 
 [2017-06-18T17:34:16.592-0500] [glassfish 4.1] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1497825256592] [levelValue: 900] [[
-  java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.Ordered_Products.order
-java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.Ordered_Products.order
+  java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.OrderedProducts.order
+java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.OrderedProducts.order
 	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1044)
 	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:1024)
 	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:747)
@@ -16895,7 +16895,7 @@ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catal
 
 [2017-06-18T17:34:16.592-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1497825256592] [levelValue: 1000] [[
   Exception while invoking class com.sun.enterprise.web.WebApplication start method
-java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.Ordered_Products.order
+java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.OrderedProducts.order
 	at com.sun.enterprise.web.WebApplication.start(WebApplication.java:168)
 	at org.glassfish.internal.data.EngineRef.start(EngineRef.java:122)
 	at org.glassfish.internal.data.ModuleInfo.start(ModuleInfo.java:291)
@@ -16943,7 +16943,7 @@ java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: st
 
 [2017-06-18T17:34:16.593-0500] [glassfish 4.1] [SEVERE] [NCLS-CORE-00026] [javax.enterprise.system.core] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1497825256593] [levelValue: 1000] [[
   Exception during lifecycle processing
-java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.Ordered_Products.order
+java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.OrderedProducts.order
 	at com.sun.enterprise.web.WebApplication.start(WebApplication.java:168)
 	at org.glassfish.internal.data.EngineRef.start(EngineRef.java:122)
 	at org.glassfish.internal.data.ModuleInfo.start(ModuleInfo.java:291)
@@ -17002,7 +17002,7 @@ java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: st
   The web application [/CS_445_war_exploded] created a ThreadLocal with key of type [org.aspectj.weaver.tools.WeavingAdaptor$1] (value [org.aspectj.weaver.tools.WeavingAdaptor$1@48f7a703]) and a value of type [java.lang.Boolean] (value [false]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
 
 [2017-06-18T17:34:16.601-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.system.core] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1497825256601] [levelValue: 1000] [[
-  Exception while loading the app : java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.Ordered_Products.order]]
+  Exception while loading the app : java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: iit.cs445.models.products.OrderedProducts.order]]
 
 [2017-06-18T17:35:48.801-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(4)] [timeMillis: 1497825348801] [levelValue: 800] [[
   visiting unvisited references]]
@@ -17928,11 +17928,11 @@ java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: st
   HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect]]
 
 [2017-06-18T17:39:49.685-0500] [glassfish 4.1] [WARNING] [] [org.springframework.web.context.support.XmlWebApplicationContext] [tid: _ThreadID=43 _ThreadName=admin-listener(2)] [timeMillis: 1497825589685] [levelValue: 900] [[
-  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts]]
+  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts]]
 
 [2017-06-18T17:39:49.693-0500] [glassfish 4.1] [SEVERE] [] [org.springframework.web.servlet.DispatcherServlet] [tid: _ThreadID=43 _ThreadName=admin-listener(2)] [timeMillis: 1497825589693] [levelValue: 1000] [[
   Context initialization failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
@@ -18006,7 +18006,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
@@ -18019,7 +18019,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
 	... 72 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -18040,7 +18040,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 
 [2017-06-18T17:39:49.694-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web] [tid: _ThreadID=43 _ThreadName=admin-listener(2)] [timeMillis: 1497825589694] [levelValue: 1000] [[
   WebModule[/CS_445_war_exploded]StandardWrapper.Throwable
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
@@ -18114,7 +18114,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
@@ -18127,7 +18127,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
 	... 72 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -18148,7 +18148,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 
 [2017-06-18T17:39:49.695-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web] [tid: _ThreadID=43 _ThreadName=admin-listener(2)] [timeMillis: 1497825589695] [levelValue: 1000] [[
   WebModule[/CS_445_war_exploded]Servlet /CS_445_war_exploded threw load() exception
-org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -18256,7 +18256,7 @@ org.hibernate.AnnotationException: mappedBy reference an unknown target entity p
 
 [2017-06-18T17:39:49.696-0500] [glassfish 4.1] [SEVERE] [AS-WEB-CORE-00108] [javax.enterprise.web.core] [tid: _ThreadID=43 _ThreadName=admin-listener(2)] [timeMillis: 1497825589696] [levelValue: 1000] [[
   ContainerBase.addChild: start: 
-org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.apache.catalina.core.StandardContext.start(StandardContext.java:5985)
 	at com.sun.enterprise.web.WebModule.start(WebModule.java:691)
 	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1041)
@@ -18307,11 +18307,11 @@ org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: 
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5740)
 	at org.apache.catalina.core.StandardContext.start(StandardContext.java:5977)
 	... 49 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -18363,8 +18363,8 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 ]]
 
 [2017-06-18T17:39:49.697-0500] [glassfish 4.1] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=43 _ThreadName=admin-listener(2)] [timeMillis: 1497825589697] [levelValue: 900] [[
-  java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
-java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+  java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
+java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1044)
 	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:1024)
 	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:747)
@@ -18417,7 +18417,7 @@ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catal
 
 [2017-06-18T17:39:49.697-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(2)] [timeMillis: 1497825589697] [levelValue: 1000] [[
   Exception while invoking class com.sun.enterprise.web.WebApplication start method
-java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at com.sun.enterprise.web.WebApplication.start(WebApplication.java:168)
 	at org.glassfish.internal.data.EngineRef.start(EngineRef.java:122)
 	at org.glassfish.internal.data.ModuleInfo.start(ModuleInfo.java:291)
@@ -18465,7 +18465,7 @@ java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: st
 
 [2017-06-18T17:39:49.697-0500] [glassfish 4.1] [SEVERE] [NCLS-CORE-00026] [javax.enterprise.system.core] [tid: _ThreadID=43 _ThreadName=admin-listener(2)] [timeMillis: 1497825589697] [levelValue: 1000] [[
   Exception during lifecycle processing
-java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at com.sun.enterprise.web.WebApplication.start(WebApplication.java:168)
 	at org.glassfish.internal.data.EngineRef.start(EngineRef.java:122)
 	at org.glassfish.internal.data.ModuleInfo.start(ModuleInfo.java:291)
@@ -18524,7 +18524,7 @@ java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: st
   The web application [/CS_445_war_exploded] created a ThreadLocal with key of type [org.aspectj.weaver.tools.WeavingAdaptor$1] (value [org.aspectj.weaver.tools.WeavingAdaptor$1@6b774dc1]) and a value of type [java.lang.Boolean] (value [false]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
 
 [2017-06-18T17:39:49.706-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.system.core] [tid: _ThreadID=43 _ThreadName=admin-listener(2)] [timeMillis: 1497825589706] [levelValue: 1000] [[
-  Exception while loading the app : java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts]]
+  Exception while loading the app : java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts]]
 
 [2017-06-18T17:40:00.275-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=42 _ThreadName=admin-listener(1)] [timeMillis: 1497825600275] [levelValue: 800] [[
   visiting unvisited references]]
@@ -18689,11 +18689,11 @@ java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: st
   HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect]]
 
 [2017-06-18T17:40:04.590-0500] [glassfish 4.1] [WARNING] [] [org.springframework.web.context.support.XmlWebApplicationContext] [tid: _ThreadID=42 _ThreadName=admin-listener(1)] [timeMillis: 1497825604590] [levelValue: 900] [[
-  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts]]
+  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts]]
 
 [2017-06-18T17:40:04.597-0500] [glassfish 4.1] [SEVERE] [] [org.springframework.web.servlet.DispatcherServlet] [tid: _ThreadID=42 _ThreadName=admin-listener(1)] [timeMillis: 1497825604597] [levelValue: 1000] [[
   Context initialization failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
@@ -18767,7 +18767,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
@@ -18780,7 +18780,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
 	... 72 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -18801,7 +18801,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 
 [2017-06-18T17:40:04.598-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web] [tid: _ThreadID=42 _ThreadName=admin-listener(1)] [timeMillis: 1497825604598] [levelValue: 1000] [[
   WebModule[/CS_445_war_exploded]StandardWrapper.Throwable
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
@@ -18875,7 +18875,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
@@ -18888,7 +18888,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
 	... 72 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -18909,7 +18909,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 
 [2017-06-18T17:40:04.599-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web] [tid: _ThreadID=42 _ThreadName=admin-listener(1)] [timeMillis: 1497825604599] [levelValue: 1000] [[
   WebModule[/CS_445_war_exploded]Servlet /CS_445_war_exploded threw load() exception
-org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -19017,7 +19017,7 @@ org.hibernate.AnnotationException: mappedBy reference an unknown target entity p
 
 [2017-06-18T17:40:04.600-0500] [glassfish 4.1] [SEVERE] [AS-WEB-CORE-00108] [javax.enterprise.web.core] [tid: _ThreadID=42 _ThreadName=admin-listener(1)] [timeMillis: 1497825604600] [levelValue: 1000] [[
   ContainerBase.addChild: start: 
-org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.apache.catalina.core.StandardContext.start(StandardContext.java:5985)
 	at com.sun.enterprise.web.WebModule.start(WebModule.java:691)
 	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1041)
@@ -19068,11 +19068,11 @@ org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: 
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5740)
 	at org.apache.catalina.core.StandardContext.start(StandardContext.java:5977)
 	... 49 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -19124,8 +19124,8 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 ]]
 
 [2017-06-18T17:40:04.601-0500] [glassfish 4.1] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=42 _ThreadName=admin-listener(1)] [timeMillis: 1497825604601] [levelValue: 900] [[
-  java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
-java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+  java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
+java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1044)
 	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:1024)
 	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:747)
@@ -19178,7 +19178,7 @@ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catal
 
 [2017-06-18T17:40:04.601-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=42 _ThreadName=admin-listener(1)] [timeMillis: 1497825604601] [levelValue: 1000] [[
   Exception while invoking class com.sun.enterprise.web.WebApplication start method
-java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at com.sun.enterprise.web.WebApplication.start(WebApplication.java:168)
 	at org.glassfish.internal.data.EngineRef.start(EngineRef.java:122)
 	at org.glassfish.internal.data.ModuleInfo.start(ModuleInfo.java:291)
@@ -19226,7 +19226,7 @@ java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: st
 
 [2017-06-18T17:40:04.601-0500] [glassfish 4.1] [SEVERE] [NCLS-CORE-00026] [javax.enterprise.system.core] [tid: _ThreadID=42 _ThreadName=admin-listener(1)] [timeMillis: 1497825604601] [levelValue: 1000] [[
   Exception during lifecycle processing
-java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at com.sun.enterprise.web.WebApplication.start(WebApplication.java:168)
 	at org.glassfish.internal.data.EngineRef.start(EngineRef.java:122)
 	at org.glassfish.internal.data.ModuleInfo.start(ModuleInfo.java:291)
@@ -19285,7 +19285,7 @@ java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: st
   The web application [/CS_445_war_exploded] created a ThreadLocal with key of type [org.aspectj.weaver.tools.WeavingAdaptor$1] (value [org.aspectj.weaver.tools.WeavingAdaptor$1@eb3bd9]) and a value of type [java.lang.Boolean] (value [false]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
 
 [2017-06-18T17:40:04.609-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.system.core] [tid: _ThreadID=42 _ThreadName=admin-listener(1)] [timeMillis: 1497825604609] [levelValue: 1000] [[
-  Exception while loading the app : java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts]]
+  Exception while loading the app : java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts]]
 
 [2017-06-18T17:43:05.690-0500] [glassfish 4.1] [INFO] [NCLS-REST-00001] [javax.enterprise.admin.rest] [tid: _ThreadID=46 _ThreadName=admin-listener(5)] [timeMillis: 1497825785690] [levelValue: 800] [[
   Listening to REST requests at context: /command/domain.]]
@@ -19627,11 +19627,11 @@ com.sun.enterprise.admin.cli.AdminMain]]
   HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect]]
 
 [2017-06-18T17:43:22.958-0500] [glassfish 4.1] [WARNING] [] [org.springframework.web.context.support.XmlWebApplicationContext] [tid: _ThreadID=41 _ThreadName=admin-listener(1)] [timeMillis: 1497825802958] [levelValue: 900] [[
-  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts]]
+  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts]]
 
 [2017-06-18T17:43:22.965-0500] [glassfish 4.1] [SEVERE] [] [org.springframework.web.servlet.DispatcherServlet] [tid: _ThreadID=41 _ThreadName=admin-listener(1)] [timeMillis: 1497825802965] [levelValue: 1000] [[
   Context initialization failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
@@ -19705,7 +19705,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
@@ -19718,7 +19718,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
 	... 72 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -19739,7 +19739,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 
 [2017-06-18T17:43:22.969-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web] [tid: _ThreadID=41 _ThreadName=admin-listener(1)] [timeMillis: 1497825802969] [levelValue: 1000] [[
   WebModule[/CS_445_war_exploded]StandardWrapper.Throwable
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
@@ -19813,7 +19813,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
@@ -19826,7 +19826,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
 	... 72 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -19847,7 +19847,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 
 [2017-06-18T17:43:22.972-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web] [tid: _ThreadID=41 _ThreadName=admin-listener(1)] [timeMillis: 1497825802972] [levelValue: 1000] [[
   WebModule[/CS_445_war_exploded]Servlet /CS_445_war_exploded threw load() exception
-org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -19955,7 +19955,7 @@ org.hibernate.AnnotationException: mappedBy reference an unknown target entity p
 
 [2017-06-18T17:43:22.981-0500] [glassfish 4.1] [SEVERE] [AS-WEB-CORE-00108] [javax.enterprise.web.core] [tid: _ThreadID=41 _ThreadName=admin-listener(1)] [timeMillis: 1497825802981] [levelValue: 1000] [[
   ContainerBase.addChild: start: 
-org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.apache.catalina.core.StandardContext.start(StandardContext.java:5985)
 	at com.sun.enterprise.web.WebModule.start(WebModule.java:691)
 	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1041)
@@ -20006,11 +20006,11 @@ org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: 
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5740)
 	at org.apache.catalina.core.StandardContext.start(StandardContext.java:5977)
 	... 49 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -20062,8 +20062,8 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 ]]
 
 [2017-06-18T17:43:22.982-0500] [glassfish 4.1] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=41 _ThreadName=admin-listener(1)] [timeMillis: 1497825802982] [levelValue: 900] [[
-  java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
-java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+  java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
+java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1044)
 	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:1024)
 	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:747)
@@ -20116,7 +20116,7 @@ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catal
 
 [2017-06-18T17:43:22.983-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=41 _ThreadName=admin-listener(1)] [timeMillis: 1497825802983] [levelValue: 1000] [[
   Exception while invoking class com.sun.enterprise.web.WebApplication start method
-java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at com.sun.enterprise.web.WebApplication.start(WebApplication.java:168)
 	at org.glassfish.internal.data.EngineRef.start(EngineRef.java:122)
 	at org.glassfish.internal.data.ModuleInfo.start(ModuleInfo.java:291)
@@ -20164,7 +20164,7 @@ java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: st
 
 [2017-06-18T17:43:22.983-0500] [glassfish 4.1] [SEVERE] [NCLS-CORE-00026] [javax.enterprise.system.core] [tid: _ThreadID=41 _ThreadName=admin-listener(1)] [timeMillis: 1497825802983] [levelValue: 1000] [[
   Exception during lifecycle processing
-java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at com.sun.enterprise.web.WebApplication.start(WebApplication.java:168)
 	at org.glassfish.internal.data.EngineRef.start(EngineRef.java:122)
 	at org.glassfish.internal.data.ModuleInfo.start(ModuleInfo.java:291)
@@ -20223,7 +20223,7 @@ java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: st
   The web application [/CS_445_war_exploded] created a ThreadLocal with key of type [org.aspectj.weaver.tools.WeavingAdaptor$1] (value [org.aspectj.weaver.tools.WeavingAdaptor$1@54a5d13]) and a value of type [java.lang.Boolean] (value [false]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
 
 [2017-06-18T17:43:22.996-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.system.core] [tid: _ThreadID=41 _ThreadName=admin-listener(1)] [timeMillis: 1497825802996] [levelValue: 1000] [[
-  Exception while loading the app : java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts]]
+  Exception while loading the app : java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts]]
 
 [2017-06-18T17:44:18.595-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(5)] [timeMillis: 1497825858595] [levelValue: 800] [[
   visiting unvisited references]]
@@ -20385,11 +20385,11 @@ java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: st
   HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect]]
 
 [2017-06-18T17:44:23.900-0500] [glassfish 4.1] [WARNING] [] [org.springframework.web.context.support.XmlWebApplicationContext] [tid: _ThreadID=45 _ThreadName=admin-listener(5)] [timeMillis: 1497825863900] [levelValue: 900] [[
-  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts]]
+  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts]]
 
 [2017-06-18T17:44:23.908-0500] [glassfish 4.1] [SEVERE] [] [org.springframework.web.servlet.DispatcherServlet] [tid: _ThreadID=45 _ThreadName=admin-listener(5)] [timeMillis: 1497825863908] [levelValue: 1000] [[
   Context initialization failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
@@ -20463,7 +20463,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
@@ -20476,7 +20476,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
 	... 72 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -20497,7 +20497,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 
 [2017-06-18T17:44:23.910-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web] [tid: _ThreadID=45 _ThreadName=admin-listener(5)] [timeMillis: 1497825863910] [levelValue: 1000] [[
   WebModule[/CS_445_war_exploded]StandardWrapper.Throwable
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
@@ -20571,7 +20571,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
@@ -20584,7 +20584,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
 	... 72 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -20605,7 +20605,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 
 [2017-06-18T17:44:23.911-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web] [tid: _ThreadID=45 _ThreadName=admin-listener(5)] [timeMillis: 1497825863911] [levelValue: 1000] [[
   WebModule[/CS_445_war_exploded]Servlet /CS_445_war_exploded threw load() exception
-org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -20713,7 +20713,7 @@ org.hibernate.AnnotationException: mappedBy reference an unknown target entity p
 
 [2017-06-18T17:44:23.914-0500] [glassfish 4.1] [SEVERE] [AS-WEB-CORE-00108] [javax.enterprise.web.core] [tid: _ThreadID=45 _ThreadName=admin-listener(5)] [timeMillis: 1497825863914] [levelValue: 1000] [[
   ContainerBase.addChild: start: 
-org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.apache.catalina.core.StandardContext.start(StandardContext.java:5985)
 	at com.sun.enterprise.web.WebModule.start(WebModule.java:691)
 	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1041)
@@ -20764,11 +20764,11 @@ org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: 
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5740)
 	at org.apache.catalina.core.StandardContext.start(StandardContext.java:5977)
 	... 49 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -20820,8 +20820,8 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 ]]
 
 [2017-06-18T17:44:23.915-0500] [glassfish 4.1] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=45 _ThreadName=admin-listener(5)] [timeMillis: 1497825863915] [levelValue: 900] [[
-  java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
-java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+  java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
+java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1044)
 	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:1024)
 	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:747)
@@ -20874,7 +20874,7 @@ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catal
 
 [2017-06-18T17:44:23.915-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(5)] [timeMillis: 1497825863915] [levelValue: 1000] [[
   Exception while invoking class com.sun.enterprise.web.WebApplication start method
-java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at com.sun.enterprise.web.WebApplication.start(WebApplication.java:168)
 	at org.glassfish.internal.data.EngineRef.start(EngineRef.java:122)
 	at org.glassfish.internal.data.ModuleInfo.start(ModuleInfo.java:291)
@@ -20922,7 +20922,7 @@ java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: st
 
 [2017-06-18T17:44:23.916-0500] [glassfish 4.1] [SEVERE] [NCLS-CORE-00026] [javax.enterprise.system.core] [tid: _ThreadID=45 _ThreadName=admin-listener(5)] [timeMillis: 1497825863916] [levelValue: 1000] [[
   Exception during lifecycle processing
-java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts
+java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts
 	at com.sun.enterprise.web.WebApplication.start(WebApplication.java:168)
 	at org.glassfish.internal.data.EngineRef.start(EngineRef.java:122)
 	at org.glassfish.internal.data.ModuleInfo.start(ModuleInfo.java:291)
@@ -20981,7 +20981,7 @@ java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: st
   The web application [/CS_445_war_exploded] created a ThreadLocal with key of type [org.aspectj.weaver.tools.WeavingAdaptor$1] (value [org.aspectj.weaver.tools.WeavingAdaptor$1@3b557a12]) and a value of type [java.lang.Boolean] (value [false]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
 
 [2017-06-18T17:44:23.928-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.system.core] [tid: _ThreadID=45 _ThreadName=admin-listener(5)] [timeMillis: 1497825863928] [levelValue: 1000] [[
-  Exception while loading the app : java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.ordered_products_id in orderedProducts]]
+  Exception while loading the app : java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.ordered_products_id in orderedProducts]]
 
 [2017-06-18T17:48:58.948-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(3)] [timeMillis: 1497826138948] [levelValue: 800] [[
   visiting unvisited references]]
@@ -21143,11 +21143,11 @@ java.lang.Exception: java.lang.IllegalStateException: ContainerBase.addChild: st
   HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect]]
 
 [2017-06-18T17:49:03.578-0500] [glassfish 4.1] [WARNING] [] [org.springframework.web.context.support.XmlWebApplicationContext] [tid: _ThreadID=43 _ThreadName=admin-listener(3)] [timeMillis: 1497826143578] [levelValue: 900] [[
-  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.orderedProducts in orderedProducts]]
+  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.orderedProducts in orderedProducts]]
 
 [2017-06-18T17:49:03.583-0500] [glassfish 4.1] [SEVERE] [] [org.springframework.web.servlet.DispatcherServlet] [tid: _ThreadID=43 _ThreadName=admin-listener(3)] [timeMillis: 1497826143583] [levelValue: 1000] [[
   Context initialization failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.orderedProducts in orderedProducts
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.orderedProducts in orderedProducts
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
@@ -21221,7 +21221,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.orderedProducts in orderedProducts
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.orderedProducts in orderedProducts
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
@@ -21234,7 +21234,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
 	... 72 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.orderedProducts in orderedProducts
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.orderedProducts in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -21255,7 +21255,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 
 [2017-06-18T17:49:03.584-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web] [tid: _ThreadID=43 _ThreadName=admin-listener(3)] [timeMillis: 1497826143584] [levelValue: 1000] [[
   WebModule[/CS_445_war_exploded]StandardWrapper.Throwable
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.orderedProducts in orderedProducts
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bracketController': Unsatisfied dependency expressed through field 'localSessionFactoryBean'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.orderedProducts in orderedProducts
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
@@ -21329,7 +21329,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.orderedProducts in orderedProducts
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in iit.cs445.configurations.PersistenceConfiguration: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.orderedProducts in orderedProducts
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
@@ -21342,7 +21342,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
 	... 72 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.orderedProducts in orderedProducts
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.orderedProducts in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -21363,7 +21363,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 
 [2017-06-18T17:49:03.585-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web] [tid: _ThreadID=43 _ThreadName=admin-listener(3)] [timeMillis: 1497826143585] [levelValue: 1000] [[
   WebModule[/CS_445_war_exploded]Servlet /CS_445_war_exploded threw load() exception
-org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.orderedProducts in orderedProducts
+org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.orderedProducts in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -21471,7 +21471,7 @@ org.hibernate.AnnotationException: mappedBy reference an unknown target entity p
 
 [2017-06-18T17:49:03.587-0500] [glassfish 4.1] [SEVERE] [AS-WEB-CORE-00108] [javax.enterprise.web.core] [tid: _ThreadID=43 _ThreadName=admin-listener(3)] [timeMillis: 1497826143587] [levelValue: 1000] [[
   ContainerBase.addChild: start: 
-org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.orderedProducts in orderedProducts
+org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.orderedProducts in orderedProducts
 	at org.apache.catalina.core.StandardContext.start(StandardContext.java:5985)
 	at com.sun.enterprise.web.WebModule.start(WebModule.java:691)
 	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1041)
@@ -21522,11 +21522,11 @@ org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: 
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.orderedProducts in orderedProducts
+Caused by: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.orderedProducts in orderedProducts
 	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5740)
 	at org.apache.catalina.core.StandardContext.start(StandardContext.java:5977)
 	... 49 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.orderedProducts in orderedProducts
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.orderedProducts in orderedProducts
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:775)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:725)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
@@ -21578,8 +21578,8 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 ]]
 
 [2017-06-18T17:49:03.588-0500] [glassfish 4.1] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=43 _ThreadName=admin-listener(3)] [timeMillis: 1497826143588] [levelValue: 900] [[
-  java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.orderedProducts in orderedProducts
-java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.Ordered_Products.orderedProducts in orderedProducts
+  java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.orderedProducts in orderedProducts
+java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.apache.catalina.LifecycleException: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: iit.cs445.models.products.OrderedProducts.orderedProducts in orderedProducts
 	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1044)
 	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:1024)
 	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:747)
