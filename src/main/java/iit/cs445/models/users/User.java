@@ -3,6 +3,7 @@ package iit.cs445.models.users;
 import iit.cs445.models.BaseEntity;
 import iit.cs445.models.orders.Order;
 import iit.cs445.models.products.Product;
+import iit.cs445.models.services.SecuritySystemInstallation;
 import org.hibernate.annotations.*;
 
 import javax.persistence.*;
@@ -13,7 +14,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "user_account")
-public class User extends BaseEntity<Long> {
+public class User extends BaseEntity<Long, User> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -100,4 +101,46 @@ public class User extends BaseEntity<Long> {
     public void setOrders(List<Order> orders) {
         this.orders = orders;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", password='" + password + '\'' +
+                ", address=" + address +
+                ", orders=" + orders +
+                "} " + super.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        User user = (User) o;
+
+        if (id != null ? !id.equals(user.id) : user.id != null) return false;
+        if (email != null ? !email.equals(user.email) : user.email != null) return false;
+        if (firstName != null ? !firstName.equals(user.firstName) : user.firstName != null) return false;
+        if (lastName != null ? !lastName.equals(user.lastName) : user.lastName != null) return false;
+        if (password != null ? !password.equals(user.password) : user.password != null) return false;
+        if (address != null ? !address.equals(user.address) : user.address != null) return false;
+        return orders != null ? orders.equals(user.orders) : user.orders == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
+        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (address != null ? address.hashCode() : 0);
+        result = 31 * result + (orders != null ? orders.hashCode() : 0);
+        return result;
+    }
+
 }

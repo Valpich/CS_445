@@ -4,10 +4,11 @@ package iit.cs445.models.products;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.util.List;
 
 @Entity
 @Table(name = "monitor")
-public class Monitor extends Accessory implements Installable, Repairable {
+public class Monitor extends Accessory<Monitor> implements Installable, Repairable {
 
     @Column(name = "description")
     private String description;
@@ -50,4 +51,25 @@ public class Monitor extends Accessory implements Installable, Repairable {
                 ", maxResolution='" + maxResolution + '\'' +
                 "} " + super.toString();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Monitor monitor = (Monitor) o;
+
+        if (description != null ? !description.equals(monitor.description) : monitor.description != null) return false;
+        if (size != null ? !size.equals(monitor.size) : monitor.size != null) return false;
+        return maxResolution != null ? maxResolution.equals(monitor.maxResolution) : monitor.maxResolution == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = description != null ? description.hashCode() : 0;
+        result = 31 * result + (size != null ? size.hashCode() : 0);
+        result = 31 * result + (maxResolution != null ? maxResolution.hashCode() : 0);
+        return result;
+    }
+
 }

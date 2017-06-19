@@ -3,10 +3,11 @@ package iit.cs445.models.users;
 import iit.cs445.models.BaseEntity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "addresses")
-public class Address extends BaseEntity<Long> {
+public class Address extends BaseEntity<Long, Address> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -111,6 +112,21 @@ public class Address extends BaseEntity<Long> {
     }
 
     @Override
+    public String toString() {
+        return "Address{" +
+                "id=" + id +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", streetAddress='" + streetAddress + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                ", country='" + country + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                "} " + super.toString();
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -143,18 +159,4 @@ public class Address extends BaseEntity<Long> {
         return result;
     }
 
-    @Override
-    public String toString() {
-        return "Address{" +
-                "id=" + id +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", streetAddress='" + streetAddress + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", zipCode='" + zipCode + '\'' +
-                ", country='" + country + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                "} " + super.toString();
-    }
 }

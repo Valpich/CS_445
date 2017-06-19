@@ -9,7 +9,7 @@ import javax.persistence.MappedSuperclass;
 import java.util.List;
 
 @MappedSuperclass
-public abstract class DVR extends Product {
+public abstract class DVR<Type> extends Product<Type> {
 
     @Column(name = "storage_types")
     @Enumerated
@@ -30,6 +30,21 @@ public abstract class DVR extends Product {
         return "DVR{" +
                 "storageTypes=" + storageTypes +
                 "} " + super.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        DVR dvr = (DVR) o;
+
+        return storageTypes != null ? storageTypes.equals(dvr.storageTypes) : dvr.storageTypes == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return storageTypes != null ? storageTypes.hashCode() : 0;
     }
 }
 

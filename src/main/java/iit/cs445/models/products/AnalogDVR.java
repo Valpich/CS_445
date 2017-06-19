@@ -1,6 +1,5 @@
 package iit.cs445.models.products;
 
-
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
@@ -8,7 +7,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "analog_dvr")
-public class AnalogDVR extends DVR {
+public class AnalogDVR extends DVR<AnalogDVR> {
 
     @Column(name = "description")
     private String description;
@@ -42,4 +41,24 @@ public class AnalogDVR extends DVR {
                 ", analogRecordFormats=" + analogRecordFormats +
                 "} " + super.toString();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        AnalogDVR analogDVR = (AnalogDVR) o;
+
+        if (description != null ? !description.equals(analogDVR.description) : analogDVR.description != null)
+            return false;
+        return analogRecordFormats != null ? analogRecordFormats.equals(analogDVR.analogRecordFormats) : analogDVR.analogRecordFormats == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = description != null ? description.hashCode() : 0;
+        result = 31 * result + (analogRecordFormats != null ? analogRecordFormats.hashCode() : 0);
+        return result;
+    }
+
 }

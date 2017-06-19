@@ -1,10 +1,13 @@
 package iit.cs445.models.services;
 
+import iit.cs445.models.products.AnalogDVR;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "other_service")
-public class CustomService extends Service<Long> {
+public class CustomService extends Service<Long, CustomService> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -38,4 +41,23 @@ public class CustomService extends Service<Long> {
                 ", description='" + description + '\'' +
                 "} " + super.toString();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        CustomService that = (CustomService) o;
+
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
+        return description != null ? description.equals(that.description) : that.description == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (description != null ? description.hashCode() : 0);
+        return result;
+    }
+
 }

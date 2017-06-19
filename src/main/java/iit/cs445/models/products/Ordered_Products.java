@@ -67,4 +67,39 @@ public class Ordered_Products {
     public void setProduct(Product product) {
         this.product = product;
     }
+
+    @Override
+    public String toString() {
+        return "Ordered_Products{" +
+                "id=" + id +
+                ", orderId=" + orderId +
+                ", price=" + price +
+                ", order=" + order +
+                ", product=" + product +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Ordered_Products that = (Ordered_Products) o;
+
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
+        if (orderId != null ? !orderId.equals(that.orderId) : that.orderId != null) return false;
+        if (price != null ? !price.equals(that.price) : that.price != null) return false;
+        if (order != null ? !order.equals(that.order) : that.order != null) return false;
+        return product != null ? product.equals(that.product) : that.product == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (orderId != null ? orderId.hashCode() : 0);
+        result = 31 * result + (price != null ? price.hashCode() : 0);
+        result = 31 * result + (order != null ? order.hashCode() : 0);
+        result = 31 * result + (product != null ? product.hashCode() : 0);
+        return result;
+    }
 }

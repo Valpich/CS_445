@@ -4,10 +4,11 @@ package iit.cs445.models.products;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.util.List;
 
 @Entity
 @Table(name = "infrared_lightning")
-public class InfraredLightning extends Accessory implements Installable, Repairable {
+public class InfraredLightning extends Accessory<InfraredLightning> implements Installable, Repairable {
 
     @Column(name = "description")
     private String description;
@@ -26,4 +27,20 @@ public class InfraredLightning extends Accessory implements Installable, Repaira
                 "description='" + description + '\'' +
                 "} " + super.toString();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        InfraredLightning that = (InfraredLightning) o;
+
+        return description != null ? description.equals(that.description) : that.description == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return description != null ? description.hashCode() : 0;
+    }
+
 }

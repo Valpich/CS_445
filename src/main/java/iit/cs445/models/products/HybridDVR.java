@@ -4,10 +4,11 @@ package iit.cs445.models.products;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.util.List;
 
 @Entity
 @Table(name = "hybrid_dvr")
-public class HybridDVR extends DVR implements Installable, Repairable {
+public class HybridDVR extends DVR<HybridDVR> implements Installable, Repairable {
 
     @Column(name = "description")
     private String description;
@@ -26,4 +27,23 @@ public class HybridDVR extends DVR implements Installable, Repairable {
                 "description='" + description + '\'' +
                 "} " + super.toString();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        HybridDVR hybridDVR = (HybridDVR) o;
+
+        return description != null ? description.equals(hybridDVR.description) : hybridDVR.description == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + (description != null ? description.hashCode() : 0);
+        return result;
+    }
+
 }

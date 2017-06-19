@@ -35,8 +35,8 @@ public class IndexController {
         user.setModificationTime(new Date());
         user.setFirstName("Antoine");
         user.setLastName("Regnier");
-        user.saveNew();
-        user.delete();
+//        user.saveNew();
+        user.listAll();
         return modelAndView;
     }
 
