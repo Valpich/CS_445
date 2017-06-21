@@ -3,7 +3,6 @@ package iit.cs445.models.users;
 import iit.cs445.models.BaseEntity;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "addresses")

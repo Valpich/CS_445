@@ -2,87 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b515210d-be3c-4260-980b-0d9ee0718f50" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/javax_servlet_jstl_1_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/taglibs_standard_1_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/UserController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/validators/UserFormValidator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/validation.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/error.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/css/hello.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/js/hello.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/Ordered_Products.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/Ordered_Products.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/configurations/ApplicationConfiguration.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/configurations/ApplicationConfiguration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/configurations/PersistenceConfiguration.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/configurations/PersistenceConfiguration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/orders/Order.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/orders/Order.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/AnalogDVR.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/AnalogDVR.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/AnalogSurveillanceCamera.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/AnalogSurveillanceCamera.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/Bracket.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/Bracket.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/Cable.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/Cable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/Connector.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/Connector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/DigitalDVR.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/DigitalDVR.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/DigitalSurveillanceCamera.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/DigitalSurveillanceCamera.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/Housing.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/Housing.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/HybridDVR.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/HybridDVR.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/IPSurveillanceCamera.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/IPSurveillanceCamera.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/InfraredLightning.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/InfraredLightning.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/Lens.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/Lens.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/Microphone.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/Microphone.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/Monitor.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/Monitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/PowerSupply.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/products/PowerSupply.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/services/CustomService.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/services/CustomService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/services/SecuritySystemInstallation.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/services/SecuritySystemInstallation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/services/SurveillanceDesign.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/services/SurveillanceDesign.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/services/SurveillanceSystemRepair.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/services/SurveillanceSystemRepair.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/users/Address.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/users/Address.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/users/User.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/users/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/users/UserManager.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/users/UserManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/configurations/ApplicationConfiguration.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/configurations/ApplicationConfiguration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/configurations/PersistenceConfiguration.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/configurations/PersistenceConfiguration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/orders/Order.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/orders/Order.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/AnalogDVR.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/AnalogDVR.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/AnalogSurveillanceCamera.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/AnalogSurveillanceCamera.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/Bracket.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/Bracket.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/Cable.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/Cable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/Connector.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/Connector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/DigitalDVR.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/DigitalDVR.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/DigitalSurveillanceCamera.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/DigitalSurveillanceCamera.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/Housing.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/Housing.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/HybridDVR.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/HybridDVR.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/IPSurveillanceCamera.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/IPSurveillanceCamera.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/InfraredLightning.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/InfraredLightning.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/Lens.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/Lens.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/Microphone.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/Microphone.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/Monitor.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/Monitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/PowerSupply.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/products/PowerSupply.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/services/CustomService.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/services/CustomService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/services/SecuritySystemInstallation.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/services/SecuritySystemInstallation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/services/SurveillanceDesign.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/services/SurveillanceDesign.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/services/SurveillanceSystemRepair.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/services/SurveillanceSystemRepair.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/users/Address.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/users/Address.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/users/User.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/users/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/users/UserManager.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/users/UserManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/CS_445_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/CS_445_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Arquillian_JUnit_Latest.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Arquillian_JUnit_Latest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_Latest.xml" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_Latest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjrt_Latest.xml" afterPath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjrt_Latest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjweaver_Latest.xml" afterPath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjweaver_Latest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CS_445.iml" afterPath="$PROJECT_DIR$/CS_445.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/local-password" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/local-password" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid.prev" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid.prev" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/policy/CS_445_war_exploded/CS_445_war_exploded/granted.policy" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/policy/CS_445_war_exploded/CS_445_war_exploded/granted.policy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/logs/server.log" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/logs/server.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/logs/server/tx/recoveryfile" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/logs/server/tx/recoveryfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/configurations/ApplicationConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/configurations/ApplicationConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/configurations/PersistenceConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/configurations/PersistenceConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Accessory.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Accessory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/BracketController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/BracketController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/IndexController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/BaseEntity.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/BaseEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/Order.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/Order.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderManager.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderService.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/AnalogSurveillanceCamera.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/AnalogSurveillanceCamera.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Bracket.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Bracket.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Cable.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Cable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Connector.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Connector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/DigitalDVR.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/DigitalDVR.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/DigitalSurveillanceCamera.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/DigitalSurveillanceCamera.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Housing.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Housing.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/HybridDVR.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/HybridDVR.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/IPSurveillanceCamera.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/IPSurveillanceCamera.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/InfraredLightning.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/InfraredLightning.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Lens.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Lens.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Microphone.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Microphone.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Monitor.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Monitor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/OrderedProducts.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/OrderedProducts.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/PowerSupply.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/PowerSupply.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Product.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Product.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/CustomService.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/CustomService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/SecuritySystemInstallation.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/SecuritySystemInstallation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/SurveillanceDesign.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/SurveillanceDesign.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/SurveillanceSystemRepair.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/SurveillanceSystemRepair.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/Address.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/Address.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/User.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserManager.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/validators/UserFormValidator.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/validators/UserFormValidator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -119,11 +71,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
               <caret line="13" column="65" lean-forward="false" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -271,7 +235,6 @@
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/configurations/PersistenceConfiguration.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/userform.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/users/show.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/configurations/ApplicationConfiguration.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/users/list.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/fragments/footer.jsp" />
@@ -280,6 +243,7 @@
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/validators/UserFormValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/User.java" />
       </list>
     </option>
   </component>
@@ -1413,7 +1377,7 @@
       <workItem from="1497812967369" duration="15547000" />
       <workItem from="1497836152249" duration="104000" />
       <workItem from="1497844139597" duration="3512000" />
-      <workItem from="1498071069806" duration="8743000" />
+      <workItem from="1498071069806" duration="9360000" />
     </task>
     <servers />
   </component>
@@ -1432,7 +1396,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52972000" />
+    <option name="totallyTimeSpent" value="53589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1461,8 +1425,9 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1471,7 +1436,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1615,18 +1579,18 @@
           <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#504#505#0" expanded="false" />
-            <element signature="e#538#539#0" expanded="false" />
-            <element signature="e#592#593#0" expanded="false" />
-            <element signature="e#638#639#0" expanded="false" />
-            <element signature="e#668#669#0" expanded="false" />
-            <element signature="e#695#696#0" expanded="false" />
-            <element signature="e#734#735#0" expanded="false" />
-            <element signature="e#766#767#0" expanded="false" />
-            <element signature="e#806#807#0" expanded="false" />
-            <element signature="e#842#843#0" expanded="false" />
-            <element signature="e#900#901#0" expanded="false" />
-            <element signature="e#950#951#0" expanded="false" />
+            <element signature="e#481#482#0" expanded="false" />
+            <element signature="e#515#516#0" expanded="false" />
+            <element signature="e#569#570#0" expanded="false" />
+            <element signature="e#615#616#0" expanded="false" />
+            <element signature="e#645#646#0" expanded="false" />
+            <element signature="e#672#673#0" expanded="false" />
+            <element signature="e#711#712#0" expanded="false" />
+            <element signature="e#743#744#0" expanded="false" />
+            <element signature="e#783#784#0" expanded="false" />
+            <element signature="e#819#820#0" expanded="false" />
+            <element signature="e#877#878#0" expanded="false" />
+            <element signature="e#927#928#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1637,10 +1601,10 @@
           <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#531#532#0" expanded="false" />
-            <element signature="e#565#566#0" expanded="false" />
-            <element signature="e#619#620#0" expanded="false" />
-            <element signature="e#665#666#0" expanded="false" />
+            <element signature="e#508#509#0" expanded="false" />
+            <element signature="e#542#543#0" expanded="false" />
+            <element signature="e#596#597#0" expanded="false" />
+            <element signature="e#642#643#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1651,18 +1615,18 @@
           <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#495#496#0" expanded="false" />
-            <element signature="e#529#530#0" expanded="false" />
-            <element signature="e#583#584#0" expanded="false" />
-            <element signature="e#629#630#0" expanded="false" />
-            <element signature="e#660#661#0" expanded="false" />
-            <element signature="e#688#689#0" expanded="false" />
-            <element signature="e#729#730#0" expanded="false" />
-            <element signature="e#763#764#0" expanded="false" />
-            <element signature="e#802#803#0" expanded="false" />
-            <element signature="e#838#839#0" expanded="false" />
-            <element signature="e#895#896#0" expanded="false" />
-            <element signature="e#945#946#0" expanded="false" />
+            <element signature="e#472#473#0" expanded="false" />
+            <element signature="e#506#507#0" expanded="false" />
+            <element signature="e#560#561#0" expanded="false" />
+            <element signature="e#606#607#0" expanded="false" />
+            <element signature="e#637#638#0" expanded="false" />
+            <element signature="e#665#666#0" expanded="false" />
+            <element signature="e#706#707#0" expanded="false" />
+            <element signature="e#740#741#0" expanded="false" />
+            <element signature="e#779#780#0" expanded="false" />
+            <element signature="e#815#816#0" expanded="false" />
+            <element signature="e#872#873#0" expanded="false" />
+            <element signature="e#922#923#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1673,30 +1637,30 @@
           <caret line="41" column="11" lean-forward="false" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#876#877#0" expanded="false" />
-            <element signature="e#901#902#0" expanded="false" />
-            <element signature="e#935#936#0" expanded="false" />
-            <element signature="e#963#964#0" expanded="false" />
-            <element signature="e#1001#1002#0" expanded="false" />
-            <element signature="e#1030#1031#0" expanded="false" />
-            <element signature="e#1079#1080#0" expanded="false" />
-            <element signature="e#1115#1116#0" expanded="false" />
-            <element signature="e#1154#1155#0" expanded="false" />
-            <element signature="e#1186#1187#0" expanded="false" />
-            <element signature="e#1239#1240#0" expanded="false" />
-            <element signature="e#1281#1282#0" expanded="false" />
-            <element signature="e#1338#1339#0" expanded="false" />
-            <element signature="e#1376#1377#0" expanded="false" />
-            <element signature="e#1453#1454#0" expanded="false" />
-            <element signature="e#1507#1508#0" expanded="false" />
-            <element signature="e#1549#1550#0" expanded="false" />
-            <element signature="e#1586#1587#0" expanded="false" />
-            <element signature="e#1647#1648#0" expanded="false" />
-            <element signature="e#1699#1700#0" expanded="false" />
-            <element signature="e#1742#1743#0" expanded="false" />
-            <element signature="e#1780#1781#0" expanded="false" />
-            <element signature="e#1843#1844#0" expanded="false" />
-            <element signature="e#1897#1898#0" expanded="false" />
+            <element signature="e#878#879#0" expanded="false" />
+            <element signature="e#903#904#0" expanded="false" />
+            <element signature="e#937#938#0" expanded="false" />
+            <element signature="e#965#966#0" expanded="false" />
+            <element signature="e#1003#1004#0" expanded="false" />
+            <element signature="e#1032#1033#0" expanded="false" />
+            <element signature="e#1081#1082#0" expanded="false" />
+            <element signature="e#1117#1118#0" expanded="false" />
+            <element signature="e#1156#1157#0" expanded="false" />
+            <element signature="e#1188#1189#0" expanded="false" />
+            <element signature="e#1241#1242#0" expanded="false" />
+            <element signature="e#1283#1284#0" expanded="false" />
+            <element signature="e#1340#1341#0" expanded="false" />
+            <element signature="e#1378#1379#0" expanded="false" />
+            <element signature="e#1455#1456#0" expanded="false" />
+            <element signature="e#1509#1510#0" expanded="false" />
+            <element signature="e#1551#1552#0" expanded="false" />
+            <element signature="e#1588#1589#0" expanded="false" />
+            <element signature="e#1649#1650#0" expanded="false" />
+            <element signature="e#1701#1702#0" expanded="false" />
+            <element signature="e#1744#1745#0" expanded="false" />
+            <element signature="e#1782#1783#0" expanded="false" />
+            <element signature="e#1845#1846#0" expanded="false" />
+            <element signature="e#1899#1900#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1707,26 +1671,26 @@
           <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#617#618#0" expanded="false" />
-            <element signature="e#642#643#0" expanded="false" />
-            <element signature="e#676#677#0" expanded="false" />
-            <element signature="e#704#705#0" expanded="false" />
-            <element signature="e#736#737#0" expanded="false" />
-            <element signature="e#766#767#0" expanded="false" />
-            <element signature="e#810#811#0" expanded="false" />
-            <element signature="e#848#849#0" expanded="false" />
-            <element signature="e#881#882#0" expanded="false" />
-            <element signature="e#909#910#0" expanded="false" />
-            <element signature="e#952#953#0" expanded="false" />
-            <element signature="e#986#987#0" expanded="false" />
-            <element signature="e#1017#1018#0" expanded="false" />
-            <element signature="e#1045#1046#0" expanded="false" />
-            <element signature="e#1086#1087#0" expanded="false" />
-            <element signature="e#1120#1121#0" expanded="false" />
-            <element signature="e#1155#1156#0" expanded="false" />
-            <element signature="e#1185#1186#0" expanded="false" />
-            <element signature="e#1232#1233#0" expanded="false" />
-            <element signature="e#1270#1271#0" expanded="false" />
+            <element signature="e#621#622#0" expanded="false" />
+            <element signature="e#646#647#0" expanded="false" />
+            <element signature="e#680#681#0" expanded="false" />
+            <element signature="e#708#709#0" expanded="false" />
+            <element signature="e#740#741#0" expanded="false" />
+            <element signature="e#770#771#0" expanded="false" />
+            <element signature="e#814#815#0" expanded="false" />
+            <element signature="e#852#853#0" expanded="false" />
+            <element signature="e#885#886#0" expanded="false" />
+            <element signature="e#913#914#0" expanded="false" />
+            <element signature="e#956#957#0" expanded="false" />
+            <element signature="e#990#991#0" expanded="false" />
+            <element signature="e#1021#1022#0" expanded="false" />
+            <element signature="e#1049#1050#0" expanded="false" />
+            <element signature="e#1090#1091#0" expanded="false" />
+            <element signature="e#1124#1125#0" expanded="false" />
+            <element signature="e#1159#1160#0" expanded="false" />
+            <element signature="e#1189#1190#0" expanded="false" />
+            <element signature="e#1236#1237#0" expanded="false" />
+            <element signature="e#1274#1275#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1853,44 +1817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1394#1395#0" expanded="false" />
-            <element signature="e#1419#1420#0" expanded="false" />
-            <element signature="e#1453#1454#0" expanded="false" />
-            <element signature="e#1481#1482#0" expanded="false" />
-            <element signature="e#1513#1514#0" expanded="false" />
-            <element signature="e#1541#1542#0" expanded="false" />
-            <element signature="e#1583#1584#0" expanded="false" />
-            <element signature="e#1617#1618#0" expanded="false" />
-            <element signature="e#1653#1654#0" expanded="false" />
-            <element signature="e#1685#1686#0" expanded="false" />
-            <element signature="e#1735#1736#0" expanded="false" />
-            <element signature="e#1777#1778#0" expanded="false" />
-            <element signature="e#1812#1813#0" expanded="false" />
-            <element signature="e#1843#1844#0" expanded="false" />
-            <element signature="e#1891#1892#0" expanded="false" />
-            <element signature="e#1931#1932#0" expanded="false" />
-            <element signature="e#1966#1967#0" expanded="false" />
-            <element signature="e#1997#1998#0" expanded="false" />
-            <element signature="e#2045#2046#0" expanded="false" />
-            <element signature="e#2085#2086#0" expanded="false" />
-            <element signature="e#2126#2127#0" expanded="false" />
-            <element signature="e#2156#2157#0" expanded="false" />
-            <element signature="e#2209#2210#0" expanded="false" />
-            <element signature="e#2247#2248#0" expanded="false" />
-            <element signature="e#2285#2286#0" expanded="false" />
-            <element signature="e#2314#2315#0" expanded="false" />
-            <element signature="e#2363#2364#0" expanded="false" />
-            <element signature="e#2399#2400#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/users/userform.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -1942,14 +1868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CS_445.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/validators/UserFormValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
@@ -1978,10 +1896,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CS_445.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-426">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="13" column="65" lean-forward="false" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

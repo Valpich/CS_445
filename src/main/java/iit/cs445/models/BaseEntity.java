@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 
 import javax.persistence.*;
-import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
@@ -108,12 +107,12 @@ public abstract class BaseEntity<ID, Type> {
             session.save(this);
             tx.commit();
             session.close();
-        }catch (Exception exc){
+        } catch (Exception exc) {
             Logger.getLogger(getClass().getName()).log(Level.WARNING, exc.toString());
         }
     }
 
-    public void update(){
+    public void update() {
         Session session = localSessionFactoryBean.getObject().openSession();
         Transaction tx = session.beginTransaction();
         session.update(this);
@@ -121,7 +120,7 @@ public abstract class BaseEntity<ID, Type> {
         session.close();
     }
 
-    public void delete(){
+    public void delete() {
         Session session = localSessionFactoryBean.getObject().openSession();
         Transaction tx = session.beginTransaction();
         session.delete(this);
@@ -129,15 +128,15 @@ public abstract class BaseEntity<ID, Type> {
         session.close();
     }
 
-    public List<Type> listAll(){
+    public List<Type> listAll() {
         Session session = localSessionFactoryBean.getObject().openSession();
         Type type = null;
-        String query = "select className from "+getClass().getSimpleName()+" className" ;
+        String query = "select className from " + getClass().getSimpleName() + " className";
         System.out.println(query);
-        Logger.getLogger(getClass().getName()).log(Level.INFO, "Doing list all query: "+query);
-        List<Type> results =  session.createQuery(query).list();
+        Logger.getLogger(getClass().getName()).log(Level.INFO, "Doing list all query: " + query);
+        List<Type> results = session.createQuery(query).list();
         if (results != null) {
-            for(Type t : results)
+            for (Type t : results)
                 Logger.getLogger(getClass().getName()).log(Level.INFO, t.toString());
         }
         session.close();

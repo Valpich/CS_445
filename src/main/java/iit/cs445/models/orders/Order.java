@@ -22,7 +22,7 @@ public class Order extends BaseEntity<Long, Order> {
     @Column(name = "order_type")
     private OrderType orderType;
 
-    @OneToMany(cascade = {CascadeType.ALL}, mappedBy="orderId")
+    @OneToMany(cascade = {CascadeType.ALL}, mappedBy = "orderId")
     @PrimaryKeyJoinColumn
     private List<OrderedProducts> orderedProducts;
 

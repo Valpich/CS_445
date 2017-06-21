@@ -22,11 +22,11 @@ public class IndexController {
         Address ad = new Address();
         ad.setCreationTime(new Date());
         ad.setModificationTime(new Date());
-      //  ad.saveNew();
+        //  ad.saveNew();
         Address ad2 = new Address();
         ad2.setCreationTime(new Date());
         ad2.setModificationTime(new Date());
-       // ad2.saveNew();
+        // ad2.saveNew();
         ArrayList addresses = new ArrayList();
         addresses.add(ad);
         addresses.add(ad2);

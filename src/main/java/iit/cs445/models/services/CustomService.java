@@ -1,9 +1,6 @@
 package iit.cs445.models.services;
 
-import iit.cs445.models.products.AnalogDVR;
-
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "other_service")

@@ -46,7 +46,7 @@ public class BracketController {
         Session session = localSessionFactoryBean.getObject().openSession();
         String query = "select bracket from Bracket bracket";
         List results = session.createQuery(query).list();
-        if(results != null){
+        if (results != null) {
             Bracket bracket = (Bracket) results.get(0);
             bracket.update();
         }
@@ -59,7 +59,7 @@ public class BracketController {
         Session session = localSessionFactoryBean.getObject().openSession();
         String query = "select bracket from Bracket bracket";
         List results = session.createQuery(query).list();
-        if(results != null){
+        if (results != null) {
             Bracket bracket = (Bracket) results.get(0);
             bracket.delete();
         }

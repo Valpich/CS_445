@@ -46,8 +46,8 @@ public class UserFormValidator implements Validator {
         Date now = new Date();
         user.setCreationTime(now);
         user.setModificationTime(now);
-        for(User u :user.listAll())
-            if(u.getEmail().toLowerCase().equals(user.getEmail().toLowerCase()))
+        for (User u : user.listAll())
+            if (u.getEmail().toLowerCase().equals(user.getEmail().toLowerCase()))
                 errors.rejectValue("email", "AlreadyUsed.userForm.email");
     }
 

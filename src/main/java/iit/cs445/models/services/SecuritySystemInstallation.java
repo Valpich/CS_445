@@ -2,7 +2,6 @@ package iit.cs445.models.services;
 
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "security_system_installation")

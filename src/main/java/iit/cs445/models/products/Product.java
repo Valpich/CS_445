@@ -4,7 +4,6 @@ import iit.cs445.models.BaseEntity;
 import iit.cs445.models.orders.OrderType;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "product")

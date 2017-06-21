@@ -2,20 +2,15 @@ package iit.cs445.models.users;
 
 import iit.cs445.models.BaseEntity;
 import iit.cs445.models.orders.Order;
-import iit.cs445.models.products.Product;
-import iit.cs445.models.services.SecuritySystemInstallation;
-import org.hibernate.annotations.*;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Table(name = "user_account")
-public class User extends BaseEntity<Long, User> implements Serializable{
+public class User extends BaseEntity<Long, User> implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

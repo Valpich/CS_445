@@ -8,9 +8,9 @@ public class UserManager implements UserService {
 
     @Override
     public Boolean registerNewUser(User user) throws DuplicateEmailException {
-        try{
+        try {
             user.saveNew();
-        }catch (Exception exception){
+        } catch (Exception exception) {
             throw new DuplicateEmailException("Duplicate email");
         }
         return true;

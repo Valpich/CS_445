@@ -1,6 +1,6 @@
 package iit.cs445.models.orders;
 
-public class OrderManager implements OrderService{
+public class OrderManager implements OrderService {
 
     @Override
     public Boolean createNewOrder(Order order) {

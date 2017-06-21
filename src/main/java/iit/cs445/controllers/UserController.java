@@ -72,38 +72,39 @@ public class UserController {
         return "users/userform";
 
     }
-/*
-    // show update form
-    @RequestMapping(value = "/users/{id}/update", method = RequestMethod.GET)
-    public String showUpdateUserForm(@PathVariable("id") int id, Model model) {
 
-        logger.debug("showUpdateUserForm() : {}", id);
+    /*
+        // show update form
+        @RequestMapping(value = "/users/{id}/update", method = RequestMethod.GET)
+        public String showUpdateUserForm(@PathVariable("id") int id, Model model) {
 
-        User user = userService.findById(id);
-        model.addAttribute("userForm", user);
+            logger.debug("showUpdateUserForm() : {}", id);
 
-        populateDefaultModel(model);
+            User user = userService.findById(id);
+            model.addAttribute("userForm", user);
 
-        return "users/userform";
+            populateDefaultModel(model);
 
-    }
+            return "users/userform";
 
-    // delete user
-    @RequestMapping(value = "/users/{id}/delete", method = RequestMethod.POST)
-    public String deleteUser(@PathVariable("id") int id,
-                             final RedirectAttributes redirectAttributes) {
+        }
 
-        logger.debug("deleteUser() : {}", id);
+        // delete user
+        @RequestMapping(value = "/users/{id}/delete", method = RequestMethod.POST)
+        public String deleteUser(@PathVariable("id") int id,
+                                 final RedirectAttributes redirectAttributes) {
 
-        userService.delete(id);
+            logger.debug("deleteUser() : {}", id);
 
-        redirectAttributes.addFlashAttribute("css", "success");
-        redirectAttributes.addFlashAttribute("msg", "User is deleted!");
+            userService.delete(id);
 
-        return "redirect:/users";
+            redirectAttributes.addFlashAttribute("css", "success");
+            redirectAttributes.addFlashAttribute("msg", "User is deleted!");
 
-    }
-*/
+            return "redirect:/users";
+
+        }
+    */
     // show user
     @RequestMapping(value = "/users/{email}", method = RequestMethod.GET)
     public String showUser(@PathVariable("email") String email, Model model) {

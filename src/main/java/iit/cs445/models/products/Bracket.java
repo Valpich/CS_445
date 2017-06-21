@@ -3,7 +3,6 @@ package iit.cs445.models.products;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.util.List;
 
 @Entity
 @Table(name = "bracket")

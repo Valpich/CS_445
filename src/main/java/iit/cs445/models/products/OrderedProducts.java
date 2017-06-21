@@ -9,7 +9,7 @@ import javax.persistence.*;
 public class OrderedProducts {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "ordered_products_id")
     private Long id;
 
@@ -20,7 +20,7 @@ public class OrderedProducts {
     private Integer price;
 
     @ManyToOne
-    @JoinColumn(name="orderId")
+    @JoinColumn(name = "orderId")
     private Order order;
 
     @ManyToOne
