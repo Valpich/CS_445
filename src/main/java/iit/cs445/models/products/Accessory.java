@@ -10,6 +10,5 @@ public abstract class Accessory<Type> extends Product<Type> {
         return "Accessory{} " + super.toString();
     }
 
-
 }
 

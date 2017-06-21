@@ -19,7 +19,7 @@ import java.util.Properties;
 @Configuration
 @ComponentScan(basePackages = "iit.cs445")
 @EnableTransactionManagement
-@PropertySource({"classpath:application.properties"})
+@PropertySource({"classpath:application.properties", "classpath:validation.properties"})
 public class PersistenceConfiguration {
 
     @Autowired

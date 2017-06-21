@@ -10,11 +10,12 @@ import javax.persistence.*;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Table(name = "user_account")
-public class User extends BaseEntity<Long, User> {
+public class User extends BaseEntity<Long, User> implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
