@@ -2,6 +2,7 @@ package iit.cs445.controllers;
 
 import iit.cs445.exceptions.DuplicateEmailException;
 import iit.cs445.models.users.User;
+import iit.cs445.models.users.UserCart;
 import iit.cs445.models.users.UserService;
 import iit.cs445.validators.UserFormValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,10 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
+import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -29,11 +33,6 @@ public class UserController {
     @InitBinder
     protected void initBinder(WebDataBinder binder) {
         binder.setValidator(userFormValidator);
-    }
-
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String index(Model model) {
-        return "redirect:/users";
     }
 
     @RequestMapping(value = "/users/listAll", method = RequestMethod.GET)
@@ -104,6 +103,33 @@ public class UserController {
         }
         model.addAttribute("user", user);
         return "users/show";
+    }
 
+    @RequestMapping(value = "/login")
+    public String login(HttpServletRequest request, HttpSession session, @RequestParam("email") Optional<String> email,
+                        @RequestParam("password") Optional<String> password) {
+        if(email.isPresent() && password.isPresent()){
+            Logger.getLogger(UserController.class.getName()).log(Level.INFO, "Email is: " +email.get() );
+            Logger.getLogger(UserController.class.getName()).log(Level.INFO, "Password is: " +password.get() );
+            User user = userService.findUserByMail(email.get());
+            if(userService.authenticateUser(user,password.get())){
+                session.setAttribute("user", user);
+                session.setAttribute("cart", new UserCart());
+                Logger.getLogger(UserController.class.getName()).log(Level.INFO, "User logged: " + user);
+                return "/";
+            }else{
+                Logger.getLogger(UserController.class.getName()).log(Level.INFO, "User not logged: " + user);
+            }
+        }
+        return "users/login";
+    }
+
+    @RequestMapping("/logout")
+    public String logout( HttpSession session) {
+        if (session.getAttribute("user")!= null) {
+            Logger.getLogger(UserController.class.getName()).log(Level.INFO, "Invalidating session" );
+            session.invalidate();
+        }
+        return "redirect:/login";
     }
 }

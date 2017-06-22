@@ -17,26 +17,6 @@ public class IndexController {
     public ModelAndView index() {
         ModelAndView modelAndView = new ModelAndView("index");
         modelAndView.addObject("controller", new String("Coucou toi!"));
-        User user = new User();
-        user.setEmail("coucou@hotmail.fr");
-        Address ad = new Address();
-        ad.setCreationTime(new Date());
-        ad.setModificationTime(new Date());
-        //  ad.saveNew();
-        Address ad2 = new Address();
-        ad2.setCreationTime(new Date());
-        ad2.setModificationTime(new Date());
-        // ad2.saveNew();
-        ArrayList addresses = new ArrayList();
-        addresses.add(ad);
-        addresses.add(ad2);
-        user.setAddress(addresses);
-        user.setCreationTime(new Date());
-        user.setModificationTime(new Date());
-        user.setFirstName("Antoine");
-        user.setLastName("Regnier");
-//        user.saveNew();
-        user.listAll();
         return modelAndView;
     }
 
