@@ -1,6 +1,7 @@
 package iit.cs445.validators;
 
 import iit.cs445.models.users.User;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -12,6 +13,7 @@ import java.util.logging.Logger;
 
 
 @Component
+@PropertySource({"classpath:validation.properties"})
 public class UserFormValidator implements Validator {
 
 
@@ -46,9 +48,6 @@ public class UserFormValidator implements Validator {
         Date now = new Date();
         user.setCreationTime(now);
         user.setModificationTime(now);
-        for (User u : user.listAll())
-            if (u.getEmail().toLowerCase().equals(user.getEmail().toLowerCase()))
-                errors.rejectValue("email", "AlreadyUsed.userForm.email");
     }
 
 }

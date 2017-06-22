@@ -44,11 +44,10 @@ public class UserManager implements UserService {
     }
 
     @Override
-    public User findUserById(int id) {
+    public User findUserById(Long id) {
         Logger.getLogger(UserManager.class.getName()).log(Level.INFO, "Find by id: " +id );
-
         for(User user : new User().listAll()){
-            Boolean test = user.getId() == id;
+            Boolean test = user.getId().equals(id);
             if(test)return user;
         }
         return null;

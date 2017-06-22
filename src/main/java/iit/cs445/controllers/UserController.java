@@ -45,26 +45,28 @@ public class UserController {
 
     @RequestMapping(value = "/users", method = RequestMethod.POST)
     public String saveOrUpdateUser(@ModelAttribute("userForm") @Validated User user,
-                                   BindingResult result, Model model,
-                                   final RedirectAttributes redirectAttributes) {
+                                   BindingResult result, Model model, final RedirectAttributes redirectAttributes) {
         if (result.hasErrors()) {
             Logger.getLogger(UserController.class.getName()).log(Level.INFO, "Result has errors");
             return "users/userform";
         } else {
-            try {
-                userService.registerNewUser(user);
-                Logger.getLogger(UserController.class.getName()).log(Level.INFO, "Registering " + user.toString());
-                redirectAttributes.addFlashAttribute("msg", "User added successfully!");
-            } catch (DuplicateEmailException e) {
-                e.printStackTrace();
+            Long id = user.getId();
+            if(id == null || id < 1){
+                try {
+                    userService.registerNewUser(user);
+                    Logger.getLogger(UserController.class.getName()).log(Level.INFO, "Registering " + user.toString());
+                    redirectAttributes.addFlashAttribute("msg", "User added successfully!");
+                } catch (DuplicateEmailException e) {
+                    e.printStackTrace();
+                }
+            }else{
+                Logger.getLogger(UserController.class.getName()).log(Level.INFO, "Updating " + user.toString());
+                userService.updateUser(user);
             }
-            return "redirect:/index";
-
+            return "redirect:/users/listAll";
         }
-
     }
 
-    // show add user form
     @RequestMapping(value = "/users/add", method = RequestMethod.GET)
     public String showAddUserForm(Model model) {
         User user = new User();
@@ -73,51 +75,34 @@ public class UserController {
 
     }
 
-    /*
-        // show update form
-        @RequestMapping(value = "/users/{id}/update", method = RequestMethod.GET)
-        public String showUpdateUserForm(@PathVariable("id") int id, Model model) {
-
-            logger.debug("showUpdateUserForm() : {}", id);
-
-            User user = userService.findById(id);
-            model.addAttribute("userForm", user);
-
-            populateDefaultModel(model);
-
-            return "users/userform";
-
-        }
-
-        // delete user
-        @RequestMapping(value = "/users/{id}/delete", method = RequestMethod.POST)
-        public String deleteUser(@PathVariable("id") int id,
-                                 final RedirectAttributes redirectAttributes) {
-
-            logger.debug("deleteUser() : {}", id);
-
-            userService.delete(id);
-
-            redirectAttributes.addFlashAttribute("css", "success");
-            redirectAttributes.addFlashAttribute("msg", "User is deleted!");
-
-            return "redirect:/users";
-
-        }
-    */
-    // show user
-    @RequestMapping(value = "/users/{id}", method = RequestMethod.GET)
-    public String showUser(@PathVariable("id") int id, Model model) {
-
-
+    @RequestMapping(value = "/users/{id}/update", method = RequestMethod.GET)
+    public String showUpdateUserForm(@PathVariable("id") Long id, Model model) {
         User user = userService.findUserById(id);
-        Logger.getLogger(UserController.class.getName()).log(Level.INFO, "Requested user is " +user);
+        model.addAttribute("userForm", user);
+        return "users/userform";
+
+    }
+
+    @RequestMapping(value = "/users/{id}/delete", method = RequestMethod.POST)
+    public String deleteUser(@PathVariable("id") Long id,
+                             final RedirectAttributes redirectAttributes) {
+        User user = userService.findUserById(id);
+        userService.deleteUser(user);
+        redirectAttributes.addFlashAttribute("css", "success");
+        redirectAttributes.addFlashAttribute("msg", "User is deleted!");
+        return "redirect:/users/listAll";
+
+    }
+
+    @RequestMapping(value = "/users/{id}", method = RequestMethod.GET)
+    public String showUser(@PathVariable("id") Long id, Model model) {
+        User user = userService.findUserById(id);
+        Logger.getLogger(UserController.class.getName()).log(Level.INFO, "Requested user is " + user);
         if (user == null) {
             model.addAttribute("css", "danger");
             model.addAttribute("msg", "User not found");
         }
         model.addAttribute("user", user);
-
         return "users/show";
 
     }

@@ -55,7 +55,7 @@ public final class header_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\r\n");
       out.write("<head>\r\n");
-      out.write("<title>Spring MVC Form Handling Example</title>\r\n");
+      out.write("<title>A surveillance shop</title>\r\n");
       out.write("\r\n");
       if (_jspx_meth_spring_url_0(_jspx_page_context))
         return;
@@ -85,7 +85,7 @@ public final class header_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t<div class=\"navbar-header\">\r\n");
       out.write("\t\t\t<a class=\"navbar-brand\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${urlHome}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\">Spring MVC Form</a>\r\n");
+      out.write("\">Index CS 445 Project</a>\r\n");
       out.write("\t\t</div>\r\n");
       out.write("\t\t<div id=\"navbar\">\r\n");
       out.write("\t\t\t<ul class=\"nav navbar-nav navbar-right\">\r\n");

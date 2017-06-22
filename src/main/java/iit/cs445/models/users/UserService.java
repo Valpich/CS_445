@@ -20,7 +20,7 @@ public interface UserService {
         return null;
     }
 
-    default User findUserById(int id) {
+    default User findUserById(Long id) {
         return null;
     }
 

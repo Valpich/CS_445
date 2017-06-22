@@ -1,7 +1,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <head>
-<title>Spring MVC Form Handling Example</title>
+<title>A surveillance shop</title>
 
 <spring:url value="/static/css/hello.css" var="coreCss" />
 <spring:url value="/static/css/bootstrap.min.css"
@@ -16,7 +16,7 @@
 <nav class="navbar navbar-inverse ">
 	<div class="container">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="${urlHome}">Spring MVC Form</a>
+			<a class="navbar-brand" href="${urlHome}">Index CS 445 Project</a>
 		</div>
 		<div id="navbar">
 			<ul class="nav navbar-nav navbar-right">
