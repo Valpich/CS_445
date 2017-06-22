@@ -1,7 +1,11 @@
 package iit.cs445.models.users;
 
+import iit.cs445.controllers.UserController;
 import iit.cs445.exceptions.DuplicateEmailException;
 import org.springframework.stereotype.Service;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Service
 public class UserManager implements UserService {
@@ -30,11 +34,28 @@ public class UserManager implements UserService {
 
     @Override
     public User findUserByMail(String email) {
+        Logger.getLogger(UserManager.class.getName()).log(Level.INFO, "Find by email: " +email );
+
+        for(User user : new User().listAll()){
+            Boolean test = user.getEmail().toLowerCase().equals(email.toLowerCase());
+            if(test)return user;
+        }
+        return null;
+    }
+
+    @Override
+    public User findUserById(int id) {
+        Logger.getLogger(UserManager.class.getName()).log(Level.INFO, "Find by id: " +id );
+
+        for(User user : new User().listAll()){
+            Boolean test = user.getId() == id;
+            if(test)return user;
+        }
         return null;
     }
 
     @Override
     public Boolean authenticateUser(User user, String password) {
-        return null;
+        return user.getPassword().toLowerCase().equals(password.toLowerCase());
     }
 }

@@ -20,6 +20,10 @@ public interface UserService {
         return null;
     }
 
+    default User findUserById(int id) {
+        return null;
+    }
+
     default Boolean authenticateUser(User user, String password) {
         return false;
     }

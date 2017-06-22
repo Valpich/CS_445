@@ -106,11 +106,12 @@ public class UserController {
         }
     */
     // show user
-    @RequestMapping(value = "/users/{email}", method = RequestMethod.GET)
-    public String showUser(@PathVariable("email") String email, Model model) {
+    @RequestMapping(value = "/users/{id}", method = RequestMethod.GET)
+    public String showUser(@PathVariable("id") int id, Model model) {
 
 
-        User user = userService.findUserByMail(email);
+        User user = userService.findUserById(id);
+        Logger.getLogger(UserController.class.getName()).log(Level.INFO, "Requested user is " +user);
         if (user == null) {
             model.addAttribute("css", "danger");
             model.addAttribute("msg", "User not found");
