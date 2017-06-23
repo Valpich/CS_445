@@ -116,7 +116,7 @@ public class UserController {
                 session.setAttribute("user", user);
                 session.setAttribute("cart", new UserCart());
                 Logger.getLogger(UserController.class.getName()).log(Level.INFO, "User logged: " + user);
-                return "/";
+                return "redirect:/";
             }else{
                 Logger.getLogger(UserController.class.getName()).log(Level.INFO, "User not logged: " + user);
             }
