@@ -9,28 +9,32 @@ import javax.persistence.Table;
 @Table(name = "microphone")
 public class Microphone extends Accessory<Microphone> implements Installable, Repairable {
 
-    @Column(name = "description")
-    private String description;
-
     @Column(name = "battery")
     private Boolean battery;
 
     @Column(name = "microphone_type")
     private MicrophoneType microphoneType;
 
-    public String getDescription() {
-        return description;
+    public Boolean getBattery() {
+        return battery;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setBattery(Boolean battery) {
+        this.battery = battery;
+    }
+
+    public MicrophoneType getMicrophoneType() {
+        return microphoneType;
+    }
+
+    public void setMicrophoneType(MicrophoneType microphoneType) {
+        this.microphoneType = microphoneType;
     }
 
     @Override
     public String toString() {
         return "Microphone{" +
-                "description='" + description + '\'' +
-                ", battery=" + battery +
+                "battery=" + battery +
                 ", microphoneType=" + microphoneType +
                 "} " + super.toString();
     }
@@ -39,20 +43,19 @@ public class Microphone extends Accessory<Microphone> implements Installable, Re
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
 
         Microphone that = (Microphone) o;
 
-        if (description != null ? !description.equals(that.description) : that.description != null) return false;
         if (battery != null ? !battery.equals(that.battery) : that.battery != null) return false;
         return microphoneType == that.microphoneType;
     }
 
     @Override
     public int hashCode() {
-        int result = description != null ? description.hashCode() : 0;
+        int result = super.hashCode();
         result = 31 * result + (battery != null ? battery.hashCode() : 0);
         result = 31 * result + (microphoneType != null ? microphoneType.hashCode() : 0);
         return result;
     }
-
 }

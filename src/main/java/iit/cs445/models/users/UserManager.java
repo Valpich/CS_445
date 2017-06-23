@@ -1,6 +1,5 @@
 package iit.cs445.models.users;
 
-import iit.cs445.controllers.UserController;
 import iit.cs445.exceptions.DuplicateEmailException;
 import org.springframework.stereotype.Service;
 
@@ -34,21 +33,21 @@ public class UserManager implements UserService {
 
     @Override
     public User findUserByMail(String email) {
-        Logger.getLogger(UserManager.class.getName()).log(Level.INFO, "Find by email: " +email );
+        Logger.getLogger(UserManager.class.getName()).log(Level.INFO, "Find by email: " + email);
 
-        for(User user : new User().listAll()){
+        for (User user : new User().listAll()) {
             Boolean test = user.getEmail().toLowerCase().equals(email.toLowerCase());
-            if(test)return user;
+            if (test) return user;
         }
         return null;
     }
 
     @Override
     public User findUserById(Long id) {
-        Logger.getLogger(UserManager.class.getName()).log(Level.INFO, "Find by id: " +id );
-        for(User user : new User().listAll()){
+        Logger.getLogger(UserManager.class.getName()).log(Level.INFO, "Find by id: " + id);
+        for (User user : new User().listAll()) {
             Boolean test = user.getId().equals(id);
-            if(test)return user;
+            if (test) return user;
         }
         return null;
     }

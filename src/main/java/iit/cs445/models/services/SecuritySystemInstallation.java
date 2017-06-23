@@ -12,9 +12,6 @@ public class SecuritySystemInstallation extends Service<Long, SecuritySystemInst
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "description")
-    private String description;
-
     @Override
     public Long getId() {
         return id;
@@ -24,19 +21,10 @@ public class SecuritySystemInstallation extends Service<Long, SecuritySystemInst
         this.id = id;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     @Override
     public String toString() {
         return "SecuritySystemInstallation{" +
                 "id=" + id +
-                ", description='" + description + '\'' +
                 "} " + super.toString();
     }
 
@@ -44,18 +32,17 @@ public class SecuritySystemInstallation extends Service<Long, SecuritySystemInst
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
 
         SecuritySystemInstallation that = (SecuritySystemInstallation) o;
 
-        if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        return description != null ? description.equals(that.description) : that.description == null;
+        return id != null ? id.equals(that.id) : that.id == null;
     }
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (description != null ? description.hashCode() : 0);
+        int result = super.hashCode();
+        result = 31 * result + (id != null ? id.hashCode() : 0);
         return result;
     }
-
 }

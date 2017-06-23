@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserCart implements Serializable{
+public class UserCart implements Serializable {
 
     private List<Product> productList;
 
@@ -16,28 +16,28 @@ public class UserCart implements Serializable{
 
     private Integer listCount;
 
-    public UserCart(){
+    public UserCart() {
         productList = new ArrayList<>();
         serviceList = new ArrayList<>();
         listCount = 0;
     }
 
-    public void addProduct(Product product){
+    public void add(Product product) {
         productList.add(product);
         listCount++;
     }
 
-    public void removeProduct(Product product){
+    public void remove(Product product) {
         productList.remove(product);
         listCount--;
     }
 
-    public void addService(Service service){
+    public void add(Service service) {
         serviceList.add(service);
         listCount++;
     }
 
-    public void removeProduct(Service service){
+    public void remove(Service service) {
         serviceList.remove(service);
         listCount--;
     }

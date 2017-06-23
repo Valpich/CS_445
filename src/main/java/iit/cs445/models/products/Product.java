@@ -16,11 +16,14 @@ public abstract class Product<Type> extends BaseEntity<Long, Type> {
     private Long id;
 
     @Column(name = "price")
-    private Integer price;
+    private Float price;
 
     @Enumerated
     @Column(name = "order_type")
     private OrderType orderType;
+
+    @Column(name = "description")
+    private String description;
 
     @Override
     public Long getId() {
@@ -31,11 +34,11 @@ public abstract class Product<Type> extends BaseEntity<Long, Type> {
         this.id = id;
     }
 
-    public Integer getPrice() {
+    public Float getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(Float price) {
         this.price = price;
     }
 
@@ -47,12 +50,21 @@ public abstract class Product<Type> extends BaseEntity<Long, Type> {
         this.orderType = orderType;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
                 "id=" + id +
                 ", price=" + price +
                 ", orderType=" + orderType +
+                ", description='" + description + '\'' +
                 "} " + super.toString();
     }
 
@@ -60,21 +72,24 @@ public abstract class Product<Type> extends BaseEntity<Long, Type> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
 
-        Product product = (Product) o;
+        Product<?> product = (Product<?>) o;
 
         if (id != null ? !id.equals(product.id) : product.id != null) return false;
         if (price != null ? !price.equals(product.price) : product.price != null) return false;
-        return orderType == product.orderType;
+        if (orderType != product.orderType) return false;
+        return description != null ? description.equals(product.description) : product.description == null;
     }
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
+        int result = super.hashCode();
+        result = 31 * result + (id != null ? id.hashCode() : 0);
         result = 31 * result + (price != null ? price.hashCode() : 0);
         result = 31 * result + (orderType != null ? orderType.hashCode() : 0);
+        result = 31 * result + (description != null ? description.hashCode() : 0);
         return result;
     }
-
 }
 

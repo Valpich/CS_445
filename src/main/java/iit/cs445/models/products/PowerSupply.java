@@ -9,28 +9,32 @@ import javax.persistence.Table;
 @Table(name = "power_supply")
 public class PowerSupply extends Accessory<PowerSupply> implements Installable, Repairable {
 
-    @Column(name = "description")
-    private String description;
-
     @Column(name = "maximum_output")
     private String maximum_output;
 
     @Column(name = "voltage")
     private Float voltage;
 
-    public String getDescription() {
-        return description;
+    public String getMaximum_output() {
+        return maximum_output;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setMaximum_output(String maximum_output) {
+        this.maximum_output = maximum_output;
+    }
+
+    public Float getVoltage() {
+        return voltage;
+    }
+
+    public void setVoltage(Float voltage) {
+        this.voltage = voltage;
     }
 
     @Override
     public String toString() {
         return "PowerSupply{" +
-                "description='" + description + '\'' +
-                ", maximum_output='" + maximum_output + '\'' +
+                "maximum_output='" + maximum_output + '\'' +
                 ", voltage=" + voltage +
                 "} " + super.toString();
     }
@@ -39,10 +43,10 @@ public class PowerSupply extends Accessory<PowerSupply> implements Installable, 
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
 
         PowerSupply that = (PowerSupply) o;
 
-        if (description != null ? !description.equals(that.description) : that.description != null) return false;
         if (maximum_output != null ? !maximum_output.equals(that.maximum_output) : that.maximum_output != null)
             return false;
         return voltage != null ? voltage.equals(that.voltage) : that.voltage == null;
@@ -50,10 +54,9 @@ public class PowerSupply extends Accessory<PowerSupply> implements Installable, 
 
     @Override
     public int hashCode() {
-        int result = description != null ? description.hashCode() : 0;
+        int result = super.hashCode();
         result = 31 * result + (maximum_output != null ? maximum_output.hashCode() : 0);
         result = 31 * result + (voltage != null ? voltage.hashCode() : 0);
         return result;
     }
-
 }

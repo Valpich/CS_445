@@ -9,22 +9,11 @@ import javax.persistence.Table;
 @Table(name = "lens")
 public class Lens extends Accessory<Lens> implements Installable, Repairable {
 
-    @Column(name = "description")
-    private String description;
-
     @Column(name = "focal")
     private Float focal;
 
     @Column(name = "magnification")
     private Float magnification;
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
     public Float getFocal() {
         return focal;
@@ -45,8 +34,7 @@ public class Lens extends Accessory<Lens> implements Installable, Repairable {
     @Override
     public String toString() {
         return "Lens{" +
-                "description='" + description + '\'' +
-                ", focal=" + focal +
+                "focal=" + focal +
                 ", magnification=" + magnification +
                 "} " + super.toString();
     }
@@ -55,20 +43,19 @@ public class Lens extends Accessory<Lens> implements Installable, Repairable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
 
         Lens lens = (Lens) o;
 
-        if (description != null ? !description.equals(lens.description) : lens.description != null) return false;
         if (focal != null ? !focal.equals(lens.focal) : lens.focal != null) return false;
         return magnification != null ? magnification.equals(lens.magnification) : lens.magnification == null;
     }
 
     @Override
     public int hashCode() {
-        int result = description != null ? description.hashCode() : 0;
+        int result = super.hashCode();
         result = 31 * result + (focal != null ? focal.hashCode() : 0);
         result = 31 * result + (magnification != null ? magnification.hashCode() : 0);
         return result;
     }
-
 }

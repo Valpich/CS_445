@@ -1,6 +1,5 @@
 package iit.cs445.models;
 
-import iit.cs445.controllers.UserController;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;

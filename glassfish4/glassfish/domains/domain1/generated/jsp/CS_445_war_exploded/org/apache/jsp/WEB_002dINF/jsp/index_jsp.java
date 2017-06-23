@@ -69,9 +69,6 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("  <button id=\"hide\">Hide</button>\n");
       out.write("  <button id=\"show\">Show</button>\n");
-      out.write("  ");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${controller}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\n");
       out.write("  </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

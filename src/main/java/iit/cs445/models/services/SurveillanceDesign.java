@@ -10,9 +10,6 @@ public class SurveillanceDesign extends Service<Long, SurveillanceDesign> {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "description")
-    private String description;
-
     @Override
     public Long getId() {
         return id;
@@ -22,19 +19,10 @@ public class SurveillanceDesign extends Service<Long, SurveillanceDesign> {
         this.id = id;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     @Override
     public String toString() {
         return "SurveillanceDesign{" +
                 "id=" + id +
-                ", description='" + description + '\'' +
                 "} " + super.toString();
     }
 
@@ -46,16 +34,13 @@ public class SurveillanceDesign extends Service<Long, SurveillanceDesign> {
 
         SurveillanceDesign that = (SurveillanceDesign) o;
 
-        if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        return description != null ? description.equals(that.description) : that.description == null;
+        return id != null ? id.equals(that.id) : that.id == null;
     }
 
     @Override
     public int hashCode() {
         int result = super.hashCode();
         result = 31 * result + (id != null ? id.hashCode() : 0);
-        result = 31 * result + (description != null ? description.hashCode() : 0);
         return result;
     }
-
 }
