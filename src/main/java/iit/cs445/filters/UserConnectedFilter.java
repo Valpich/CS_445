@@ -1,6 +1,7 @@
 package iit.cs445.filters;
 
 import iit.cs445.controllers.UserController;
+import iit.cs445.models.users.User;
 import org.springframework.web.util.UrlPathHelper;
 
 import java.io.IOException;
@@ -35,7 +36,8 @@ public class UserConnectedFilter implements Filter {
         String path = new UrlPathHelper().getPathWithinApplication((HttpServletRequest)request);
         String pathTwo = new UrlPathHelper().getContextPath((HttpServletRequest)request);
         Logger.getLogger(UserConnectedFilter.class.getName()).log(Level.INFO, "Path is: " +path);
-        if (session.getAttribute("user")!= null) {
+        User user = (User) session.getAttribute("user");
+        if (user!= null) {
             Logger.getLogger(UserConnectedFilter.class.getName()).log(Level.INFO, "User is: " +session.getAttribute("user"));
             try {
                 chain.doFilter(request, response);
@@ -43,7 +45,7 @@ public class UserConnectedFilter implements Filter {
                 ((HttpServletResponse)response).sendRedirect("/WEB-INF/jsp/index.jsp");
             }
         } else {
-            if(path.equals("") || path.equals("/") || path.equals("/index") || path.equals("/login")){
+            if(path.equals("") || path.equals("/") || path.equals("/index") || path.equals("/login")|| path.contains("/static")){
                     Logger.getLogger(UserConnectedFilter.class.getName()).log(Level.INFO, "Valid path is: " +path);
                     chain.doFilter(request, response);
             } else {

@@ -121,7 +121,11 @@ public class UserController {
                 Logger.getLogger(UserController.class.getName()).log(Level.INFO, "User not logged: " + user);
             }
         }
-        return "users/login";
+        if(session.getAttribute("user") == null){
+            return "users/login";
+        }else{
+            return "redirect:/";
+        }
     }
 
     @RequestMapping("/logout")
