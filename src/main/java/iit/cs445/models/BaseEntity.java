@@ -56,6 +56,12 @@ public abstract class BaseEntity<ID, Type> {
         this.version = version;
     }
 
+    public BaseEntity() {
+        Date now = new Date();
+        this.creationTime = now;
+        this.modificationTime = now;
+    }
+
     @PrePersist
     public void prePersist() {
         Date now = new Date();
