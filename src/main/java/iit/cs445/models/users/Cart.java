@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserCart implements Serializable {
+public class Cart implements Serializable {
 
     private List<Product> productList;
 
@@ -16,7 +16,7 @@ public class UserCart implements Serializable {
 
     private Integer listCount;
 
-    public UserCart() {
+    public Cart() {
         productList = new ArrayList<>();
         serviceList = new ArrayList<>();
         listCount = 0;

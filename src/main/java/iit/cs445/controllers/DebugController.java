@@ -7,13 +7,12 @@ import iit.cs445.models.services.SurveillanceDesign;
 import iit.cs445.models.services.SurveillanceSystemRepair;
 import iit.cs445.models.users.Address;
 import iit.cs445.models.users.User;
-import iit.cs445.models.users.UserCart;
+import iit.cs445.models.users.Cart;
 import iit.cs445.models.users.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
@@ -46,7 +45,7 @@ public class DebugController {
         if(user == null)
             populateUsers();
         request.getSession().setAttribute("user", user);
-        populateCart((UserCart)request.getSession().getAttribute("cart"));
+        populateCart((Cart)request.getSession().getAttribute("cart"));
         return "redirect:/";
     }
 
@@ -206,7 +205,7 @@ public class DebugController {
         user.saveNew();
     }
 
-    private void populateCart(UserCart cart){
+    private void populateCart(Cart cart){
         Cable cable = new Cable();
         cable.setPrice(getRandom());
         cable.setLength(getRandom());

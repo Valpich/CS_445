@@ -2,7 +2,7 @@ package iit.cs445.controllers;
 
 import iit.cs445.exceptions.DuplicateEmailException;
 import iit.cs445.models.users.User;
-import iit.cs445.models.users.UserCart;
+import iit.cs445.models.users.Cart;
 import iit.cs445.models.users.UserService;
 import iit.cs445.validators.UserFormValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -114,7 +114,7 @@ public class UserController {
             User user = userService.findUserByMail(email.get());
             if (user != null && userService.authenticateUser(user, password.get())) {
                 session.setAttribute("user", user);
-                session.setAttribute("cart", new UserCart());
+                session.setAttribute("cart", new Cart());
                 Logger.getLogger(UserController.class.getName()).log(Level.INFO, "User logged: " + user);
                 return "redirect:/";
             } else {

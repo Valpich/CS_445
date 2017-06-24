@@ -2,7 +2,7 @@ package iit.cs445.controllers;
 
 import iit.cs445.models.products.Cable;
 import iit.cs445.models.services.CustomService;
-import iit.cs445.models.users.UserCart;
+import iit.cs445.models.users.Cart;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,7 +19,7 @@ public class IndexController {
         ModelAndView modelAndView = new ModelAndView("index");
         modelAndView.addObject("controller", new String("Coucou toi!"));
         HttpSession session = request.getSession();
-        UserCart cart = (UserCart) session.getAttribute("cart");
+        Cart cart = (Cart) session.getAttribute("cart");
         if (cart != null) {
             Cable cable = new Cable();
             cable.setId(new Long(2));
