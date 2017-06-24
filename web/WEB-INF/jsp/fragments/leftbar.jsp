@@ -17,7 +17,7 @@
                     <span> User </span>
                     </a>
                     <ul>
-                        <li ><a href="${pageContext.request.contextPath}/logout"> Details </a></li>
+                        <li ><a href="${pageContext.request.contextPath}/users/${sessionScope.user.id}"> Details </a></li>
                     </ul>
                 </li>
                 <li >

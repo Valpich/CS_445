@@ -8833,3 +8833,375 @@
 [2017-06-24T18:13:51.045-0500] [glassfish 4.1] [INFO] [] [iit.cs445.filters.UserConnectedFilter] [tid: _ThreadID=30 _ThreadName=http-listener-1(2)] [timeMillis: 1498346031045] [levelValue: 800] [[
   User is: User{id=1, email='antoinebaiseaude@danslepetit.com', firstName='Antoi', lastName='Regnier', password='qaws1234', address=[], orders=[]} BaseEntity{creationTime=2017-06-23 16:24:17.0, modificationTime=2017-06-23 16:24:17.0, version=0}]]
 
+[2017-06-24T18:14:44.131-0500] [glassfish 4.1] [INFO] [] [iit.cs445.filters.UserConnectedFilter] [tid: _ThreadID=31 _ThreadName=http-listener-1(3)] [timeMillis: 1498346084131] [levelValue: 800] [[
+  Path is: /users/listAll]]
+
+[2017-06-24T18:14:44.131-0500] [glassfish 4.1] [INFO] [] [iit.cs445.filters.UserConnectedFilter] [tid: _ThreadID=31 _ThreadName=http-listener-1(3)] [timeMillis: 1498346084131] [levelValue: 800] [[
+  User is: User{id=1, email='antoinebaiseaude@danslepetit.com', firstName='Antoi', lastName='Regnier', password='qaws1234', address=[], orders=[]} BaseEntity{creationTime=2017-06-23 16:24:17.0, modificationTime=2017-06-23 16:24:17.0, version=0}]]
+
+[2017-06-24T18:14:44.132-0500] [glassfish 4.1] [INFO] [] [iit.cs445.models.users.User] [tid: _ThreadID=31 _ThreadName=http-listener-1(3)] [timeMillis: 1498346084132] [levelValue: 800] [[
+  Doing list all query: select className from User className]]
+
+[2017-06-24T18:14:44.132-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=31 _ThreadName=Thread-8] [timeMillis: 1498346084132] [levelValue: 800] [[
+  select className from User className]]
+
+[2017-06-24T18:14:44.132-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=31 _ThreadName=Thread-8] [timeMillis: 1498346084132] [levelValue: 800] [[
+  Hibernate: select user0_.`user_id` as user_id1_26_, user0_.`creation_time` as creation2_26_, user0_.`modification_time` as modifica3_26_, user0_.`version` as version4_26_, user0_.`email` as email5_26_, user0_.`first_name` as first_na6_26_, user0_.`last_name` as last_nam7_26_, user0_.`password` as password8_26_ from `user_account` user0_]]
+
+[2017-06-24T18:14:44.137-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=31 _ThreadName=Thread-8] [timeMillis: 1498346084137] [levelValue: 800] [[
+  Hibernate: select address0_.`address_ids` as address13_4_0_, address0_.`id` as id1_4_0_, address0_.`id` as id1_4_1_, address0_.`creation_time` as creation2_4_1_, address0_.`modification_time` as modifica3_4_1_, address0_.`version` as version4_4_1_, address0_.`city` as city5_4_1_, address0_.`country` as country6_4_1_, address0_.`first_name` as first_na7_4_1_, address0_.`last_name` as last_nam8_4_1_, address0_.`phone_number` as phone_nu9_4_1_, address0_.`state` as state10_4_1_, address0_.`street_address` as street_11_4_1_, address0_.`zip_code` as zip_cod12_4_1_ from `addresses` address0_ where address0_.`address_ids`=?]]
+
+[2017-06-24T18:14:44.137-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=31 _ThreadName=Thread-8] [timeMillis: 1498346084137] [levelValue: 800] [[
+  Hibernate: select orders0_.`order_id` as order_id7_19_0_, orders0_.`id` as id1_19_0_, orders0_.`id` as id1_19_1_, orders0_.`creation_time` as creation2_19_1_, orders0_.`modification_time` as modifica3_19_1_, orders0_.`version` as version4_19_1_, orders0_.`order_type` as order_ty5_19_1_, orders0_.`status` as status6_19_1_, address1_.`id` as id1_4_2_, address1_.`creation_time` as creation2_4_2_, address1_.`modification_time` as modifica3_4_2_, address1_.`version` as version4_4_2_, address1_.`city` as city5_4_2_, address1_.`country` as country6_4_2_, address1_.`first_name` as first_na7_4_2_, address1_.`last_name` as last_nam8_4_2_, address1_.`phone_number` as phone_nu9_4_2_, address1_.`state` as state10_4_2_, address1_.`street_address` as street_11_4_2_, address1_.`zip_code` as zip_cod12_4_2_ from `order` orders0_ left outer join `addresses` address1_ on orders0_.`id`=address1_.`id` where orders0_.`order_id`=?]]
+
+[2017-06-24T18:14:44.138-0500] [glassfish 4.1] [INFO] [] [iit.cs445.models.users.User] [tid: _ThreadID=31 _ThreadName=http-listener-1(3)] [timeMillis: 1498346084138] [levelValue: 800] [[
+  User{id=1, email='antoinebaiseaude@danslepetit.com', firstName='Antoi', lastName='Regnier', password='qaws1234', address=[], orders=[]} BaseEntity{creationTime=2017-06-23 16:24:17.0, modificationTime=2017-06-23 16:24:17.0, version=0}]]
+
+[2017-06-24T18:14:44.138-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=31 _ThreadName=Thread-8] [timeMillis: 1498346084138] [levelValue: 800] [[
+  Hibernate: select address0_.`address_ids` as address13_4_0_, address0_.`id` as id1_4_0_, address0_.`id` as id1_4_1_, address0_.`creation_time` as creation2_4_1_, address0_.`modification_time` as modifica3_4_1_, address0_.`version` as version4_4_1_, address0_.`city` as city5_4_1_, address0_.`country` as country6_4_1_, address0_.`first_name` as first_na7_4_1_, address0_.`last_name` as last_nam8_4_1_, address0_.`phone_number` as phone_nu9_4_1_, address0_.`state` as state10_4_1_, address0_.`street_address` as street_11_4_1_, address0_.`zip_code` as zip_cod12_4_1_ from `addresses` address0_ where address0_.`address_ids`=?]]
+
+[2017-06-24T18:14:44.140-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=31 _ThreadName=Thread-8] [timeMillis: 1498346084140] [levelValue: 800] [[
+  Hibernate: select orders0_.`order_id` as order_id7_19_0_, orders0_.`id` as id1_19_0_, orders0_.`id` as id1_19_1_, orders0_.`creation_time` as creation2_19_1_, orders0_.`modification_time` as modifica3_19_1_, orders0_.`version` as version4_19_1_, orders0_.`order_type` as order_ty5_19_1_, orders0_.`status` as status6_19_1_, address1_.`id` as id1_4_2_, address1_.`creation_time` as creation2_4_2_, address1_.`modification_time` as modifica3_4_2_, address1_.`version` as version4_4_2_, address1_.`city` as city5_4_2_, address1_.`country` as country6_4_2_, address1_.`first_name` as first_na7_4_2_, address1_.`last_name` as last_nam8_4_2_, address1_.`phone_number` as phone_nu9_4_2_, address1_.`state` as state10_4_2_, address1_.`street_address` as street_11_4_2_, address1_.`zip_code` as zip_cod12_4_2_ from `order` orders0_ left outer join `addresses` address1_ on orders0_.`id`=address1_.`id` where orders0_.`order_id`=?]]
+
+[2017-06-24T18:14:44.141-0500] [glassfish 4.1] [INFO] [] [iit.cs445.models.users.User] [tid: _ThreadID=31 _ThreadName=http-listener-1(3)] [timeMillis: 1498346084141] [levelValue: 800] [[
+  User{id=50, email='antoine@regnier.com', firstName='Antoine', lastName='Regnier', password='qaws1234', address=[Address{id=51, phoneNumber='(123) 456 - 7890', streetAddress='1234, Fullerton Ave', firstName='Antoine', lastName='Regnier', zipCode='60614', country='USA', city='Chicago', state='Illinois'} BaseEntity{creationTime=2017-06-24 17:48:47.0, modificationTime=2017-06-24 17:48:47.0, version=0}], orders=[]} BaseEntity{creationTime=2017-06-24 17:48:47.0, modificationTime=2017-06-24 17:48:47.0, version=0}]]
+
+[2017-06-24T18:14:44.323-0500] [glassfish 4.1] [INFO] [] [iit.cs445.filters.UserConnectedFilter] [tid: _ThreadID=29 _ThreadName=http-listener-1(1)] [timeMillis: 1498346084323] [levelValue: 800] [[
+  Path is: /static/css/hello.css]]
+
+[2017-06-24T18:14:44.324-0500] [glassfish 4.1] [INFO] [] [iit.cs445.filters.UserConnectedFilter] [tid: _ThreadID=29 _ThreadName=http-listener-1(1)] [timeMillis: 1498346084324] [levelValue: 800] [[
+  User is: User{id=1, email='antoinebaiseaude@danslepetit.com', firstName='Antoi', lastName='Regnier', password='qaws1234', address=[], orders=[]} BaseEntity{creationTime=2017-06-23 16:24:17.0, modificationTime=2017-06-23 16:24:17.0, version=0}]]
+
+[2017-06-24T18:14:44.323-0500] [glassfish 4.1] [INFO] [] [iit.cs445.filters.UserConnectedFilter] [tid: _ThreadID=33 _ThreadName=http-listener-1(5)] [timeMillis: 1498346084323] [levelValue: 800] [[
+  Path is: /static/css/bootstrap.min.css]]
+
+[2017-06-24T18:14:44.325-0500] [glassfish 4.1] [INFO] [] [iit.cs445.filters.UserConnectedFilter] [tid: _ThreadID=33 _ThreadName=http-listener-1(5)] [timeMillis: 1498346084325] [levelValue: 800] [[
+  User is: User{id=1, email='antoinebaiseaude@danslepetit.com', firstName='Antoi', lastName='Regnier', password='qaws1234', address=[], orders=[]} BaseEntity{creationTime=2017-06-23 16:24:17.0, modificationTime=2017-06-23 16:24:17.0, version=0}]]
+
+[2017-06-24T18:14:44.327-0500] [glassfish 4.1] [INFO] [] [iit.cs445.filters.UserConnectedFilter] [tid: _ThreadID=30 _ThreadName=http-listener-1(2)] [timeMillis: 1498346084327] [levelValue: 800] [[
+  Path is: /static/js/bootstrap.min.js]]
+
+[2017-06-24T18:14:44.327-0500] [glassfish 4.1] [INFO] [] [iit.cs445.filters.UserConnectedFilter] [tid: _ThreadID=30 _ThreadName=http-listener-1(2)] [timeMillis: 1498346084327] [levelValue: 800] [[
+  User is: User{id=1, email='antoinebaiseaude@danslepetit.com', firstName='Antoi', lastName='Regnier', password='qaws1234', address=[], orders=[]} BaseEntity{creationTime=2017-06-23 16:24:17.0, modificationTime=2017-06-23 16:24:17.0, version=0}]]
+
+[2017-06-24T18:14:44.324-0500] [glassfish 4.1] [INFO] [] [iit.cs445.filters.UserConnectedFilter] [tid: _ThreadID=32 _ThreadName=http-listener-1(4)] [timeMillis: 1498346084324] [levelValue: 800] [[
+  Path is: /static/js/hello.js]]
+
+[2017-06-24T18:14:44.327-0500] [glassfish 4.1] [INFO] [] [iit.cs445.filters.UserConnectedFilter] [tid: _ThreadID=32 _ThreadName=http-listener-1(4)] [timeMillis: 1498346084327] [levelValue: 800] [[
+  User is: User{id=1, email='antoinebaiseaude@danslepetit.com', firstName='Antoi', lastName='Regnier', password='qaws1234', address=[], orders=[]} BaseEntity{creationTime=2017-06-23 16:24:17.0, modificationTime=2017-06-23 16:24:17.0, version=0}]]
+
+[2017-06-24T18:14:52.107-0500] [glassfish 4.1] [INFO] [] [iit.cs445.filters.UserConnectedFilter] [tid: _ThreadID=31 _ThreadName=http-listener-1(3)] [timeMillis: 1498346092107] [levelValue: 800] [[
+  Path is: /populate/cart]]
+
+[2017-06-24T18:14:52.107-0500] [glassfish 4.1] [INFO] [] [iit.cs445.filters.UserConnectedFilter] [tid: _ThreadID=31 _ThreadName=http-listener-1(3)] [timeMillis: 1498346092107] [levelValue: 800] [[
+  User is: User{id=1, email='antoinebaiseaude@danslepetit.com', firstName='Antoi', lastName='Regnier', password='qaws1234', address=[], orders=[]} BaseEntity{creationTime=2017-06-23 16:24:17.0, modificationTime=2017-06-23 16:24:17.0, version=0}]]
+
+[2017-06-24T18:14:52.107-0500] [glassfish 4.1] [INFO] [] [iit.cs445.models.users.UserManager] [tid: _ThreadID=31 _ThreadName=http-listener-1(3)] [timeMillis: 1498346092107] [levelValue: 800] [[
+  Find by email: antoine@regnier.com]]
+
+[2017-06-24T18:14:52.108-0500] [glassfish 4.1] [INFO] [] [iit.cs445.models.users.User] [tid: _ThreadID=31 _ThreadName=http-listener-1(3)] [timeMillis: 1498346092108] [levelValue: 800] [[
+  Doing list all query: select className from User className]]
+
+[2017-06-24T18:14:52.108-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=31 _ThreadName=Thread-8] [timeMillis: 1498346092108] [levelValue: 800] [[
+  select className from User className]]
+
+[2017-06-24T18:14:52.108-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=31 _ThreadName=Thread-8] [timeMillis: 1498346092108] [levelValue: 800] [[
+  Hibernate: select user0_.`user_id` as user_id1_26_, user0_.`creation_time` as creation2_26_, user0_.`modification_time` as modifica3_26_, user0_.`version` as version4_26_, user0_.`email` as email5_26_, user0_.`first_name` as first_na6_26_, user0_.`last_name` as last_nam7_26_, user0_.`password` as password8_26_ from `user_account` user0_]]
+
+[2017-06-24T18:14:52.113-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=31 _ThreadName=Thread-8] [timeMillis: 1498346092113] [levelValue: 800] [[
+  Hibernate: select address0_.`address_ids` as address13_4_0_, address0_.`id` as id1_4_0_, address0_.`id` as id1_4_1_, address0_.`creation_time` as creation2_4_1_, address0_.`modification_time` as modifica3_4_1_, address0_.`version` as version4_4_1_, address0_.`city` as city5_4_1_, address0_.`country` as country6_4_1_, address0_.`first_name` as first_na7_4_1_, address0_.`last_name` as last_nam8_4_1_, address0_.`phone_number` as phone_nu9_4_1_, address0_.`state` as state10_4_1_, address0_.`street_address` as street_11_4_1_, address0_.`zip_code` as zip_cod12_4_1_ from `addresses` address0_ where address0_.`address_ids`=?]]
+
+[2017-06-24T18:14:52.114-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=31 _ThreadName=Thread-8] [timeMillis: 1498346092114] [levelValue: 800] [[
+  Hibernate: select orders0_.`order_id` as order_id7_19_0_, orders0_.`id` as id1_19_0_, orders0_.`id` as id1_19_1_, orders0_.`creation_time` as creation2_19_1_, orders0_.`modification_time` as modifica3_19_1_, orders0_.`version` as version4_19_1_, orders0_.`order_type` as order_ty5_19_1_, orders0_.`status` as status6_19_1_, address1_.`id` as id1_4_2_, address1_.`creation_time` as creation2_4_2_, address1_.`modification_time` as modifica3_4_2_, address1_.`version` as version4_4_2_, address1_.`city` as city5_4_2_, address1_.`country` as country6_4_2_, address1_.`first_name` as first_na7_4_2_, address1_.`last_name` as last_nam8_4_2_, address1_.`phone_number` as phone_nu9_4_2_, address1_.`state` as state10_4_2_, address1_.`street_address` as street_11_4_2_, address1_.`zip_code` as zip_cod12_4_2_ from `order` orders0_ left outer join `addresses` address1_ on orders0_.`id`=address1_.`id` where orders0_.`order_id`=?]]
+
+[2017-06-24T18:14:52.114-0500] [glassfish 4.1] [INFO] [] [iit.cs445.models.users.User] [tid: _ThreadID=31 _ThreadName=http-listener-1(3)] [timeMillis: 1498346092114] [levelValue: 800] [[
+  User{id=1, email='antoinebaiseaude@danslepetit.com', firstName='Antoi', lastName='Regnier', password='qaws1234', address=[], orders=[]} BaseEntity{creationTime=2017-06-23 16:24:17.0, modificationTime=2017-06-23 16:24:17.0, version=0}]]
+
+[2017-06-24T18:14:52.114-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=31 _ThreadName=Thread-8] [timeMillis: 1498346092114] [levelValue: 800] [[
+  Hibernate: select address0_.`address_ids` as address13_4_0_, address0_.`id` as id1_4_0_, address0_.`id` as id1_4_1_, address0_.`creation_time` as creation2_4_1_, address0_.`modification_time` as modifica3_4_1_, address0_.`version` as version4_4_1_, address0_.`city` as city5_4_1_, address0_.`country` as country6_4_1_, address0_.`first_name` as first_na7_4_1_, address0_.`last_name` as last_nam8_4_1_, address0_.`phone_number` as phone_nu9_4_1_, address0_.`state` as state10_4_1_, address0_.`street_address` as street_11_4_1_, address0_.`zip_code` as zip_cod12_4_1_ from `addresses` address0_ where address0_.`address_ids`=?]]
+
+[2017-06-24T18:14:52.115-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=31 _ThreadName=Thread-8] [timeMillis: 1498346092115] [levelValue: 800] [[
+  Hibernate: select orders0_.`order_id` as order_id7_19_0_, orders0_.`id` as id1_19_0_, orders0_.`id` as id1_19_1_, orders0_.`creation_time` as creation2_19_1_, orders0_.`modification_time` as modifica3_19_1_, orders0_.`version` as version4_19_1_, orders0_.`order_type` as order_ty5_19_1_, orders0_.`status` as status6_19_1_, address1_.`id` as id1_4_2_, address1_.`creation_time` as creation2_4_2_, address1_.`modification_time` as modifica3_4_2_, address1_.`version` as version4_4_2_, address1_.`city` as city5_4_2_, address1_.`country` as country6_4_2_, address1_.`first_name` as first_na7_4_2_, address1_.`last_name` as last_nam8_4_2_, address1_.`phone_number` as phone_nu9_4_2_, address1_.`state` as state10_4_2_, address1_.`street_address` as street_11_4_2_, address1_.`zip_code` as zip_cod12_4_2_ from `order` orders0_ left outer join `addresses` address1_ on orders0_.`id`=address1_.`id` where orders0_.`order_id`=?]]
+
+[2017-06-24T18:14:52.116-0500] [glassfish 4.1] [INFO] [] [iit.cs445.models.users.User] [tid: _ThreadID=31 _ThreadName=http-listener-1(3)] [timeMillis: 1498346092116] [levelValue: 800] [[
+  User{id=50, email='antoine@regnier.com', firstName='Antoine', lastName='Regnier', password='qaws1234', address=[Address{id=51, phoneNumber='(123) 456 - 7890', streetAddress='1234, Fullerton Ave', firstName='Antoine', lastName='Regnier', zipCode='60614', country='USA', city='Chicago', state='Illinois'} BaseEntity{creationTime=2017-06-24 17:48:47.0, modificationTime=2017-06-24 17:48:47.0, version=0}], orders=[]} BaseEntity{creationTime=2017-06-24 17:48:47.0, modificationTime=2017-06-24 17:48:47.0, version=0}]]
+
+[2017-06-24T18:14:52.121-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=31 _ThreadName=Thread-8] [timeMillis: 1498346092121] [levelValue: 800] [[
+  Hibernate: select `next_val` as id_val from `hibernate_sequence` for update]]
+
+[2017-06-24T18:14:52.122-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=31 _ThreadName=Thread-8] [timeMillis: 1498346092122] [levelValue: 800] [[
+  Hibernate: update `hibernate_sequence` set `next_val`= ? where `next_val`=?]]
+
+[2017-06-24T18:14:52.123-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=31 _ThreadName=Thread-8] [timeMillis: 1498346092123] [levelValue: 800] [[
+  Hibernate: insert into `product` (`creation_time`, `modification_time`, `version`, `description`, `order_type`, `price`, `product_id`) values (?, ?, ?, ?, ?, ?, ?)]]
+
+[2017-06-24T18:14:52.123-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=31 _ThreadName=Thread-8] [timeMillis: 1498346092123] [levelValue: 800] [[
+  Hibernate: insert into `cable` (`length`, `product_id`) values (?, ?)]]
+
+[2017-06-24T18:14:52.129-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=31 _ThreadName=Thread-8] [timeMillis: 1498346092129] [levelValue: 800] [[
+  Hibernate: select `next_val` as id_val from `hibernate_sequence` for update]]
+
+[2017-06-24T18:14:52.130-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=31 _ThreadName=Thread-8] [timeMillis: 1498346092130] [levelValue: 800] [[
+  Hibernate: update `hibernate_sequence` set `next_val`= ? where `next_val`=?]]
+
+[2017-06-24T18:14:52.131-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=31 _ThreadName=Thread-8] [timeMillis: 1498346092131] [levelValue: 800] [[
+  Hibernate: insert into `other_service` (`creation_time`, `modification_time`, `version`, `description`, `price`, `id`) values (?, ?, ?, ?, ?, ?)]]
+
+[2017-06-24T18:14:52.136-0500] [glassfish 4.1] [INFO] [] [iit.cs445.filters.UserConnectedFilter] [tid: _ThreadID=33 _ThreadName=http-listener-1(5)] [timeMillis: 1498346092136] [levelValue: 800] [[
+  Path is: /]]
+
+[2017-06-24T18:14:52.137-0500] [glassfish 4.1] [INFO] [] [iit.cs445.filters.UserConnectedFilter] [tid: _ThreadID=33 _ThreadName=http-listener-1(5)] [timeMillis: 1498346092137] [levelValue: 800] [[
+  User is: User{id=50, email='antoine@regnier.com', firstName='Antoine', lastName='Regnier', password='qaws1234', address=[Address{id=51, phoneNumber='(123) 456 - 7890', streetAddress='1234, Fullerton Ave', firstName='Antoine', lastName='Regnier', zipCode='60614', country='USA', city='Chicago', state='Illinois'} BaseEntity{creationTime=2017-06-24 17:48:47.0, modificationTime=2017-06-24 17:48:47.0, version=0}], orders=[]} BaseEntity{creationTime=2017-06-24 17:48:47.0, modificationTime=2017-06-24 17:48:47.0, version=0}]]
+
+[2017-06-24T18:14:54.933-0500] [glassfish 4.1] [INFO] [] [iit.cs445.filters.UserConnectedFilter] [tid: _ThreadID=29 _ThreadName=http-listener-1(1)] [timeMillis: 1498346094933] [levelValue: 800] [[
+  Path is: /logout]]
+
+[2017-06-24T18:14:54.933-0500] [glassfish 4.1] [INFO] [] [iit.cs445.filters.UserConnectedFilter] [tid: _ThreadID=29 _ThreadName=http-listener-1(1)] [timeMillis: 1498346094933] [levelValue: 800] [[
+  User is: User{id=50, email='antoine@regnier.com', firstName='Antoine', lastName='Regnier', password='qaws1234', address=[Address{id=51, phoneNumber='(123) 456 - 7890', streetAddress='1234, Fullerton Ave', firstName='Antoine', lastName='Regnier', zipCode='60614', country='USA', city='Chicago', state='Illinois'} BaseEntity{creationTime=2017-06-24 17:48:47.0, modificationTime=2017-06-24 17:48:47.0, version=0}], orders=[]} BaseEntity{creationTime=2017-06-24 17:48:47.0, modificationTime=2017-06-24 17:48:47.0, version=0}]]
+
+[2017-06-24T18:14:54.933-0500] [glassfish 4.1] [INFO] [] [iit.cs445.controllers.UserController] [tid: _ThreadID=29 _ThreadName=http-listener-1(1)] [timeMillis: 1498346094933] [levelValue: 800] [[
+  Invalidating session]]
+
+[2017-06-24T18:14:54.939-0500] [glassfish 4.1] [INFO] [] [iit.cs445.filters.UserConnectedFilter] [tid: _ThreadID=30 _ThreadName=http-listener-1(2)] [timeMillis: 1498346094939] [levelValue: 800] [[
+  Path is: /login]]
+
+[2017-06-24T18:14:54.939-0500] [glassfish 4.1] [INFO] [] [iit.cs445.filters.UserConnectedFilter] [tid: _ThreadID=30 _ThreadName=http-listener-1(2)] [timeMillis: 1498346094939] [levelValue: 800] [[
+  Valid path is: /login]]
+
+[2017-06-24T18:16:18.103-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.web] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346178103] [levelValue: 800] [[
+  WebModule[null] ServletContext.log():Destroying Spring FrameworkServlet 'dispatcher']]
+
+[2017-06-24T18:16:18.104-0500] [glassfish 4.1] [INFO] [] [org.springframework.web.context.support.XmlWebApplicationContext] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346178104] [levelValue: 800] [[
+  Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Sat Jun 24 18:10:29 CDT 2017]; root of context hierarchy]]
+
+[2017-06-24T18:16:18.116-0500] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346178116] [levelValue: 900] [[
+  The web application [/CS_445_war_exploded] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-06-24T18:16:18.116-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346178116] [levelValue: 1000] [[
+  The web application [/CS_445_war_exploded] created a ThreadLocal with key of type [org.aspectj.weaver.tools.WeavingAdaptor$1] (value [org.aspectj.weaver.tools.WeavingAdaptor$1@2a8d6fc3]) and a value of type [java.lang.Boolean] (value [false]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2017-06-24T18:16:18.117-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346178117] [levelValue: 1000] [[
+  The web application [/CS_445_war_exploded] created a ThreadLocal with key of type [org.aspectj.weaver.tools.WeavingAdaptor$1] (value [org.aspectj.weaver.tools.WeavingAdaptor$1@2a8d6fc3]) and a value of type [java.lang.Boolean] (value [false]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2017-06-24T18:16:18.117-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346178117] [levelValue: 1000] [[
+  The web application [/CS_445_war_exploded] created a ThreadLocal with key of type [org.aspectj.weaver.tools.WeavingAdaptor$1] (value [org.aspectj.weaver.tools.WeavingAdaptor$1@2a8d6fc3]) and a value of type [java.lang.Boolean] (value [false]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2017-06-24T18:16:18.117-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346178117] [levelValue: 1000] [[
+  The web application [/CS_445_war_exploded] created a ThreadLocal with key of type [org.aspectj.weaver.tools.WeavingAdaptor$1] (value [org.aspectj.weaver.tools.WeavingAdaptor$1@2a8d6fc3]) and a value of type [java.lang.Boolean] (value [false]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2017-06-24T18:16:18.117-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346178117] [levelValue: 1000] [[
+  The web application [/CS_445_war_exploded] created a ThreadLocal with key of type [org.aspectj.weaver.tools.WeavingAdaptor$1] (value [org.aspectj.weaver.tools.WeavingAdaptor$1@2a8d6fc3]) and a value of type [java.lang.Boolean] (value [false]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2017-06-24T18:16:18.117-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346178117] [levelValue: 1000] [[
+  The web application [/CS_445_war_exploded] created a ThreadLocal with key of type [org.aspectj.weaver.tools.WeavingAdaptor$1] (value [org.aspectj.weaver.tools.WeavingAdaptor$1@2a8d6fc3]) and a value of type [java.lang.Boolean] (value [false]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2017-06-24T18:16:19.151-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179151] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.466-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179466] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.483-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179483] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.483-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179483] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.483-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179483] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.484-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179484] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.484-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179484] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.484-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179484] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.484-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179484] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.484-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179484] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.485-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179485] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.485-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179485] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.485-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179485] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.485-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179485] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.485-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179485] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.486-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179486] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.486-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179486] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.486-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179486] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.486-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179486] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.486-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179486] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.486-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179486] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.487-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179487] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.487-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179487] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.487-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179487] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.487-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179487] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.487-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179487] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.487-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179487] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.488-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179488] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.488-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179488] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.488-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179488] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.489-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179489] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.489-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179489] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.489-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179489] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.489-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179489] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.489-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179489] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.490-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179490] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.501-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179501] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.501-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179501] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.501-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179501] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.502-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179502] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.502-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179502] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.502-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179502] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.502-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179502] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.502-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179502] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.503-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179503] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.503-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179503] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.503-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179503] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.503-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179503] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.503-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179503] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.504-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179504] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.504-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179504] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.504-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179504] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.505-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179505] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.505-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179505] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.505-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179505] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.506-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179506] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.506-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179506] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.506-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179506] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.507-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179507] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.507-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179507] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.507-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179507] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.507-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179507] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.508-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179508] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T18:16:19.599-0500] [glassfish 4.1] [INFO] [] [org.glassfish.tyrus.servlet.TyrusServletContainerInitializer] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179599] [levelValue: 800] [[
+  Registering WebSocket filter for url pattern /*]]
+
+[2017-06-24T18:16:19.639-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.web] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179639] [levelValue: 800] [[
+  WebModule[null] ServletContext.log():No Spring WebApplicationInitializer types detected on classpath]]
+
+[2017-06-24T18:16:19.642-0500] [glassfish 4.1] [INFO] [jsf.config.listener.version] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346179642] [levelValue: 800] [[
+  Initializing Mojarra 2.2.14 ( 20161114-2152 unable to get svn info) for context '/CS_445_war_exploded']]
+
+[2017-06-24T18:16:20.016-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.web] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346180016] [levelValue: 800] [[
+  WebModule[null] ServletContext.log():Initializing Spring FrameworkServlet 'dispatcher']]
+
+[2017-06-24T18:16:20.017-0500] [glassfish 4.1] [INFO] [] [org.springframework.web.servlet.DispatcherServlet] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346180017] [levelValue: 800] [[
+  FrameworkServlet 'dispatcher': initialization started]]
+
+[2017-06-24T18:16:20.041-0500] [glassfish 4.1] [INFO] [] [org.springframework.web.context.support.XmlWebApplicationContext] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346180041] [levelValue: 800] [[
+  Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Sat Jun 24 18:16:20 CDT 2017]; root of context hierarchy]]
+
+[2017-06-24T18:16:20.088-0500] [glassfish 4.1] [INFO] [] [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1498346180088] [levelValue: 800] [[
+  Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]]]
+
