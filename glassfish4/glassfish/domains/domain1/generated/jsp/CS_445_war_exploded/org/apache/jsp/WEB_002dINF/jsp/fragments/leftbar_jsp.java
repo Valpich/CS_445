@@ -53,9 +53,7 @@ public final class leftbar_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
       out.write("\n");
-      out.write("\n");
-      out.write("<aside class=\"main-sidebar\">\n");
-      out.write("    <section class=\"sidebar\">\n");
+      out.write("<aside>\n");
       out.write("        ");
       if (_jspx_meth_c_if_0(_jspx_page_context))
         return;
@@ -64,23 +62,13 @@ public final class leftbar_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_c_if_1(_jspx_page_context))
         return;
       out.write("\n");
-      out.write("        <ul class=\"sidebar-menu\">\n");
-      out.write("            <li >\n");
-      out.write("                <span> User </span>\n");
-      out.write("                </a>\n");
-      out.write("                <ul>\n");
-      out.write("                    <li ><a href=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/logout\"> Details </a></li>\n");
-      out.write("                </ul>\n");
-      out.write("            </li>\n");
+      out.write("        <ul>\n");
       out.write("            ");
       if (_jspx_meth_c_if_2(_jspx_page_context))
         return;
       out.write("\n");
       out.write("        </ul>\n");
-      out.write("    </section>\n");
-      out.write("</aside>\n");
+      out.write("</aside>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -176,6 +164,15 @@ public final class leftbar_jsp extends org.apache.jasper.runtime.HttpJspBase
     if (_jspx_eval_c_if_2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\n");
+        out.write("                <li >\n");
+        out.write("                    <span> User </span>\n");
+        out.write("                    </a>\n");
+        out.write("                    <ul>\n");
+        out.write("                        <li ><a href=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("/logout\"> Details </a></li>\n");
+        out.write("                    </ul>\n");
+        out.write("                </li>\n");
         out.write("                <li >\n");
         out.write("                    <span> Products </span>\n");
         out.write("                    </a>\n");

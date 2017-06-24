@@ -1,7 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-<aside class="main-sidebar">
-    <section class="sidebar">
+<aside>
         <c:if test="${not empty sessionScope.user}">
             <ul>
                 <span>${sessionScope.user.lastName} ${sessionScope.user.firstName}</span>
@@ -13,15 +11,15 @@
                 <li ><a href="${pageContext.request.contextPath}/login"> Login / Register </a></li>
             </ul>
         </c:if>
-        <ul class="sidebar-menu">
-            <li >
-                <span> User </span>
-                </a>
-                <ul>
-                    <li ><a href="${pageContext.request.contextPath}/logout"> Details </a></li>
-                </ul>
-            </li>
+        <ul>
             <c:if test="${not empty sessionScope.user}">
+                <li >
+                    <span> User </span>
+                    </a>
+                    <ul>
+                        <li ><a href="${pageContext.request.contextPath}/logout"> Details </a></li>
+                    </ul>
+                </li>
                 <li >
                     <span> Products </span>
                     </a>
@@ -64,5 +62,4 @@
                 </li>
             </c:if>
         </ul>
-    </section>
 </aside>

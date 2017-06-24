@@ -2,6 +2,8 @@ package iit.cs445.controllers;
 
 import iit.cs445.models.products.*;
 import iit.cs445.models.services.CustomService;
+import iit.cs445.models.services.SecuritySystemInstallation;
+import iit.cs445.models.services.SurveillanceDesign;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -141,5 +143,19 @@ public class DebugController {
         hybridDVR.setStorageTypes(storageTypesThree);
         hybridDVR.setDescription("Digital DVR test");
         hybridDVR.saveNew();
+    }
+
+    private void populateServices(){
+        CustomService customService = new CustomService();
+        customService.setDescription("Custom service test");
+        customService.setPrice(getRandom());
+
+        SecuritySystemInstallation securitySystemInstallation = new SecuritySystemInstallation();
+        securitySystemInstallation.setPrice(getRandom());
+        securitySystemInstallation.setDescription("Security system installation test");
+
+        SurveillanceDesign surveillanceDesign = new SurveillanceDesign();
+        surveillanceDesign.setPrice(getRandom());
+        surveillanceDesign.setDescription("Surveillance design test");
     }
 }
