@@ -29,8 +29,8 @@ public class IndexController {
             cart.add
                     (cable);
             CustomService customService = new CustomService();
-            customService.setId(new Long (3));
-            customService.setPrice(new Float (32.2));
+            customService.setId(new Long(3));
+            customService.setPrice(new Float(32.2));
             customService.setDescription("Service test");
             cart.add(customService);
         }

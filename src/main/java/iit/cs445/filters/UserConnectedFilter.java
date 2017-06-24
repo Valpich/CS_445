@@ -38,7 +38,7 @@ public class UserConnectedFilter implements Filter {
                 ((HttpServletResponse) response).sendRedirect("/WEB-INF/jsp/index.jsp");
             }
         } else {
-            if (path.equals("") || path.equals("/") || path.equals("/index") || path.equals("/login") || path.contains("/static") || path.contains("/users/add")  || path.equals("/users") ) {
+            if (path.equals("") || path.equals("/") || path.equals("/index") || path.equals("/login") || path.contains("/static") || path.contains("/users/add") || path.equals("/users")) {
                 Logger.getLogger(UserConnectedFilter.class.getName()).log(Level.INFO, "Valid path is: " + path);
                 chain.doFilter(request, response);
             } else {
