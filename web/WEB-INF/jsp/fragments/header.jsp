@@ -21,8 +21,8 @@
 		</div>
 		<c:if test="${not empty user}">
 		<div id="navbar">
-			<ul class="nav navbar-nav navbar-right">
-				<li class="active"><a href="${urlCart}">${sessionScope.cart.listCount}</a></li>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="${urlCart}">Cart: ${sessionScope.cart.listCount}</a></li>
 			</ul>
 		</div>
 		</c:if>
