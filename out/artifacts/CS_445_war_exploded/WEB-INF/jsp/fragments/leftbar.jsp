@@ -60,6 +60,7 @@
                 </a>
                 <ul>
                     <li ><a href="${pageContext.request.contextPath}/users/listAll"> List all </a></li>
+                    <li ><a href="${pageContext.request.contextPath}/populate/database"> Populate database </a></li>
                 </ul>
             </li>
         </ul>

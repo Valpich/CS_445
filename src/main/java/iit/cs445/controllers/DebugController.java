@@ -13,8 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 public class DebugController {
 
     @RequestMapping(value = "/populate/database", method = RequestMethod.GET)
-    public ModelAndView index(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView("index");
+    public String index(HttpServletRequest request) {
         Cable cable = new Cable();
         cable.setId(new Long(2));
         cable.setPrice(new Float(44.2));
@@ -24,7 +23,7 @@ public class DebugController {
         customService.setId(new Long(3));
         customService.setPrice(new Float(32.2));
         customService.setDescription("Service test");
-        return modelAndView;
+        return "redirect:/";
     }
 
 }
