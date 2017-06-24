@@ -4,6 +4,9 @@ import iit.cs445.models.products.*;
 import iit.cs445.models.services.CustomService;
 import iit.cs445.models.services.SecuritySystemInstallation;
 import iit.cs445.models.services.SurveillanceDesign;
+import iit.cs445.models.services.SurveillanceSystemRepair;
+import iit.cs445.models.users.Address;
+import iit.cs445.models.users.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,9 +29,8 @@ public class DebugController {
     @RequestMapping(value = "/populate/database", method = RequestMethod.GET)
     public String index(HttpServletRequest request) {
         populateProducts();
-        CustomService customService = new CustomService();
-        customService.setPrice(new Float(32.2));
-        customService.setDescription("Custom service test");
+        populateServices();
+        populateUsers();
         return "redirect:/";
     }
 
@@ -149,13 +151,43 @@ public class DebugController {
         CustomService customService = new CustomService();
         customService.setDescription("Custom service test");
         customService.setPrice(getRandom());
+        customService.saveNew();
 
         SecuritySystemInstallation securitySystemInstallation = new SecuritySystemInstallation();
         securitySystemInstallation.setPrice(getRandom());
         securitySystemInstallation.setDescription("Security system installation test");
+        securitySystemInstallation.saveNew();
 
         SurveillanceDesign surveillanceDesign = new SurveillanceDesign();
         surveillanceDesign.setPrice(getRandom());
         surveillanceDesign.setDescription("Surveillance design test");
+        surveillanceDesign.saveNew();
+
+        SurveillanceSystemRepair surveillanceSystemRepair = new SurveillanceSystemRepair();
+        surveillanceSystemRepair.setPrice(getRandom());
+        surveillanceSystemRepair.setDescription("Surveillance system repair test");
+        surveillanceSystemRepair.saveNew();
     }
+
+    private void populateUsers(){
+        User user = new User();
+        user.setFirstName("Antoine");
+        user.setLastName("Regnier");
+        user.setEmail("antoine@regnier.com");
+        user.setPassword("qaws1234");
+        List<Address> addresses = new ArrayList<>();
+        Address address = new Address();
+        address.setCity("Chicago");
+        address.setCountry("USA");
+        address.setFirstName("Antoine");
+        address.setLastName("Regnier");
+        address.setPhoneNumber("(123) 456 - 7890");
+        address.setState("Illinois");
+        address.setZipCode("60614");
+        address.setStreetAddress("1234, Fullerton Ave");
+        addresses.add(address);
+        user.setAddress(addresses);
+        user.saveNew();
+    }
+
 }
