@@ -252,6 +252,9 @@ public final class leftbar_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("/users/listAll\"> List all </a></li>\n");
         out.write("                        <li ><a href=\"");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("/populate/cart\"> Populate cart </a></li>\n");
+        out.write("                        <li ><a href=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write("/populate/database\"> Populate database </a></li>\n");
         out.write("                    </ul>\n");
         out.write("                </li>\n");

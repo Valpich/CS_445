@@ -10,7 +10,12 @@
 
 <body>
 
-	<div class="container">
+<div class="container" role="main">
+
+	<div class="col-sm-4">
+		<jsp:include page="../fragments/leftbar.jsp" />
+	</div>
+	<div class="col-sm-8">
 
 		<c:if test="${not empty msg}">
 			<div class="alert alert-${css} alert-dismissible" role="alert">
@@ -61,7 +66,7 @@
 			</c:forEach>
 		</table>
 	</div>
-
+</div>
 	<jsp:include page="../fragments/footer.jsp" />
 
 </body>

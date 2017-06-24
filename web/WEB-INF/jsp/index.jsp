@@ -9,14 +9,19 @@
 <jsp:include page="fragments/header.jsp" />
 
 <body>
-<jsp:include page="fragments/leftbar.jsp" />
+<div class="container" role="main">
 
+<div class="col-sm-4">
+    <jsp:include page="fragments/leftbar.jsp" />
+</div>
+<div class="col-sm-8">
 <div class="container">
 
 
 
 </div>
-
+</div>
+</div>
 <jsp:include page="fragments/footer.jsp" />
 
 </body>

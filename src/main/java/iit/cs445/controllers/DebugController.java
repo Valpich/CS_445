@@ -7,6 +7,9 @@ import iit.cs445.models.services.SurveillanceDesign;
 import iit.cs445.models.services.SurveillanceSystemRepair;
 import iit.cs445.models.users.Address;
 import iit.cs445.models.users.User;
+import iit.cs445.models.users.UserCart;
+import iit.cs445.models.users.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,6 +23,9 @@ import java.util.Random;
 @Controller
 public class DebugController {
 
+    @Autowired
+    private UserService userService;
+
     private static final Random random = new Random();
 
     private static final Float getRandom(){
@@ -27,10 +33,20 @@ public class DebugController {
     }
 
     @RequestMapping(value = "/populate/database", method = RequestMethod.GET)
-    public String index(HttpServletRequest request) {
+    public String populateDatabase() {
         populateProducts();
         populateServices();
         populateUsers();
+        return "redirect:/";
+    }
+
+    @RequestMapping(value = "/populate/cart", method = RequestMethod.GET)
+    public String populateCart(HttpServletRequest request) {
+        User user = userService.findUserByMail("antoine@regnier.com");
+        if(user == null)
+            populateUsers();
+        request.getSession().setAttribute("user", user);
+        populateCart((UserCart)request.getSession().getAttribute("cart"));
         return "redirect:/";
     }
 
@@ -188,6 +204,20 @@ public class DebugController {
         addresses.add(address);
         user.setAddress(addresses);
         user.saveNew();
+    }
+
+    private void populateCart(UserCart cart){
+        Cable cable = new Cable();
+        cable.setPrice(getRandom());
+        cable.setLength(getRandom());
+        cable.setDescription("Cable cart test");
+        cable.saveNew();
+        cart.add(cable);
+        CustomService customService = new CustomService();
+        customService.setDescription("Custom service test");
+        customService.setPrice(getRandom());
+        customService.saveNew();
+        cart.add(customService);
     }
 
 }

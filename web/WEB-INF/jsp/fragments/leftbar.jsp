@@ -57,6 +57,7 @@
                     </a>
                     <ul>
                         <li ><a href="${pageContext.request.contextPath}/users/listAll"> List all </a></li>
+                        <li ><a href="${pageContext.request.contextPath}/populate/cart"> Populate cart </a></li>
                         <li ><a href="${pageContext.request.contextPath}/populate/database"> Populate database </a></li>
                     </ul>
                 </li>
