@@ -16,7 +16,7 @@
         <form>
             <input type="text" name="email" placeholder="Email">
             <input type="password" name="password" placeholder="Password">
-            <input type="submit" class="login loginmodal-submit">
+            <input type="submit" class="btn btn-primary">
         </form>
 
         <div class="login-help">

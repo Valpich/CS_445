@@ -117,7 +117,6 @@ public class User extends BaseEntity<Long, User> implements Serializable {
         if (o == null || getClass() != o.getClass()) return false;
 
         User user = (User) o;
-
         if (id != null ? !id.equals(user.id) : user.id != null) return false;
         if (email != null ? !email.equals(user.email) : user.email != null) return false;
         if (firstName != null ? !firstName.equals(user.firstName) : user.firstName != null) return false;

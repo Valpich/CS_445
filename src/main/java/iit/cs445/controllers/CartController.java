@@ -40,19 +40,26 @@ public class CartController {
         if(cart.getListCount() <= 0){
             return "cart/list";
         }
-        saveCart(request, 21L, 21L);
+        request.setAttribute("totalItem", cart.getListCount());
+        Float total= 0F;
+        for(Product p :cart.getProductList())
+            total+=p.getPrice();
+        for(Service s : cart.getServiceList())
+            total+= s.getPrice();
+        request.setAttribute("total",total);
+      //  saveCart(request, 21L, 21L);
         Logger.getLogger(CartController.class.getName()).log(Level.INFO, "find by id " + new User().findById(1L));
         return "cart/checkout";
     }
 
     @RequestMapping(value = "/cart/checkout", method = RequestMethod.POST)
-    public String checkoutPost(HttpServletRequest request, @RequestParam("billing_address") Long billingAddress ,
-                               @RequestParam("shipping_address") Long shippingAddress ) {
-        if (saveCart(request, billingAddress, shippingAddress)) return "cart/list";
+    public String checkoutPost(HttpServletRequest request, @RequestParam("billing_address") Long billingAddress
+                                ) {
+        if (saveCart(request, billingAddress)) return "cart/list";
         return "order/confirmation";
     }
 
-    private boolean saveCart(HttpServletRequest request, Long billingAddress, Long shippingAddress) {
+    private boolean saveCart(HttpServletRequest request, Long billingAddress) {
         HttpSession session = request.getSession();
         Cart cart = (Cart) session.getAttribute("cart");
         if(cart.getListCount() <= 0){
