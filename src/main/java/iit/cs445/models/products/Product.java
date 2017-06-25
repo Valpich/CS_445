@@ -12,7 +12,7 @@ public abstract class Product<Type> extends BaseEntity<Long, Type> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "product_id")
+    @Column(name = "product_id", unique = true, nullable = false)
     private Long id;
 
     @Column(name = "price")

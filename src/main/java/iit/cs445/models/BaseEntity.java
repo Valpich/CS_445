@@ -16,10 +16,9 @@ import java.util.logging.Logger;
 @MappedSuperclass
 public abstract class BaseEntity<ID, Type> {
 
-    @SuppressWarnings("SpringJavaAutowiringInspection")
     @Autowired
     @Transient
-    LocalSessionFactoryBean localSessionFactoryBean;
+    protected LocalSessionFactoryBean localSessionFactoryBean;
 
     @Column(name = "creation_time", nullable = false)
     private Date creationTime;
@@ -62,18 +61,6 @@ public abstract class BaseEntity<ID, Type> {
         this.modificationTime = now;
     }
 
-    @PrePersist
-    public void prePersist() {
-        Date now = new Date();
-        this.creationTime = now;
-        this.modificationTime = now;
-    }
-
-    @PreUpdate
-    public void preUpdate() {
-        this.modificationTime = new Date();
-    }
-
     @Override
     public String toString() {
         return "BaseEntity{" +
@@ -107,59 +94,83 @@ public abstract class BaseEntity<ID, Type> {
     }
 
     public void saveNew() {
+        Session session = localSessionFactoryBean.getObject().openSession();
         try {
-            Session session = localSessionFactoryBean.getObject().openSession();
             Transaction tx = session.beginTransaction();
-            session.save(this);
+            session.saveOrUpdate(this);
             tx.commit();
-            session.close();
         } catch (Exception exc) {
             Logger.getLogger(getClass().getName()).log(Level.WARNING, exc.toString());
+        } finally {
+            session.close();
         }
     }
 
     public void update() {
         Session session = localSessionFactoryBean.getObject().openSession();
-        Transaction tx = session.beginTransaction();
-        session.update(this);
-        tx.commit();
-        session.close();
+        try {
+            Transaction tx = session.beginTransaction();
+            session.update(this);
+            tx.commit();
+        } catch (Exception exc) {
+            Logger.getLogger(getClass().getName()).log(Level.WARNING, exc.toString());
+        } finally {
+            session.close();
+        }
     }
 
     public void delete() {
         Session session = localSessionFactoryBean.getObject().openSession();
-        Transaction tx = session.beginTransaction();
-        session.delete(this);
-        tx.commit();
-        session.close();
+        try {
+            Transaction tx = session.beginTransaction();
+            session.delete(this);
+            tx.commit();
+        } catch (Exception exc) {
+            Logger.getLogger(getClass().getName()).log(Level.WARNING, exc.toString());
+        } finally {
+            session.close();
+        }
     }
 
     public List<Type> listAll() {
         Session session = localSessionFactoryBean.getObject().openSession();
-        String query = "select className from " + getClass().getSimpleName() + " className";
-        Logger.getLogger(getClass().getName()).log(Level.INFO, "Doing list all query: " + query);
-        List<Type> results = session.createQuery(query).list();
-        if (results != null) {
-            for (Type t : results)
-                Logger.getLogger(getClass().getName()).log(Level.INFO, t.toString());
+        List<Type> results = null;
+        try {
+            String query = "select className from " + getClass().getSimpleName() + " className";
+            Logger.getLogger(getClass().getName()).log(Level.INFO, "Doing list all query: " + query);
+            results = session.createQuery(query).list();
+            if (results != null) {
+                for (Type t : results)
+                    Logger.getLogger(getClass().getName()).log(Level.INFO, t.toString());
+            }
+        } catch (Exception exc) {
+            Logger.getLogger(getClass().getName()).log(Level.WARNING, exc.toString());
+        } finally {
+            session.close();
         }
-        session.close();
         return results;
     }
 
     public Type findById(Long id) {
         Session session = localSessionFactoryBean.getObject().openSession();
-        String query = "select className from " + getClass().getSimpleName() + " className where className.id = :id";
-        Logger.getLogger(getClass().getName()).log(Level.INFO, "Doing find by id query: " + query);
-        List<Type> results = session.createQuery(query).setParameter("id", id).list();
-        if (results != null) {
-            for (Type t : results) {
-                Logger.getLogger(getClass().getName()).log(Level.INFO, t.toString());
-                return t;
+        List<Type> results = null;
+        try {
+            String query = "select className from " + getClass().getSimpleName() + " className where className.id = :id";
+            Logger.getLogger(getClass().getName()).log(Level.INFO, "Doing find by id query: " + query);
+            results = session.createQuery(query).setParameter("id", id).list();
+            if (results != null) {
+                for (Type t : results) {
+                    Logger.getLogger(getClass().getName()).log(Level.INFO, t.toString());
+                    return t;
+                }
             }
+            Logger.getLogger(getClass().getName()).log(Level.INFO, "No user found.");
+            session.close();
+        } catch (Exception exc) {
+            Logger.getLogger(getClass().getName()).log(Level.WARNING, exc.toString());
+        } finally {
+            session.close();
         }
-        Logger.getLogger(getClass().getName()).log(Level.INFO, "No user found.");
-        session.close();
         return null;
     }
 }

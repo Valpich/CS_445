@@ -1,38 +1,53 @@
 package iit.cs445.models.orders;
 
 import iit.cs445.models.BaseEntity;
-import iit.cs445.models.products.OrderedProducts;
+import iit.cs445.models.products.Product;
+import iit.cs445.models.services.Service;
 import iit.cs445.models.users.Address;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.annotations.*;
 
 import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Entity
 @Table(name = "order")
 public class Order extends BaseEntity<Long, Order> {
 
-    @Id()
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "order_id")
     private Long id;
 
     @Column(name = "status")
     private OrderStatus status;
 
-    @Column(name = "order_type")
-    private OrderType orderType;
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "ordered_products", joinColumns = {
+            @JoinColumn(name = "order_id", nullable = false, updatable = false) },
+            inverseJoinColumns = { @JoinColumn(name = "product_id",
+                    nullable = false, updatable = false) })
+    private List<Product> orderedProducts;
 
-    @OneToMany(cascade = {CascadeType.ALL}, mappedBy = "orderId")
-    @PrimaryKeyJoinColumn
-    private List<OrderedProducts> orderedProducts;
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "ordered_services", joinColumns = {
+            @JoinColumn(name = "order_id", nullable = false, updatable = false) },
+            inverseJoinColumns = { @JoinColumn(name = "service_id",
+                    nullable = false, updatable = false) })
+    private List<Service> orderedServices;
 
-    @OneToOne
-    @JoinColumn(name = "id")
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "billing_address", joinColumns = {
+            @JoinColumn(name = "order_id", nullable = false, updatable = false) },
+            inverseJoinColumns = { @JoinColumn(name = "address_id",
+                    nullable = false, updatable = false) })
     private Address billingAddress;
-
-    @OneToOne
-    @JoinColumn(name = "id")
-    private Address shippingAddress;
 
     @Override
     public Long getId() {
@@ -51,20 +66,20 @@ public class Order extends BaseEntity<Long, Order> {
         this.status = status;
     }
 
-    public OrderType getOrderType() {
-        return orderType;
-    }
-
-    public void setOrderType(OrderType orderType) {
-        this.orderType = orderType;
-    }
-
-    public List<OrderedProducts> getOrderedProducts() {
+    public List<Product> getOrderedProducts() {
         return orderedProducts;
     }
 
-    public void setOrderedProducts(List<OrderedProducts> orderedProducts) {
+    public void setOrderedProducts(List<Product> orderedProducts) {
         this.orderedProducts = orderedProducts;
+    }
+
+    public List<Service> getOrderedServices() {
+        return orderedServices;
+    }
+
+    public void setOrderedServices(List<Service> orderedServices) {
+        this.orderedServices = orderedServices;
     }
 
     public Address getBillingAddress() {
@@ -75,23 +90,14 @@ public class Order extends BaseEntity<Long, Order> {
         this.billingAddress = billingAddress;
     }
 
-    public Address getShippingAddress() {
-        return shippingAddress;
-    }
-
-    public void setShippingAddress(Address shippingAddress) {
-        this.shippingAddress = shippingAddress;
-    }
-
     @Override
     public String toString() {
         return "Order{" +
                 "id=" + id +
                 ", status=" + status +
-                ", orderType=" + orderType +
                 ", orderedProducts=" + orderedProducts +
+                ", orderedServices=" + orderedServices +
                 ", billingAddress=" + billingAddress +
-                ", shippingAddress=" + shippingAddress +
                 "} " + super.toString();
     }
 
@@ -99,29 +105,27 @@ public class Order extends BaseEntity<Long, Order> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
 
         Order order = (Order) o;
 
         if (id != null ? !id.equals(order.id) : order.id != null) return false;
         if (status != order.status) return false;
-        if (orderType != order.orderType) return false;
         if (orderedProducts != null ? !orderedProducts.equals(order.orderedProducts) : order.orderedProducts != null)
             return false;
-        if (billingAddress != null ? !billingAddress.equals(order.billingAddress) : order.billingAddress != null)
+        if (orderedServices != null ? !orderedServices.equals(order.orderedServices) : order.orderedServices != null)
             return false;
-        return shippingAddress != null ? shippingAddress.equals(order.shippingAddress) : order.shippingAddress == null;
+        return billingAddress != null ? billingAddress.equals(order.billingAddress) : order.billingAddress == null;
     }
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
+        int result = super.hashCode();
+        result = 31 * result + (id != null ? id.hashCode() : 0);
         result = 31 * result + (status != null ? status.hashCode() : 0);
-        result = 31 * result + (orderType != null ? orderType.hashCode() : 0);
         result = 31 * result + (orderedProducts != null ? orderedProducts.hashCode() : 0);
+        result = 31 * result + (orderedServices != null ? orderedServices.hashCode() : 0);
         result = 31 * result + (billingAddress != null ? billingAddress.hashCode() : 0);
-        result = 31 * result + (shippingAddress != null ? shippingAddress.hashCode() : 0);
         return result;
     }
-
-
 }

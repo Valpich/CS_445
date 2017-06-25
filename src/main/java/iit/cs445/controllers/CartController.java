@@ -2,6 +2,9 @@ package iit.cs445.controllers;
 
 import iit.cs445.models.orders.Order;
 import iit.cs445.models.orders.OrderService;
+import iit.cs445.models.orders.OrderStatus;
+import iit.cs445.models.products.Product;
+import iit.cs445.models.services.Service;
 import iit.cs445.models.users.Address;
 import iit.cs445.models.users.Cart;
 import iit.cs445.models.users.User;
@@ -13,9 +16,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 
 @Controller
 public class CartController {
@@ -35,19 +39,32 @@ public class CartController {
         if(cart.getListCount() <= 0){
             return "cart/list";
         }
+        saveCart(request, 21L, 21L);
         Logger.getLogger(CartController.class.getName()).log(Level.INFO, "find by id " + new User().findById(1L));
         return "cart/checkout";
     }
 
     @RequestMapping(value = "/cart/checkout", method = RequestMethod.POST)
-    public String checkoutPost(HttpServletRequest request, @RequestParam("billing_address") Long billingAddress ) {
+    public String checkoutPost(HttpServletRequest request, @RequestParam("billing_address") Long billingAddress ,
+                               @RequestParam("shipping_address") Long shippingAddress ) {
+        if (saveCart(request, billingAddress, shippingAddress)) return "cart/list";
+        return "order/confirmation";
+    }
+
+    private boolean saveCart(HttpServletRequest request, Long billingAddress, Long shippingAddress) {
         HttpSession session = request.getSession();
         Cart cart = (Cart) session.getAttribute("cart");
         if(cart.getListCount() <= 0){
-            return "cart/list";
+            return true;
         }
         Order order = new Order();
         order.setBillingAddress(new Address().findById(billingAddress));
-        return "order/confirmation";
+        order.setStatus(OrderStatus.PROCESSING);
+        order.setOrderedProducts(cart.getProductList());
+        cart.getProductList().add(cart.getProductList().get(0));
+        Logger.getLogger(CartController.class.getName()).log(Level.INFO, "Product list is  " +cart.getProductList());
+        order.setOrderedServices(cart.getServiceList());
+        order.saveNew();
+        return false;
     }
 }

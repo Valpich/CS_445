@@ -10,7 +10,7 @@ public class Address extends BaseEntity<Long, Address> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "address_id")
     private Long id;
 
     @Column(name = "phone_number")

@@ -1,5 +1,6 @@
 package iit.cs445.controllers;
 
+import iit.cs445.models.orders.OrderType;
 import iit.cs445.models.products.*;
 import iit.cs445.models.services.CustomService;
 import iit.cs445.models.services.SecuritySystemInstallation;
@@ -211,9 +212,10 @@ public class DebugController {
         cable.setLength(getRandom());
         cable.setDescription("Cable cart test");
         cable.saveNew();
+        cable.setOrderType(OrderType.BUY);
         cart.add(cable);
         CustomService customService = new CustomService();
-        customService.setDescription("Custom service test");
+        customService.setDescription("Custom service cart test");
         customService.setPrice(getRandom());
         customService.saveNew();
         cart.add(customService);

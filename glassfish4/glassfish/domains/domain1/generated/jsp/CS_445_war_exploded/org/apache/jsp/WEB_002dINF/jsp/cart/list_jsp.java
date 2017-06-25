@@ -210,6 +210,7 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("                    <th>ID</th>\r\n");
         out.write("                    <th>Price</th>\r\n");
         out.write("                    <th>Description</th>\r\n");
+        out.write("                    <th>Order type</th>\r\n");
         out.write("                </tr>\r\n");
         out.write("                </thead>\r\n");
         out.write("                ");
@@ -258,6 +259,9 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("</td>\r\n");
           out.write("                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${item.description}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</td>\r\n");
+          out.write("                        <td>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${item.orderType}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</td>\r\n");
           out.write("                    </tr>\r\n");
           out.write("                ");

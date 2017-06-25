@@ -33,6 +33,7 @@
                     <th>ID</th>
                     <th>Price</th>
                     <th>Description</th>
+                    <th>Order type</th>
                 </tr>
                 </thead>
                 <c:forEach var="item" items="${sessionScope.cart.productList}">
@@ -42,6 +43,7 @@
                         </td>
                         <td>${item.price}</td>
                         <td>${item.description}</td>
+                        <td>${item.orderType}</td>
                     </tr>
                 </c:forEach>
             </table>

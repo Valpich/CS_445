@@ -26,8 +26,7 @@ public class IndexController {
             cable.setPrice(new Float(44.2));
             cable.setLength(new Float(24.3));
             cable.setDescription("Cable test");
-            cart.add
-                    (cable);
+            cart.add(cable);
             CustomService customService = new CustomService();
             customService.setId(new Long(3));
             customService.setPrice(new Float(32.2));
