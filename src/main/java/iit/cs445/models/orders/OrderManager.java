@@ -1,5 +1,8 @@
 package iit.cs445.models.orders;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class OrderManager implements OrderService {
 
     @Override

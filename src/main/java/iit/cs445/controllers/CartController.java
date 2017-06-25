@@ -1,7 +1,7 @@
 package iit.cs445.controllers;
 
+import iit.cs445.models.orders.OrderService;
 import iit.cs445.models.users.Cart;
-import iit.cs445.models.users.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 public class CartController {
 
     @Autowired
-    private UserService userService;
+    private OrderService orderService;
 
     @RequestMapping(value = "/cart", method = RequestMethod.GET)
     public String listAll(Model model) {
