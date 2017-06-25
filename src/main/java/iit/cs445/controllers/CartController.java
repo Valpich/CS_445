@@ -8,6 +8,7 @@ import iit.cs445.models.services.Service;
 import iit.cs445.models.users.Address;
 import iit.cs445.models.users.Cart;
 import iit.cs445.models.users.User;
+import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -64,7 +65,13 @@ public class CartController {
         cart.getProductList().add(cart.getProductList().get(0));
         Logger.getLogger(CartController.class.getName()).log(Level.INFO, "Product list is  " +cart.getProductList());
         order.setOrderedServices(cart.getServiceList());
-        order.saveNew();
+        User user = (User) request.getSession().getAttribute("user");
+        List<Order> userOrders = user.getOrders();
+        if(userOrders == null){
+            user.setOrders(new ArrayList<>());
+        }
+        user.getOrders().add(order);
+        user.update();
         return false;
     }
 }
