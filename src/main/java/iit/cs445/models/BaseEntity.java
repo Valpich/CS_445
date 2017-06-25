@@ -136,9 +136,7 @@ public abstract class BaseEntity<ID, Type> {
 
     public List<Type> listAll() {
         Session session = localSessionFactoryBean.getObject().openSession();
-        Type type = null;
         String query = "select className from " + getClass().getSimpleName() + " className";
-        System.out.println(query);
         Logger.getLogger(getClass().getName()).log(Level.INFO, "Doing list all query: " + query);
         List<Type> results = session.createQuery(query).list();
         if (results != null) {
@@ -147,6 +145,22 @@ public abstract class BaseEntity<ID, Type> {
         }
         session.close();
         return results;
+    }
+
+    public Type findById(Long id) {
+        Session session = localSessionFactoryBean.getObject().openSession();
+        String query = "select className from " + getClass().getSimpleName() + " className where className.id = :id";
+        Logger.getLogger(getClass().getName()).log(Level.INFO, "Doing find by id query: " + query);
+        List<Type> results = session.createQuery(query).setParameter("id", id).list();
+        if (results != null) {
+            for (Type t : results) {
+                Logger.getLogger(getClass().getName()).log(Level.INFO, t.toString());
+                return t;
+            }
+        }
+        Logger.getLogger(getClass().getName()).log(Level.INFO, "No user found.");
+        session.close();
+        return null;
     }
 }
 
