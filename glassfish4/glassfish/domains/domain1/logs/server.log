@@ -5245,3 +5245,327 @@ com.sun.enterprise.admin.cli.AdminMain]]
 [2017-06-24T22:46:11.352-0500] [glassfish 4.1] [INFO] [] [iit.cs445.controllers.CartController] [tid: _ThreadID=29 _ThreadName=http-listener-1(2)] [timeMillis: 1498362371352] [levelValue: 800] [[
   find by id User{id=1, email='antoinebaiseaude@danslepetit.com', firstName='Antoine', lastName='R', password='qaws1234', address=[], orders=[]} BaseEntity{creationTime=2017-06-24 22:45:55.0, modificationTime=2017-06-24 22:45:55.0, version=0}]]
 
+[2017-06-24T22:47:15.669-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.web] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362435669] [levelValue: 800] [[
+  WebModule[null] ServletContext.log():Destroying Spring FrameworkServlet 'dispatcher']]
+
+[2017-06-24T22:47:15.669-0500] [glassfish 4.1] [INFO] [] [org.springframework.web.context.support.XmlWebApplicationContext] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362435669] [levelValue: 800] [[
+  Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Sat Jun 24 22:45:24 CDT 2017]; root of context hierarchy]]
+
+[2017-06-24T22:47:15.670-0500] [glassfish 4.1] [INFO] [] [org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362435670] [levelValue: 800] [[
+  HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down']]
+
+[2017-06-24T22:47:15.674-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435674] [levelValue: 800] [[
+  Hibernate: drop table if exists `AnalogDVR_analogRecordFormats`]]
+
+[2017-06-24T22:47:15.678-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435678] [levelValue: 800] [[
+  Hibernate: drop table if exists `AnalogDVR_storageTypes`]]
+
+[2017-06-24T22:47:15.680-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435680] [levelValue: 800] [[
+  Hibernate: drop table if exists `DigitalDVR_storageTypes`]]
+
+[2017-06-24T22:47:15.681-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435681] [levelValue: 800] [[
+  Hibernate: drop table if exists `HybridDVR_storageTypes`]]
+
+[2017-06-24T22:47:15.683-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435683] [levelValue: 800] [[
+  Hibernate: drop table if exists `addresses`]]
+
+[2017-06-24T22:47:15.684-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435684] [levelValue: 800] [[
+  Hibernate: drop table if exists `analog_dvr`]]
+
+[2017-06-24T22:47:15.685-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435685] [levelValue: 800] [[
+  Hibernate: drop table if exists `analog_surveillance_camera`]]
+
+[2017-06-24T22:47:15.686-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435686] [levelValue: 800] [[
+  Hibernate: drop table if exists `billing_address`]]
+
+[2017-06-24T22:47:15.687-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435687] [levelValue: 800] [[
+  Hibernate: drop table if exists `bracket`]]
+
+[2017-06-24T22:47:15.688-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435688] [levelValue: 800] [[
+  Hibernate: drop table if exists `cable`]]
+
+[2017-06-24T22:47:15.689-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435689] [levelValue: 800] [[
+  Hibernate: drop table if exists `connector`]]
+
+[2017-06-24T22:47:15.690-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435690] [levelValue: 800] [[
+  Hibernate: drop table if exists `digital_dvr`]]
+
+[2017-06-24T22:47:15.692-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435692] [levelValue: 800] [[
+  Hibernate: drop table if exists `digital_surveillance_camera`]]
+
+[2017-06-24T22:47:15.693-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435693] [levelValue: 800] [[
+  Hibernate: drop table if exists `hibernate_sequence`]]
+
+[2017-06-24T22:47:15.694-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435694] [levelValue: 800] [[
+  Hibernate: drop table if exists `housing`]]
+
+[2017-06-24T22:47:15.695-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435695] [levelValue: 800] [[
+  Hibernate: drop table if exists `hybrid_dvr`]]
+
+[2017-06-24T22:47:15.696-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435696] [levelValue: 800] [[
+  Hibernate: drop table if exists `infrared_lightning`]]
+
+[2017-06-24T22:47:15.698-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435698] [levelValue: 800] [[
+  Hibernate: drop table if exists `ip_surveillance_camera`]]
+
+[2017-06-24T22:47:15.699-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435699] [levelValue: 800] [[
+  Hibernate: drop table if exists `lens`]]
+
+[2017-06-24T22:47:15.700-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435700] [levelValue: 800] [[
+  Hibernate: drop table if exists `microphone`]]
+
+[2017-06-24T22:47:15.701-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435701] [levelValue: 800] [[
+  Hibernate: drop table if exists `monitor`]]
+
+[2017-06-24T22:47:15.703-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435703] [levelValue: 800] [[
+  Hibernate: drop table if exists `order`]]
+
+[2017-06-24T22:47:15.704-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435704] [levelValue: 800] [[
+  Hibernate: drop table if exists `ordered_products`]]
+
+[2017-06-24T22:47:15.705-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435705] [levelValue: 800] [[
+  Hibernate: drop table if exists `ordered_services`]]
+
+[2017-06-24T22:47:15.706-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435706] [levelValue: 800] [[
+  Hibernate: drop table if exists `other_service`]]
+
+[2017-06-24T22:47:15.708-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435708] [levelValue: 800] [[
+  Hibernate: drop table if exists `power_supply`]]
+
+[2017-06-24T22:47:15.709-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435709] [levelValue: 800] [[
+  Hibernate: drop table if exists `product`]]
+
+[2017-06-24T22:47:15.710-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435710] [levelValue: 800] [[
+  Hibernate: drop table if exists `security_system_installation`]]
+
+[2017-06-24T22:47:15.712-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435712] [levelValue: 800] [[
+  Hibernate: drop table if exists `service`]]
+
+[2017-06-24T22:47:15.713-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435713] [levelValue: 800] [[
+  Hibernate: drop table if exists `surveillance_system_repair`]]
+
+[2017-06-24T22:47:15.714-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498362435714] [levelValue: 800] [[
+  Hibernate: drop table if exists `user_account`]]
+
+[2017-06-24T22:47:15.727-0500] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362435727] [levelValue: 900] [[
+  The web application [/CS_445_war_exploded] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-06-24T22:47:15.727-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362435727] [levelValue: 1000] [[
+  The web application [/CS_445_war_exploded] created a ThreadLocal with key of type [org.aspectj.weaver.tools.WeavingAdaptor$1] (value [org.aspectj.weaver.tools.WeavingAdaptor$1@3dbf2e15]) and a value of type [java.lang.Boolean] (value [false]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2017-06-24T22:47:15.727-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362435727] [levelValue: 1000] [[
+  The web application [/CS_445_war_exploded] created a ThreadLocal with key of type [org.aspectj.weaver.tools.WeavingAdaptor$1] (value [org.aspectj.weaver.tools.WeavingAdaptor$1@3dbf2e15]) and a value of type [java.lang.Boolean] (value [false]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2017-06-24T22:47:15.727-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362435727] [levelValue: 1000] [[
+  The web application [/CS_445_war_exploded] created a ThreadLocal with key of type [org.aspectj.weaver.tools.WeavingAdaptor$1] (value [org.aspectj.weaver.tools.WeavingAdaptor$1@3dbf2e15]) and a value of type [java.lang.Boolean] (value [false]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2017-06-24T22:47:15.728-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362435728] [levelValue: 1000] [[
+  The web application [/CS_445_war_exploded] created a ThreadLocal with key of type [org.aspectj.weaver.tools.WeavingAdaptor$1] (value [org.aspectj.weaver.tools.WeavingAdaptor$1@3dbf2e15]) and a value of type [java.lang.Boolean] (value [false]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2017-06-24T22:47:15.728-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362435728] [levelValue: 1000] [[
+  The web application [/CS_445_war_exploded] created a ThreadLocal with key of type [org.aspectj.weaver.tools.WeavingAdaptor$1] (value [org.aspectj.weaver.tools.WeavingAdaptor$1@3dbf2e15]) and a value of type [java.lang.Boolean] (value [false]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2017-06-24T22:47:15.728-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362435728] [levelValue: 1000] [[
+  The web application [/CS_445_war_exploded] created a ThreadLocal with key of type [org.aspectj.weaver.tools.WeavingAdaptor$1] (value [org.aspectj.weaver.tools.WeavingAdaptor$1@3dbf2e15]) and a value of type [java.lang.Boolean] (value [false]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2017-06-24T22:47:15.728-0500] [glassfish 4.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362435728] [levelValue: 1000] [[
+  The web application [/CS_445_war_exploded] created a ThreadLocal with key of type [org.aspectj.weaver.tools.WeavingAdaptor$1] (value [org.aspectj.weaver.tools.WeavingAdaptor$1@3dbf2e15]) and a value of type [java.lang.Boolean] (value [false]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2017-06-24T22:47:16.214-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436214] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.481-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436481] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.501-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436501] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.501-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436501] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.501-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436501] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.502-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436502] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.502-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436502] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.503-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436503] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.503-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436503] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.504-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436504] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.504-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436504] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.504-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436504] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.505-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436505] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.505-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436505] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.505-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436505] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.506-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436506] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.506-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436506] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.507-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436507] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.507-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436507] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.507-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436507] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.508-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436508] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.508-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436508] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.508-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436508] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.509-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436509] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.509-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436509] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.510-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436510] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.510-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436510] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.510-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436510] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.511-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436511] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.511-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436511] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.512-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436512] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.512-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436512] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.513-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436513] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.513-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436513] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.514-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436514] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.514-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436514] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.530-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436530] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.531-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436531] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.531-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436531] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.531-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436531] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.532-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436532] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.532-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436532] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.532-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436532] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.533-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436533] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.533-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436533] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.534-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436534] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.534-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436534] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.535-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436535] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.535-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436535] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.535-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436535] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.536-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436536] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.536-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436536] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.536-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436536] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.537-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436537] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.537-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436537] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.537-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436537] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.538-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436538] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.538-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436538] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.539-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436539] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.539-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436539] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.539-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436539] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.540-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436540] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.540-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436540] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-06-24T22:47:16.623-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.web] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436623] [levelValue: 800] [[
+  WebModule[null] ServletContext.log():No Spring WebApplicationInitializer types detected on classpath]]
+
+[2017-06-24T22:47:16.627-0500] [glassfish 4.1] [INFO] [] [org.glassfish.tyrus.servlet.TyrusServletContainerInitializer] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436627] [levelValue: 800] [[
+  Registering WebSocket filter for url pattern /*]]
+
+[2017-06-24T22:47:16.690-0500] [glassfish 4.1] [INFO] [jsf.config.listener.version] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498362436690] [levelValue: 800] [[
+  Initializing Mojarra 2.2.14 ( 20161114-2152 unable to get svn info) for context '/CS_445_war_exploded']]
+
