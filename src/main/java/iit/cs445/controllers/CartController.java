@@ -48,14 +48,15 @@ public class CartController {
             total+= s.getPrice();
         request.setAttribute("total",total);
       //  saveCart(request, 21L, 21L);
-        Logger.getLogger(CartController.class.getName()).log(Level.INFO, "find by id " + new User().findById(1L));
         return "cart/checkout";
     }
 
     @RequestMapping(value = "/cart/checkout", method = RequestMethod.POST)
-    public String checkoutPost(HttpServletRequest request, @RequestParam("billing_address") Long billingAddress
+    public String checkoutPost(HttpServletRequest request, @RequestParam("optradio") Long idAddress
                                 ) {
-        if (saveCart(request, billingAddress)) return "cart/list";
+        Logger.getLogger(CartController.class.getName()).log(Level.INFO, " Id address is " + idAddress);
+
+        //if (saveCart(request, billingAddress)) return "cart/list";
         return "order/confirmation";
     }
 

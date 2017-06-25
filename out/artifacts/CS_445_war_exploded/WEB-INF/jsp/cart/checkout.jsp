@@ -80,10 +80,10 @@
                                 <c:set var="count" value="${count + 1}" scope="page"/>
                                 <div class="radio">
                                     <c:if test="${ count == 1}">
-                                        <label><input type="radio" name="optradio" checked="checked">Address #${count}</label>
+                                        <label><input type="radio" name="optradio" checked="checked" value="<c:out value="${address.id}"/>">Address #${count}</label>
                                     </c:if>
                                     <c:if test="${ count != 1}">
-                                        <label><input type="radio" name="optradio">Address #${count}</label>
+                                        <label><input type="radio" name="optradio" value="<c:out value="${address.id}"/>">Address #${count}</label>
                                     </c:if>
                                 </div>
                                 <div class="form-group">
@@ -160,10 +160,10 @@
                         </c:if>
                         <div class="radio">
                             <c:if test="${not empty sessionScope.user.address}">
-                            <label><input type="radio" name="optradio">New address</label>
+                            <label><input type="radio" name="optradio" value="-1">New address</label>
                         </c:if>
                             <c:if test="${ empty sessionScope.user.address}">
-                                <label><input type="radio" name="optradio" checked="checked">New address</label>
+                                <label><input type="radio" name="optradio" checked="checked" value="-1">New address</label>
                             </c:if>
                         </div>
                         <div class="form-group">
@@ -300,7 +300,7 @@
                             </div>
                         </div>
                     </fieldset>
-                    <button type="button" class="btn btn-success">Pay Now</button>
+                    <button type="submit" class="btn btn-success">Pay Now</button>
                 </form>
             </div>
         </c:if>
