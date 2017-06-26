@@ -36,10 +36,6 @@ public class CartTest {
     }
 
     @Test
-    public void add1() throws Exception {
-    }
-
-    @Test
     public void getProductList() throws Exception {
     }
 
@@ -57,10 +53,6 @@ public class CartTest {
 
     @Test
     public void getListCount() throws Exception {
-    }
-
-    @Test
-    public void setListCount() throws Exception {
     }
 
     @Test

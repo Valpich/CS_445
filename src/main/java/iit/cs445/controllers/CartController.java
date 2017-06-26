@@ -23,8 +23,33 @@ import java.util.logging.Logger;
 public class CartController {
 
     @RequestMapping(value = "/cart", method = RequestMethod.GET)
-    public String listAll() {
+    public String list() {
         return "cart/list";
+    }
+
+
+    @RequestMapping(value = "/cart", method = RequestMethod.POST)
+    public String list(HttpServletRequest request, @RequestParam("id")Optional<Long> idOptional) {
+        if(idOptional.isPresent()) {
+            Long id = idOptional.get();
+            HttpSession session = request.getSession();
+            Cart cart = (Cart) session.getAttribute("cart");
+            for (int i = 0; i < cart.getProductList().size(); i++) {
+                Product p = cart.getProductList().get(i);
+                if (id.equals(p.getId())) {
+                    cart.getProductList().remove(p);
+                    break;
+                }
+            }
+            for (int i = 0; i < cart.getServiceList().size(); i++) {
+                Service s = cart.getServiceList().get(i);
+                if (id.equals(s.getId())) {
+                    cart.getServiceList().remove(s);
+                    break;
+                }
+            }
+        }
+        return "redirect:/cart";
     }
 
     @RequestMapping(value = "/cart/checkout", method = RequestMethod.GET)

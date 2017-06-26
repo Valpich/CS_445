@@ -14,32 +14,25 @@ public class Cart implements Serializable {
 
     private List<Service> serviceList;
 
-    private Integer listCount;
-
     public Cart() {
         productList = new ArrayList<>();
         serviceList = new ArrayList<>();
-        listCount = 0;
     }
 
     public void add(Product product) {
         productList.add(product);
-        listCount++;
     }
 
     public void remove(Product product) {
         productList.remove(product);
-        listCount--;
     }
 
     public void add(Service service) {
         serviceList.add(service);
-        listCount++;
     }
 
     public void remove(Service service) {
         serviceList.remove(service);
-        listCount--;
     }
 
     public List<Product> getProductList() {
@@ -59,11 +52,7 @@ public class Cart implements Serializable {
     }
 
     public Integer getListCount() {
-        return listCount;
-    }
-
-    public void setListCount(Integer listCount) {
-        this.listCount = listCount;
+        return productList.size()+serviceList.size();
     }
 
     @Override
@@ -71,7 +60,6 @@ public class Cart implements Serializable {
         return "Cart{" +
                 "productList=" + productList +
                 ", serviceList=" + serviceList +
-                ", listCount=" + listCount +
                 '}';
     }
 }

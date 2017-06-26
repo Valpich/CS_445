@@ -26,7 +26,7 @@
             </div>
         </c:if>
         <c:if test="${not empty sessionScope.cart.serviceList || not empty sessionScope.cart.productList}">
-            <h1>All Items</h1><c:if test="${not emptysessionScope.cart.productList}">
+            <h1>All Items</h1><c:if test="${not empty sessionScope.cart.productList}">
             <table class="table table-striped">
                 <thead> Products
                 <tr>
@@ -34,6 +34,7 @@
                     <th>Price</th>
                     <th>Description</th>
                     <th>Order type</th>
+                    <th>Remove</th>
                 </tr>
                 </thead>
                 <c:forEach var="item" items="${sessionScope.cart.productList}">
@@ -44,17 +45,24 @@
                         <td>${item.price}</td>
                         <td>${item.description}</td>
                         <td>${item.orderType}</td>
+                        <td>
+                            <form action="${pageContext.request.contextPath}/cart" method="post" name="formRemove">
+                                <input type="hidden" name="id" value="${item.id}">
+                                <button class="btn btn-alert" onclick="document.formRemove.submit()">Remove</button>
+                            </form>
+                        </td>
                     </tr>
                 </c:forEach>
             </table>
         </c:if>
-            <c:if test="${not emptysessionScope.cart.serviceList}">
+            <c:if test="${not empty sessionScope.cart.serviceList}">
                 <table class="table table-striped">
                     <thead> Services
                     <tr>
                         <th>ID</th>
                         <th>Price</th>
                         <th>Description</th>
+                        <th>Remove</th>
                     </tr>
                     </thead>
                     <c:forEach var="item" items="${sessionScope.cart.serviceList}">
@@ -64,6 +72,12 @@
                             </td>
                             <td>${item.price}</td>
                             <td>${item.description}</td>
+                            <td>
+                                <form action="${pageContext.request.contextPath}/cart" method="post" name="formRemove">
+                                    <input type="hidden" name="id" value="${item.id}">
+                                    <button class="btn btn-alert" onclick="document.formRemove.submit()">Remove</button>
+                                </form>
+                            </td>
                         </tr>
                     </c:forEach>
                 </table>
