@@ -15,7 +15,6 @@
           <element id="library" level="project" name="org.aspectj:aspectjrt:Latest" />
           <element id="library" level="project" name="org.aspectj:aspectjweaver:Latest" />
           <element id="library" level="project" name="Arquillian JUnit:Latest" />
-          <element id="library" level="project" name="javax.servlet:jstl:1.1.2" />
           <element id="library" level="project" name="taglibs:standard:1.1.2" />
         </element>
       </element>
