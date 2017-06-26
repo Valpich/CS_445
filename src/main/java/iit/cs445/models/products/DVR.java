@@ -32,19 +32,5 @@ public abstract class DVR<Type> extends Product<Type> {
                 "} " + super.toString();
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        DVR dvr = (DVR) o;
-
-        return storageTypes != null ? storageTypes.equals(dvr.storageTypes) : dvr.storageTypes == null;
-    }
-
-    @Override
-    public int hashCode() {
-        return storageTypes != null ? storageTypes.hashCode() : 0;
-    }
 }
 

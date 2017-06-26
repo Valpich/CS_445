@@ -68,28 +68,5 @@ public abstract class Product<Type> extends BaseEntity<Long, Type> {
                 "} " + super.toString();
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-
-        Product<?> product = (Product<?>) o;
-
-        if (id != null ? !id.equals(product.id) : product.id != null) return false;
-        if (price != null ? !price.equals(product.price) : product.price != null) return false;
-        if (orderType != product.orderType) return false;
-        return description != null ? description.equals(product.description) : product.description == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = super.hashCode();
-        result = 31 * result + (id != null ? id.hashCode() : 0);
-        result = 31 * result + (price != null ? price.hashCode() : 0);
-        result = 31 * result + (orderType != null ? orderType.hashCode() : 0);
-        result = 31 * result + (description != null ? description.hashCode() : 0);
-        return result;
-    }
 }
 
