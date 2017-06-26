@@ -12,21 +12,23 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by valentinpichavant on 6/26/17.
- */
 @RunWith(Arquillian.class)
 public class DigitalSurveillanceCameraTest {
+
+    private DigitalSurveillanceCamera digitalSurveillanceCamera;
+
     @Before
     public void setUp() throws Exception {
+        digitalSurveillanceCamera = new DigitalSurveillanceCamera();
     }
 
     @After
     public void tearDown() throws Exception {
+        digitalSurveillanceCamera = null;
     }
 
     @Test
-    public void toString() throws Exception {
+    public void toStringTest() throws Exception {
     }
 
     @Deployment

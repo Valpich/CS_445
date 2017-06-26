@@ -5,16 +5,28 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by valentinpichavant on 6/26/17.
- */
 @RunWith(Arquillian.class)
 public class CableTest {
+
+    private Cable cable;
+
+    @Before
+    public void setUp() throws Exception {
+        cable = new Cable();
+    }
+
+    @After
+    public void tearDown() throws Exception {
+        cable = null;
+    }
+
     @Test
     public void getLength() throws Exception {
     }
@@ -24,15 +36,7 @@ public class CableTest {
     }
 
     @Test
-    public void toString() throws Exception {
-    }
-
-    @Test
-    public void equals() throws Exception {
-    }
-
-    @Test
-    public void hashCode() throws Exception {
+    public void toStringTest() throws Exception {
     }
 
     @Deployment

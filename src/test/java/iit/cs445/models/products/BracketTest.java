@@ -12,21 +12,23 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by valentinpichavant on 6/26/17.
- */
 @RunWith(Arquillian.class)
 public class BracketTest {
+
+    private Bracket bracket;
+
     @Before
     public void setUp() throws Exception {
+        bracket = new Bracket();
     }
 
     @After
     public void tearDown() throws Exception {
+        bracket = null;
     }
 
     @Test
-    public void toString() throws Exception {
+    public void toStringTest() throws Exception {
     }
 
     @Deployment

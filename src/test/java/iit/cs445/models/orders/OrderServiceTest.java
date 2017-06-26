@@ -15,16 +15,18 @@ import static org.junit.Assert.*;
 @RunWith(Arquillian.class)
 public class OrderServiceTest {
 
-    private OrderService orderService;
+    private class OrderSerivceImplementTest implements OrderService{}
+
+    private OrderSerivceImplementTest orderSerivceImplementTest;
 
     @Before
     public void setUp() throws Exception {
-        orderService = new OrderManager();
+        orderSerivceImplementTest = new OrderSerivceImplementTest();
     }
 
     @After
     public void tearDown() throws Exception {
-        orderService = null;
+        orderSerivceImplementTest = null;
     }
 
     @Test

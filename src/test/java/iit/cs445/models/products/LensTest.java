@@ -12,37 +12,19 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by valentinpichavant on 6/26/17.
- */
 @RunWith(Arquillian.class)
 public class LensTest {
-    @Test
-    public void getFocal1() throws Exception {
-    }
 
-    @Test
-    public void setFocal1() throws Exception {
-    }
-
-    @Test
-    public void getMagnification1() throws Exception {
-    }
-
-    @Test
-    public void setMagnification1() throws Exception {
-    }
-
-    @Test
-    public void toString1() throws Exception {
-    }
+    private Lens lens;
 
     @Before
     public void setUp() throws Exception {
+        lens = new Lens();
     }
 
     @After
     public void tearDown() throws Exception {
+        lens = null;
     }
 
     @Test
@@ -62,7 +44,7 @@ public class LensTest {
     }
 
     @Test
-    public void toString() throws Exception {
+    public void toStringTest() throws Exception {
     }
 
     @Deployment

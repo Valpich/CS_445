@@ -12,17 +12,19 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by valentinpichavant on 6/26/17.
- */
 @RunWith(Arquillian.class)
 public class CartTest {
+
+    private Cart cart;
+
     @Before
     public void setUp() throws Exception {
+        cart = new Cart();
     }
 
     @After
     public void tearDown() throws Exception {
+        cart = null;
     }
 
     @Test
@@ -35,10 +37,6 @@ public class CartTest {
 
     @Test
     public void add1() throws Exception {
-    }
-
-    @Test
-    public void remove1() throws Exception {
     }
 
     @Test
@@ -65,6 +63,9 @@ public class CartTest {
     public void setListCount() throws Exception {
     }
 
+    @Test
+    public void toStringTest() throws Exception {
+    }
     @Deployment
     public static JavaArchive createDeployment() {
         return ShrinkWrap.create(JavaArchive.class)

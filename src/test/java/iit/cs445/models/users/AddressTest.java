@@ -12,17 +12,19 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by valentinpichavant on 6/26/17.
- */
 @RunWith(Arquillian.class)
 public class AddressTest {
+
+    private Address address;
+
     @Before
     public void setUp() throws Exception {
+        address = new Address();
     }
 
     @After
     public void tearDown() throws Exception {
+        address = null;
     }
 
     @Test
@@ -106,7 +108,7 @@ public class AddressTest {
     }
 
     @Test
-    public void toString() throws Exception {
+    public void toStringTest() throws Exception {
     }
 
     @Deployment

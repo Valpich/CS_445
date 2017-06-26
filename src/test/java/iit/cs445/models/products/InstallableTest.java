@@ -12,17 +12,20 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by valentinpichavant on 6/26/17.
- */
 @RunWith(Arquillian.class)
 public class InstallableTest {
+
+    private class InstallableImplementationTest implements Installable{}
+    private InstallableImplementationTest installableImplementationTest;
+
     @Before
     public void setUp() throws Exception {
+        installableImplementationTest = new InstallableImplementationTest();
     }
 
     @After
     public void tearDown() throws Exception {
+        installableImplementationTest = null;
     }
 
     @Test

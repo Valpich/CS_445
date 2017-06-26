@@ -12,21 +12,23 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by valentinpichavant on 6/26/17.
- */
 @RunWith(Arquillian.class)
 public class HybridDVRTest {
+
+    private HybridDVR hybridDVR;
+
     @Before
     public void setUp() throws Exception {
+        hybridDVR = new HybridDVR();
     }
 
     @After
     public void tearDown() throws Exception {
+        hybridDVR = null;
     }
 
     @Test
-    public void toString() throws Exception {
+    public void toStringTest() throws Exception {
     }
 
     @Deployment

@@ -12,17 +12,19 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by valentinpichavant on 6/26/17.
- */
 @RunWith(Arquillian.class)
 public class MicrophoneTest {
+
+    private Microphone microphone;
+
     @Before
     public void setUp() throws Exception {
+        microphone = new Microphone();
     }
 
     @After
     public void tearDown() throws Exception {
+        microphone = null;
     }
 
     @Test
@@ -42,7 +44,7 @@ public class MicrophoneTest {
     }
 
     @Test
-    public void toString() throws Exception {
+    public void toStringTest() throws Exception {
     }
 
     @Deployment

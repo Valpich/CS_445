@@ -12,21 +12,24 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by valentinpichavant on 6/26/17.
- */
+
 @RunWith(Arquillian.class)
 public class ConnectorTest {
+
+    private Connector connector;
+
     @Before
     public void setUp() throws Exception {
+        connector = new Connector();
     }
 
     @After
     public void tearDown() throws Exception {
+        connector = null;
     }
 
     @Test
-    public void toString() throws Exception {
+    public void toStringTest() throws Exception {
     }
 
     @Deployment

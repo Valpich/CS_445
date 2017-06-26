@@ -19,10 +19,12 @@ public class AnalogDVRTest {
 
     @Before
     public void setUp() throws Exception {
+        analogDVR = new AnalogDVR();
     }
 
     @After
     public void tearDown() throws Exception {
+        analogDVR = null;
     }
 
     @Test

@@ -65,4 +65,13 @@ public class Cart implements Serializable {
     public void setListCount(Integer listCount) {
         this.listCount = listCount;
     }
+
+    @Override
+    public String toString() {
+        return "Cart{" +
+                "productList=" + productList +
+                ", serviceList=" + serviceList +
+                ", listCount=" + listCount +
+                '}';
+    }
 }

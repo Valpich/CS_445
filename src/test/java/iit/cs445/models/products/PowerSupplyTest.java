@@ -12,17 +12,19 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by valentinpichavant on 6/26/17.
- */
 @RunWith(Arquillian.class)
 public class PowerSupplyTest {
+
+    private PowerSupply powerSupply;
+
     @Before
     public void setUp() throws Exception {
+        powerSupply = new PowerSupply();
     }
 
     @After
     public void tearDown() throws Exception {
+        powerSupply = null;
     }
 
     @Test
@@ -42,7 +44,7 @@ public class PowerSupplyTest {
     }
 
     @Test
-    public void toString() throws Exception {
+    public void toStringTest() throws Exception {
     }
 
     @Deployment
