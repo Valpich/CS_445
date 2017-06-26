@@ -29,14 +29,14 @@ public class ConnectorController {
 
     @RequestMapping(value = "/connector/{id}/update", method = RequestMethod.GET)
     public String showUpdateConnectorForm(@PathVariable("id") Long id, Model model) {
-        Connector connector = new Connector();
+        Connector connector = new Connector().findById(id);
         model.addAttribute("connectorFormUpdate", connector);
         return "productForm";
     }
 
     @RequestMapping(value = "/connector", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+    public String checkoutPost(@RequestParam("description") String description ,
+                               @RequestParam("price") String price ) {
         saveConnector(description, price);
         return "index";
     }

@@ -31,15 +31,15 @@ public class DigitalDVRController {
 
     @RequestMapping(value = "/digitalDVR/{id}/update", method = RequestMethod.GET)
     public String showUpdateDigitalDVRForm(@PathVariable("id") Long id, Model model) {
-        DigitalDVR digitalDVR = new DigitalDVR();
+        DigitalDVR digitalDVR = new DigitalDVR().findById(id);
         model.addAttribute("digitalDVRFormUpdate", digitalDVR);
         return "productForm";
     }
 
     @RequestMapping(value = "/digitalDVR", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description,
-                               @RequestParam("storage_types") String storageTypes,
-                               @RequestParam("price") String price) {
+    public String checkoutPost(@RequestParam("description") String description ,
+                               @RequestParam("storage_types") String storageTypes ,
+                               @RequestParam("price") String price ) {
         saveDigitalDVR(description, storageTypes, price);
         return "index";
     }
@@ -48,9 +48,9 @@ public class DigitalDVRController {
         DigitalDVR digitalDVR = new DigitalDVR();
         digitalDVR.setPrice(Float.parseFloat(price));
         List<StorageType> storageTypes = new ArrayList<>();
-        if (storage.equals("DISK_DRIVE")) {
+        if(storage.equals("DISK_DRIVE")) {
             storageTypes.add(StorageType.DISK_DRIVE);
-        } else if (storage.equals("USB")) {
+        } else if(storage.equals("USB")) {
             storageTypes.add(StorageType.USB);
         } else if (storage.equals("SSD")) {
             storageTypes.add(StorageType.SSD);

@@ -25,10 +25,21 @@
 
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Description</label>
-            <input type="text" name="description" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty digitalDVRForm}">
+                    <input type="text" name="description" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="description" value="${digitalDVRFormUpdate.description}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
+
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Storage Types</label>
+
             <select class="custom-select" name="storage_types">
                 <option type="text" value="DISK_DRIVE">Disk Drive</option>
                 <option type="text" value="USB">USB</option>
@@ -36,10 +47,21 @@
                 <option type="text" value="SD_MEMORY_CARD">SD Memomy Card</option>
                 <option type="text" value="OTHER">Other</option>
             </select>
+
         </div>
+
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Price</label>
-            <input type="text" name="price" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty digitalDVRForm}">
+                    <input type="text" name="price" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="price" value="${digitalDVRFormUpdate.price}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
 
         <div class="col-sm-10">

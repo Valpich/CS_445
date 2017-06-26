@@ -111,13 +111,13 @@
             </div>
         </c:if>
 
-        <c:if test="${not empty conenctorForm}">
+        <c:if test="${not empty connectorForm}">
             <div>
                 <jsp:include page="fragments/form/product/accessory/connectorForm.jsp" />
             </div>
         </c:if>
 
-        <c:if test="${not empty conenctorFormUpdate}">
+        <c:if test="${not empty connectorFormUpdate}">
             <div>
                 <jsp:include page="fragments/form/product/accessory/connectorForm.jsp" />
             </div>

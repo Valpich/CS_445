@@ -29,14 +29,14 @@ public class BracketController {
 
     @RequestMapping(value = "/bracket/{id}/update", method = RequestMethod.GET)
     public String showUpdateBracketForm(@PathVariable("id") Long id, Model model) {
-        Bracket bracket = new Bracket();
+        Bracket bracket = new Bracket().findById(id);
         model.addAttribute("bracketFormUpdate", bracket);
         return "productForm";
     }
 
     @RequestMapping(value = "/bracket", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+    public String checkoutPost(@RequestParam("description") String description ,
+                               @RequestParam("price") String price ) {
         saveBracket(description, price);
         return "index";
     }

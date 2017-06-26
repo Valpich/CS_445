@@ -29,15 +29,15 @@ public class DigitalSurveillanceCameraController {
 
     @RequestMapping(value = "/digitalSurveillanceCamera/{id}/update", method = RequestMethod.GET)
     public String showUpdateDigitalSurveillanceCameraForm(@PathVariable("id") Long id, Model model) {
-        DigitalSurveillanceCamera digitalSurveillanceCamera = new DigitalSurveillanceCamera();
+        DigitalSurveillanceCamera digitalSurveillanceCamera = new DigitalSurveillanceCamera().findById(id);
         model.addAttribute("digitalSurveillanceCameraFormUpdate", digitalSurveillanceCamera);
         return "productForm";
     }
 
     @RequestMapping(value = "/digitalSurveillanceCamera", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description,
-                               @RequestParam("resolution") String resolution,
-                               @RequestParam("price") String price) {
+    public String checkoutPost(@RequestParam("description") String description ,
+                               @RequestParam("resolution") String resolution ,
+                               @RequestParam("price") String price ) {
         saveDigitalSurveillanceCamera(description, resolution, price);
         return "index";
     }

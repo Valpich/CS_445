@@ -29,16 +29,16 @@ public class PowerSupplyController {
 
     @RequestMapping(value = "/powerSupply/{id}/update", method = RequestMethod.GET)
     public String showUpdatePowerSupplyForm(@PathVariable("id") Long id, Model model) {
-        PowerSupply powerSupply = new PowerSupply();
+        PowerSupply powerSupply = new PowerSupply().findById(id);
         model.addAttribute("powerSupplyFormUpdate", powerSupply);
         return "productForm";
     }
 
     @RequestMapping(value = "/powerSupply", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description,
-                               @RequestParam("maximum_output") String maximumOutput,
-                               @RequestParam("voltage") String voltage,
-                               @RequestParam("price") String price) {
+    public String checkoutPost(@RequestParam("description") String description ,
+                               @RequestParam("maximum_output") String maximumOutput ,
+                               @RequestParam("voltage") String voltage ,
+                               @RequestParam("price") String price ) {
         savePowerSupply(description, maximumOutput, voltage, price);
         return "index";
     }

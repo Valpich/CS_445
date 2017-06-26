@@ -29,15 +29,15 @@ public class CableController {
 
     @RequestMapping(value = "/cable/{id}/update", method = RequestMethod.GET)
     public String showUpdateCableForm(@PathVariable("id") Long id, Model model) {
-        Cable cable = new Cable();
+        Cable cable = new Cable().findById(id);
         model.addAttribute("cableFormUpdate", cable);
         return "productForm";
     }
 
     @RequestMapping(value = "/cable", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description,
+    public String checkoutPost(@RequestParam("description") String description ,
                                @RequestParam("length") String length,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price ) {
         saveCable(description, length, price);
         return "index";
     }

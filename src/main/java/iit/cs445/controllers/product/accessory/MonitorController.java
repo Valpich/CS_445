@@ -29,16 +29,16 @@ public class MonitorController {
 
     @RequestMapping(value = "/monitor/{id}/update", method = RequestMethod.GET)
     public String showUpdateMonitoryForm(@PathVariable("id") Long id, Model model) {
-        Monitor monitor = new Monitor();
+        Monitor monitor = new Monitor().findById(id);
         model.addAttribute("monitorFormUpdate", monitor);
         return "productForm";
     }
 
     @RequestMapping(value = "/monitor", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description,
+    public String checkoutPost(@RequestParam("description") String description ,
                                @RequestParam("size") String size,
-                               @RequestParam("max_resolution") String maxResolution,
-                               @RequestParam("price") String price) {
+                               @RequestParam("max_resolution")  String maxResolution,
+                               @RequestParam("price") String price ) {
         saveMonitor(description, size, maxResolution, price);
         return "index";
     }

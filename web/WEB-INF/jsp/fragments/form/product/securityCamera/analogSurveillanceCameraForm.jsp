@@ -25,16 +25,44 @@
 
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Description</label>
-            <input type="text" name="description" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty analogSurveillanceCameraForm}">
+                    <input type="text" name="description" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="description" value="${analogSurveillanceCameraFormUpdate.description}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
+
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Resolution</label>
-            <input type="text" name="resolution" placeholder="">
-            </select>
+
+            <c:choose>
+                <c:when test="${not empty analogSurveillanceCameraForm}">
+                    <input type="text" name="resolution" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="resolution" value="${analogSurveillanceCameraFormUpdate.resolution}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
+
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Price</label>
-            <input type="text" name="price" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty analogSurveillanceCameraForm}">
+                    <input type="text" name="price" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="price" value="${analogSurveillanceCameraFormUpdate.price}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
 
         <div class="col-sm-10">

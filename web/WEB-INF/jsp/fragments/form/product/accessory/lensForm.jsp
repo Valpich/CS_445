@@ -25,19 +25,58 @@
 
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Description</label>
-            <input type="text" name="description" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty lensForm}">
+                    <input type="text" name="description" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="description" value="${lensFormUpdate.description}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
+
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Focal</label>
-            <input type="text" name="focal" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty lensForm}">
+                    <input type="text" name="focal" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="focal" value="${lensFormUpdate.focal}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
+
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Magnification</label>
-            <input type="text" name="magnification" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty lensForm}">
+                    <input type="text" name="magnification" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="description" value="${lensFormUpdate.magnification}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
+
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Price</label>
-            <input type="text" name="price" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty lensForm}">
+                    <input type="text" name="price" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="price" value="${lensFormUpdate.price}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
 
         <div class="col-sm-10">

@@ -27,9 +27,9 @@
 
     <c:forEach var="housing" items="${housings}">
         <tr>
-            <td>${lens.description}</td>
-            <td>${lens.id}</td>
-            <td>${lens.price}</td>
+            <td>${housing.description}</td>
+            <td>${housing.id}</td>
+            <td>${housing.price}</td>
 
             <spring:url value="/housing/${housing.id}/update" var="updateUrl" />
 

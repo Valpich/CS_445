@@ -25,19 +25,31 @@
 
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Description</label>
-            <input type="text" name="description" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty microphoneForm}">
+                    <input type="text" name="description" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="description" value="${microphoneFormUpdate.description}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
 
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Battery</label>
+
             <select class="custom-select" name="battery">
                 <option type="boolean" value="TRUE">True</option>
                 <option type="boolean" value="FALSE">False</option>
             </select>
+
         </div>
 
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Microphone type</label>
+
             <select class="custom-select" name="microphone_type">
                 <option type="text" value="CONDENSER">Condenser</option>
                 <option type="text" value="DYNAMIC">Dynamic</option>
@@ -49,11 +61,21 @@
                 <option type="text" value="LIQUID">Liquid</option>
                 <option type="text" value="MEMS">Mems</option>
             </select>
+
         </div>
 
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Price</label>
-            <input type="text" name="price" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty microphoneForm}">
+                    <input type="text" name="price" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="price" value="${microphoneFormUpdate.price}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
 
         <div class="col-sm-10">
