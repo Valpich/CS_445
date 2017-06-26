@@ -12,6 +12,9 @@
 
 <h1>Cable</h1>
 
+<spring:url value="/product/accessory/cable/add" var="cable"/>
+<button class="btn btn-primary" onclick="location.href='${cable}'">Add Cable</button>
+
 <table class="table table-striped">
     <thead>
     <tr>
@@ -32,6 +35,7 @@
 
             <td>
                 <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
+                <button class="btn btn-info" onclick="location.href='${userUrl}'">Update</button>
             </td>
         </tr>
     </c:forEach>

@@ -12,6 +12,10 @@
 
 <h1>Analog DVR</h1>
 
+
+<spring:url value="/product/dvr/analog/add" var="analogAdd"/>
+<button class="btn btn-primary" onclick="location.href='${analogAdd}'">Add Analog DVR</button>
+
 <table class="table table-striped">
     <thead>
     <tr>
@@ -37,6 +41,7 @@
 
             <td>
                 <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
+                <button class="btn btn-info" onclick="location.href='${userUrl}'">Update</button>
             </td>
         </tr>
     </c:forEach>

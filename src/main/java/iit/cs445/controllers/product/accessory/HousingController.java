@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -16,6 +17,27 @@ public class HousingController {
         List<Housing> list = new Housing().listAll();
         model.addAttribute("housings", list);
         return "product";
+    }
+
+    @RequestMapping(value = "/product/accessory/housing/add", method = RequestMethod.GET)
+    public String showHousingForm(Model model) {
+        Housing housing = new Housing();
+        model.addAttribute("housingForm", housing);
+        return "productForm";
+    }
+
+    @RequestMapping(value = "/housing", method = RequestMethod.POST)
+    public String checkoutPost(@RequestParam("description") String description ,
+                               @RequestParam("price") String price ) {
+        saveHousing(description, price);
+        return "index";
+    }
+
+    private void saveHousing(String description, String price) {
+        Housing housing = new Housing();
+        housing.setPrice(Float.parseFloat(price));
+        housing.setDescription(description);
+        housing.saveNew();
     }
 
 }
