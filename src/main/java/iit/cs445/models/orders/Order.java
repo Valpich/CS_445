@@ -4,17 +4,14 @@ import iit.cs445.models.BaseEntity;
 import iit.cs445.models.products.Product;
 import iit.cs445.models.services.Service;
 import iit.cs445.models.users.Address;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-import org.hibernate.annotations.*;
+import iit.cs445.models.users.OrderAddress;
+import iit.cs445.models.users.User;
 
 import javax.persistence.*;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 @Entity
 @Table(name = "order")
@@ -42,12 +39,19 @@ public class Order extends BaseEntity<Long, Order> {
                     nullable = false, updatable = false) })
     private List<Service> orderedServices;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable(name = "billing_address", joinColumns = {
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "order_address", joinColumns = {
             @JoinColumn(name = "order_id", nullable = false, updatable = false) },
             inverseJoinColumns = { @JoinColumn(name = "address_id",
                     nullable = false, updatable = false) })
-    private Address billingAddress;
+    private OrderAddress orderAddress;
+
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
+    @JoinTable(name = "user_order", joinColumns = {
+            @JoinColumn(name = "order_id", nullable = false, updatable = false) },
+            inverseJoinColumns = { @JoinColumn(name = "user_id",
+                    nullable = false, updatable = false) })
+    private User user;
 
     @Override
     public Long getId() {
@@ -82,12 +86,20 @@ public class Order extends BaseEntity<Long, Order> {
         this.orderedServices = orderedServices;
     }
 
-    public Address getBillingAddress() {
-        return billingAddress;
+    public OrderAddress getOrderAddress() {
+        return orderAddress;
     }
 
-    public void setBillingAddress(Address billingAddress) {
-        this.billingAddress = billingAddress;
+    public void setOrderAddress(OrderAddress orderAddress) {
+        this.orderAddress = orderAddress;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override
@@ -97,35 +109,9 @@ public class Order extends BaseEntity<Long, Order> {
                 ", status=" + status +
                 ", orderedProducts=" + orderedProducts +
                 ", orderedServices=" + orderedServices +
-                ", billingAddress=" + billingAddress +
+                ", orderAddress=" + orderAddress +
+                ", userId=" + user.getId() +
                 "} " + super.toString();
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-
-        Order order = (Order) o;
-
-        if (id != null ? !id.equals(order.id) : order.id != null) return false;
-        if (status != order.status) return false;
-        if (orderedProducts != null ? !orderedProducts.equals(order.orderedProducts) : order.orderedProducts != null)
-            return false;
-        if (orderedServices != null ? !orderedServices.equals(order.orderedServices) : order.orderedServices != null)
-            return false;
-        return billingAddress != null ? billingAddress.equals(order.billingAddress) : order.billingAddress == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = super.hashCode();
-        result = 31 * result + (id != null ? id.hashCode() : 0);
-        result = 31 * result + (status != null ? status.hashCode() : 0);
-        result = 31 * result + (orderedProducts != null ? orderedProducts.hashCode() : 0);
-        result = 31 * result + (orderedServices != null ? orderedServices.hashCode() : 0);
-        result = 31 * result + (billingAddress != null ? billingAddress.hashCode() : 0);
-        return result;
-    }
 }

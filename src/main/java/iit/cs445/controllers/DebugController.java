@@ -202,7 +202,7 @@ public class DebugController {
         address.setZipCode("60614");
         address.setStreetAddress("1234, Fullerton Ave");
         addresses.add(address);
-        user.setAddress(addresses);
+        user.setAddresses(addresses);
         user.saveNew();
     }
 

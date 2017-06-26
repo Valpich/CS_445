@@ -74,9 +74,9 @@
                 <form action='${checkoutUrl}' method="POST">
                     <fieldset>
                         <legend>Address</legend>
-                        <c:if test="${not empty sessionScope.user.address}">
+                        <c:if test="${not empty sessionScope.user.addresses}">
                             <c:set var="count" value="0" scope="page" />
-                            <c:forEach var="address" items="${sessionScope.user.address}">
+                            <c:forEach var="address" items="${sessionScope.user.addresses}">
                                 <c:set var="count" value="${count + 1}" scope="page"/>
                                 <div class="radio">
                                     <c:if test="${ count == 1}">
@@ -92,7 +92,7 @@
                                     <div class="col-10">
                                         <input class="form-control" type="text"
                                                value="<c:out value="${address.firstName}"/>"
-                                               id="first-name-input_<c:out value="${address.id}"/>">
+                                               id="first-name-input_<c:out value="${address.id}"/>" disabled>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -101,7 +101,7 @@
                                     <div class="col-10">
                                         <input class="form-control" type="text"
                                                value="<c:out value="${address.lastName}"/>"
-                                               id="last-name-input_<c:out value="${address.id}"/>">
+                                               id="last-name-input_<c:out value="${address.id}"/>" disabled>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -109,7 +109,7 @@
                                     <div class="col-10">
                                         <input class="form-control" type="tel"
                                                value="<c:out value="${address.phoneNumber}"/>"
-                                               id="tel-input_<c:out value="${address.id}"/>">
+                                               id="tel-input_<c:out value="${address.id}"/>" disabled>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -118,7 +118,7 @@
                                     <div class="col-10">
                                         <input class="form-control" type="text"
                                                value="<c:out value="${address.streetAddress}"/>"
-                                               id="street-input_<c:out value="${address.id}"/>">
+                                               id="street-input_<c:out value="${address.id}"/>" disabled>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -126,7 +126,7 @@
                                         address</label>
                                     <div class="col-10">
                                         <input class="form-control" type="text" value="<c:out value="${address.city}"/>"
-                                               id="city-input_<c:out value="${address.id}"/>">
+                                               id="city-input_<c:out value="${address.id}"/>" disabled>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -135,7 +135,7 @@
                                     <div class="col-10">
                                         <input class="form-control" type="number"
                                                value="<c:out value="${address.zipCode}"/>"
-                                               id="zip-code-input_<c:out value="${address.id}"/>">
+                                               id="zip-code-input_<c:out value="${address.id}"/>" disabled>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -144,7 +144,7 @@
                                     <div class="col-10">
                                         <input class="form-control" type="text"
                                                value="<c:out value="${address.state}"/>"
-                                               id="state-input_<c:out value="${address.id}"/>">
+                                               id="state-input_<c:out value="${address.id}"/>" disabled>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -153,23 +153,23 @@
                                     <div class="col-10">
                                         <input class="form-control" type="text"
                                                value="<c:out value="${address.country}"/>"
-                                               id="country-input_<c:out value="${address.id}"/>">
+                                               id="country-input_<c:out value="${address.id}"/>" disabled>
                                     </div>
                                 </div>
                             </c:forEach>
                         </c:if>
                         <div class="radio">
-                            <c:if test="${not empty sessionScope.user.address}">
+                            <c:if test="${not empty sessionScope.user.addresses}">
                             <label><input type="radio" name="optradio" value="-1">New address</label>
                         </c:if>
-                            <c:if test="${ empty sessionScope.user.address}">
+                            <c:if test="${ empty sessionScope.user.addresses}">
                                 <label><input type="radio" name="optradio" checked="checked" value="-1">New address</label>
                             </c:if>
                         </div>
                         <div class="form-group">
                             <label for="first-name-input" class="col-2 col-form-label">First name</label>
                             <div class="col-10">
-                                <input class="form-control" type="text"
+                                <input name="firstName" class="form-control" type="text"
                                        value="<c:out value="${address.firstName}"/>"
                                        id="first-name-input">
                             </div>
@@ -177,7 +177,7 @@
                         <div class="form-group">
                             <label for="last-name-input" class="col-2 col-form-label">Last name</label>
                             <div class="col-10">
-                                <input class="form-control" type="text"
+                                <input name="lastName" class="form-control" type="text"
                                        value="<c:out value="${address.lastName}"/>"
                                        id="last-name-input">
                             </div>
@@ -185,7 +185,7 @@
                         <div class="form-group">
                             <label for="tel-input" class="col-2 col-form-label">Telephone</label>
                             <div class="col-10">
-                                <input class="form-control" type="tel"
+                                <input name="phoneNumber" class="form-control" type="tel"
                                        value="<c:out value="${address.phoneNumber}"/>"
                                        id="tel-input">
                             </div>
@@ -194,16 +194,15 @@
                             <label for="street-input"
                                    class="col-2 col-form-label">Street address</label>
                             <div class="col-10">
-                                <input class="form-control" type="text"
+                                <input name="streetAddress" class="form-control" type="text"
                                        value="<c:out value="${address.streetAddress}"/>"
                                        id="street-input">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="city-input" class="col-2 col-form-label">Street
-                                address</label>
+                            <label for="city-input" class="col-2 col-form-label">City</label>
                             <div class="col-10">
-                                <input class="form-control" type="text" value="<c:out value="${address.city}"/>"
+                                <input name="city" class="form-control" type="text" value="<c:out value="${address.city}"/>"
                                        id="city-input">
                             </div>
                         </div>
@@ -211,7 +210,7 @@
                             <label for="zip-code-input"
                                    class="col-2 col-form-label">Zip code</label>
                             <div class="col-10">
-                                <input class="form-control" type="number"
+                                <input name="zipCode" class="form-control" type="number"
                                        value="<c:out value="${address.zipCode}"/>"
                                        id="zip-code-input">
                             </div>
@@ -220,7 +219,7 @@
                             <label for="state-input"
                                    class="col-2 col-form-label">State</label>
                             <div class="col-10">
-                                <input class="form-control" type="text"
+                                <input name="state" class="form-control" type="text"
                                        value="<c:out value="${address.state}"/>"
                                        id="state-input">
                             </div>
@@ -229,7 +228,7 @@
                             <label for="country-input"
                                    class="col-2 col-form-label">Country</label>
                             <div class="col-10">
-                                <input class="form-control" type="text"
+                                <input name="country" class="form-control" type="text"
                                        value="<c:out value="${address.country}"/>"
                                        id="country-input">
                             </div>
@@ -240,14 +239,14 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label" for="card-holder-name">Name on Card</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="card-holder-name" id="card-holder-name"
+                                <input type="text" class="form-control" name="cardHolderName" id="card-holder-name"
                                        placeholder="Card Holder's Name">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-3 control-label" for="card-number">Card Number</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="card-number" id="card-number"
+                                <input type="text" class="form-control" name="cardNumber" id="card-number"
                                        placeholder="Debit/Credit Card Number">
                             </div>
                         </div>
@@ -256,7 +255,7 @@
                             <div class="col-sm-9">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                        <select class="form-control col-sm-2" name="expiry-month" id="expiry-month">
+                                        <select class="form-control col-sm-2" name="expiryMonth" id="expiry-month">
                                             <option>Month</option>
                                             <option value="01">Jan (01)</option>
                                             <option value="02">Feb (02)</option>
@@ -273,7 +272,7 @@
                                         </select>
                                     </div>
                                     <div class="col-xs-3">
-                                        <select class="form-control" name="expiry-year">
+                                        <select class="form-control" name="expiryYear">
                                             <option value="17">2017</option>
                                             <option value="18">2018</option>
                                             <option value="19">2019</option>

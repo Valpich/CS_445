@@ -2,14 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b515210d-be3c-4260-980b-0d9ee0718f50" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/OrderAddress.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/CartController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/CartController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/DebugController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/DebugController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/IndexController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/IndexController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/BaseEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/BaseEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/orders/Order.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/orders/Order.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/users/Address.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/users/Address.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/users/User.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/users/User.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/CartController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/CartController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/DebugController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/DebugController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/IndexController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/IndexController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/BaseEntity.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/BaseEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/orders/Order.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/orders/Order.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/users/Address.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/users/Address.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/users/User.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/users/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Arquillian_JUnit_Latest.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Arquillian_JUnit_Latest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_Latest.xml" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_Latest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjrt_Latest.xml" afterPath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjrt_Latest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjweaver_Latest.xml" afterPath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjweaver_Latest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml.bak" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/local-password" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/local-password" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid.prev" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid.prev" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/jsp/CS_445_war_exploded/org/apache/jsp/WEB_002dINF/jsp/cart/checkout_jsp.java" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/jsp/CS_445_war_exploded/org/apache/jsp/WEB_002dINF/jsp/cart/checkout_jsp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/policy/CS_445_war_exploded/CS_445_war_exploded/granted.policy" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/policy/CS_445_war_exploded/CS_445_war_exploded/granted.policy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/logs/server.log" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/logs/server.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/application.properties" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/cart/checkout.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/cart/checkout.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/CartController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/CartController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/DebugController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/DebugController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/IndexController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/BaseEntity.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/BaseEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/Order.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/Order.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/Address.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/Address.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/User.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/cart/checkout.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/cart/checkout.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,21 +58,83 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="checkout.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/cart/checkout.jsp">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3444">
-              <caret line="302" column="40" lean-forward="false" selection-start-line="302" selection-start-column="40" selection-end-line="302" selection-end-column="40" />
+            <state relative-caret-position="861">
+              <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/cart/list.jsp">
+      <file leaf-file-name="BaseEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/BaseEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="71" selection-end-column="102" />
+            <state relative-caret-position="640">
+              <caret line="115" column="23" lean-forward="false" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CartController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/CartController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="141" column="83" lean-forward="false" selection-start-line="141" selection-start-column="83" selection-end-line="141" selection-end-column="83" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Address.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/Address.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="141" column="5" lean-forward="false" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
+              <folding>
+                <element signature="e#2562#2563#0" expanded="true" />
+                <element signature="e#2589#2590#0" expanded="true" />
+                <element signature="e#2627#2628#0" expanded="true" />
+                <element signature="e#2659#2660#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cart.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/Cart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-225">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Order.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/Order.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="107" column="28" lean-forward="true" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="28" />
+              <folding>
+                <element signature="e#3088#3089#0" expanded="true" />
+                <element signature="e#3115#3116#0" expanded="true" />
+                <element signature="e#3153#3154#0" expanded="true" />
+                <element signature="e#3185#3186#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -67,24 +160,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/CartController.java">
+      <file leaf-file-name="OrderAddress.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/OrderAddress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="59" column="34" lean-forward="false" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="34" />
+            <state relative-caret-position="435">
+              <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#2593#2594#0" expanded="true" />
+                <element signature="e#2621#2622#0" expanded="true" />
+                <element signature="e#2662#2663#0" expanded="true" />
+                <element signature="e#2696#2697#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="error.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/error.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -110,6 +196,7 @@
       <find>spring</find>
       <find>MVC</find>
       <find>id</find>
+      <find>address</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -123,7 +210,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/validators/UserFormValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/BracketController.java" />
@@ -153,7 +239,6 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/fragments/leftbar.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderManager.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/orders/confirmation.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/IndexController.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/cart/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/AntoineBaiseAude.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/SecuritySystemInstallation.java" />
@@ -163,17 +248,19 @@
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/OrderedService.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/OrderedProducts.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/OrderedServices.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/Address.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/BaseEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Product.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/Service.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/Order.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/DebugController.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/users/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/User.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/cart/checkout.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/DebugController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/IndexController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/BaseEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/OrderAddress.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/Address.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/CartController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/Order.java" />
       </list>
     </option>
   </component>
@@ -220,6 +307,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -824,14 +913,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cs445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="configurations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -858,22 +979,9 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/WEB-INF/jsp/users" />
-      <recent name="$PROJECT_DIR$/web/WEB-INF/jsp" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="iit.cs445.models" />
       <recent name="iit.cs445.model.products" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="iit.cs445.models.services" />
-      <recent name="iit.cs445.controllers" />
-      <recent name="iit.cs445.model.services" />
-      <recent name="iit.cs445.model.products" />
-      <recent name="iit.cs445.model.users" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/WEB-INF/jsp/cart" />
@@ -881,6 +989,19 @@
       <recent name="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders" />
       <recent name="$PROJECT_DIR$/src/main/java/iit/cs445/controller" />
       <recent name="$PROJECT_DIR$/src/main/java/iit/cs445/configuration" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="iit.cs445.models.users" />
+      <recent name="iit.cs445.models.services" />
+      <recent name="iit.cs445.controllers" />
+      <recent name="iit.cs445.model.services" />
+      <recent name="iit.cs445.model.products" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/WEB-INF/jsp/users" />
+      <recent name="$PROJECT_DIR$/web/WEB-INF/jsp" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1498,7 +1619,8 @@
       <workItem from="1498181609482" duration="418000" />
       <workItem from="1498234800229" duration="8787000" />
       <workItem from="1498336187849" duration="24192000" />
-      <workItem from="1498416980809" duration="8500000" />
+      <workItem from="1498416980809" duration="17265000" />
+      <workItem from="1498437802068" duration="3217000" />
     </task>
     <servers />
   </component>
@@ -1517,7 +1639,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104060000" />
+    <option name="totallyTimeSpent" value="116042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1542,8 +1664,8 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29191092" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29191092" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -1587,19 +1709,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/validation.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/jsp/CS_445_war_exploded/org/apache/jsp/WEB_002dINF/jsp/cart/list_jsp.java" />
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/structural.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="72" column="16" lean-forward="false" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1745,22 +1858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/Cart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/AntoineBaiseAude.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/services/SurveillanceDesign.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1815,47 +1912,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/BaseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/services/Service.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/DebugController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="220" column="32" lean-forward="false" selection-start-line="220" selection-start-column="32" selection-end-line="220" selection-end-column="32" />
-          <folding>
-            <element signature="method#populateDatabase#0;class#DebugController#0" expanded="false" />
-            <element signature="method#populateCart#0;class#DebugController#0" expanded="false" />
-            <element signature="method#populateProducts#0;class#DebugController#0" expanded="false" />
-            <element signature="method#populateAccessories#0;class#DebugController#0" expanded="false" />
-            <element signature="method#populateSurveillanceCameras#0;class#DebugController#0" expanded="false" />
-            <element signature="method#populateDVR#0;class#DebugController#0" expanded="false" />
-            <element signature="method#populateServices#0;class#DebugController#0" expanded="false" />
-            <element signature="method#populateUsers#0;class#DebugController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="55" column="32" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1875,30 +1931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/Address.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1915,14 +1947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1931,22 +1955,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Product.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/error.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/Order.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="58" column="5" lean-forward="false" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+        <state relative-caret-position="105">
+          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/services/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/validation.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/cart/checkout.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="301" column="56" lean-forward="false" selection-start-line="301" selection-start-column="0" selection-end-line="302" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/cart/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="71" column="32" lean-forward="false" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="109" column="75" lean-forward="false" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="75" />
           <folding>
-            <element signature="e#2002#2003#0" expanded="false" />
-            <element signature="e#2030#2031#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1113#1114#0" expanded="false" />
+            <element signature="e#1167#1168#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/DebugController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="187" column="0" lean-forward="false" selection-start-line="187" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+          <folding>
+            <element signature="method#populateDatabase#0;class#DebugController#0" expanded="false" />
+            <element signature="method#populateProducts#0;class#DebugController#0" expanded="false" />
+            <element signature="method#populateAccessories#0;class#DebugController#0" expanded="false" />
+            <element signature="method#populateSurveillanceCameras#0;class#DebugController#0" expanded="false" />
+            <element signature="method#populateDVR#0;class#DebugController#0" expanded="false" />
+            <element signature="method#populateServices#0;class#DebugController#0" expanded="false" />
+            <element signature="method#populateCart#1;class#DebugController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="40" column="23" lean-forward="false" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="115" column="23" lean-forward="false" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="141" column="5" lean-forward="false" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
+          <folding>
+            <element signature="e#2562#2563#0" expanded="true" />
+            <element signature="e#2589#2590#0" expanded="true" />
+            <element signature="e#2627#2628#0" expanded="true" />
+            <element signature="e#2659#2660#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="861">
+          <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/OrderAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+          <folding>
+            <element signature="e#2593#2594#0" expanded="true" />
+            <element signature="e#2621#2622#0" expanded="true" />
+            <element signature="e#2662#2663#0" expanded="true" />
+            <element signature="e#2696#2697#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1966,37 +2111,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/Cart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/CartController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="59" column="34" lean-forward="false" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="34" />
+        <state relative-caret-position="390">
+          <caret line="141" column="83" lean-forward="false" selection-start-line="141" selection-start-column="83" selection-end-line="141" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/error.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/cart/checkout.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3444">
-          <caret line="302" column="40" lean-forward="false" selection-start-line="302" selection-start-column="40" selection-end-line="302" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/cart/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="71" selection-end-column="102" />
-          <folding />
+        <state relative-caret-position="345">
+          <caret line="107" column="28" lean-forward="true" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="28" />
+          <folding>
+            <element signature="e#3088#3089#0" expanded="true" />
+            <element signature="e#3115#3116#0" expanded="true" />
+            <element signature="e#3153#3154#0" expanded="true" />
+            <element signature="e#3185#3186#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

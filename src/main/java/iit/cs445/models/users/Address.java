@@ -3,6 +3,7 @@ package iit.cs445.models.users;
 import iit.cs445.models.BaseEntity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "addresses")
@@ -36,6 +37,13 @@ public class Address extends BaseEntity<Long, Address> {
 
     @Column(name = "state")
     private String state;
+
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "user_address", joinColumns = {
+            @JoinColumn(name = "address_id", nullable = false, updatable = false) },
+            inverseJoinColumns = { @JoinColumn(name = "user_id",
+                    nullable = false, updatable = false) })
+    private User user;
 
     @Override
     public Long getId() {
@@ -110,6 +118,14 @@ public class Address extends BaseEntity<Long, Address> {
         this.state = state;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     @Override
     public String toString() {
         return "Address{" +
@@ -124,38 +140,4 @@ public class Address extends BaseEntity<Long, Address> {
                 ", state='" + state + '\'' +
                 "} " + super.toString();
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Address address = (Address) o;
-
-        if (id != null ? !id.equals(address.id) : address.id != null) return false;
-        if (phoneNumber != null ? !phoneNumber.equals(address.phoneNumber) : address.phoneNumber != null) return false;
-        if (streetAddress != null ? !streetAddress.equals(address.streetAddress) : address.streetAddress != null)
-            return false;
-        if (firstName != null ? !firstName.equals(address.firstName) : address.firstName != null) return false;
-        if (lastName != null ? !lastName.equals(address.lastName) : address.lastName != null) return false;
-        if (zipCode != null ? !zipCode.equals(address.zipCode) : address.zipCode != null) return false;
-        if (country != null ? !country.equals(address.country) : address.country != null) return false;
-        if (city != null ? !city.equals(address.city) : address.city != null) return false;
-        return state != null ? state.equals(address.state) : address.state == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (phoneNumber != null ? phoneNumber.hashCode() : 0);
-        result = 31 * result + (streetAddress != null ? streetAddress.hashCode() : 0);
-        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
-        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
-        result = 31 * result + (zipCode != null ? zipCode.hashCode() : 0);
-        result = 31 * result + (country != null ? country.hashCode() : 0);
-        result = 31 * result + (city != null ? city.hashCode() : 0);
-        result = 31 * result + (state != null ? state.hashCode() : 0);
-        return result;
-    }
-
 }

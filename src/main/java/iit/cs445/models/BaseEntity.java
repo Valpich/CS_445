@@ -165,7 +165,6 @@ public abstract class BaseEntity<ID, Type> {
                 }
             }
             Logger.getLogger(getClass().getName()).log(Level.INFO, "No user found.");
-            session.close();
         } catch (Exception exc) {
             Logger.getLogger(getClass().getName()).log(Level.WARNING, exc.toString());
         } finally {

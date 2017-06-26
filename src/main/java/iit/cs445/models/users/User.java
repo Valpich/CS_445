@@ -2,11 +2,16 @@ package iit.cs445.models.users;
 
 import iit.cs445.models.BaseEntity;
 import iit.cs445.models.orders.Order;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Entity
 @Table(name = "user_account")
@@ -29,16 +34,15 @@ public class User extends BaseEntity<Long, User> implements Serializable {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "address")
-    @OneToMany
-    @JoinColumn(name = "address_ids")
-    @Cascade({org.hibernate.annotations.CascadeType.ALL})
-    private List<Address> address;
 
-    @Column(name = "orders")
-    @OneToMany
-    @JoinColumn(name = "order_id")
-    @Cascade({org.hibernate.annotations.CascadeType.ALL})
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "user_address", joinColumns = {
+            @JoinColumn(name = "user_id", nullable = false, updatable = false) },
+            inverseJoinColumns = { @JoinColumn(name = "address_id",
+                    nullable = false, updatable = false) })
+    private List<Address> addresses;
+
+    @Transient
     private List<Order> orders;
 
     @Override
@@ -82,20 +86,43 @@ public class User extends BaseEntity<Long, User> implements Serializable {
         this.password = password;
     }
 
-    public List<Address> getAddress() {
-        return address;
+    public List<Address> getAddresses() {
+        return addresses;
     }
 
-    public void setAddress(List<Address> address) {
-        this.address = address;
+    public void setAddresses(List<Address> address) {
+        this.addresses = address;
     }
 
     public List<Order> getOrders() {
+        orders = new ArrayList<>();
+        for(Order o : new Order().listAll()){
+            if(o.getUser().getId().equals(this.getId()))
+                orders.add(o);
+        }
         return orders;
     }
 
     public void setOrders(List<Order> orders) {
         this.orders = orders;
+    }
+
+    @Override
+    public void update() {
+        Session session = localSessionFactoryBean.getObject().openSession();
+        Logger.getLogger(getClass().getName()).log(Level.INFO, "User update call");
+        try {
+            Transaction tx = session.beginTransaction();
+            for(Address address : addresses){
+                session.evict(address);
+            }
+            session.update(this);
+            tx.commit();
+        } catch (Exception exc) {
+            Logger.getLogger(getClass().getName()).log(Level.WARNING, exc.toString());
+        } finally {
+            session.close();
+        }
     }
 
     @Override
@@ -106,36 +133,8 @@ public class User extends BaseEntity<Long, User> implements Serializable {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", password='" + password + '\'' +
-                ", address=" + address +
-                ", orders=" + orders +
+                ", address=" + addresses +
                 "} " + super.toString();
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        User user = (User) o;
-        if (id != null ? !id.equals(user.id) : user.id != null) return false;
-        if (email != null ? !email.equals(user.email) : user.email != null) return false;
-        if (firstName != null ? !firstName.equals(user.firstName) : user.firstName != null) return false;
-        if (lastName != null ? !lastName.equals(user.lastName) : user.lastName != null) return false;
-        if (password != null ? !password.equals(user.password) : user.password != null) return false;
-        if (address != null ? !address.equals(user.address) : user.address != null) return false;
-        return orders != null ? orders.equals(user.orders) : user.orders == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (email != null ? email.hashCode() : 0);
-        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
-        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
-        result = 31 * result + (password != null ? password.hashCode() : 0);
-        result = 31 * result + (address != null ? address.hashCode() : 0);
-        result = 31 * result + (orders != null ? orders.hashCode() : 0);
-        return result;
     }
 
 }

@@ -1,13 +1,13 @@
 package iit.cs445.models.users;
 
 import iit.cs445.models.BaseEntity;
+import iit.cs445.models.orders.Order;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "addresses")
-public class Address extends BaseEntity<Long, Address> {
+public class OrderAddress extends BaseEntity<Long, OrderAddress> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -39,11 +39,11 @@ public class Address extends BaseEntity<Long, Address> {
     private String state;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable(name = "user_address", joinColumns = {
+    @JoinTable(name = "order_address", joinColumns = {
             @JoinColumn(name = "address_id", nullable = false, updatable = false) },
-            inverseJoinColumns = { @JoinColumn(name = "user_id",
+            inverseJoinColumns = { @JoinColumn(name = "order_id",
                     nullable = false, updatable = false) })
-    private User user;
+    private Order order;
 
     @Override
     public Long getId() {
@@ -118,9 +118,30 @@ public class Address extends BaseEntity<Long, Address> {
         this.state = state;
     }
 
+    public Order getOrder() {
+        return order;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
+    }
+
+    public OrderAddress clone(Address address) {
+        OrderAddress orderAddress = new OrderAddress();
+        orderAddress.setPhoneNumber(address.getPhoneNumber());
+        orderAddress.setStreetAddress(address.getStreetAddress());
+        orderAddress.setFirstName(address.getFirstName());
+        orderAddress.setLastName(address.getLastName());
+        orderAddress.setZipCode(address.getZipCode());
+        orderAddress.setCountry(address.getCountry());
+        orderAddress.setCity(address.getCity());
+        orderAddress.setState(address.getState());
+        return orderAddress;
+    }
+
     @Override
     public String toString() {
-        return "Address{" +
+        return "OrderAddress{" +
                 "id=" + id +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", streetAddress='" + streetAddress + '\'' +
@@ -133,51 +154,5 @@ public class Address extends BaseEntity<Long, Address> {
                 "} " + super.toString();
     }
 
-    @Override
-    public Address clone() {
-        Address address = new Address();
-        address.setPhoneNumber(phoneNumber);
-        address.setStreetAddress(streetAddress);
-        address.setFirstName(firstName);
-        address.setLastName(lastName);
-        address.setZipCode(zipCode);
-        address.setCountry(country);
-        address.setCity(city);
-        address.setState(state);
-        return address;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Address address = (Address) o;
-
-        if (id != null ? !id.equals(address.id) : address.id != null) return false;
-        if (phoneNumber != null ? !phoneNumber.equals(address.phoneNumber) : address.phoneNumber != null) return false;
-        if (streetAddress != null ? !streetAddress.equals(address.streetAddress) : address.streetAddress != null)
-            return false;
-        if (firstName != null ? !firstName.equals(address.firstName) : address.firstName != null) return false;
-        if (lastName != null ? !lastName.equals(address.lastName) : address.lastName != null) return false;
-        if (zipCode != null ? !zipCode.equals(address.zipCode) : address.zipCode != null) return false;
-        if (country != null ? !country.equals(address.country) : address.country != null) return false;
-        if (city != null ? !city.equals(address.city) : address.city != null) return false;
-        return state != null ? state.equals(address.state) : address.state == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (phoneNumber != null ? phoneNumber.hashCode() : 0);
-        result = 31 * result + (streetAddress != null ? streetAddress.hashCode() : 0);
-        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
-        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
-        result = 31 * result + (zipCode != null ? zipCode.hashCode() : 0);
-        result = 31 * result + (country != null ? country.hashCode() : 0);
-        result = 31 * result + (city != null ? city.hashCode() : 0);
-        result = 31 * result + (state != null ? state.hashCode() : 0);
-        return result;
-    }
 
 }

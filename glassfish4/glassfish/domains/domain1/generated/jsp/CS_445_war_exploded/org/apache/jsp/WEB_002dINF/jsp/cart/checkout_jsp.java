@@ -208,7 +208,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("                        <div class=\"form-group\">\r\n");
         out.write("                            <label for=\"first-name-input\" class=\"col-2 col-form-label\">First name</label>\r\n");
         out.write("                            <div class=\"col-10\">\r\n");
-        out.write("                                <input class=\"form-control\" type=\"text\"\r\n");
+        out.write("                                <input name=\"firstName\" class=\"form-control\" type=\"text\"\r\n");
         out.write("                                       value=\"");
         if (_jspx_meth_c_out_26((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_1, _jspx_page_context))
           return true;
@@ -219,7 +219,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("                        <div class=\"form-group\">\r\n");
         out.write("                            <label for=\"last-name-input\" class=\"col-2 col-form-label\">Last name</label>\r\n");
         out.write("                            <div class=\"col-10\">\r\n");
-        out.write("                                <input class=\"form-control\" type=\"text\"\r\n");
+        out.write("                                <input name=\"lastName\" class=\"form-control\" type=\"text\"\r\n");
         out.write("                                       value=\"");
         if (_jspx_meth_c_out_27((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_1, _jspx_page_context))
           return true;
@@ -230,7 +230,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("                        <div class=\"form-group\">\r\n");
         out.write("                            <label for=\"tel-input\" class=\"col-2 col-form-label\">Telephone</label>\r\n");
         out.write("                            <div class=\"col-10\">\r\n");
-        out.write("                                <input class=\"form-control\" type=\"tel\"\r\n");
+        out.write("                                <input name=\"phoneNumber\" class=\"form-control\" type=\"tel\"\r\n");
         out.write("                                       value=\"");
         if (_jspx_meth_c_out_28((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_1, _jspx_page_context))
           return true;
@@ -242,7 +242,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("                            <label for=\"street-input\"\r\n");
         out.write("                                   class=\"col-2 col-form-label\">Street address</label>\r\n");
         out.write("                            <div class=\"col-10\">\r\n");
-        out.write("                                <input class=\"form-control\" type=\"text\"\r\n");
+        out.write("                                <input name=\"streetAddress\" class=\"form-control\" type=\"text\"\r\n");
         out.write("                                       value=\"");
         if (_jspx_meth_c_out_29((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_1, _jspx_page_context))
           return true;
@@ -251,10 +251,9 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("                            </div>\r\n");
         out.write("                        </div>\r\n");
         out.write("                        <div class=\"form-group\">\r\n");
-        out.write("                            <label for=\"city-input\" class=\"col-2 col-form-label\">Street\r\n");
-        out.write("                                address</label>\r\n");
+        out.write("                            <label for=\"city-input\" class=\"col-2 col-form-label\">City</label>\r\n");
         out.write("                            <div class=\"col-10\">\r\n");
-        out.write("                                <input class=\"form-control\" type=\"text\" value=\"");
+        out.write("                                <input name=\"city\" class=\"form-control\" type=\"text\" value=\"");
         if (_jspx_meth_c_out_30((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_1, _jspx_page_context))
           return true;
         out.write("\"\r\n");
@@ -265,7 +264,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("                            <label for=\"zip-code-input\"\r\n");
         out.write("                                   class=\"col-2 col-form-label\">Zip code</label>\r\n");
         out.write("                            <div class=\"col-10\">\r\n");
-        out.write("                                <input class=\"form-control\" type=\"number\"\r\n");
+        out.write("                                <input name=\"zipCode\" class=\"form-control\" type=\"number\"\r\n");
         out.write("                                       value=\"");
         if (_jspx_meth_c_out_31((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_1, _jspx_page_context))
           return true;
@@ -277,7 +276,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("                            <label for=\"state-input\"\r\n");
         out.write("                                   class=\"col-2 col-form-label\">State</label>\r\n");
         out.write("                            <div class=\"col-10\">\r\n");
-        out.write("                                <input class=\"form-control\" type=\"text\"\r\n");
+        out.write("                                <input name=\"state\" class=\"form-control\" type=\"text\"\r\n");
         out.write("                                       value=\"");
         if (_jspx_meth_c_out_32((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_1, _jspx_page_context))
           return true;
@@ -289,7 +288,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("                            <label for=\"country-input\"\r\n");
         out.write("                                   class=\"col-2 col-form-label\">Country</label>\r\n");
         out.write("                            <div class=\"col-10\">\r\n");
-        out.write("                                <input class=\"form-control\" type=\"text\"\r\n");
+        out.write("                                <input name=\"country\" class=\"form-control\" type=\"text\"\r\n");
         out.write("                                       value=\"");
         if (_jspx_meth_c_out_33((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_1, _jspx_page_context))
           return true;
@@ -303,14 +302,14 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("                        <div class=\"form-group\">\r\n");
         out.write("                            <label class=\"col-sm-3 control-label\" for=\"card-holder-name\">Name on Card</label>\r\n");
         out.write("                            <div class=\"col-sm-9\">\r\n");
-        out.write("                                <input type=\"text\" class=\"form-control\" name=\"card-holder-name\" id=\"card-holder-name\"\r\n");
+        out.write("                                <input type=\"text\" class=\"form-control\" name=\"cardHolderName\" id=\"card-holder-name\"\r\n");
         out.write("                                       placeholder=\"Card Holder's Name\">\r\n");
         out.write("                            </div>\r\n");
         out.write("                        </div>\r\n");
         out.write("                        <div class=\"form-group\">\r\n");
         out.write("                            <label class=\"col-sm-3 control-label\" for=\"card-number\">Card Number</label>\r\n");
         out.write("                            <div class=\"col-sm-9\">\r\n");
-        out.write("                                <input type=\"text\" class=\"form-control\" name=\"card-number\" id=\"card-number\"\r\n");
+        out.write("                                <input type=\"text\" class=\"form-control\" name=\"cardNumber\" id=\"card-number\"\r\n");
         out.write("                                       placeholder=\"Debit/Credit Card Number\">\r\n");
         out.write("                            </div>\r\n");
         out.write("                        </div>\r\n");
@@ -319,7 +318,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("                            <div class=\"col-sm-9\">\r\n");
         out.write("                                <div class=\"row\">\r\n");
         out.write("                                    <div class=\"col-xs-3\">\r\n");
-        out.write("                                        <select class=\"form-control col-sm-2\" name=\"expiry-month\" id=\"expiry-month\">\r\n");
+        out.write("                                        <select class=\"form-control col-sm-2\" name=\"expiryMonth\" id=\"expiry-month\">\r\n");
         out.write("                                            <option>Month</option>\r\n");
         out.write("                                            <option value=\"01\">Jan (01)</option>\r\n");
         out.write("                                            <option value=\"02\">Feb (02)</option>\r\n");
@@ -336,7 +335,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("                                        </select>\r\n");
         out.write("                                    </div>\r\n");
         out.write("                                    <div class=\"col-xs-3\">\r\n");
-        out.write("                                        <select class=\"form-control\" name=\"expiry-year\">\r\n");
+        out.write("                                        <select class=\"form-control\" name=\"expiryYear\">\r\n");
         out.write("                                            <option value=\"17\">2017</option>\r\n");
         out.write("                                            <option value=\"18\">2018</option>\r\n");
         out.write("                                            <option value=\"19\">2019</option>\r\n");
@@ -597,7 +596,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_4 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_if_4.setPageContext(_jspx_page_context);
     _jspx_th_c_if_4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_1);
-    _jspx_th_c_if_4.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${not empty sessionScope.user.address}", boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    _jspx_th_c_if_4.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${not empty sessionScope.user.addresses}", boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
     int _jspx_eval_c_if_4 = _jspx_th_c_if_4.doStartTag();
     if (_jspx_eval_c_if_4 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
@@ -653,7 +652,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_th_c_forEach_2.setPageContext(_jspx_page_context);
     _jspx_th_c_forEach_2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_4);
     _jspx_th_c_forEach_2.setVar("address");
-    _jspx_th_c_forEach_2.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.user.address}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_2.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.user.addresses}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int[] _jspx_push_body_count_c_forEach_2 = new int[] { 0 };
     try {
       int _jspx_eval_c_forEach_2 = _jspx_th_c_forEach_2.doStartTag();
@@ -689,7 +688,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("                                               id=\"first-name-input_");
           if (_jspx_meth_c_out_4((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_2, _jspx_page_context, _jspx_push_body_count_c_forEach_2))
             return true;
-          out.write("\">\r\n");
+          out.write("\" disabled>\r\n");
           out.write("                                    </div>\r\n");
           out.write("                                </div>\r\n");
           out.write("                                <div class=\"form-group\">\r\n");
@@ -707,7 +706,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("                                               id=\"last-name-input_");
           if (_jspx_meth_c_out_7((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_2, _jspx_page_context, _jspx_push_body_count_c_forEach_2))
             return true;
-          out.write("\">\r\n");
+          out.write("\" disabled>\r\n");
           out.write("                                    </div>\r\n");
           out.write("                                </div>\r\n");
           out.write("                                <div class=\"form-group\">\r\n");
@@ -724,7 +723,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("                                               id=\"tel-input_");
           if (_jspx_meth_c_out_10((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_2, _jspx_page_context, _jspx_push_body_count_c_forEach_2))
             return true;
-          out.write("\">\r\n");
+          out.write("\" disabled>\r\n");
           out.write("                                    </div>\r\n");
           out.write("                                </div>\r\n");
           out.write("                                <div class=\"form-group\">\r\n");
@@ -742,7 +741,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("                                               id=\"street-input_");
           if (_jspx_meth_c_out_13((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_2, _jspx_page_context, _jspx_push_body_count_c_forEach_2))
             return true;
-          out.write("\">\r\n");
+          out.write("\" disabled>\r\n");
           out.write("                                    </div>\r\n");
           out.write("                                </div>\r\n");
           out.write("                                <div class=\"form-group\">\r\n");
@@ -759,7 +758,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("                                               id=\"city-input_");
           if (_jspx_meth_c_out_16((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_2, _jspx_page_context, _jspx_push_body_count_c_forEach_2))
             return true;
-          out.write("\">\r\n");
+          out.write("\" disabled>\r\n");
           out.write("                                    </div>\r\n");
           out.write("                                </div>\r\n");
           out.write("                                <div class=\"form-group\">\r\n");
@@ -777,7 +776,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("                                               id=\"zip-code-input_");
           if (_jspx_meth_c_out_19((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_2, _jspx_page_context, _jspx_push_body_count_c_forEach_2))
             return true;
-          out.write("\">\r\n");
+          out.write("\" disabled>\r\n");
           out.write("                                    </div>\r\n");
           out.write("                                </div>\r\n");
           out.write("                                <div class=\"form-group\">\r\n");
@@ -795,7 +794,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("                                               id=\"state-input_");
           if (_jspx_meth_c_out_22((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_2, _jspx_page_context, _jspx_push_body_count_c_forEach_2))
             return true;
-          out.write("\">\r\n");
+          out.write("\" disabled>\r\n");
           out.write("                                    </div>\r\n");
           out.write("                                </div>\r\n");
           out.write("                                <div class=\"form-group\">\r\n");
@@ -813,7 +812,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("                                               id=\"country-input_");
           if (_jspx_meth_c_out_25((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_2, _jspx_page_context, _jspx_push_body_count_c_forEach_2))
             return true;
-          out.write("\">\r\n");
+          out.write("\" disabled>\r\n");
           out.write("                                    </div>\r\n");
           out.write("                                </div>\r\n");
           out.write("                            ");
@@ -1398,7 +1397,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_7 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_if_7.setPageContext(_jspx_page_context);
     _jspx_th_c_if_7.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_1);
-    _jspx_th_c_if_7.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${not empty sessionScope.user.address}", boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    _jspx_th_c_if_7.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${not empty sessionScope.user.addresses}", boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
     int _jspx_eval_c_if_7 = _jspx_th_c_if_7.doStartTag();
     if (_jspx_eval_c_if_7 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
@@ -1426,7 +1425,7 @@ public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_8 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_if_8.setPageContext(_jspx_page_context);
     _jspx_th_c_if_8.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_1);
-    _jspx_th_c_if_8.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ empty sessionScope.user.address}", boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    _jspx_th_c_if_8.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ empty sessionScope.user.addresses}", boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
     int _jspx_eval_c_if_8 = _jspx_th_c_if_8.doStartTag();
     if (_jspx_eval_c_if_8 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
