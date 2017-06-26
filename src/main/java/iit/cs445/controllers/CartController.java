@@ -27,7 +27,6 @@ public class CartController {
         return "cart/list";
     }
 
-
     @RequestMapping(value = "/cart", method = RequestMethod.POST)
     public String list(HttpServletRequest request, @RequestParam("id")Optional<Long> idOptional) {
         if(idOptional.isPresent()) {

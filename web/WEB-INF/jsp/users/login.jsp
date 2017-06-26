@@ -13,7 +13,7 @@
 <div class="container">
     <div class="loginmodal-container">
         <h1>Login to Your Account</h1><br>
-        <form>
+        <form method="POST">
             <input type="text" name="email" placeholder="Email">
             <input type="password" name="password" placeholder="Password">
             <input type="submit" class="btn btn-primary">
