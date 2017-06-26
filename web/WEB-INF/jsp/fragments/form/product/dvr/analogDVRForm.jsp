@@ -9,7 +9,16 @@
 <body>
 
 <div class="container">
-    <h1>Add Analog DVR</h1><br>
+
+    <c:choose>
+        <c:when test="${not empty analogDVRForm}">
+            <h1>Add Analog DVR</h1><br>
+        </c:when>
+        <c:otherwise>
+            <h1>Update Analog DVR</h1><br>
+        </c:otherwise>
+    </c:choose>
+
 
     <spring:url value="/analogDVR" var="analog"/>
 
@@ -17,16 +26,27 @@
 
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Description</label>
-            <input type="text" name="description" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty analogDVRForm}">
+                    <input type="text" name="description" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="description" value="${analogDVRFormUpdate.description}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
+
         <div class="col-sm-10">
-            <label class="col-sm-2 control-label">Analog Record Formats</label>
+            <label class="col-sm-2 control-label">Analog Record</label>
             <select class="custom-select" name="analog_record_formats">
                 <option type="text" value="NTSC">NTSC</option>
                 <option type="text" value="PAL">PAL</option>
                 <option type="text" value="SECAM">SECAM</option>
             </select>
         </div>
+
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Storage Types</label>
             <select class="custom-select" name="storage_types">
@@ -37,13 +57,23 @@
                 <option type="text" value="OTHER">Other</option>
             </select>
         </div>
+
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Price</label>
-            <input type="text" name="price" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty analogDVRForm}">
+                    <input type="text" name="price" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="price" value="${analogDVRFormUpdate.price}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
 
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Save Analog DVR</button>
+            <button type="submit" class="btn btn-primary">Save</button>
         </div>
 
     </form>

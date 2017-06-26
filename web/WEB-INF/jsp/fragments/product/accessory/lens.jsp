@@ -35,9 +35,11 @@
             <td>${lens.id}</td>
             <td>${lens.price}</td>
 
+            <spring:url value="/lens/${lens.id}/update" var="updateUrl" />
+
             <td>
                 <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
-                <button class="btn btn-info" onclick="location.href='${userUrl}'">Update</button>
+                <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
             </td>
         </tr>
     </c:forEach>

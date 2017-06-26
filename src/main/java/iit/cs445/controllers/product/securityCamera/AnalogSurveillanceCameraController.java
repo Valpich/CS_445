@@ -3,6 +3,7 @@ package iit.cs445.controllers.product.securityCamera;
 import iit.cs445.models.products.AnalogSurveillanceCamera;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,10 +27,17 @@ public class AnalogSurveillanceCameraController {
         return "productForm";
     }
 
+    @RequestMapping(value = "/analogSurveillanceCamera/{id}/update", method = RequestMethod.GET)
+    public String showUpdateAnalogSurveillanceCameraForm(@PathVariable("id") Long id, Model model) {
+        AnalogSurveillanceCamera analogSurveillanceCamera = new AnalogSurveillanceCamera().findById(id);
+        model.addAttribute("analogSurveillanceCameraFormUpdate", analogSurveillanceCamera);
+        return "productForm";
+    }
+
     @RequestMapping(value = "/analogSurveillanceCamera", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description,
-                               @RequestParam("resolution") String resolution,
-                               @RequestParam("price") String price) {
+    public String checkoutPost(@RequestParam("description") String description ,
+                               @RequestParam("resolution") String resolution ,
+                               @RequestParam("price") String price ) {
         saveAnalogSurveillanceCamera(description, resolution, price);
         return "index";
     }

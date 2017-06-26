@@ -3,6 +3,7 @@ package iit.cs445.controllers.product.accessory;
 import iit.cs445.models.products.InfraredLightning;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,9 +27,16 @@ public class InfraredLightningController {
         return "productForm";
     }
 
+    @RequestMapping(value = "/infraredLightning/{id}/update", method = RequestMethod.GET)
+    public String showUpdateInfraredLightningForm(@PathVariable("id") Long id, Model model) {
+        InfraredLightning infraredLightning = new InfraredLightning().findById(id);
+        model.addAttribute("infraredLightningFormUpdate", infraredLightning);
+        return "productForm";
+    }
+
     @RequestMapping(value = "/infraredLightning", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+    public String checkoutPost(@RequestParam("description") String description ,
+                               @RequestParam("price") String price ) {
         saveInfraredLightninh(description, price);
         return "index";
     }

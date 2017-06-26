@@ -9,7 +9,15 @@
 <body>
 
 <div class="container">
-    <h1>Add Power Supply</h1><br>
+
+    <c:choose>
+        <c:when test="${not empty powerSupplyForm}">
+            <h1>Add Power Supply</h1><br>
+        </c:when>
+        <c:otherwise>
+            <h1>Update Power Supply</h1><br>
+        </c:otherwise>
+    </c:choose>
 
     <spring:url value="/powerSupply" var="powerSupply"/>
 
@@ -17,22 +25,58 @@
 
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Description</label>
-            <input type="text" name="description" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty powerSupplyForm}">
+                    <input type="text" name="description" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="description" value="${powerSupplyFormUpdate.description}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
 
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Maximum Output</label>
-            <input type="text" name="maximum_output" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty powerSupplyForm}">
+                    <input type="text" name="maximum_output" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="maximum_output" value="${powerSupplyFormUpdate.maximumOutput}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
 
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Voltage</label>
-            <input type="text" name="voltage" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty powerSupplyForm}">
+                    <input type="text" name="voltage" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="voltage" value="${powerSupplyFormUpdate.voltage}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
 
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Price</label>
-            <input type="text" name="price" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty powerSupplyForm}">
+                    <input type="text" name="price" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="price" value="${powerSupplyFormUpdate.price}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
 
         <div class="col-sm-10">

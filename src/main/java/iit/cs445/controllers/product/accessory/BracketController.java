@@ -3,6 +3,7 @@ package iit.cs445.controllers.product.accessory;
 import iit.cs445.models.products.Bracket;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,9 +27,16 @@ public class BracketController {
         return "productForm";
     }
 
+    @RequestMapping(value = "/bracket/{id}/update", method = RequestMethod.GET)
+    public String showUpdateBracketForm(@PathVariable("id") Long id, Model model) {
+        Bracket bracket = new Bracket().findById(id);
+        model.addAttribute("bracketFormUpdate", bracket);
+        return "productForm";
+    }
+
     @RequestMapping(value = "/bracket", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+    public String checkoutPost(@RequestParam("description") String description ,
+                               @RequestParam("price") String price ) {
         saveBracket(description, price);
         return "index";
     }

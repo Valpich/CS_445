@@ -9,7 +9,15 @@
 <body>
 
 <div class="container">
-    <h1>Add Connector</h1><br>
+
+    <c:choose>
+        <c:when test="${not empty connectorForm}">
+            <h1>Add Connector</h1><br>
+        </c:when>
+        <c:otherwise>
+            <h1>Update Connector</h1><br>
+        </c:otherwise>
+    </c:choose>
 
     <spring:url value="/connector" var="connector"/>
 
@@ -17,11 +25,30 @@
 
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Description</label>
-            <input type="text" name="description" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty connectorForm}">
+                    <input type="text" name="description" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="description" value="${connectorFormUpdate.description}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
+
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Price</label>
-            <input type="text" name="price" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty connectorForm}">
+                    <input type="text" name="price" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="price" value="${connectorFormUpdate.price}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
 
         <div class="col-sm-10">

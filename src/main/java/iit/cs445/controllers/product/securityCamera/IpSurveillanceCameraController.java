@@ -3,10 +3,12 @@ package iit.cs445.controllers.product.securityCamera;
 import iit.cs445.models.products.IPSurveillanceCamera;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -26,10 +28,17 @@ public class IpSurveillanceCameraController {
         return "productForm";
     }
 
+    @RequestMapping(value = "/ipSurveillanceCamera/{id}/update", method = RequestMethod.GET)
+    public String showUpdateIpSurveillanceCameraForm(@PathVariable("id") Long id, Model model) {
+        IPSurveillanceCamera ipSurveillanceCamera = new IPSurveillanceCamera().findById(id);
+        model.addAttribute("ipSurveillanceCameraFormUpdate", ipSurveillanceCamera);
+        return "productForm";
+    }
+
     @RequestMapping(value = "/ipSurveillanceCamera", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description,
-                               @RequestParam("resolution") String resolution,
-                               @RequestParam("price") String price) {
+    public String checkoutPost(@RequestParam("description") String description ,
+                               @RequestParam("resolution") String resolution ,
+                               @RequestParam("price") String price ) {
         saveIpSurveillanceCamera(description, resolution, price);
         return "index";
     }

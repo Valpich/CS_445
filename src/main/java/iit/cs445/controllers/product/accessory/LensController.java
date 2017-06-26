@@ -3,6 +3,7 @@ package iit.cs445.controllers.product.accessory;
 import iit.cs445.models.products.Lens;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,11 +27,18 @@ public class LensController {
         return "productForm";
     }
 
+    @RequestMapping(value = "/lens/{id}/update", method = RequestMethod.GET)
+    public String showUpdateLensForm(@PathVariable("id") Long id, Model model) {
+        Lens lens = new Lens().findById(id);
+        model.addAttribute("lensFormUpdate", lens);
+        return "productForm";
+    }
+
     @RequestMapping(value = "/lens", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description,
+    public String checkoutPost(@RequestParam("description") String description ,
                                @RequestParam("focal") String focal,
                                @RequestParam("magnification") String magnification,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price ) {
         saveLens(description, focal, magnification, price);
         return "index";
     }

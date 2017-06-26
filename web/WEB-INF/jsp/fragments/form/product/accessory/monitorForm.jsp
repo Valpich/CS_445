@@ -9,7 +9,15 @@
 <body>
 
 <div class="container">
-    <h1>Add Monitor</h1><br>
+
+    <c:choose>
+        <c:when test="${not empty monitorForm}">
+            <h1>Add Monitor</h1><br>
+        </c:when>
+        <c:otherwise>
+            <h1>Update Monitor</h1><br>
+        </c:otherwise>
+    </c:choose>
 
     <spring:url value="/monitor" var="monitor"/>
 
@@ -17,22 +25,58 @@
 
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Description</label>
-            <input type="text" name="description" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty monitorForm}">
+                    <input type="text" name="description" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="description" value="${monitorFormUpdate.description}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
 
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Size</label>
-            <input type="text" name="size" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty monitorForm}">
+                    <input type="text" name="size" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="size" value="${monitorFormUpdate.size}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
 
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Max Resolution</label>
-            <input type="text" name="max_resolution" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty monitorForm}">
+                    <input type="text" name="max_resolution" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="max_resolution" value="${monitorFormUpdate.maxResolution}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
 
         <div class="col-sm-10">
             <label class="col-sm-2 control-label">Price</label>
-            <input type="text" name="price" placeholder="">
+
+            <c:choose>
+                <c:when test="${not empty monitorForm}">
+                    <input type="text" name="price" placeholder="">
+                </c:when>
+                <c:otherwise>
+                    <input type="text" name="price" value="${monitorFormUpdate.price}" placeholder="">
+                </c:otherwise>
+            </c:choose>
+
         </div>
 
         <div class="col-sm-10">
