@@ -21,6 +21,13 @@
                     </ul>
                 </li>
                 <li >
+                    <span> Orders </span>
+                    </a>
+                    <ul>
+                        <li ><a href="${pageContext.request.contextPath}/order/listAll"> List your orders </a></li>
+                    </ul>
+                </li>
+                <li >
                     <span> Products </span>
                     </a>
                     <ul>

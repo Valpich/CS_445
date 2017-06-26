@@ -26,9 +26,6 @@ import java.util.logging.Logger;
 @Controller
 public class CartController {
 
-    @Autowired
-    private OrderService orderService;
-
     @RequestMapping(value = "/cart", method = RequestMethod.GET)
     public String listAll() {
         return "cart/list";
@@ -48,7 +45,6 @@ public class CartController {
         for (Service s : cart.getServiceList())
             total += s.getPrice();
         request.setAttribute("total", total);
-        //  saveCart(request, 21L, 21L);
         return "cart/checkout";
     }
 
@@ -86,7 +82,7 @@ public class CartController {
         user.getAddresses().add(address);
         if (!saveCart(request, address.getId())) return "cart/list";
         session.setAttribute("cart", new Cart());
-        return "order/listAll";
+        return "redirect:/order/listAll";
     }
 
     private boolean cardIsValid(@RequestParam("cardHolderName") Optional<String> cardHolderNameOptional, @RequestParam("cardNumber") Optional<String> cardNumberOptional, @RequestParam("expiryMonth") Optional<String> expiryMonthOptional, @RequestParam("expiryYear") Optional<String> expiryYearOptional, @RequestParam("cvv") Optional<String> cvvOptional) {
@@ -132,7 +128,6 @@ public class CartController {
         order.setOrderAddress(new OrderAddress().clone(new Address().findById(billingAddress)));
         order.setStatus(OrderStatus.PROCESSING);
         order.setOrderedProducts(cart.getProductList());
-        cart.getProductList().add(cart.getProductList().get(0));
         Logger.getLogger(CartController.class.getName()).log(Level.INFO, "Product list is  " + cart.getProductList());
         order.setOrderedServices(cart.getServiceList());
         User user = (User) request.getSession().getAttribute("user");
@@ -140,7 +135,6 @@ public class CartController {
         order.saveNew();
         user = user.findById(user.getId());
         Logger.getLogger(CartController.class.getName()).log(Level.INFO, "UserOrder is  " + user.getOrders());
-        //user.update();
         return true;
     }
 }

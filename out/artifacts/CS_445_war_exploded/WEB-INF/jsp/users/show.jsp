@@ -7,9 +7,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<jsp:include page="../fragments/header.jsp" />
+<jsp:include page="../fragments/header.jsp"/>
 
-<div class="container">
+<body>
+
+<div class="container" role="main">
+
+	<div class="col-sm-4">
+		<jsp:include page="../fragments/leftbar.jsp"/>
+	</div>
+	<div class="col-sm-8">
 
 	<c:if test="${not empty msg}">
 		<div class="alert alert-${css} alert-dismissible" role="alert">
@@ -49,7 +56,7 @@
 	</div>
 
 </div>
-
+</div>
 <jsp:include page="../fragments/footer.jsp" />
 
 </body>
