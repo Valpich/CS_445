@@ -1,9 +1,6 @@
 package iit.cs445.controllers;
 
-import iit.cs445.models.products.Cable;
-import iit.cs445.models.services.CustomService;
 import iit.cs445.models.users.Address;
-import iit.cs445.models.users.Cart;
 import iit.cs445.models.users.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 

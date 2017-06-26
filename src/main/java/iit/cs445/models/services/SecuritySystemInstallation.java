@@ -1,7 +1,8 @@
 package iit.cs445.models.services;
 
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "security_system_installation")

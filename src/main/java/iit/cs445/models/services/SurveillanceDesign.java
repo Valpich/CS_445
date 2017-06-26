@@ -1,6 +1,6 @@
 package iit.cs445.models.services;
 
-import javax.persistence.*;
+import javax.persistence.Table;
 
 @Table(name = "surveillance_design")
 public class SurveillanceDesign extends Service<SurveillanceDesign> {

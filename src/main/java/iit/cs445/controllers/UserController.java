@@ -1,8 +1,8 @@
 package iit.cs445.controllers;
 
 import iit.cs445.exceptions.DuplicateEmailException;
-import iit.cs445.models.users.User;
 import iit.cs445.models.users.Cart;
+import iit.cs445.models.users.User;
 import iit.cs445.models.users.UserService;
 import iit.cs445.validators.UserFormValidator;
 import org.springframework.beans.factory.annotation.Autowired;

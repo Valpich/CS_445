@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -29,10 +28,10 @@ public class MicrophoneController {
     }
 
     @RequestMapping(value = "/microphone", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
+    public String checkoutPost(@RequestParam("description") String description,
                                @RequestParam("battery") Boolean battery,
                                @RequestParam("microphone_type") String microphoneType,
-                               @RequestParam("price") String price ) {
+                               @RequestParam("price") String price) {
         saveMicrophone(description, battery, microphoneType, price);
         return "index";
     }
@@ -42,21 +41,21 @@ public class MicrophoneController {
         microphone.setPrice(Float.parseFloat(price));
         microphone.setDescription(description);
         microphone.setBattery(battery);
-        if(microphoneType.equals("CONDENSER")) {
+        if (microphoneType.equals("CONDENSER")) {
             microphone.setMicrophoneType(MicrophoneType.CONDENSER);
-        } else if(microphoneType.equals("DYNAMIC")) {
+        } else if (microphoneType.equals("DYNAMIC")) {
             microphone.setMicrophoneType(MicrophoneType.DYNAMIC);
-        } else if(microphoneType.equals("RIBBON")) {
+        } else if (microphoneType.equals("RIBBON")) {
             microphone.setMicrophoneType(MicrophoneType.RIBBON);
-        } else if(microphoneType.equals("CARBON")) {
+        } else if (microphoneType.equals("CARBON")) {
             microphone.setMicrophoneType(MicrophoneType.CARBON);
-        } else if(microphoneType.equals("PIEZOELECTRIC")) {
+        } else if (microphoneType.equals("PIEZOELECTRIC")) {
             microphone.setMicrophoneType(MicrophoneType.PIEZOELECTRIC);
-        } else if(microphoneType.equals("FIBER_OPTIC")) {
+        } else if (microphoneType.equals("FIBER_OPTIC")) {
             microphone.setMicrophoneType(MicrophoneType.FIBER_OPTIC);
-        } else if(microphoneType.equals("LASER")) {
+        } else if (microphoneType.equals("LASER")) {
             microphone.setMicrophoneType(MicrophoneType.LASER);
-        } else if(microphoneType.equals("LIQUID")) {
+        } else if (microphoneType.equals("LIQUID")) {
             microphone.setMicrophoneType(MicrophoneType.LIQUID);
         } else {
             microphone.setMicrophoneType(MicrophoneType.MEMS);

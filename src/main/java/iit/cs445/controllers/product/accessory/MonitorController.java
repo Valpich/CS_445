@@ -27,10 +27,10 @@ public class MonitorController {
     }
 
     @RequestMapping(value = "/monitor", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
+    public String checkoutPost(@RequestParam("description") String description,
                                @RequestParam("size") String size,
-                               @RequestParam("max_resolution")  String maxResolution,
-                               @RequestParam("price") String price ) {
+                               @RequestParam("max_resolution") String maxResolution,
+                               @RequestParam("price") String price) {
         saveMonitor(description, size, maxResolution, price);
         return "index";
     }

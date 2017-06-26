@@ -27,8 +27,8 @@ public class BracketController {
     }
 
     @RequestMapping(value = "/bracket", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
-                               @RequestParam("price") String price ) {
+    public String checkoutPost(@RequestParam("description") String description,
+                               @RequestParam("price") String price) {
         saveBracket(description, price);
         return "index";
     }

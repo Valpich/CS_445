@@ -3,14 +3,10 @@ package iit.cs445.models.orders;
 import iit.cs445.models.BaseEntity;
 import iit.cs445.models.products.Product;
 import iit.cs445.models.services.Service;
-import iit.cs445.models.users.Address;
 import iit.cs445.models.users.OrderAddress;
 import iit.cs445.models.users.User;
 
 import javax.persistence.*;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.Table;
 import java.util.List;
 
 @Entity
@@ -27,30 +23,30 @@ public class Order extends BaseEntity<Long, Order> {
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "ordered_products", joinColumns = {
-            @JoinColumn(name = "order_id", nullable = false, updatable = false) },
-            inverseJoinColumns = { @JoinColumn(name = "product_id",
-                    nullable = false, updatable = false) })
+            @JoinColumn(name = "order_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "product_id",
+                    nullable = false, updatable = false)})
     private List<Product> orderedProducts;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "ordered_services", joinColumns = {
-            @JoinColumn(name = "order_id", nullable = false, updatable = false) },
-            inverseJoinColumns = { @JoinColumn(name = "service_id",
-                    nullable = false, updatable = false) })
+            @JoinColumn(name = "order_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "service_id",
+                    nullable = false, updatable = false)})
     private List<Service> orderedServices;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "order_address", joinColumns = {
-            @JoinColumn(name = "order_id", nullable = false, updatable = false) },
-            inverseJoinColumns = { @JoinColumn(name = "address_id",
-                    nullable = false, updatable = false) })
+            @JoinColumn(name = "order_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "address_id",
+                    nullable = false, updatable = false)})
     private OrderAddress orderAddress;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
     @JoinTable(name = "user_order", joinColumns = {
-            @JoinColumn(name = "order_id", nullable = false, updatable = false) },
-            inverseJoinColumns = { @JoinColumn(name = "user_id",
-                    nullable = false, updatable = false) })
+            @JoinColumn(name = "order_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "user_id",
+                    nullable = false, updatable = false)})
     private User user;
 
     @Override

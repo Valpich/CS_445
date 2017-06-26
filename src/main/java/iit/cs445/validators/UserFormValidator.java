@@ -16,7 +16,6 @@ import java.util.logging.Logger;
 @PropertySource({"classpath:validation.properties"})
 public class UserFormValidator implements Validator {
 
-
     @Override
     public boolean supports(Class<?> clazz) {
         return User.class.equals(clazz);

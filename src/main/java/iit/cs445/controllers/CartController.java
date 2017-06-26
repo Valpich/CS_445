@@ -1,7 +1,6 @@
 package iit.cs445.controllers;
 
 import iit.cs445.models.orders.Order;
-import iit.cs445.models.orders.OrderService;
 import iit.cs445.models.orders.OrderStatus;
 import iit.cs445.models.products.Product;
 import iit.cs445.models.services.Service;
@@ -9,7 +8,6 @@ import iit.cs445.models.users.Address;
 import iit.cs445.models.users.Cart;
 import iit.cs445.models.users.OrderAddress;
 import iit.cs445.models.users.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,8 +15,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -64,19 +60,19 @@ public class CartController {
                                @RequestParam("expiryYear") Optional<String> expiryYearOptional,
                                @RequestParam("cvv") Optional<String> cvvOptional) {
         boolean valid = cardIsValid(cardHolderNameOptional, cardNumberOptional, expiryMonthOptional, expiryYearOptional, cvvOptional);
-        if(!valid) return "cart/checkout";
+        if (!valid) return "cart/checkout";
         Logger.getLogger(CartController.class.getName()).log(Level.INFO, "Card is valid.");
         Address address;
-        if(idAddress<=0){
+        if (idAddress <= 0) {
             address = new Address();
-            buildAddress(address,firstNameOptional, lastNameOptional, phoneNumberOptional, streetAddressOptional, cityOptional, zipCodeOptional, stateOptional, countryOptional);
-        }else{
+            buildAddress(address, firstNameOptional, lastNameOptional, phoneNumberOptional, streetAddressOptional, cityOptional, zipCodeOptional, stateOptional, countryOptional);
+        } else {
             address = new Address().findById(idAddress);
         }
         Logger.getLogger(CartController.class.getName()).log(Level.INFO, "Address is: " + address);
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
-        if(address.getId() == null){
+        if (address.getId() == null) {
             address.saveNew();
         }
         user.getAddresses().add(address);
@@ -86,12 +82,14 @@ public class CartController {
     }
 
     private boolean cardIsValid(@RequestParam("cardHolderName") Optional<String> cardHolderNameOptional, @RequestParam("cardNumber") Optional<String> cardNumberOptional, @RequestParam("expiryMonth") Optional<String> expiryMonthOptional, @RequestParam("expiryYear") Optional<String> expiryYearOptional, @RequestParam("cvv") Optional<String> cvvOptional) {
-         if(!(cardHolderNameOptional.isPresent() && cardNumberOptional.isPresent() && expiryMonthOptional.isPresent() && expiryYearOptional.isPresent() && cvvOptional.isPresent()))return false;
-         if(cardHolderNameOptional.get().isEmpty() || cardNumberOptional.get().isEmpty() || expiryMonthOptional.get().isEmpty() || expiryYearOptional.get().isEmpty() || cvvOptional.get().isEmpty()) return false;
-         return true;
+        if (!(cardHolderNameOptional.isPresent() && cardNumberOptional.isPresent() && expiryMonthOptional.isPresent() && expiryYearOptional.isPresent() && cvvOptional.isPresent()))
+            return false;
+        if (cardHolderNameOptional.get().isEmpty() || cardNumberOptional.get().isEmpty() || expiryMonthOptional.get().isEmpty() || expiryYearOptional.get().isEmpty() || cvvOptional.get().isEmpty())
+            return false;
+        return true;
     }
 
-    private void buildAddress(final Address address,@RequestParam("firstName") Optional<String> firstNameOptional, @RequestParam("lastName") Optional<String> lastNameOptional, @RequestParam("phoneNumber") Optional<String> phoneNumberOptional, @RequestParam("streetAddress") Optional<String> streetAddressOptional, @RequestParam("city") Optional<String> cityOptional, @RequestParam("zipCode") Optional<String> zipCodeOptional, @RequestParam("state") Optional<String> stateOptional, @RequestParam("country") Optional<String> countryOptional) {
+    private void buildAddress(final Address address, @RequestParam("firstName") Optional<String> firstNameOptional, @RequestParam("lastName") Optional<String> lastNameOptional, @RequestParam("phoneNumber") Optional<String> phoneNumberOptional, @RequestParam("streetAddress") Optional<String> streetAddressOptional, @RequestParam("city") Optional<String> cityOptional, @RequestParam("zipCode") Optional<String> zipCodeOptional, @RequestParam("state") Optional<String> stateOptional, @RequestParam("country") Optional<String> countryOptional) {
         if (firstNameOptional.isPresent()) {
             address.setFirstName(firstNameOptional.get());
         }

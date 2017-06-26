@@ -7,8 +7,8 @@ import iit.cs445.models.services.SecuritySystemInstallation;
 import iit.cs445.models.services.SurveillanceDesign;
 import iit.cs445.models.services.SurveillanceSystemRepair;
 import iit.cs445.models.users.Address;
-import iit.cs445.models.users.User;
 import iit.cs445.models.users.Cart;
+import iit.cs445.models.users.User;
 import iit.cs445.models.users.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,13 +23,12 @@ import java.util.Random;
 @Controller
 public class DebugController {
 
+    private static final Random random = new Random();
     @Autowired
     private UserService userService;
 
-    private static final Random random = new Random();
-
-    private static final Float getRandom(){
-        return random.nextFloat()*100;
+    private static final Float getRandom() {
+        return random.nextFloat() * 100;
     }
 
     @RequestMapping(value = "/populate/database", method = RequestMethod.GET)
@@ -42,14 +41,14 @@ public class DebugController {
 
     @RequestMapping(value = "/populate/cart", method = RequestMethod.GET)
     public String populateCart(HttpServletRequest request) {
-        User user = (User)request.getSession().getAttribute("user");
-        if(user == null);
-            user = userService.findUserByMail("antoine@regnier.com");
-        if(user == null){
+        User user = (User) request.getSession().getAttribute("user");
+        if (user == null) ;
+        user = userService.findUserByMail("antoine@regnier.com");
+        if (user == null) {
             populateUsers();
             request.getSession().setAttribute("user", user);
         }
-        populateCart((Cart)request.getSession().getAttribute("cart"));
+        populateCart((Cart) request.getSession().getAttribute("cart"));
         return "redirect:/";
     }
 
@@ -101,7 +100,7 @@ public class DebugController {
 
         Monitor monitor = new Monitor();
         monitor.setMaxResolution("1080p");
-        monitor.setSize(getRandom()*2);
+        monitor.setSize(getRandom() * 2);
         monitor.setPrice(getRandom());
         monitor.setDescription("Monitor test");
         monitor.saveNew();
@@ -114,7 +113,7 @@ public class DebugController {
         powerSupply.saveNew();
     }
 
-    private void populateSurveillanceCameras(){
+    private void populateSurveillanceCameras() {
         AnalogSurveillanceCamera analogSurveillanceCamera = new AnalogSurveillanceCamera();
         analogSurveillanceCamera.setPrice(getRandom());
         analogSurveillanceCamera.setResolution("720p");
@@ -134,7 +133,7 @@ public class DebugController {
         ipSurveillanceCamera.saveNew();
     }
 
-    private void populateDVR(){
+    private void populateDVR() {
         AnalogDVR analogDVR = new AnalogDVR();
         List<AnalogRecordFormat> analogRecordFormats = new ArrayList<>();
         analogRecordFormats.add(AnalogRecordFormat.NTSC);
@@ -166,7 +165,7 @@ public class DebugController {
         hybridDVR.saveNew();
     }
 
-    private void populateServices(){
+    private void populateServices() {
         CustomService customService = new CustomService();
         customService.setDescription("Custom service test");
         customService.setPrice(getRandom());
@@ -188,7 +187,7 @@ public class DebugController {
         surveillanceSystemRepair.saveNew();
     }
 
-    private void populateUsers(){
+    private void populateUsers() {
         User user = new User();
         user.setFirstName("Antoine");
         user.setLastName("Regnier");
@@ -209,7 +208,7 @@ public class DebugController {
         user.saveNew();
     }
 
-    private void populateCart(Cart cart){
+    private void populateCart(Cart cart) {
         Cable cable = new Cable();
         cable.setPrice(getRandom());
         cable.setLength(getRandom());

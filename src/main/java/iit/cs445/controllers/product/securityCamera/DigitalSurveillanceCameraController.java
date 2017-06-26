@@ -1,7 +1,6 @@
 package iit.cs445.controllers.product.securityCamera;
 
 import iit.cs445.models.products.DigitalSurveillanceCamera;
-import iit.cs445.models.products.IPSurveillanceCamera;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,9 +27,9 @@ public class DigitalSurveillanceCameraController {
     }
 
     @RequestMapping(value = "/digitalSurveillanceCamera", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
-                               @RequestParam("resolution") String resolution ,
-                               @RequestParam("price") String price ) {
+    public String checkoutPost(@RequestParam("description") String description,
+                               @RequestParam("resolution") String resolution,
+                               @RequestParam("price") String price) {
         saveDigitalSurveillanceCamera(description, resolution, price);
         return "index";
     }

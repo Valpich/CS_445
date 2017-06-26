@@ -27,9 +27,9 @@ public class CableController {
     }
 
     @RequestMapping(value = "/cable", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
+    public String checkoutPost(@RequestParam("description") String description,
                                @RequestParam("length") String length,
-                               @RequestParam("price") String price ) {
+                               @RequestParam("price") String price) {
         saveCable(description, length, price);
         return "index";
     }

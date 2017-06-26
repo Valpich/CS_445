@@ -6,7 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Transient;
+import javax.persistence.Version;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
@@ -28,6 +31,12 @@ public abstract class BaseEntity<ID, Type> {
 
     @Version
     private long version;
+
+    public BaseEntity() {
+        Date now = new Date();
+        this.creationTime = now;
+        this.modificationTime = now;
+    }
 
     public abstract ID getId();
 
@@ -53,12 +62,6 @@ public abstract class BaseEntity<ID, Type> {
 
     public void setVersion(long version) {
         this.version = version;
-    }
-
-    public BaseEntity() {
-        Date now = new Date();
-        this.creationTime = now;
-        this.modificationTime = now;
     }
 
     @Override

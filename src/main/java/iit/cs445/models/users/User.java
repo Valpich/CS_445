@@ -4,7 +4,6 @@ import iit.cs445.models.BaseEntity;
 import iit.cs445.models.orders.Order;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -37,9 +36,9 @@ public class User extends BaseEntity<Long, User> implements Serializable {
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "user_address", joinColumns = {
-            @JoinColumn(name = "user_id", nullable = false, updatable = false) },
-            inverseJoinColumns = { @JoinColumn(name = "address_id",
-                    nullable = false, updatable = false) })
+            @JoinColumn(name = "user_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "address_id",
+                    nullable = false, updatable = false)})
     private List<Address> addresses;
 
     @Transient
@@ -96,8 +95,8 @@ public class User extends BaseEntity<Long, User> implements Serializable {
 
     public List<Order> getOrders() {
         orders = new ArrayList<>();
-        for(Order o : new Order().listAll()){
-            if(o.getUser().getId().equals(this.getId()))
+        for (Order o : new Order().listAll()) {
+            if (o.getUser().getId().equals(this.getId()))
                 orders.add(o);
         }
         return orders;
@@ -113,7 +112,7 @@ public class User extends BaseEntity<Long, User> implements Serializable {
         Logger.getLogger(getClass().getName()).log(Level.INFO, "User update call");
         try {
             Transaction tx = session.beginTransaction();
-            for(Address address : addresses){
+            for (Address address : addresses) {
                 session.evict(address);
             }
             session.update(this);

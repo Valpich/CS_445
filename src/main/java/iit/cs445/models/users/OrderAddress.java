@@ -40,9 +40,9 @@ public class OrderAddress extends BaseEntity<Long, OrderAddress> {
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "order_address", joinColumns = {
-            @JoinColumn(name = "address_id", nullable = false, updatable = false) },
-            inverseJoinColumns = { @JoinColumn(name = "order_id",
-                    nullable = false, updatable = false) })
+            @JoinColumn(name = "address_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "order_id",
+                    nullable = false, updatable = false)})
     private Order order;
 
     @Override

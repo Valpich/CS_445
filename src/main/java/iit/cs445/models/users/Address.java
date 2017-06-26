@@ -3,7 +3,6 @@ package iit.cs445.models.users;
 import iit.cs445.models.BaseEntity;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "addresses")
@@ -40,9 +39,9 @@ public class Address extends BaseEntity<Long, Address> {
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "user_address", joinColumns = {
-            @JoinColumn(name = "address_id", nullable = false, updatable = false) },
-            inverseJoinColumns = { @JoinColumn(name = "user_id",
-                    nullable = false, updatable = false) })
+            @JoinColumn(name = "address_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "user_id",
+                    nullable = false, updatable = false)})
     private User user;
 
     @Override

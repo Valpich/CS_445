@@ -27,8 +27,8 @@ public class ConnectorController {
     }
 
     @RequestMapping(value = "/connector", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
-                               @RequestParam("price") String price ) {
+    public String checkoutPost(@RequestParam("description") String description,
+                               @RequestParam("price") String price) {
         saveConnector(description, price);
         return "index";
     }
