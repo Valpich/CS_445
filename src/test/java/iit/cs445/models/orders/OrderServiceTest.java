@@ -12,17 +12,19 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by valentinpichavant on 6/26/17.
- */
 @RunWith(Arquillian.class)
 public class OrderServiceTest {
+
+    private OrderService orderService;
+
     @Before
     public void setUp() throws Exception {
+        orderService = new OrderManager();
     }
 
     @After
     public void tearDown() throws Exception {
+        orderService = null;
     }
 
     @Test

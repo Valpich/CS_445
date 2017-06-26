@@ -73,29 +73,6 @@ public abstract class BaseEntity<ID, Type> {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        BaseEntity<?, ?> that = (BaseEntity<?, ?>) o;
-
-        if (version != that.version) return false;
-        if (localSessionFactoryBean != null ? !localSessionFactoryBean.equals(that.localSessionFactoryBean) : that.localSessionFactoryBean != null)
-            return false;
-        if (creationTime != null ? !creationTime.equals(that.creationTime) : that.creationTime != null) return false;
-        return modificationTime != null ? modificationTime.equals(that.modificationTime) : that.modificationTime == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = localSessionFactoryBean != null ? localSessionFactoryBean.hashCode() : 0;
-        result = 31 * result + (creationTime != null ? creationTime.hashCode() : 0);
-        result = 31 * result + (modificationTime != null ? modificationTime.hashCode() : 0);
-        result = 31 * result + (int) (version ^ (version >>> 32));
-        return result;
-    }
-
     public void saveNew() {
         Session session = localSessionFactoryBean.getObject().openSession();
         try {

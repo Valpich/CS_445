@@ -19,6 +19,7 @@ public class OrderTest {
 
     @Before
     public void setUp() throws Exception {
+        order = new Order();
     }
 
     @After
