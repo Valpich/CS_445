@@ -12,12 +12,19 @@ import java.util.List;
 @Controller
 public class OrderController {
 
-    @RequestMapping(value = "/order/listAll", method = RequestMethod.GET)
-    public String listAll(HttpServletRequest request) {
+    @RequestMapping(value = "/order/list", method = RequestMethod.GET)
+    public String list(HttpServletRequest request) {
         User user = (User) request.getSession().getAttribute("user");
         List<Order> orders = user.getOrders();
         request.setAttribute("orders",orders);
         return "orders/list";
+    }
+
+    @RequestMapping(value = "/order/listAll", method = RequestMethod.GET)
+    public String listAll(HttpServletRequest request) {
+        List<Order> orders = new Order().listAll();
+        request.setAttribute("orders",orders);
+        return "orders/listAll";
     }
 
 }

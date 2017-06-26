@@ -82,7 +82,7 @@ public class CartController {
         user.getAddresses().add(address);
         if (!saveCart(request, address.getId())) return "cart/list";
         session.setAttribute("cart", new Cart());
-        return "redirect:/order/listAll";
+        return "redirect:/order/list";
     }
 
     private boolean cardIsValid(@RequestParam("cardHolderName") Optional<String> cardHolderNameOptional, @RequestParam("cardNumber") Optional<String> cardNumberOptional, @RequestParam("expiryMonth") Optional<String> expiryMonthOptional, @RequestParam("expiryYear") Optional<String> expiryYearOptional, @RequestParam("cvv") Optional<String> cvvOptional) {

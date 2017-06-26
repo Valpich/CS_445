@@ -12,6 +12,9 @@
 
 <h1>Lens</h1>
 
+<spring:url value="/product/accessory/lens/add" var="lens"/>
+<button class="btn btn-primary" onclick="location.href='${lens}'">Add Bracket</button>
+
 <table class="table table-striped">
     <thead>
     <tr>
@@ -34,6 +37,7 @@
 
             <td>
                 <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
+                <button class="btn btn-info" onclick="location.href='${userUrl}'">Update</button>
             </td>
         </tr>
     </c:forEach>

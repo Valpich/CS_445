@@ -1,9 +1,9 @@
-/* AUTOMATICALLY GENERATED ON Mon Jun 26 14:48:43 CDT 2017*/
+/* AUTOMATICALLY GENERATED ON Mon Jun 26 15:39:00 CDT 2017*/
 /* DO NOT EDIT */
 
 grant {
-  permission javax.security.jacc.WebUserDataPermission "/";
   permission javax.security.jacc.WebResourcePermission "/";
+  permission javax.security.jacc.WebUserDataPermission "/";
 };
 
 grant      principal * * {

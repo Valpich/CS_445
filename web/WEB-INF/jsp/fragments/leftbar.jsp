@@ -24,7 +24,7 @@
                     <span> Orders </span>
                     </a>
                     <ul>
-                        <li ><a href="${pageContext.request.contextPath}/order/listAll"> List your orders </a></li>
+                        <li ><a href="${pageContext.request.contextPath}/order/list"> List your orders </a></li>
                     </ul>
                 </li>
                 <li >
@@ -63,7 +63,8 @@
                     <span> Admin </span>
                     </a>
                     <ul>
-                        <li ><a href="${pageContext.request.contextPath}/users/listAll"> List all </a></li>
+                        <li ><a href="${pageContext.request.contextPath}/order/listAll"> List all orders </a></li>
+                        <li ><a href="${pageContext.request.contextPath}/users/listAll"> List all users </a></li>
                         <li ><a href="${pageContext.request.contextPath}/populate/cart"> Populate cart </a></li>
                         <li ><a href="${pageContext.request.contextPath}/populate/database"> Populate database </a></li>
                     </ul>

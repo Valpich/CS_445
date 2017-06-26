@@ -42,10 +42,13 @@ public class DebugController {
 
     @RequestMapping(value = "/populate/cart", method = RequestMethod.GET)
     public String populateCart(HttpServletRequest request) {
-        User user = userService.findUserByMail("antoine@regnier.com");
-        if(user == null)
+        User user = (User)request.getSession().getAttribute("user");
+        if(user == null);
+            user = userService.findUserByMail("antoine@regnier.com");
+        if(user == null){
             populateUsers();
-        request.getSession().setAttribute("user", user);
+            request.getSession().setAttribute("user", user);
+        }
         populateCart((Cart)request.getSession().getAttribute("cart"));
         return "redirect:/";
     }

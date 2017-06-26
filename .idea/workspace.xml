@@ -2,33 +2,85 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b515210d-be3c-4260-980b-0d9ee0718f50" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/OrderController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/orders/list.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/orders/confirmation.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/orders/confirmation.jsp" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/orders/listAll.jsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/jsp/CS_445_war_exploded/org/apache/jsp/WEB_002dINF/jsp/cart/checkout_jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/jsp/CS_445_war_exploded/org/apache/jsp/WEB_002dINF/jsp/cart/list_jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/jsp/CS_445_war_exploded/org/apache/jsp/WEB_002dINF/jsp/fragments/footer_jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/jsp/CS_445_war_exploded/org/apache/jsp/WEB_002dINF/jsp/fragments/header_jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/jsp/CS_445_war_exploded/org/apache/jsp/WEB_002dINF/jsp/fragments/leftbar_jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/jsp/CS_445_war_exploded/org/apache/jsp/WEB_002dINF/jsp/index_jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/jsp/CS_445_war_exploded/org/apache/jsp/WEB_002dINF/jsp/orders/list_jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/jsp/CS_445_war_exploded/org/apache/jsp/WEB_002dINF/jsp/users/login_jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/jsp/CS_445_war_exploded/org/apache/jsp/WEB_002dINF/jsp/users/show_jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/jsp/CS_445_war_exploded/org/apache/jsp/WEB_002dINF/jsp/users/userform_jsp.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/CartController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/CartController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/orders/Order.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/models/orders/Order.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/DebugController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/DebugController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/OrderController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/OrderController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/accessory/BracketController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/accessory/BracketController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/accessory/CableController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/accessory/CableController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/accessory/ConnectorController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/accessory/ConnectorController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/accessory/HousingController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/accessory/HousingController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/accessory/InfraredLightningController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/accessory/InfraredLightningController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/accessory/LensController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/accessory/LensController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/accessory/MicrophoneController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/accessory/MicrophoneController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/accessory/MonitorController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/accessory/MonitorController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/accessory/PowerSupplyController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/accessory/PowerSupplyController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/dvr/AnalogDVRController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/dvr/AnalogDVRController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/dvr/DigitalDVRController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/dvr/DigitalDVRController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/dvr/HybridDVRController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/dvr/HybridDVRController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/securityCamera/AnalogSurveillanceCameraController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/securityCamera/AnalogSurveillanceCameraController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/securityCamera/DigitalSurveillanceCameraController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/securityCamera/DigitalSurveillanceCameraController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/securityCamera/IpSurveillanceCameraController.class" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/iit/cs445/controllers/product/securityCamera/IpSurveillanceCameraController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/CartController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/CartController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/models/orders/Order.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/models/orders/Order.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Arquillian_JUnit_Latest.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Arquillian_JUnit_Latest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_Latest.xml" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_Latest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjrt_Latest.xml" afterPath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjrt_Latest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjweaver_Latest.xml" afterPath="$PROJECT_DIR$/.idea/libraries/org_aspectj_aspectjweaver_Latest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/DebugController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/DebugController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/OrderController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/OrderController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/BracketController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/BracketController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/CableController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/CableController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/ConnectorController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/ConnectorController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/HousingController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/HousingController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/InfraredLightningController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/InfraredLightningController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/LensController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/LensController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/MicrophoneController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/MicrophoneController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/MonitorController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/MonitorController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/PowerSupplyController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/PowerSupplyController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/dvr/AnalogDVRController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/dvr/AnalogDVRController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/dvr/DigitalDVRController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/dvr/DigitalDVRController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/dvr/HybridDVRController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/dvr/HybridDVRController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/securityCamera/AnalogSurveillanceCameraController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/securityCamera/AnalogSurveillanceCameraController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/securityCamera/DigitalSurveillanceCameraController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/securityCamera/DigitalSurveillanceCameraController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/securityCamera/IpSurveillanceCameraController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/securityCamera/IpSurveillanceCameraController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml.bak" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/domain.xml.bak" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/local-password" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/local-password" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid.prev" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/config/pid.prev" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/jsp/CS_445_war_exploded/org/apache/jsp/WEB_002dINF/jsp/fragments/leftbar_jsp.java" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/jsp/CS_445_war_exploded/org/apache/jsp/WEB_002dINF/jsp/fragments/leftbar_jsp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/policy/CS_445_war_exploded/CS_445_war_exploded/granted.policy" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/generated/policy/CS_445_war_exploded/CS_445_war_exploded/granted.policy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/logs/server.log" afterPath="$PROJECT_DIR$/glassfish4/glassfish/domains/domain1/logs/server.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/application.properties" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/classes/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/leftbar.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/leftbar.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/users/show.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/users/show.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/accessory/bracket.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/accessory/bracket.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/accessory/cable.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/accessory/cable.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/accessory/connector.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/accessory/connector.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/accessory/housing.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/accessory/housing.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/accessory/infraredLightning.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/accessory/infraredLightning.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/accessory/lens.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/accessory/lens.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/accessory/microphone.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/accessory/microphone.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/accessory/monitor.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/accessory/monitor.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/accessory/powerSupply.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/accessory/powerSupply.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/dvr/analogDVR.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/dvr/analogDVR.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/dvr/digitalDVR.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/dvr/digitalDVR.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/dvr/hybridDVR.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/dvr/hybridDVR.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/securityCamera/analogSurveillanceCamera.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/securityCamera/analogSurveillanceCamera.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/securityCamera/digitalSurveillanceCamera.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/securityCamera/digitalSurveillanceCamera.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/securityCamera/ipSurveillanceCamera.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/fragments/product/securityCamera/ipSurveillanceCamera.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/users/userform.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CS_445_war_exploded/WEB-INF/jsp/users/userform.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/CartController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/CartController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/DebugController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/DebugController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/OrderController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/OrderController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/fragments/leftbar.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/fragments/leftbar.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/users/show.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/users/show.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -48,18 +100,8 @@
       <file leaf-file-name="list.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/orders/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+            <state relative-caret-position="255">
+              <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -68,8 +110,8 @@
       <file leaf-file-name="leftbar.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/fragments/leftbar.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="78" lean-forward="true" selection-start-line="26" selection-start-column="78" selection-end-line="26" selection-end-column="78" />
+            <state relative-caret-position="-215">
+              <caret line="26" column="78" lean-forward="false" selection-start-line="26" selection-start-column="78" selection-end-line="26" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -85,11 +127,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userform.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="userform.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/users/userform.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="32" column="39" lean-forward="true" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+            <state relative-caret-position="387">
+              <caret line="32" column="39" lean-forward="false" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listAll.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/orders/listAll.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -118,8 +170,8 @@
       <file leaf-file-name="OrderController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+            <state relative-caret-position="285">
+              <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,22 +179,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/Order.java">
+      <file leaf-file-name="CartController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/CartController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="30" />
-              <folding />
+            <state relative-caret-position="132">
+              <caret line="84" column="36" lean-forward="false" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderStatus.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderStatus.java">
+      <file leaf-file-name="DebugController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/DebugController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="75" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="75" />
-              <folding />
+            <state relative-caret-position="91">
+              <caret line="50" column="9" lean-forward="false" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
+              <folding>
+                <element signature="method#populateDatabase#0;class#DebugController#0" expanded="false" />
+                <element signature="method#populateProducts#0;class#DebugController#0" expanded="false" />
+                <element signature="method#populateAccessories#0;class#DebugController#0" expanded="false" />
+                <element signature="method#populateSurveillanceCameras#0;class#DebugController#0" expanded="false" />
+                <element signature="method#populateDVR#0;class#DebugController#0" expanded="false" />
+                <element signature="method#populateServices#0;class#DebugController#0" expanded="false" />
+                <element signature="method#populateUsers#0;class#DebugController#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -218,8 +280,6 @@
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/Service.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/users/login.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/cart/checkout.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/DebugController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/IndexController.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/BaseEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/OrderAddress.java" />
@@ -227,12 +287,14 @@
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/Order.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/orders/confirmation.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/OrderController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/CartController.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/orders/list.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/fragments/leftbar.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/users/show.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/users/userform.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/CartController.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/fragments/leftbar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/OrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/DebugController.java" />
       </list>
     </option>
   </component>
@@ -356,6 +418,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orders" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -864,6 +952,86 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="securityCamera" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cs445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dvr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cs445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accessory" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1567,7 +1735,7 @@
       <workItem from="1498336187849" duration="24192000" />
       <workItem from="1498416980809" duration="17265000" />
       <workItem from="1498437802068" duration="3639000" />
-      <workItem from="1498501372273" duration="3865000" />
+      <workItem from="1498501372273" duration="5135000" />
     </task>
     <servers />
   </component>
@@ -1586,7 +1754,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120329000" />
+    <option name="totallyTimeSpent" value="121599000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1647,7 +1815,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1656,14 +1824,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/DVR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/fragments/footer.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1877,22 +2037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/DebugController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="187" column="0" lean-forward="false" selection-start-line="187" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
-          <folding>
-            <element signature="method#populateDatabase#0;class#DebugController#0" expanded="false" />
-            <element signature="method#populateProducts#0;class#DebugController#0" expanded="false" />
-            <element signature="method#populateAccessories#0;class#DebugController#0" expanded="false" />
-            <element signature="method#populateSurveillanceCameras#0;class#DebugController#0" expanded="false" />
-            <element signature="method#populateDVR#0;class#DebugController#0" expanded="false" />
-            <element signature="method#populateServices#0;class#DebugController#0" expanded="false" />
-            <element signature="method#populateCart#1;class#DebugController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -1973,16 +2117,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/CartController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/OrderStatus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1999,16 +2133,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1050">
@@ -2017,34 +2141,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/fragments/leftbar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="78" lean-forward="true" selection-start-line="26" selection-start-column="78" selection-end-line="26" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/users/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/orders/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2059,9 +2159,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/users/userform.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="32" column="39" lean-forward="true" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+        <state relative-caret-position="387">
+          <caret line="32" column="39" lean-forward="false" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/orders/listAll.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/fragments/leftbar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-215">
+          <caret line="26" column="78" lean-forward="false" selection-start-line="26" selection-start-column="78" selection-end-line="26" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/orders/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/CartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="84" column="36" lean-forward="false" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/DebugController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="50" column="9" lean-forward="false" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
+          <folding>
+            <element signature="method#populateDatabase#0;class#DebugController#0" expanded="false" />
+            <element signature="method#populateProducts#0;class#DebugController#0" expanded="false" />
+            <element signature="method#populateAccessories#0;class#DebugController#0" expanded="false" />
+            <element signature="method#populateSurveillanceCameras#0;class#DebugController#0" expanded="false" />
+            <element signature="method#populateDVR#0;class#DebugController#0" expanded="false" />
+            <element signature="method#populateServices#0;class#DebugController#0" expanded="false" />
+            <element signature="method#populateUsers#0;class#DebugController#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

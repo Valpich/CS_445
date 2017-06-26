@@ -181,7 +181,7 @@ public final class leftbar_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("                    <ul>\n");
         out.write("                        <li ><a href=\"");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-        out.write("/order/listAll\"> List your orders </a></li>\n");
+        out.write("/order/list\"> List your orders </a></li>\n");
         out.write("                    </ul>\n");
         out.write("                </li>\n");
         out.write("                <li >\n");
@@ -260,7 +260,10 @@ public final class leftbar_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("                    <ul>\n");
         out.write("                        <li ><a href=\"");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-        out.write("/users/listAll\"> List all </a></li>\n");
+        out.write("/order/listAll\"> List all orders </a></li>\n");
+        out.write("                        <li ><a href=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("/users/listAll\"> List all users </a></li>\n");
         out.write("                        <li ><a href=\"");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write("/populate/cart\"> Populate cart </a></li>\n");
