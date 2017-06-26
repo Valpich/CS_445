@@ -25,6 +25,9 @@ public abstract class Product<Type> extends BaseEntity<Long, Type> {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "deleted")
+    private Boolean deleted;
+
     @Override
     public Long getId() {
         return id;
@@ -58,13 +61,22 @@ public abstract class Product<Type> extends BaseEntity<Long, Type> {
         this.description = description;
     }
 
+    public Boolean getDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(Boolean deleted) {
+        this.deleted = deleted;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
                 "id=" + id +
                 ", price=" + price +
                 ", orderType=" + orderType +
-                ", description='" + description + '\'' +
+                ", description=" + description +
+                ", deleted='" + deleted + '\'' +
                 "} " + super.toString();
     }
 

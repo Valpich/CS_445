@@ -1,5 +1,6 @@
 package iit.cs445.models.services;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import iit.cs445.models.BaseEntity;
 
 import javax.persistence.*;
@@ -19,6 +20,9 @@ public abstract class Service<Type> extends BaseEntity<Long, Type> {
 
     @Column(name = "description")
     private String description;
+
+    @Column(name = "deleted")
+    private Boolean deleted;
 
     @Override
     public Long getId() {
@@ -45,11 +49,20 @@ public abstract class Service<Type> extends BaseEntity<Long, Type> {
         this.description = description;
     }
 
+    public Boolean getDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(Boolean deleted) {
+        this.deleted = deleted;
+    }
+
     @Override
     public String toString() {
         return "Service{" +
                 "price=" + price +
-                ", description='" + description + '\'' +
+                ", description=" + description +
+                ", deleted='" + deleted + '\'' +
                 "} " + super.toString();
     }
 
