@@ -9,7 +9,15 @@
 <body>
 
 <div class="container">
-    <h1>Add Bracket</h1><br>
+
+    <c:choose>
+        <c:when test="${not empty bracketForm}">
+            <h1>Add Bracket</h1><br>
+        </c:when>
+        <c:otherwise>
+            <h1>Update Bracket</h1><br>
+        </c:otherwise>
+    </c:choose>
 
     <spring:url value="/bracket" var="bracket"/>
 

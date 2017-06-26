@@ -3,6 +3,7 @@ package iit.cs445.controllers.product.accessory;
 import iit.cs445.models.products.Housing;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -23,6 +24,13 @@ public class HousingController {
     public String showHousingForm(Model model) {
         Housing housing = new Housing();
         model.addAttribute("housingForm", housing);
+        return "productForm";
+    }
+
+    @RequestMapping(value = "/housing/{id}/update", method = RequestMethod.GET)
+    public String showUpdateHousingForm(@PathVariable("id") Long id, Model model) {
+        Housing housing = new Housing();
+        model.addAttribute("housingFormUpdate", housing);
         return "productForm";
     }
 

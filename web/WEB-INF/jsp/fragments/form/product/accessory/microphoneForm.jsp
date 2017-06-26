@@ -9,7 +9,15 @@
 <body>
 
 <div class="container">
-    <h1>Add Microphone</h1><br>
+
+    <c:choose>
+        <c:when test="${not empty microphoneForm}">
+            <h1>Add Microphone</h1><br>
+        </c:when>
+        <c:otherwise>
+            <h1>Update Microphone</h1><br>
+        </c:otherwise>
+    </c:choose>
 
     <spring:url value="/microphone" var="microphone"/>
 

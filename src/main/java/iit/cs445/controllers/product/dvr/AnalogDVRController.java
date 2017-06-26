@@ -5,6 +5,7 @@ import iit.cs445.models.products.AnalogRecordFormat;
 import iit.cs445.models.products.StorageType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -36,6 +37,13 @@ public class AnalogDVRController {
                                @RequestParam("price") String price) {
         saveAnalogDVR(description, analogRecord, storageTypes, price);
         return "index";
+    }
+
+    @RequestMapping(value = "/analogDVR/{id}/update", method = RequestMethod.GET)
+    public String showUpdateAnalogDVRForm(@PathVariable("id") Long id, Model model) {
+        AnalogDVR analogDVR = new AnalogDVR();
+        model.addAttribute("analogDVRFormUpdate", analogDVR);
+        return "productForm";
     }
 
     private void saveAnalogDVR(String description, String analogRecord, String storage, String price) {

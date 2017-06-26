@@ -9,7 +9,15 @@
 <body>
 
 <div class="container">
-    <h1>Add Analog Surveillance Camera</h1><br>
+
+    <c:choose>
+        <c:when test="${not empty analogSurveillanceCameraForm}">
+            <h1>Add Analog Surveillance Camera</h1><br>
+        </c:when>
+        <c:otherwise>
+            <h1>Update Analog Surveillance Camera</h1><br>
+        </c:otherwise>
+    </c:choose>
 
     <spring:url value="/analogSurveillanceCamera" var="analog"/>
 
@@ -30,7 +38,7 @@
         </div>
 
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Save Analog Surveillance Camera</button>
+            <button type="submit" class="btn btn-primary">Save</button>
         </div>
 
     </form>

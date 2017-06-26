@@ -9,7 +9,15 @@
 <body>
 
 <div class="container">
-    <h1>Add Monitor</h1><br>
+
+    <c:choose>
+        <c:when test="${not empty monitorForm}">
+            <h1>Add Monitor</h1><br>
+        </c:when>
+        <c:otherwise>
+            <h1>Update Monitor</h1><br>
+        </c:otherwise>
+    </c:choose>
 
     <spring:url value="/monitor" var="monitor"/>
 

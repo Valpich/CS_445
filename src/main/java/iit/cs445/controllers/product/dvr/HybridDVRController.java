@@ -4,6 +4,7 @@ import iit.cs445.models.products.HybridDVR;
 import iit.cs445.models.products.StorageType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,6 +26,13 @@ public class HybridDVRController {
     public String showAddHybridDVRForm(Model model) {
         HybridDVR hybridDVR = new HybridDVR();
         model.addAttribute("hybridDVRForm", hybridDVR);
+        return "productForm";
+    }
+
+    @RequestMapping(value = "/hybridDVR/{id}/update", method = RequestMethod.GET)
+    public String showUpdateHybridDVRForm(@PathVariable("id") Long id, Model model) {
+        HybridDVR hybridDVR = new HybridDVR();
+        model.addAttribute("hybridDVRFormUpdate", hybridDVR);
         return "productForm";
     }
 

@@ -9,7 +9,15 @@
 <body>
 
 <div class="container">
-    <h1>Add Housing</h1><br>
+
+    <c:choose>
+        <c:when test="${not empty housingForm}">
+            <h1>Add Housing</h1><br>
+        </c:when>
+        <c:otherwise>
+            <h1>Update Housing</h1><br>
+        </c:otherwise>
+    </c:choose>
 
     <spring:url value="/housing" var="housing"/>
 

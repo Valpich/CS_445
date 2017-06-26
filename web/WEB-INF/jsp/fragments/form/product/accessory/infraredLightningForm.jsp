@@ -9,7 +9,15 @@
 <body>
 
 <div class="container">
-    <h1>Add Infrared Lightning</h1><br>
+
+    <c:choose>
+        <c:when test="${not empty infraredLightningForm}">
+            <h1>Add Infrared Lightning</h1><br>
+        </c:when>
+        <c:otherwise>
+            <h1>Update Infrared Lightning</h1><br>
+        </c:otherwise>
+    </c:choose>
 
     <spring:url value="/infraredLightning" var="infraredLightning"/>
 

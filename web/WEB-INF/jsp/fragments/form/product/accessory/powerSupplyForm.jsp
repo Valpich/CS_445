@@ -9,7 +9,15 @@
 <body>
 
 <div class="container">
-    <h1>Add Power Supply</h1><br>
+
+    <c:choose>
+        <c:when test="${not empty powerSupplyForm}">
+            <h1>Add Power Supply</h1><br>
+        </c:when>
+        <c:otherwise>
+            <h1>Update Power Supply</h1><br>
+        </c:otherwise>
+    </c:choose>
 
     <spring:url value="/powerSupply" var="powerSupply"/>
 

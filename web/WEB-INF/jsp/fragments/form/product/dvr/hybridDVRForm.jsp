@@ -9,7 +9,15 @@
 <body>
 
 <div class="container">
-    <h1>Add Hybrid DVR</h1><br>
+
+    <c:choose>
+        <c:when test="${not empty hybridDVRForm}">
+            <h1>Add Hybrid DVR</h1><br>
+        </c:when>
+        <c:otherwise>
+            <h1>Update Hybrid DVR</h1><br>
+        </c:otherwise>
+    </c:choose>
 
     <spring:url value="/hybridDVR" var="hybrid"/>
 
@@ -35,7 +43,7 @@
         </div>
 
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Save Hybrid DVR</button>
+            <button type="submit" class="btn btn-primary">Save</button>
         </div>
 
     </form>

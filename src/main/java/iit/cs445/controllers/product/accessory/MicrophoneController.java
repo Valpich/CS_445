@@ -4,6 +4,7 @@ import iit.cs445.models.products.Microphone;
 import iit.cs445.models.products.MicrophoneType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,6 +25,13 @@ public class MicrophoneController {
     public String showMicrophoneForm(Model model) {
         Microphone microphone = new Microphone();
         model.addAttribute("microphoneForm", microphone);
+        return "productForm";
+    }
+
+    @RequestMapping(value = "/microphone/{id}/update", method = RequestMethod.GET)
+    public String showUpdateMicrophoneForm(@PathVariable("id") Long id, Model model) {
+        Microphone microphone = new Microphone();
+        model.addAttribute("microphoneFormUpdate", microphone);
         return "productForm";
     }
 

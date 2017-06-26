@@ -9,7 +9,15 @@
 <body>
 
 <div class="container">
-    <h1>Add Digital DVR</h1><br>
+
+    <c:choose>
+        <c:when test="${not empty digitalDVRForm}">
+            <h1>Add Digital DVR</h1><br>
+        </c:when>
+        <c:otherwise>
+            <h1>Update Digital DVR</h1><br>
+        </c:otherwise>
+    </c:choose>
 
     <spring:url value="/digitalDVR" var="digital"/>
 
@@ -35,7 +43,7 @@
         </div>
 
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Save Digital DVR</button>
+            <button type="submit" class="btn btn-primary">Save</button>
         </div>
 
     </form>

@@ -4,6 +4,7 @@ import iit.cs445.models.products.DigitalDVR;
 import iit.cs445.models.products.StorageType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,6 +26,13 @@ public class DigitalDVRController {
     public String showAddDigitalDVRForm(Model model) {
         DigitalDVR digitalDVR = new DigitalDVR();
         model.addAttribute("digitalDVRForm", digitalDVR);
+        return "productForm";
+    }
+
+    @RequestMapping(value = "/digitalDVR/{id}/update", method = RequestMethod.GET)
+    public String showUpdateDigitalDVRForm(@PathVariable("id") Long id, Model model) {
+        DigitalDVR digitalDVR = new DigitalDVR();
+        model.addAttribute("digitalDVRFormUpdate", digitalDVR);
         return "productForm";
     }
 

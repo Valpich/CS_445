@@ -9,7 +9,16 @@
 <body>
 
 <div class="container">
-    <h1>Add Analog DVR</h1><br>
+
+    <c:choose>
+        <c:when test="${not empty analogDVRForm}">
+            <h1>Add Analog DVR</h1><br>
+        </c:when>
+        <c:otherwise>
+            <h1>Update Analog DVR</h1><br>
+        </c:otherwise>
+    </c:choose>
+
 
     <spring:url value="/analogDVR" var="analog"/>
 
@@ -20,7 +29,7 @@
             <input type="text" name="description" placeholder="">
         </div>
         <div class="col-sm-10">
-            <label class="col-sm-2 control-label">Analog Record Formats</label>
+            <label class="col-sm-2 control-label">Analog Record</label>
             <select class="custom-select" name="analog_record_formats">
                 <option type="text" value="NTSC">NTSC</option>
                 <option type="text" value="PAL">PAL</option>
@@ -43,7 +52,7 @@
         </div>
 
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Save Analog DVR</button>
+            <button type="submit" class="btn btn-primary">Save</button>
         </div>
 
     </form>

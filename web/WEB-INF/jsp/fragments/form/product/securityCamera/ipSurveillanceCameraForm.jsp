@@ -9,7 +9,15 @@
 <body>
 
 <div class="container">
-    <h1>Add IP Surveillance Camera</h1><br>
+
+    <c:choose>
+        <c:when test="${not empty ipSurveillanceCameraForm}">
+            <h1>Add Ip Surveillance Camera</h1><br>
+        </c:when>
+        <c:otherwise>
+            <h1>Update Ip Surveillance Camera</h1><br>
+        </c:otherwise>
+    </c:choose>
 
     <spring:url value="/ipSurveillanceCamera" var="ipSurveillanceCamera"/>
 
@@ -29,7 +37,7 @@
         </div>
 
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Save IP Surveillance Camera</button>
+            <button type="submit" class="btn btn-primary">Save</button>
         </div>
 
     </form>

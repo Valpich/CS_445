@@ -9,7 +9,15 @@
 <body>
 
 <div class="container">
-    <h1>Add Connector</h1><br>
+
+    <c:choose>
+        <c:when test="${not empty connectorForm}">
+            <h1>Add Connector</h1><br>
+        </c:when>
+        <c:otherwise>
+            <h1>Update Connector</h1><br>
+        </c:otherwise>
+    </c:choose>
 
     <spring:url value="/connector" var="connector"/>
 

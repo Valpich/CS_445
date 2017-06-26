@@ -3,6 +3,7 @@ package iit.cs445.controllers.product.accessory;
 import iit.cs445.models.products.Connector;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -23,6 +24,13 @@ public class ConnectorController {
     public String showConnectorForm(Model model) {
         Connector connector = new Connector();
         model.addAttribute("connectorForm", connector);
+        return "productForm";
+    }
+
+    @RequestMapping(value = "/connector/{id}/update", method = RequestMethod.GET)
+    public String showUpdateConnectorForm(@PathVariable("id") Long id, Model model) {
+        Connector connector = new Connector();
+        model.addAttribute("connectorFormUpdate", connector);
         return "productForm";
     }
 

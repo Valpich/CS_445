@@ -9,7 +9,15 @@
 <body>
 
 <div class="container">
-    <h1>Add Cable</h1><br>
+
+    <c:choose>
+        <c:when test="${not empty cableForm}">
+            <h1>Add Cable</h1><br>
+        </c:when>
+        <c:otherwise>
+            <h1>Update Cable</h1><br>
+        </c:otherwise>
+    </c:choose>
 
     <spring:url value="/cable" var="cable"/>
 
