@@ -71,7 +71,6 @@ public class UserController {
         User user = new User();
         model.addAttribute("userForm", user);
         return "users/userform";
-
     }
 
     @RequestMapping(value = "/users/{id}/update", method = RequestMethod.GET)
@@ -79,7 +78,6 @@ public class UserController {
         User user = userService.findUserById(id);
         model.addAttribute("userForm", user);
         return "users/userform";
-
     }
 
     @RequestMapping(value = "/users/{id}/delete", method = RequestMethod.POST)
@@ -90,7 +88,6 @@ public class UserController {
         redirectAttributes.addFlashAttribute("css", "success");
         redirectAttributes.addFlashAttribute("msg", "User is deleted!");
         return "redirect:/users/listAll";
-
     }
 
     @RequestMapping(value = "/users/{id}", method = RequestMethod.GET)

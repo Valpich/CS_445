@@ -84,6 +84,30 @@
                     </table>
                 </c:if>
             </c:if>
+            <c:if test="${order.status == 'PROCESSING'}">
+                <h3>Update order state</h3>
+                <button class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/order/update/${order.id}/PREPARING_SHIPPING'">Preparing shipping</button>
+                <button class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/order/update/${order.id}/SHIPPED'">Shipped</button>
+                <button class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/order/update/${order.id}/DELIVERED'">Delivered</button>
+            </c:if>
+            <c:if test="${order.status == 'PREPARING_SHIPPING'}">
+                <h3>Update order state</h3>
+                <button class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/order/update/${order.id}/PROCESSING'">Processing</button>
+                <button class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/order/update/${order.id}/SHIPPED'">Shipped</button>
+                <button class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/order/update/${order.id}/DELIVERED'">Delivered</button>
+            </c:if>
+            <c:if test="${order.status == 'SHIPPED'}">
+                <h3>Update order state</h3>
+                <button class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/order/update/${order.id}/PROCESSING'">Processing</button>
+                <button class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/order/update/${order.id}/PREPARING_SHIPPING'">Preparing shipping</button>
+                <button class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/order/update/${order.id}/DELIVERED'">Delivered</button>
+            </c:if>
+            <c:if test="${order.status == 'DELIVERED'}">
+                <h3>Update order state</h3>
+                <button class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/order/update/${order.id}/PROCESSING'">Processing</button>
+                <button class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/order/update/${order.id}/PREPARING_SHIPPING'">Preparing shipping</button>
+                <button class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/order/update/${order.id}/SHIPPED'">Shipped</button>
+            </c:if>
         </c:forEach>
         <c:if test="${empty orders}">
             <h1>No order yet!</h1>
