@@ -1,11 +1,11 @@
 package iit.cs445.controllers.product.accessory;
 
-import iit.cs445.models.products.Bracket;
 import iit.cs445.models.products.Monitor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -17,6 +17,31 @@ public class MonitorController {
         List<Monitor> list = new Monitor().listAll();
         model.addAttribute("monitors", list);
         return "product";
+    }
+
+    @RequestMapping(value = "/product/accessory/monitor/add", method = RequestMethod.GET)
+    public String showMonitorForm(Model model) {
+        Monitor monitor = new Monitor();
+        model.addAttribute("monitorForm", monitor);
+        return "productForm";
+    }
+
+    @RequestMapping(value = "/monitor", method = RequestMethod.POST)
+    public String checkoutPost(@RequestParam("description") String description ,
+                               @RequestParam("size") String size,
+                               @RequestParam("max_resolution")  String maxResolution,
+                               @RequestParam("price") String price ) {
+        saveMonitor(description, size, maxResolution, price);
+        return "index";
+    }
+
+    private void saveMonitor(String description, String size, String maxResolution, String price) {
+        Monitor monitor = new Monitor();
+        monitor.setPrice(Float.parseFloat(price));
+        monitor.setSize(Float.parseFloat(size));
+        monitor.setMaxResolution(maxResolution);
+        monitor.setDescription(description);
+        monitor.saveNew();
     }
 
 }
