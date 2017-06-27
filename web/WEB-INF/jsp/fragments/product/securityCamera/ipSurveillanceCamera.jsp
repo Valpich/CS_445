@@ -27,19 +27,27 @@
     </thead>
 
     <c:forEach var="ipSurveillanceCamera" items="${ipSurveillanceCameras}">
-        <tr>
-            <td>${ipSurveillanceCamera.description}</td>
-            <td>${ipSurveillanceCamera.resolution}</td>
-            <td>${ipSurveillanceCamera.id}</td>
-            <td>${ipSurveillanceCamera.price}</td>
 
-            <spring:url value="/ipSurveillanceCamera/${ipSurveillanceCamera.id}/update" var="updateUrl" />
+        <c:if test="${ipSurveillanceCamera.deleted == false}">
 
-            <td>
-                <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
-                <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
-            </td>
-        </tr>
+            <tr>
+                <td>${ipSurveillanceCamera.description}</td>
+                <td>${ipSurveillanceCamera.resolution}</td>
+                <td>${ipSurveillanceCamera.id}</td>
+                <td>${ipSurveillanceCamera.price}</td>
+
+                <spring:url value="/ipSurveillanceCamera/${ipSurveillanceCamera.id}/update" var="updateUrl" />
+                <spring:url value="/ipSurveillanceCamera/${ipSurveillanceCamera.id}/delete" var="deleteUrl" />
+
+                <td>
+                    <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
+                    <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
+                    <button class="btn btn-danger" onclick="location.href='${deleteUrl}'">Delete</button>
+                </td>
+            </tr>
+
+    </c:if>
+
     </c:forEach>
 </table>
 

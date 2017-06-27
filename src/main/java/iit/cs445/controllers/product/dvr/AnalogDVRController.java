@@ -37,12 +37,31 @@ public class AnalogDVRController {
         return "productForm";
     }
 
+    @RequestMapping(value = "/analogDVR/{id}/delete", method = RequestMethod.GET)
+    public String deleteAnalogDVR(@PathVariable("id") Long id, Model model) {
+        AnalogDVR analogDVR = new AnalogDVR().findById(id);
+        analogDVR.setDeleted(true);
+        analogDVR.update();
+        model.addAttribute("analogDVRForm", analogDVR);
+        return "index";
+    }
+
     @RequestMapping(value = "/analogDVR", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description ,
                                @RequestParam("analog_record_formats") String analogRecord ,
                                @RequestParam("storage_types") String storageTypes ,
                                @RequestParam("price") String price ) {
         saveAnalogDVR(description, analogRecord, storageTypes, price);
+        return "index";
+    }
+
+    @RequestMapping(value = "/analogDVRUpdate", method = RequestMethod.POST)
+    public String checkoutPostUpdate(@RequestParam("id") String id,
+                                @RequestParam("description") String description ,
+                                @RequestParam("analog_record_formats") String analogRecord ,
+                                @RequestParam("storage_types") String storageTypes ,
+                                @RequestParam("price") String price ) {
+        updateAnalogDVR(id, description, analogRecord, storageTypes, price);
         return "index";
     }
 
@@ -72,6 +91,41 @@ public class AnalogDVRController {
         }
         analogDVR.setStorageTypes(storageTypes);
         analogDVR.setDescription(description);
+        analogDVR.setDeleted(false);
+        analogDVR.saveNew();
+    }
+
+    private void updateAnalogDVR(String id, String description, String analogRecord, String storage, String price) {
+        AnalogDVR analogDVROld = new AnalogDVR().findById(Long.parseLong(id));
+        analogDVROld.setDeleted(true);
+        analogDVROld.update();
+
+        AnalogDVR analogDVR = new AnalogDVR();
+        List<AnalogRecordFormat> analogRecordFormats = new ArrayList<>();
+        if(analogRecord.equals("NTSC")) {
+            analogRecordFormats.add(AnalogRecordFormat.NTSC);
+        } else if (analogRecord.equals("PAL")) {
+            analogRecordFormats.add(AnalogRecordFormat.PAL);
+        } else {
+            analogRecordFormats.add(AnalogRecordFormat.SECAM);
+        }
+        analogDVR.setAnalogRecordFormats(analogRecordFormats);
+        analogDVR.setPrice(Float.parseFloat(price));
+        List<StorageType> storageTypes = new ArrayList<>();
+        if(storage.equals("DISK_DRIVE")) {
+            storageTypes.add(StorageType.DISK_DRIVE);
+        } else if(storage.equals("USB")) {
+            storageTypes.add(StorageType.USB);
+        } else if (storage.equals("SSD")) {
+            storageTypes.add(StorageType.SSD);
+        } else if (storage.equals("SD_MEMORY_CARD")) {
+            storageTypes.add(StorageType.SD_MEMORY_CARD);
+        } else {
+            storageTypes.add(StorageType.OTHER);
+        }
+        analogDVR.setStorageTypes(storageTypes);
+        analogDVR.setDescription(description);
+        analogDVR.setDeleted(false);
         analogDVR.saveNew();
     }
 

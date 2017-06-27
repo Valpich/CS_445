@@ -34,6 +34,15 @@ public class PowerSupplyController {
         return "productForm";
     }
 
+    @RequestMapping(value = "/powerSupply/{id}/delete", method = RequestMethod.GET)
+    public String deletePowerSupply(@PathVariable("id") Long id, Model model) {
+        PowerSupply powerSupply = new PowerSupply().findById(id);
+        powerSupply.setDeleted(true);
+        powerSupply.update();
+        model.addAttribute("powerSupplyForm", powerSupply);
+        return "index";
+    }
+
     @RequestMapping(value = "/powerSupply", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description ,
                                @RequestParam("maximum_output") String maximumOutput ,
@@ -43,12 +52,37 @@ public class PowerSupplyController {
         return "index";
     }
 
+    @RequestMapping(value = "/powerSupplyUpdate", method = RequestMethod.POST)
+    public String checkoutPost(@RequestParam("id") String id,
+                                @RequestParam("description") String description ,
+                                @RequestParam("maximum_output") String maximumOutput ,
+                                @RequestParam("voltage") String voltage ,
+                                @RequestParam("price") String price ) {
+        updatePowerSupply(id, description, maximumOutput, voltage, price);
+        return "index";
+    }
+
     private void savePowerSupply(String description, String maximumOutput, String voltage, String price) {
         PowerSupply powerSupply = new PowerSupply();
         powerSupply.setPrice(Float.parseFloat(price));
         powerSupply.setMaximum_output(maximumOutput);
         powerSupply.setVoltage(Float.parseFloat(voltage));
         powerSupply.setDescription(description);
+        powerSupply.setDeleted(false);
+        powerSupply.saveNew();
+    }
+
+    private void updatePowerSupply(String id, String description, String maximumOutput, String voltage, String price) {
+        PowerSupply powerSupplyOld = new PowerSupply().findById(Long.parseLong(id));
+        powerSupplyOld.setDeleted(true);
+        powerSupplyOld.update();
+
+        PowerSupply powerSupply = new PowerSupply();
+        powerSupply.setPrice(Float.parseFloat(price));
+        powerSupply.setMaximum_output(maximumOutput);
+        powerSupply.setVoltage(Float.parseFloat(voltage));
+        powerSupply.setDescription(description);
+        powerSupply.setDeleted(false);
         powerSupply.saveNew();
     }
 

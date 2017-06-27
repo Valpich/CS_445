@@ -13,13 +13,13 @@
     <c:choose>
         <c:when test="${not empty microphoneForm}">
             <h1>Add Microphone</h1><br>
+            <spring:url value="/microphone" var="microphone"/>
         </c:when>
         <c:otherwise>
             <h1>Update Microphone</h1><br>
+            <spring:url value="/microphoneUpdate" var="microphone"/>
         </c:otherwise>
     </c:choose>
-
-    <spring:url value="/microphone" var="microphone"/>
 
     <form action='${microphone}' method="POST">
 
@@ -32,6 +32,7 @@
                 </c:when>
                 <c:otherwise>
                     <input type="text" name="description" value="${microphoneFormUpdate.description}" placeholder="">
+                    <input hidden type="text" name="id" value="${microphoneFormUpdate.id}" >
                 </c:otherwise>
             </c:choose>
 

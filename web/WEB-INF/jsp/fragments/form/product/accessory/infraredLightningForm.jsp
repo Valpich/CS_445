@@ -13,13 +13,13 @@
     <c:choose>
         <c:when test="${not empty infraredLightningForm}">
             <h1>Add Infrared Lightning</h1><br>
+            <spring:url value="/infraredLightning" var="infraredLightning"/>
         </c:when>
         <c:otherwise>
             <h1>Update Infrared Lightning</h1><br>
+            <spring:url value="/infraredLightningUpdate" var="infraredLightning"/>
         </c:otherwise>
     </c:choose>
-
-    <spring:url value="/infraredLightning" var="infraredLightning"/>
 
     <form action='${infraredLightning}' method="POST">
 
@@ -32,6 +32,7 @@
                 </c:when>
                 <c:otherwise>
                     <input type="text" name="description" value="${infraredLightningFormUpdate.description}" placeholder="">
+                    <input hidden type="text" name="id" value="${infraredLightningFormUpdate.id}" >
                 </c:otherwise>
             </c:choose>
 

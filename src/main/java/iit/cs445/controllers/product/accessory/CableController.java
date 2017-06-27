@@ -34,6 +34,15 @@ public class CableController {
         return "productForm";
     }
 
+    @RequestMapping(value = "/cable/{id}/delete", method = RequestMethod.GET)
+    public String deleteCable(@PathVariable("id") Long id, Model model) {
+        Cable cable = new Cable().findById(id);
+        cable.setDeleted(true);
+        cable.update();
+        model.addAttribute("cableForm", cable);
+        return "index";
+    }
+
     @RequestMapping(value = "/cable", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description ,
                                @RequestParam("length") String length,
@@ -42,11 +51,34 @@ public class CableController {
         return "index";
     }
 
+    @RequestMapping(value = "/cableUpdate", method = RequestMethod.POST)
+    public String checkoutPost(@RequestParam("id") String id,
+                                @RequestParam("description") String description ,
+                                @RequestParam("length") String length,
+                                @RequestParam("price") String price ) {
+        updateCable(id, description, length, price);
+        return "index";
+    }
+
     private void saveCable(String description, String length, String price) {
         Cable cable = new Cable();
         cable.setPrice(Float.parseFloat(price));
         cable.setLength(Float.parseFloat(length));
         cable.setDescription(description);
+        cable.setDeleted(false);
+        cable.saveNew();
+    }
+
+    private void updateCable(String id, String description, String length, String price) {
+        Cable cableOld = new Cable().findById(Long.parseLong(id));
+        cableOld.setDeleted(true);
+        cableOld.update();
+
+        Cable cable = new Cable();
+        cable.setPrice(Float.parseFloat(price));
+        cable.setLength(Float.parseFloat(length));
+        cable.setDescription(description);
+        cable.setDeleted(false);
         cable.saveNew();
     }
 

@@ -28,20 +28,28 @@
     </thead>
 
     <c:forEach var="microphone" items="${microphones}">
-        <tr>
-            <td>${microphone.description}</td>
-            <td>${microphone.battery}</td>
-            <td>${microphone.microphoneType}</td>
-            <td>${microphone.id}</td>
-            <td>${microphone.price}</td>
 
-            <spring:url value="/microphone/${microphone.id}/update" var="updateUrl" />
+        <c:if test="${microphone.deleted == false}">
 
-            <td>
-                <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
-                <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
-            </td>
-        </tr>
+            <tr>
+                <td>${microphone.description}</td>
+                <td>${microphone.battery}</td>
+                <td>${microphone.microphoneType}</td>
+                <td>${microphone.id}</td>
+                <td>${microphone.price}</td>
+
+                <spring:url value="/microphone/${microphone.id}/update" var="updateUrl" />
+                <spring:url value="/microphone/${microphone.id}/delete" var="deleteUrl" />
+
+                <td>
+                    <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
+                    <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
+                    <button class="btn btn-danger" onclick="location.href='${deleteUrl}'">Delete</button>
+                </td>
+            </tr>
+
+        </c:if>
+
     </c:forEach>
 </table>
 

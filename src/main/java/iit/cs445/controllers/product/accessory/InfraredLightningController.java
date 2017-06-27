@@ -34,17 +34,47 @@ public class InfraredLightningController {
         return "productForm";
     }
 
-    @RequestMapping(value = "/infraredLightning", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
-                               @RequestParam("price") String price ) {
-        saveInfraredLightninh(description, price);
+    @RequestMapping(value = "/infraredLightning/{id}/delete", method = RequestMethod.GET)
+    public String deleteInfraredLightning(@PathVariable("id") Long id, Model model) {
+        InfraredLightning infraredLightning = new InfraredLightning().findById(id);
+        infraredLightning.setDeleted(true);
+        infraredLightning.update();
+        model.addAttribute("infraredLightningForm", infraredLightning);
         return "index";
     }
 
-    private void saveInfraredLightninh(String description, String price) {
+    @RequestMapping(value = "/infraredLightning", method = RequestMethod.POST)
+    public String checkoutPost(@RequestParam("description") String description ,
+                               @RequestParam("price") String price ) {
+        saveInfraredLightning(description, price);
+        return "index";
+    }
+
+    @RequestMapping(value = "/infraredLightningUpdate", method = RequestMethod.POST)
+    public String checkoutPost(@RequestParam("id") String id,
+                                @RequestParam("description") String description ,
+                                @RequestParam("price") String price ) {
+        updateInfraredLightning(id, description, price);
+        return "index";
+    }
+
+    private void saveInfraredLightning(String description, String price) {
         InfraredLightning infraredLightning = new InfraredLightning();
         infraredLightning.setPrice(Float.parseFloat(price));
         infraredLightning.setDescription(description);
+        infraredLightning.setDeleted(false);
+        infraredLightning.saveNew();
+    }
+
+    private void updateInfraredLightning(String id, String description, String price) {
+        InfraredLightning infraredLightningOld = new InfraredLightning().findById(Long.parseLong(id));
+        infraredLightningOld.setDeleted(true);
+        infraredLightningOld.update();
+
+        InfraredLightning infraredLightning = new InfraredLightning();
+        infraredLightning.setPrice(Float.parseFloat(price));
+        infraredLightning.setDescription(description);
+        infraredLightning.setDeleted(false);
         infraredLightning.saveNew();
     }
 

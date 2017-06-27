@@ -6,40 +6,37 @@
 
 <html>
 <head>
-    <title>Power Supply</title>
+    <title>Surveillance Design</title>
 </head>
 <body>
 
-<h1>Power Supply</h1>
+<h1>Surveillance Design</h1>
 
-<spring:url value="/product/accessory/powerSupply/add" var="powerSupply"/>
-<button class="btn btn-primary" onclick="location.href='${powerSupply}'">Add Power Supply</button>
+
+<spring:url value="/service/surveillanceDesign/add" var="surveillanceDesign"/>
+<button class="btn btn-primary" onclick="location.href='${surveillanceDesign}'">Add Security System Installation</button>
 
 <table class="table table-striped">
     <thead>
     <tr>
         <th>Description</th>
-        <th>Maximum Output</th>
-        <th>Voltage</th>
         <th>ID</th>
         <th>Price</th>
         <th></th>
     </tr>
     </thead>
 
-    <c:forEach var="powerSupply" items="${powerSupplies}">
+    <c:forEach var="surveillanceDesign" items="${surveillanceDesigns}">
 
-        <c:if test="${powerSupply.deleted == false}">
+        <c:if test="${surveillanceDesign.deleted == false}">
 
             <tr>
-                <td>${powerSupply.description}</td>
-                <td>${powerSupply.maximum_output}</td>
-                <td>${powerSupply.voltage}</td>
-                <td>${powerSupply.id}</td>
-                <td>${powerSupply.price}</td>
+                <td>${surveillanceDesign.description}</td>
+                <td>${surveillanceDesign.id}</td>
+                <td>${surveillanceDesign.price}</td>
 
-                <spring:url value="/powerSupply/${powerSupply.id}/update" var="updateUrl" />
-                <spring:url value="/powerSupply/${powerSupply.id}/delete" var="deleteUrl" />
+                <spring:url value="/surveillanceDesign/${surveillanceDesign.id}/delete" var="deleteUrl" />
+                <spring:url value="/surveillanceDesign/${surveillanceDesign.id}/update" var="updateUrl" />
 
                 <td>
                     <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
@@ -49,6 +46,7 @@
             </tr>
 
         </c:if>
+
 
     </c:forEach>
 </table>

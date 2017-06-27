@@ -13,13 +13,13 @@
     <c:choose>
         <c:when test="${not empty bracketForm}">
             <h1>Add Bracket</h1><br>
+            <spring:url value="/bracket" var="bracket"/>
         </c:when>
         <c:otherwise>
             <h1>Update Bracket</h1><br>
+            <spring:url value="/bracketUpdate" var="bracket"/>
         </c:otherwise>
     </c:choose>
-
-    <spring:url value="/bracket" var="bracket"/>
 
     <form action='${bracket}' method="POST">
 
@@ -32,6 +32,7 @@
                 </c:when>
                 <c:otherwise>
                     <input type="text" name="description" value="${bracketFormUpdate.description}" placeholder="">
+                    <input hidden type="text" name="id" value="${bracketFormUpdate.id}" >
                 </c:otherwise>
             </c:choose>
 

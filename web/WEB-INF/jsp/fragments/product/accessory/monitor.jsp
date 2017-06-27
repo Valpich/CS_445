@@ -28,20 +28,28 @@
     </thead>
 
     <c:forEach var="monitor" items="${monitors}">
-        <tr>
-            <td>${monitor.description}</td>
-            <td>${monitor.size}</td>
-            <td>${monitor.maxResolution}</td>
-            <td>${monitor.id}</td>
-            <td>${monitor.price}</td>
 
-            <spring:url value="/monitor/${monitor.id}/update" var="updateUrl" />
+        <c:if test="${monitor.deleted == false}">
 
-            <td>
-                <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
-                <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
-            </td>
-        </tr>
+            <tr>
+                <td>${monitor.description}</td>
+                <td>${monitor.size}</td>
+                <td>${monitor.maxResolution}</td>
+                <td>${monitor.id}</td>
+                <td>${monitor.price}</td>
+
+                <spring:url value="/monitor/${monitor.id}/update" var="updateUrl" />
+                <spring:url value="/monitor/${monitor.id}/delete" var="deleteUrl" />
+
+                <td>
+                    <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
+                    <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
+                    <button class="btn btn-danger" onclick="location.href='${deleteUrl}'">Delete</button>
+                </td>
+            </tr>
+
+        </c:if>
+
     </c:forEach>
 </table>
 

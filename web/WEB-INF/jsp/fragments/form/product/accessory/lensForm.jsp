@@ -13,13 +13,15 @@
     <c:choose>
         <c:when test="${not empty lensForm}">
             <h1>Add Lens</h1><br>
+            <spring:url value="/lens" var="lens"/>
         </c:when>
         <c:otherwise>
             <h1>Update Lens</h1><br>
+            <spring:url value="/lensUpdate" var="lens"/>
         </c:otherwise>
     </c:choose>
 
-    <spring:url value="/lens" var="lens"/>
+
 
     <form action='${lens}' method="POST">
 
@@ -32,6 +34,7 @@
                 </c:when>
                 <c:otherwise>
                     <input type="text" name="description" value="${lensFormUpdate.description}" placeholder="">
+                    <input hidden type="text" name="id" value="${lensFormUpdate.id}" >
                 </c:otherwise>
             </c:choose>
 

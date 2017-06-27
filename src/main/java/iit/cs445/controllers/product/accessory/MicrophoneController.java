@@ -36,6 +36,15 @@ public class MicrophoneController {
         return "productForm";
     }
 
+    @RequestMapping(value = "/microphone/{id}/delete", method = RequestMethod.GET)
+    public String deleteMicrophone(@PathVariable("id") Long id, Model model) {
+        Microphone microphone = new Microphone().findById(id);
+        microphone.setDeleted(true);
+        microphone.update();
+        model.addAttribute("microphoneForm", microphone);
+        return "index";
+    }
+
     @RequestMapping(value = "/microphone", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description ,
                                @RequestParam("battery") Boolean battery,
@@ -44,6 +53,17 @@ public class MicrophoneController {
         saveMicrophone(description, battery, microphoneType, price);
         return "index";
     }
+
+    @RequestMapping(value = "/microphoneUpdate", method = RequestMethod.POST)
+    public String checkoutPost(@RequestParam("id") String id,
+                                @RequestParam("description") String description ,
+                                @RequestParam("battery") Boolean battery,
+                                @RequestParam("microphone_type") String microphoneType,
+                                @RequestParam("price") String price ) {
+        updateMicrophone(id, description, battery, microphoneType, price);
+        return "index";
+    }
+
 
     private void saveMicrophone(String description, Boolean battery, String microphoneType, String price) {
         Microphone microphone = new Microphone();
@@ -69,6 +89,39 @@ public class MicrophoneController {
         } else {
             microphone.setMicrophoneType(MicrophoneType.MEMS);
         }
+        microphone.setDeleted(false);
+        microphone.saveNew();
+    }
+
+    private void updateMicrophone(String id, String description, Boolean battery, String microphoneType, String price) {
+        Microphone microphoneOld = new Microphone().findById(Long.parseLong(id));
+        microphoneOld.setDeleted(true);
+        microphoneOld.update();
+
+        Microphone microphone = new Microphone();
+        microphone.setPrice(Float.parseFloat(price));
+        microphone.setDescription(description);
+        microphone.setBattery(battery);
+        if(microphoneType.equals("CONDENSER")) {
+            microphone.setMicrophoneType(MicrophoneType.CONDENSER);
+        } else if(microphoneType.equals("DYNAMIC")) {
+            microphone.setMicrophoneType(MicrophoneType.DYNAMIC);
+        } else if(microphoneType.equals("RIBBON")) {
+            microphone.setMicrophoneType(MicrophoneType.RIBBON);
+        } else if(microphoneType.equals("CARBON")) {
+            microphone.setMicrophoneType(MicrophoneType.CARBON);
+        } else if(microphoneType.equals("PIEZOELECTRIC")) {
+            microphone.setMicrophoneType(MicrophoneType.PIEZOELECTRIC);
+        } else if(microphoneType.equals("FIBER_OPTIC")) {
+            microphone.setMicrophoneType(MicrophoneType.FIBER_OPTIC);
+        } else if(microphoneType.equals("LASER")) {
+            microphone.setMicrophoneType(MicrophoneType.LASER);
+        } else if(microphoneType.equals("LIQUID")) {
+            microphone.setMicrophoneType(MicrophoneType.LIQUID);
+        } else {
+            microphone.setMicrophoneType(MicrophoneType.MEMS);
+        }
+        microphone.setDeleted(false);
         microphone.saveNew();
     }
 

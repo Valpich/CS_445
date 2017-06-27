@@ -34,6 +34,15 @@ public class AnalogSurveillanceCameraController {
         return "productForm";
     }
 
+    @RequestMapping(value = "/analogSurveillanceCamera/{id}/delete", method = RequestMethod.GET)
+    public String deleteAnalogSurveillanceCamera(@PathVariable("id") Long id, Model model) {
+        AnalogSurveillanceCamera analogSurveillanceCamera = new AnalogSurveillanceCamera().findById(id);
+        analogSurveillanceCamera.setDeleted(true);
+        analogSurveillanceCamera.update();
+        model.addAttribute("analogSurveillanceCameraForm", analogSurveillanceCamera);
+        return "index";
+    }
+
     @RequestMapping(value = "/analogSurveillanceCamera", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description ,
                                @RequestParam("resolution") String resolution ,
@@ -42,11 +51,34 @@ public class AnalogSurveillanceCameraController {
         return "index";
     }
 
+    @RequestMapping(value = "/analogSurveillanceCameraUpdate", method = RequestMethod.POST)
+    public String checkoutPost(@RequestParam("id") String id,
+                                @RequestParam("description") String description ,
+                                @RequestParam("resolution") String resolution ,
+                                @RequestParam("price") String price ) {
+        updateAnalogSurveillanceCamera(id, description, resolution, price);
+        return "index";
+    }
+
     private void saveAnalogSurveillanceCamera(String description, String resolution, String price) {
         AnalogSurveillanceCamera analogSurveillanceCamera = new AnalogSurveillanceCamera();
         analogSurveillanceCamera.setPrice(Float.parseFloat(price));
         analogSurveillanceCamera.setResolution(resolution);
         analogSurveillanceCamera.setDescription(description);
+        analogSurveillanceCamera.setDeleted(false);
+        analogSurveillanceCamera.saveNew();
+    }
+
+    private void updateAnalogSurveillanceCamera(String id, String description, String resolution, String price) {
+        AnalogSurveillanceCamera analogSurveillanceCameraOld = new AnalogSurveillanceCamera().findById(Long.parseLong(id));
+        analogSurveillanceCameraOld.setDeleted(true);
+        analogSurveillanceCameraOld.update();
+
+        AnalogSurveillanceCamera analogSurveillanceCamera = new AnalogSurveillanceCamera();
+        analogSurveillanceCamera.setPrice(Float.parseFloat(price));
+        analogSurveillanceCamera.setResolution(resolution);
+        analogSurveillanceCamera.setDescription(description);
+        analogSurveillanceCamera.setDeleted(false);
         analogSurveillanceCamera.saveNew();
     }
 

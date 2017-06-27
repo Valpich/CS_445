@@ -13,13 +13,15 @@
     <c:choose>
         <c:when test="${not empty hybridDVRForm}">
             <h1>Add Hybrid DVR</h1><br>
+            <spring:url value="/hybridDVR" var="hybrid"/>
         </c:when>
         <c:otherwise>
             <h1>Update Hybrid DVR</h1><br>
+            <spring:url value="/hybridDVRUpdate" var="hybrid"/>
         </c:otherwise>
     </c:choose>
 
-    <spring:url value="/hybridDVR" var="hybrid"/>
+
 
     <form action='${hybrid}' method="POST">
 
@@ -32,6 +34,7 @@
                 </c:when>
                 <c:otherwise>
                     <input type="text" name="description" value="${hybridDVRFormUpdate.description}" placeholder="">
+                    <input hidden type="text" name="id" value="${hybridDVRFormUpdate.id}">
                 </c:otherwise>
             </c:choose>
 
