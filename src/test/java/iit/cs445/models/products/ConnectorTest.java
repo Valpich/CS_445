@@ -10,13 +10,20 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
 
 @RunWith(Arquillian.class)
 public class ConnectorTest {
 
     private Connector connector;
+
+    @Deployment
+    public static JavaArchive createDeployment() {
+        return ShrinkWrap.create(JavaArchive.class)
+                .addClass(Connector.class)
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    }
 
     @Before
     public void setUp() throws Exception {
@@ -31,13 +38,6 @@ public class ConnectorTest {
     @Test
     public void toStringTest() throws Exception {
         assertNotNull(connector.toString());
-    }
-
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(Connector.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 
 }

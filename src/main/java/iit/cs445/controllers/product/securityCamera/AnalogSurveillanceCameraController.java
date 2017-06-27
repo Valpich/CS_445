@@ -44,18 +44,18 @@ public class AnalogSurveillanceCameraController {
     }
 
     @RequestMapping(value = "/analogSurveillanceCamera", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
-                               @RequestParam("resolution") String resolution ,
-                               @RequestParam("price") String price ) {
+    public String checkoutPost(@RequestParam("description") String description,
+                               @RequestParam("resolution") String resolution,
+                               @RequestParam("price") String price) {
         saveAnalogSurveillanceCamera(description, resolution, price);
         return "index";
     }
 
     @RequestMapping(value = "/analogSurveillanceCameraUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
-                                @RequestParam("description") String description ,
-                                @RequestParam("resolution") String resolution ,
-                                @RequestParam("price") String price ) {
+                               @RequestParam("description") String description,
+                               @RequestParam("resolution") String resolution,
+                               @RequestParam("price") String price) {
         updateAnalogSurveillanceCamera(id, description, resolution, price);
         return "index";
     }

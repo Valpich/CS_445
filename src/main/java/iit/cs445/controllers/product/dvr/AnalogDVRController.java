@@ -47,20 +47,20 @@ public class AnalogDVRController {
     }
 
     @RequestMapping(value = "/analogDVR", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
-                               @RequestParam("analog_record_formats") String analogRecord ,
-                               @RequestParam("storage_types") String storageTypes ,
-                               @RequestParam("price") String price ) {
+    public String checkoutPost(@RequestParam("description") String description,
+                               @RequestParam("analog_record_formats") String analogRecord,
+                               @RequestParam("storage_types") String storageTypes,
+                               @RequestParam("price") String price) {
         saveAnalogDVR(description, analogRecord, storageTypes, price);
         return "index";
     }
 
     @RequestMapping(value = "/analogDVRUpdate", method = RequestMethod.POST)
     public String checkoutPostUpdate(@RequestParam("id") String id,
-                                @RequestParam("description") String description ,
-                                @RequestParam("analog_record_formats") String analogRecord ,
-                                @RequestParam("storage_types") String storageTypes ,
-                                @RequestParam("price") String price ) {
+                                     @RequestParam("description") String description,
+                                     @RequestParam("analog_record_formats") String analogRecord,
+                                     @RequestParam("storage_types") String storageTypes,
+                                     @RequestParam("price") String price) {
         updateAnalogDVR(id, description, analogRecord, storageTypes, price);
         return "index";
     }
@@ -68,7 +68,7 @@ public class AnalogDVRController {
     private void saveAnalogDVR(String description, String analogRecord, String storage, String price) {
         AnalogDVR analogDVR = new AnalogDVR();
         List<AnalogRecordFormat> analogRecordFormats = new ArrayList<>();
-        if(analogRecord.equals("NTSC")) {
+        if (analogRecord.equals("NTSC")) {
             analogRecordFormats.add(AnalogRecordFormat.NTSC);
         } else if (analogRecord.equals("PAL")) {
             analogRecordFormats.add(AnalogRecordFormat.PAL);
@@ -78,9 +78,9 @@ public class AnalogDVRController {
         analogDVR.setAnalogRecordFormats(analogRecordFormats);
         analogDVR.setPrice(Float.parseFloat(price));
         List<StorageType> storageTypes = new ArrayList<>();
-        if(storage.equals("DISK_DRIVE")) {
+        if (storage.equals("DISK_DRIVE")) {
             storageTypes.add(StorageType.DISK_DRIVE);
-        } else if(storage.equals("USB")) {
+        } else if (storage.equals("USB")) {
             storageTypes.add(StorageType.USB);
         } else if (storage.equals("SSD")) {
             storageTypes.add(StorageType.SSD);
@@ -102,7 +102,7 @@ public class AnalogDVRController {
 
         AnalogDVR analogDVR = new AnalogDVR();
         List<AnalogRecordFormat> analogRecordFormats = new ArrayList<>();
-        if(analogRecord.equals("NTSC")) {
+        if (analogRecord.equals("NTSC")) {
             analogRecordFormats.add(AnalogRecordFormat.NTSC);
         } else if (analogRecord.equals("PAL")) {
             analogRecordFormats.add(AnalogRecordFormat.PAL);
@@ -112,9 +112,9 @@ public class AnalogDVRController {
         analogDVR.setAnalogRecordFormats(analogRecordFormats);
         analogDVR.setPrice(Float.parseFloat(price));
         List<StorageType> storageTypes = new ArrayList<>();
-        if(storage.equals("DISK_DRIVE")) {
+        if (storage.equals("DISK_DRIVE")) {
             storageTypes.add(StorageType.DISK_DRIVE);
-        } else if(storage.equals("USB")) {
+        } else if (storage.equals("USB")) {
             storageTypes.add(StorageType.USB);
         } else if (storage.equals("SSD")) {
             storageTypes.add(StorageType.SSD);

@@ -44,20 +44,20 @@ public class PowerSupplyController {
     }
 
     @RequestMapping(value = "/powerSupply", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
-                               @RequestParam("maximum_output") String maximumOutput ,
-                               @RequestParam("voltage") String voltage ,
-                               @RequestParam("price") String price ) {
+    public String checkoutPost(@RequestParam("description") String description,
+                               @RequestParam("maximum_output") String maximumOutput,
+                               @RequestParam("voltage") String voltage,
+                               @RequestParam("price") String price) {
         savePowerSupply(description, maximumOutput, voltage, price);
         return "index";
     }
 
     @RequestMapping(value = "/powerSupplyUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
-                                @RequestParam("description") String description ,
-                                @RequestParam("maximum_output") String maximumOutput ,
-                                @RequestParam("voltage") String voltage ,
-                                @RequestParam("price") String price ) {
+                               @RequestParam("description") String description,
+                               @RequestParam("maximum_output") String maximumOutput,
+                               @RequestParam("voltage") String voltage,
+                               @RequestParam("price") String price) {
         updatePowerSupply(id, description, maximumOutput, voltage, price);
         return "index";
     }

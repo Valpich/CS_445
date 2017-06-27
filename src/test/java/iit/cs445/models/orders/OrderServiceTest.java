@@ -10,14 +10,19 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Arquillian.class)
 public class OrderServiceTest {
 
-    private class OrderServiceImplementTest implements OrderService{}
-
     private OrderServiceImplementTest orderServiceImplementTest;
+
+    @Deployment
+    public static JavaArchive createDeployment() {
+        return ShrinkWrap.create(JavaArchive.class)
+                .addClass(OrderService.class)
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    }
 
     @Before
     public void setUp() throws Exception {
@@ -44,11 +49,7 @@ public class OrderServiceTest {
         assertEquals(null, orderServiceImplementTest.deleteOrder(new Order()));
     }
 
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(OrderService.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    private class OrderServiceImplementTest implements OrderService {
     }
 
 }

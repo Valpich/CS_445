@@ -44,16 +44,16 @@ public class InfraredLightningController {
     }
 
     @RequestMapping(value = "/infraredLightning", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
-                               @RequestParam("price") String price ) {
+    public String checkoutPost(@RequestParam("description") String description,
+                               @RequestParam("price") String price) {
         saveInfraredLightning(description, price);
         return "index";
     }
 
     @RequestMapping(value = "/infraredLightningUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
-                                @RequestParam("description") String description ,
-                                @RequestParam("price") String price ) {
+                               @RequestParam("description") String description,
+                               @RequestParam("price") String price) {
         updateInfraredLightning(id, description, price);
         return "index";
     }

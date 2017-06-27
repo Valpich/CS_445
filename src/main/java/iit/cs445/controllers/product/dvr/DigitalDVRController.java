@@ -1,7 +1,6 @@
 package iit.cs445.controllers.product.dvr;
 
 import iit.cs445.models.products.DigitalDVR;
-import iit.cs445.models.products.DigitalSurveillanceCamera;
 import iit.cs445.models.products.StorageType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -47,18 +46,18 @@ public class DigitalDVRController {
     }
 
     @RequestMapping(value = "/digitalDVR", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
-                               @RequestParam("storage_types") String storageTypes ,
-                               @RequestParam("price") String price ) {
+    public String checkoutPost(@RequestParam("description") String description,
+                               @RequestParam("storage_types") String storageTypes,
+                               @RequestParam("price") String price) {
         saveDigitalDVR(description, storageTypes, price);
         return "index";
     }
 
     @RequestMapping(value = "/digitalDVRUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
-                                @RequestParam("description") String description ,
-                                @RequestParam("storage_types") String storageTypes ,
-                                @RequestParam("price") String price ) {
+                               @RequestParam("description") String description,
+                               @RequestParam("storage_types") String storageTypes,
+                               @RequestParam("price") String price) {
         updateDigitalDVR(id, description, storageTypes, price);
         return "index";
     }
@@ -67,9 +66,9 @@ public class DigitalDVRController {
         DigitalDVR digitalDVR = new DigitalDVR();
         digitalDVR.setPrice(Float.parseFloat(price));
         List<StorageType> storageTypes = new ArrayList<>();
-        if(storage.equals("DISK_DRIVE")) {
+        if (storage.equals("DISK_DRIVE")) {
             storageTypes.add(StorageType.DISK_DRIVE);
-        } else if(storage.equals("USB")) {
+        } else if (storage.equals("USB")) {
             storageTypes.add(StorageType.USB);
         } else if (storage.equals("SSD")) {
             storageTypes.add(StorageType.SSD);
@@ -92,9 +91,9 @@ public class DigitalDVRController {
         DigitalDVR digitalDVR = new DigitalDVR();
         digitalDVR.setPrice(Float.parseFloat(price));
         List<StorageType> storageTypes = new ArrayList<>();
-        if(storage.equals("DISK_DRIVE")) {
+        if (storage.equals("DISK_DRIVE")) {
             storageTypes.add(StorageType.DISK_DRIVE);
-        } else if(storage.equals("USB")) {
+        } else if (storage.equals("USB")) {
             storageTypes.add(StorageType.USB);
         } else if (storage.equals("SSD")) {
             storageTypes.add(StorageType.SSD);

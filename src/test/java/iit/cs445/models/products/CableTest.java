@@ -10,12 +10,20 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 @RunWith(Arquillian.class)
 public class CableTest {
 
     private Cable cable;
+
+    @Deployment
+    public static JavaArchive createDeployment() {
+        return ShrinkWrap.create(JavaArchive.class)
+                .addClass(Cable.class)
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    }
 
     @Before
     public void setUp() throws Exception {
@@ -47,13 +55,6 @@ public class CableTest {
     @Test
     public void toStringTest() throws Exception {
         assertNotNull(cable.toString());
-    }
-
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(Cable.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 
 }

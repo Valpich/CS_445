@@ -13,31 +13,20 @@ import org.junit.runner.RunWith;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Arquillian.class)
 public class RepairableTest {
 
-    private class RepairableImplementationTest implements Repairable{
-        private List<Equipment> equipments;
-
-        @Override
-        public List<Equipment> repairEquipments() {
-            return equipments;
-        }
-
-        public List<Equipment> getEquipments() {
-            return equipments;
-        }
-
-        public void setEquipments(List<Equipment> equipments) {
-            this.equipments = equipments;
-        }
-    }
-    private class RepairableImplementationTestTwo implements Repairable{
-    }
     private RepairableImplementationTest repairableImplementationTest;
     private RepairableImplementationTestTwo repairableImplementationTestTwo;
+
+    @Deployment
+    public static JavaArchive createDeployment() {
+        return ShrinkWrap.create(JavaArchive.class)
+                .addClass(Repairable.class)
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    }
 
     @Before
     public void setUp() throws Exception {
@@ -53,12 +42,12 @@ public class RepairableTest {
 
     @Test
     public void repairPrice() throws Exception {
-            assertEquals(new Float(0F), repairableImplementationTest.repairPrice());
+        assertEquals(new Float(0F), repairableImplementationTest.repairPrice());
     }
 
     @Test
     public void repairEquipments() throws Exception {
-        assertEquals(null,repairableImplementationTest.repairEquipments());
+        assertEquals(null, repairableImplementationTest.repairEquipments());
         List<Equipment> equipments = new ArrayList<>();
         equipments.add(Equipment.AMMETER);
         repairableImplementationTest.setEquipments(equipments);
@@ -67,11 +56,24 @@ public class RepairableTest {
 
     }
 
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(Repairable.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    private class RepairableImplementationTest implements Repairable {
+        private List<Equipment> equipments;
+
+        @Override
+        public List<Equipment> repairEquipments() {
+            return equipments;
+        }
+
+        public List<Equipment> getEquipments() {
+            return equipments;
+        }
+
+        public void setEquipments(List<Equipment> equipments) {
+            this.equipments = equipments;
+        }
+    }
+
+    private class RepairableImplementationTestTwo implements Repairable {
     }
 
 }

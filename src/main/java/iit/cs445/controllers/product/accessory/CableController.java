@@ -44,18 +44,18 @@ public class CableController {
     }
 
     @RequestMapping(value = "/cable", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
+    public String checkoutPost(@RequestParam("description") String description,
                                @RequestParam("length") String length,
-                               @RequestParam("price") String price ) {
+                               @RequestParam("price") String price) {
         saveCable(description, length, price);
         return "index";
     }
 
     @RequestMapping(value = "/cableUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
-                                @RequestParam("description") String description ,
-                                @RequestParam("length") String length,
-                                @RequestParam("price") String price ) {
+                               @RequestParam("description") String description,
+                               @RequestParam("length") String length,
+                               @RequestParam("price") String price) {
         updateCable(id, description, length, price);
         return "index";
     }

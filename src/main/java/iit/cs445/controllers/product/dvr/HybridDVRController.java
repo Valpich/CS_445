@@ -46,18 +46,18 @@ public class HybridDVRController {
     }
 
     @RequestMapping(value = "/hybridDVR", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
-                               @RequestParam("storage_types") String storageTypes ,
-                               @RequestParam("price") String price ) {
+    public String checkoutPost(@RequestParam("description") String description,
+                               @RequestParam("storage_types") String storageTypes,
+                               @RequestParam("price") String price) {
         saveHybridDVR(description, storageTypes, price);
         return "index";
     }
 
     @RequestMapping(value = "/hybridDVRUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
-                                @RequestParam("description") String description ,
-                                @RequestParam("storage_types") String storageTypes ,
-                                @RequestParam("price") String price ) {
+                               @RequestParam("description") String description,
+                               @RequestParam("storage_types") String storageTypes,
+                               @RequestParam("price") String price) {
         updateHybridDVR(id, description, storageTypes, price);
         return "index";
     }
@@ -66,9 +66,9 @@ public class HybridDVRController {
         HybridDVR hybridDVR = new HybridDVR();
         hybridDVR.setPrice(Float.parseFloat(price));
         List<StorageType> storageTypes = new ArrayList<>();
-        if(storage.equals("DISK_DRIVE")) {
+        if (storage.equals("DISK_DRIVE")) {
             storageTypes.add(StorageType.DISK_DRIVE);
-        } else if(storage.equals("USB")) {
+        } else if (storage.equals("USB")) {
             storageTypes.add(StorageType.USB);
         } else if (storage.equals("SSD")) {
             storageTypes.add(StorageType.SSD);
@@ -91,9 +91,9 @@ public class HybridDVRController {
         HybridDVR hybridDVR = new HybridDVR();
         hybridDVR.setPrice(Float.parseFloat(price));
         List<StorageType> storageTypes = new ArrayList<>();
-        if(storage.equals("DISK_DRIVE")) {
+        if (storage.equals("DISK_DRIVE")) {
             storageTypes.add(StorageType.DISK_DRIVE);
-        } else if(storage.equals("USB")) {
+        } else if (storage.equals("USB")) {
             storageTypes.add(StorageType.USB);
         } else if (storage.equals("SSD")) {
             storageTypes.add(StorageType.SSD);

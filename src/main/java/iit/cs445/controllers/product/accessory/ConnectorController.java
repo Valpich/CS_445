@@ -44,16 +44,16 @@ public class ConnectorController {
     }
 
     @RequestMapping(value = "/connector", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
-                               @RequestParam("price") String price ) {
+    public String checkoutPost(@RequestParam("description") String description,
+                               @RequestParam("price") String price) {
         saveConnector(description, price);
         return "index";
     }
 
     @RequestMapping(value = "/connectorUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
-                                @RequestParam("description") String description ,
-                                @RequestParam("price") String price ) {
+                               @RequestParam("description") String description,
+                               @RequestParam("price") String price) {
         updateConnector(id, description, price);
         return "index";
     }

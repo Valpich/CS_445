@@ -11,14 +11,21 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 
 @RunWith(Arquillian.class)
 public class ProductTest {
 
-    private class ProductClassTest extends Product<ProductClassTest>{}
     private ProductClassTest productClassTest;
+
+    @Deployment
+    public static JavaArchive createDeployment() {
+        return ShrinkWrap.create(JavaArchive.class)
+                .addClass(Product.class)
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    }
 
     @Before
     public void setUp() throws Exception {
@@ -111,11 +118,7 @@ public class ProductTest {
         assertNotNull(productClassTest.toString());
     }
 
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(Product.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    private class ProductClassTest extends Product<ProductClassTest> {
     }
 
 }

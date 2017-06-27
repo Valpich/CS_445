@@ -52,7 +52,7 @@ public class Cart implements Serializable {
     }
 
     public Integer getListCount() {
-        return productList.size()+serviceList.size();
+        return productList.size() + serviceList.size();
     }
 
     @Override

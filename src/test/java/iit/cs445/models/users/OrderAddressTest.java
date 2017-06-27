@@ -11,12 +11,20 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 @RunWith(Arquillian.class)
 public class OrderAddressTest {
 
     private OrderAddress orderAddress;
+
+    @Deployment
+    public static JavaArchive createDeployment() {
+        return ShrinkWrap.create(JavaArchive.class)
+                .addClass(OrderAddress.class)
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    }
 
     @Before
     public void setUp() throws Exception {
@@ -31,15 +39,15 @@ public class OrderAddressTest {
     @Test
     public void getId() throws Exception {
         orderAddress.setId(1L);
-        assertEquals(1L, (long)orderAddress.getId());
+        assertEquals(1L, (long) orderAddress.getId());
     }
 
     @Test
     public void setId() throws Exception {
         orderAddress.setId(1L);
-        assertEquals(1L, (long)orderAddress.getId());
+        assertEquals(1L, (long) orderAddress.getId());
         orderAddress.setId(2L);
-        assertEquals(2L, (long)orderAddress.getId());
+        assertEquals(2L, (long) orderAddress.getId());
     }
 
     @Test
@@ -179,13 +187,6 @@ public class OrderAddressTest {
     @Test
     public void toStringTest() throws Exception {
         assertNotNull(orderAddress.toString());
-    }
-
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(OrderAddress.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 
 }

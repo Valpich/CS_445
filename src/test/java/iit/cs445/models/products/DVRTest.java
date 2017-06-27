@@ -13,13 +13,20 @@ import org.junit.runner.RunWith;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 @RunWith(Arquillian.class)
 public class DVRTest {
 
-    private class DVRClassTest extends DVR<DVRClassTest>{}
     private DVRClassTest dvrClassTest;
+
+    @Deployment
+    public static JavaArchive createDeployment() {
+        return ShrinkWrap.create(JavaArchive.class)
+                .addClass(DVR.class)
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    }
 
     @Before
     public void setUp() throws Exception {
@@ -56,11 +63,7 @@ public class DVRTest {
         assertNotNull(dvrClassTest.toString());
     }
 
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(DVR.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    private class DVRClassTest extends DVR<DVRClassTest> {
     }
 
 }

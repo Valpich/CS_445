@@ -44,16 +44,16 @@ public class SurveillanceSystemRepairController {
     }
 
     @RequestMapping(value = "/surveillanceSystemRepair", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
-                               @RequestParam("price") String price ) {
+    public String checkoutPost(@RequestParam("description") String description,
+                               @RequestParam("price") String price) {
         saveSurveillanceSystemRepair(description, price);
         return "index";
     }
 
     @RequestMapping(value = "/surveillanceSystemRepairUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
-                               @RequestParam("description") String description ,
-                               @RequestParam("price") String price ) {
+                               @RequestParam("description") String description,
+                               @RequestParam("price") String price) {
         updateSurveillanceSystemRepair(id, description, price);
         return "index";
     }

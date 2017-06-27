@@ -44,16 +44,16 @@ public class HousingController {
     }
 
     @RequestMapping(value = "/housing", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
-                               @RequestParam("price") String price ) {
+    public String checkoutPost(@RequestParam("description") String description,
+                               @RequestParam("price") String price) {
         saveHousing(description, price);
         return "index";
     }
 
     @RequestMapping(value = "/housingUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
-                                @RequestParam("description") String description ,
-                                @RequestParam("price") String price ) {
+                               @RequestParam("description") String description,
+                               @RequestParam("price") String price) {
         updateHousing(id, description, price);
         return "index";
     }

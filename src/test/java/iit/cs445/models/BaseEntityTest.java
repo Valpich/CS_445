@@ -17,14 +17,14 @@ import static org.junit.Assert.*;
 @RunWith(Arquillian.class)
 public class BaseEntityTest {
 
-    private class BaseEntityClassTest extends BaseEntity<Long, BaseEntityClassTest>{
-
-        @Override
-        public Long getId() {
-            return null;
-        }
-    }
     private BaseEntityClassTest baseEntityClassTest;
+
+    @Deployment
+    public static JavaArchive createDeployment() {
+        return ShrinkWrap.create(JavaArchive.class)
+                .addClass(BaseEntity.class)
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    }
 
     @Before
     public void setUp() throws Exception {
@@ -95,9 +95,9 @@ public class BaseEntityTest {
     @Test
     public void saveNew() throws Exception {
         boolean exception = false;
-        try{
+        try {
             baseEntityClassTest.saveNew();
-        }catch (NullPointerException npe){
+        } catch (NullPointerException npe) {
             exception = true;
         }
         assertEquals(true, exception);
@@ -106,9 +106,9 @@ public class BaseEntityTest {
     @Test
     public void update() throws Exception {
         boolean exception = false;
-        try{
+        try {
             baseEntityClassTest.update();
-        }catch (NullPointerException npe){
+        } catch (NullPointerException npe) {
             exception = true;
         }
         assertEquals(true, exception);
@@ -117,9 +117,9 @@ public class BaseEntityTest {
     @Test
     public void delete() throws Exception {
         boolean exception = false;
-        try{
+        try {
             baseEntityClassTest.delete();
-        }catch (NullPointerException npe){
+        } catch (NullPointerException npe) {
             exception = true;
         }
         assertEquals(true, exception);
@@ -128,9 +128,9 @@ public class BaseEntityTest {
     @Test
     public void listAll() throws Exception {
         boolean exception = false;
-        try{
+        try {
             baseEntityClassTest.listAll();
-        }catch (NullPointerException npe){
+        } catch (NullPointerException npe) {
             exception = true;
         }
         assertEquals(true, exception);
@@ -139,19 +139,20 @@ public class BaseEntityTest {
     @Test
     public void findById() throws Exception {
         boolean exception = false;
-        try{
+        try {
             baseEntityClassTest.findById(1L);
-        }catch (NullPointerException npe){
+        } catch (NullPointerException npe) {
             exception = true;
         }
         assertEquals(true, exception);
     }
 
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(BaseEntity.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    private class BaseEntityClassTest extends BaseEntity<Long, BaseEntityClassTest> {
+
+        @Override
+        public Long getId() {
+            return null;
+        }
     }
 
 }

@@ -10,12 +10,19 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
 @RunWith(Arquillian.class)
 public class DigitalSurveillanceCameraTest {
 
     private DigitalSurveillanceCamera digitalSurveillanceCamera;
+
+    @Deployment
+    public static JavaArchive createDeployment() {
+        return ShrinkWrap.create(JavaArchive.class)
+                .addClass(DigitalSurveillanceCamera.class)
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    }
 
     @Before
     public void setUp() throws Exception {
@@ -30,13 +37,6 @@ public class DigitalSurveillanceCameraTest {
     @Test
     public void toStringTest() throws Exception {
         assertNotNull(digitalSurveillanceCamera.toString());
-    }
-
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(DigitalSurveillanceCamera.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 
 }

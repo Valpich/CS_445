@@ -44,20 +44,20 @@ public class LensController {
     }
 
     @RequestMapping(value = "/lens", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
+    public String checkoutPost(@RequestParam("description") String description,
                                @RequestParam("focal") String focal,
                                @RequestParam("magnification") String magnification,
-                               @RequestParam("price") String price ) {
+                               @RequestParam("price") String price) {
         saveLens(description, focal, magnification, price);
         return "index";
     }
 
     @RequestMapping(value = "/lensUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
-                                @RequestParam("description") String description ,
-                                @RequestParam("focal") String focal,
-                                @RequestParam("magnification") String magnification,
-                                @RequestParam("price") String price ) {
+                               @RequestParam("description") String description,
+                               @RequestParam("focal") String focal,
+                               @RequestParam("magnification") String magnification,
+                               @RequestParam("price") String price) {
         updateLens(id, description, focal, magnification, price);
         return "index";
     }

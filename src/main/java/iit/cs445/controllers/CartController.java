@@ -28,8 +28,8 @@ public class CartController {
     }
 
     @RequestMapping(value = "/cart", method = RequestMethod.POST)
-    public String list(HttpServletRequest request, @RequestParam("id")Optional<Long> idOptional) {
-        if(idOptional.isPresent()) {
+    public String list(HttpServletRequest request, @RequestParam("id") Optional<Long> idOptional) {
+        if (idOptional.isPresent()) {
             Long id = idOptional.get();
             HttpSession session = request.getSession();
             Cart cart = (Cart) session.getAttribute("cart");

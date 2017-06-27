@@ -10,12 +10,20 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 @RunWith(Arquillian.class)
 public class MicrophoneTest {
 
     private Microphone microphone;
+
+    @Deployment
+    public static JavaArchive createDeployment() {
+        return ShrinkWrap.create(JavaArchive.class)
+                .addClass(Microphone.class)
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    }
 
     @Before
     public void setUp() throws Exception {
@@ -31,17 +39,17 @@ public class MicrophoneTest {
     public void getBattery() throws Exception {
         Boolean bool = true;
         microphone.setBattery(bool);
-        assertEquals(bool,microphone.getBattery());
+        assertEquals(bool, microphone.getBattery());
     }
 
     @Test
     public void setBattery() throws Exception {
         Boolean bool = true;
         microphone.setBattery(bool);
-        assertEquals(bool,microphone.getBattery());
+        assertEquals(bool, microphone.getBattery());
         Boolean boolTwo = false;
         microphone.setBattery(boolTwo);
-        assertEquals(boolTwo,microphone.getBattery());
+        assertEquals(boolTwo, microphone.getBattery());
     }
 
     @Test
@@ -61,13 +69,6 @@ public class MicrophoneTest {
     @Test
     public void toStringTest() throws Exception {
         assertNotNull(microphone.toString());
-    }
-
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(Microphone.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 
 }

@@ -44,16 +44,16 @@ public class SurveillanceDesignController {
     }
 
     @RequestMapping(value = "/surveillanceDesign", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
-                               @RequestParam("price") String price ) {
+    public String checkoutPost(@RequestParam("description") String description,
+                               @RequestParam("price") String price) {
         saveSurveillanceDesign(description, price);
         return "index";
     }
 
     @RequestMapping(value = "/surveillanceDesignUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
-                               @RequestParam("description") String description ,
-                               @RequestParam("price") String price ) {
+                               @RequestParam("description") String description,
+                               @RequestParam("price") String price) {
         updateSurveillanceDesign(id, description, price);
         return "index";
     }

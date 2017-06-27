@@ -2,7 +2,6 @@ package iit.cs445.models.orders;
 
 import iit.cs445.models.products.Product;
 import iit.cs445.models.services.Service;
-import iit.cs445.models.users.Address;
 import iit.cs445.models.users.OrderAddress;
 import iit.cs445.models.users.User;
 import org.jboss.arquillian.container.test.api.Deployment;
@@ -18,12 +17,20 @@ import org.junit.runner.RunWith;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 @RunWith(Arquillian.class)
 public class OrderTest {
 
     private Order order;
+
+    @Deployment
+    public static JavaArchive createDeployment() {
+        return ShrinkWrap.create(JavaArchive.class)
+                .addClass(Order.class)
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    }
 
     @Before
     public void setUp() throws Exception {
@@ -147,13 +154,6 @@ public class OrderTest {
         user.setId(1L);
         order.setUser(user);
         assertNotNull(order.toString());
-    }
-
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(Order.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 
 }

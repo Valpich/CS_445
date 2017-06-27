@@ -1,7 +1,6 @@
 package iit.cs445.models.users;
 
 import iit.cs445.models.orders.Order;
-import org.aspectj.weaver.ast.Or;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
@@ -15,12 +14,20 @@ import org.junit.runner.RunWith;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 @RunWith(Arquillian.class)
 public class UserTest {
 
     private User user;
+
+    @Deployment
+    public static JavaArchive createDeployment() {
+        return ShrinkWrap.create(JavaArchive.class)
+                .addClass(User.class)
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    }
 
     @Before
     public void setUp() throws Exception {
@@ -35,15 +42,15 @@ public class UserTest {
     @Test
     public void getId() throws Exception {
         user.setId(1L);
-        assertEquals(1L, (long)user.getId());
+        assertEquals(1L, (long) user.getId());
     }
 
     @Test
     public void setId() throws Exception {
         user.setId(1L);
-        assertEquals(1L, (long)user.getId());
+        assertEquals(1L, (long) user.getId());
         user.setId(2L);
-        assertEquals(2L, (long)user.getId());
+        assertEquals(2L, (long) user.getId());
     }
 
     @Test
@@ -99,7 +106,7 @@ public class UserTest {
         user.setPassword("password");
         assertEquals("password", user.getPassword());
         user.setPassword("pass");
-        assertEquals("pass",user.getPassword());
+        assertEquals("pass", user.getPassword());
     }
 
     @Test
@@ -122,10 +129,10 @@ public class UserTest {
     @Test
     public void getOrders() throws Exception {
         boolean exception = false;
-        try{
+        try {
             List<Order> orderList = new ArrayList<>();
             assertEquals(orderList, user.getOrders());
-        }catch (NullPointerException npe){
+        } catch (NullPointerException npe) {
             exception = true;
         }
         assertEquals(true, exception);
@@ -134,14 +141,14 @@ public class UserTest {
     @Test
     public void setOrders() throws Exception {
         boolean exception = false;
-        try{
+        try {
             List<Order> orderList = new ArrayList<>();
             user.setOrders(orderList);
             assertEquals(orderList, user.getOrders());
             List<Order> orderListTwo = new ArrayList<>();
             user.setOrders(orderListTwo);
             assertEquals(orderListTwo, user.getOrders());
-        }catch (NullPointerException npe){
+        } catch (NullPointerException npe) {
             exception = true;
         }
         assertEquals(true, exception);
@@ -149,25 +156,18 @@ public class UserTest {
 
     @Test
     public void update() throws Exception {
-            boolean exception = false;
-            try{
-                user.update();
-            }catch (NullPointerException npe){
-                exception = true;
-            }
-            assertEquals(true, exception);
+        boolean exception = false;
+        try {
+            user.update();
+        } catch (NullPointerException npe) {
+            exception = true;
+        }
+        assertEquals(true, exception);
     }
 
     @Test
     public void toStringTest() throws Exception {
         assertNotNull(user.toString());
-    }
-
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(User.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 
 }

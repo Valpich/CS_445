@@ -106,7 +106,7 @@ public class Order extends BaseEntity<Long, Order> {
                 ", orderedProducts=" + orderedProducts +
                 ", orderedServices=" + orderedServices +
                 ", orderAddress=" + orderAddress +
-                ", userId=" + (user == null ? "-1" :user.getId()) +
+                ", userId=" + (user == null ? "-1" : user.getId()) +
                 "} " + super.toString();
     }
 

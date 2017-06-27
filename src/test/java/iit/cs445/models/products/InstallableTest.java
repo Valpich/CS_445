@@ -10,13 +10,19 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Arquillian.class)
 public class InstallableTest {
 
-    private class InstallableImplementationTest implements Installable{}
     private InstallableImplementationTest installableImplementationTest;
+
+    @Deployment
+    public static JavaArchive createDeployment() {
+        return ShrinkWrap.create(JavaArchive.class)
+                .addClass(Installable.class)
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    }
 
     @Before
     public void setUp() throws Exception {
@@ -35,14 +41,10 @@ public class InstallableTest {
 
     @Test
     public void installEquipments() throws Exception {
-        assertEquals(0,installableImplementationTest.installEquipments().size());
+        assertEquals(0, installableImplementationTest.installEquipments().size());
     }
 
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(Installable.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    private class InstallableImplementationTest implements Installable {
     }
 
 }

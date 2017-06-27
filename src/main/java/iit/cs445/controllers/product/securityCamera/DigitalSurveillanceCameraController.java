@@ -44,18 +44,18 @@ public class DigitalSurveillanceCameraController {
     }
 
     @RequestMapping(value = "/digitalSurveillanceCamera", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
-                               @RequestParam("resolution") String resolution ,
-                               @RequestParam("price") String price ) {
+    public String checkoutPost(@RequestParam("description") String description,
+                               @RequestParam("resolution") String resolution,
+                               @RequestParam("price") String price) {
         saveDigitalSurveillanceCamera(description, resolution, price);
         return "index";
     }
 
     @RequestMapping(value = "/digitalSurveillanceCameraUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
-                                @RequestParam("description") String description ,
-                                @RequestParam("resolution") String resolution ,
-                                @RequestParam("price") String price ) {
+                               @RequestParam("description") String description,
+                               @RequestParam("resolution") String resolution,
+                               @RequestParam("price") String price) {
         updateDigitalSurveillanceCamera(id, description, resolution, price);
         return "index";
     }

@@ -44,16 +44,16 @@ public class CustomServiceController {
     }
 
     @RequestMapping(value = "/customService", method = RequestMethod.POST)
-    public String checkoutPost(@RequestParam("description") String description ,
-                               @RequestParam("price") String price ) {
+    public String checkoutPost(@RequestParam("description") String description,
+                               @RequestParam("price") String price) {
         saveCustomService(description, price);
         return "index";
     }
 
     @RequestMapping(value = "/customServiceUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
-                               @RequestParam("description") String description ,
-                               @RequestParam("price") String price ) {
+                               @RequestParam("description") String description,
+                               @RequestParam("price") String price) {
         updateCustonService(id, description, price);
         return "index";
     }

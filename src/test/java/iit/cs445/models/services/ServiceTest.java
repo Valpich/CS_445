@@ -10,13 +10,20 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 @RunWith(Arquillian.class)
 public class ServiceTest {
 
-    private class ServiceClassTest extends Service<ServiceClassTest>{}
     private ServiceClassTest serviceClassTest;
+
+    @Deployment
+    public static JavaArchive createDeployment() {
+        return ShrinkWrap.create(JavaArchive.class)
+                .addClass(Service.class)
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    }
 
     @Before
     public void setUp() throws Exception {
@@ -32,17 +39,17 @@ public class ServiceTest {
     public void getId() throws Exception {
         Long id = 2L;
         serviceClassTest.setId(id);
-        assertEquals(2L,(long) serviceClassTest.getId());
+        assertEquals(2L, (long) serviceClassTest.getId());
     }
 
     @Test
     public void setId() throws Exception {
         Long id = 2L;
         serviceClassTest.setId(id);
-        assertEquals(2L,(long) serviceClassTest.getId());
+        assertEquals(2L, (long) serviceClassTest.getId());
         Long idTwo = 3L;
         serviceClassTest.setId(idTwo);
-        assertEquals(3L,(long) serviceClassTest.getId());
+        assertEquals(3L, (long) serviceClassTest.getId());
     }
 
     @Test
@@ -93,11 +100,7 @@ public class ServiceTest {
         assertNotNull(serviceClassTest.toString());
     }
 
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(Service.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    private class ServiceClassTest extends Service<ServiceClassTest> {
     }
 
 }
