@@ -35,11 +35,12 @@
                 <td>${customService.id}</td>
                 <td>${customService.price}</td>
 
-                <spring:url value="/customService/${customService.id}/delete" var="deleteUrl" />
+                <spring:url value="/customService/${customService.id}/cart" var="cartUrl" />
                 <spring:url value="/customService/${customService.id}/update" var="updateUrl" />
+                <spring:url value="/customService/${customService.id}/delete" var="deleteUrl" />
 
                 <td>
-                    <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
+                    <button class="btn btn-primary" onclick="location.href='${cartUrl}'">Add Cart</button>
                     <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
                     <button class="btn btn-danger" onclick="location.href='${deleteUrl}'">Delete</button>
                 </td>

@@ -1,6 +1,7 @@
 package iit.cs445.controllers.product.accessory;
 
 import iit.cs445.models.products.Lens;
+import iit.cs445.models.users.Cart;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -25,6 +28,21 @@ public class LensController {
         Lens lens = new Lens();
         model.addAttribute("lensForm", lens);
         return "productForm";
+    }
+
+    @RequestMapping(value = "/lens/{id}/cart", method = RequestMethod.GET)
+    public String addLensToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
+        Lens lens = new Lens().findById(id);
+        saveCart(request, lens);
+        model.addAttribute("lens", lens);
+        return "index";
+    }
+
+    private boolean saveCart(HttpServletRequest request, Lens lens) {
+        HttpSession session = request.getSession();
+        Cart cart = (Cart) session.getAttribute("cart");
+        cart.add(lens);
+        return true;
     }
 
     @RequestMapping(value = "/lens/{id}/update", method = RequestMethod.GET)

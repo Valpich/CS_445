@@ -1,6 +1,7 @@
 package iit.cs445.controllers.product.accessory;
 
 import iit.cs445.models.products.Monitor;
+import iit.cs445.models.users.Cart;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -25,6 +28,21 @@ public class MonitorController {
         Monitor monitor = new Monitor();
         model.addAttribute("monitorForm", monitor);
         return "productForm";
+    }
+
+    @RequestMapping(value = "/monitor/{id}/cart", method = RequestMethod.GET)
+    public String addMonitorToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
+        Monitor monitor = new Monitor().findById(id);
+        saveCart(request, monitor);
+        model.addAttribute("monitor", monitor);
+        return "index";
+    }
+
+    private boolean saveCart(HttpServletRequest request, Monitor monitor) {
+        HttpSession session = request.getSession();
+        Cart cart = (Cart) session.getAttribute("cart");
+        cart.add(monitor);
+        return true;
     }
 
     @RequestMapping(value = "/monitor/{id}/update", method = RequestMethod.GET)

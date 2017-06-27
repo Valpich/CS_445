@@ -1,6 +1,7 @@
 package iit.cs445.controllers.service;
 
 import iit.cs445.models.services.CustomService;
+import iit.cs445.models.users.Cart;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -25,6 +28,21 @@ public class CustomServiceController {
         CustomService customService = new CustomService();
         model.addAttribute("customServiceForm", customService);
         return "serviceForm";
+    }
+
+    @RequestMapping(value = "/customService/{id}/cart", method = RequestMethod.GET)
+    public String addCustomServiceToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
+        CustomService customService = new CustomService().findById(id);
+        saveCart(request, customService);
+        model.addAttribute("customService", customService);
+        return "index";
+    }
+
+    private boolean saveCart(HttpServletRequest request, CustomService customService) {
+        HttpSession session = request.getSession();
+        Cart cart = (Cart) session.getAttribute("cart");
+        cart.add(customService);
+        return true;
     }
 
     @RequestMapping(value = "/customService/{id}/update", method = RequestMethod.GET)
@@ -54,7 +72,7 @@ public class CustomServiceController {
     public String checkoutPost(@RequestParam("id") String id,
                                @RequestParam("description") String description,
                                @RequestParam("price") String price) {
-        updateCustonService(id, description, price);
+        updateCustomService(id, description, price);
         return "index";
     }
 
@@ -66,7 +84,7 @@ public class CustomServiceController {
         customService.saveNew();
     }
 
-    private void updateCustonService(String id, String description, String price) {
+    private void updateCustomService(String id, String description, String price) {
         CustomService customServiceOld = new CustomService().findById(Long.parseLong(id));
         customServiceOld.setDeleted(true);
         customServiceOld.update();

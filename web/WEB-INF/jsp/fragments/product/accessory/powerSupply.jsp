@@ -28,22 +28,6 @@
     </thead>
 
     <c:forEach var="powerSupply" items="${powerSupplies}">
-<<<<<<< HEAD
-        <tr>
-            <td>${powerSupply.description}</td>
-            <td>${powerSupply.maximumOutput}</td>
-            <td>${powerSupply.voltage}</td>
-            <td>${powerSupply.id}</td>
-            <td>${powerSupply.price}</td>
-
-            <spring:url value="/powerSupply/${powerSupply.id}/update" var="updateUrl" />
-
-            <td>
-                <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
-                <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
-            </td>
-        </tr>
-=======
 
         <c:if test="${powerSupply.deleted == false}">
 
@@ -54,11 +38,12 @@
                 <td>${powerSupply.id}</td>
                 <td>${powerSupply.price}</td>
 
+                <spring:url value="/powerSupply/${powerSupply.id}/cart" var="cartUrl" />
                 <spring:url value="/powerSupply/${powerSupply.id}/update" var="updateUrl" />
                 <spring:url value="/powerSupply/${powerSupply.id}/delete" var="deleteUrl" />
 
                 <td>
-                    <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
+                    <button class="btn btn-primary" onclick="location.href='${cartUrl}'">Add Cart</button>
                     <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
                     <button class="btn btn-danger" onclick="location.href='${deleteUrl}'">Delete</button>
                 </td>
@@ -66,7 +51,6 @@
 
         </c:if>
 
->>>>>>> 57246d7ffa84e4f7c386fce52da496632996ce9a
     </c:forEach>
 </table>
 

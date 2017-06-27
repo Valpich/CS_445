@@ -1,6 +1,7 @@
 package iit.cs445.controllers.product.accessory;
 
 import iit.cs445.models.products.Bracket;
+import iit.cs445.models.users.Cart;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -25,6 +28,21 @@ public class BracketController {
         Bracket bracket = new Bracket();
         model.addAttribute("bracketForm", bracket);
         return "productForm";
+    }
+
+    @RequestMapping(value = "/bracket/{id}/cart", method = RequestMethod.GET)
+    public String addBracketToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
+        Bracket bracket = new Bracket().findById(id);
+        saveCart(request, bracket);
+        model.addAttribute("bracket", bracket);
+        return "index";
+    }
+
+    private boolean saveCart(HttpServletRequest request, Bracket bracket) {
+        HttpSession session = request.getSession();
+        Cart cart = (Cart) session.getAttribute("cart");
+        cart.add(bracket);
+        return true;
     }
 
     @RequestMapping(value = "/bracket/{id}/update", method = RequestMethod.GET)

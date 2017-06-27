@@ -35,11 +35,12 @@
                 <td>${surveillanceSystemRepair.id}</td>
                 <td>${surveillanceSystemRepair.price}</td>
 
-                <spring:url value="/surveillanceSystemRepair/${surveillanceSystemRepair.id}/delete" var="deleteUrl" />
+                <spring:url value="/surveillanceSystemRepair/${surveillanceSystemRepair.id}/cart" var="cartUrl" />
                 <spring:url value="/surveillanceSystemRepair/${surveillanceSystemRepair.id}/update" var="updateUrl" />
+                <spring:url value="/surveillanceSystemRepair/${surveillanceSystemRepair.id}/delete" var="deleteUrl" />
 
                 <td>
-                    <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
+                    <button class="btn btn-primary" onclick="location.href='${cartUrl}'">Add Cart</button>
                     <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
                     <button class="btn btn-danger" onclick="location.href='${deleteUrl}'">Delete</button>
                 </td>

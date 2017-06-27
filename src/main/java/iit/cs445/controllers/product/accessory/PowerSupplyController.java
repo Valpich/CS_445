@@ -1,6 +1,7 @@
 package iit.cs445.controllers.product.accessory;
 
 import iit.cs445.models.products.PowerSupply;
+import iit.cs445.models.users.Cart;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -25,6 +28,21 @@ public class PowerSupplyController {
         PowerSupply powerSupply = new PowerSupply();
         model.addAttribute("powerSupplyForm", powerSupply);
         return "productForm";
+    }
+
+    @RequestMapping(value = "/powerSupply/{id}/cart", method = RequestMethod.GET)
+    public String addPowerSupplyToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
+        PowerSupply powerSupply = new PowerSupply().findById(id);
+        saveCart(request, powerSupply);
+        model.addAttribute("powerSupply", powerSupply);
+        return "index";
+    }
+
+    private boolean saveCart(HttpServletRequest request, PowerSupply powerSupply) {
+        HttpSession session = request.getSession();
+        Cart cart = (Cart) session.getAttribute("cart");
+        cart.add(powerSupply);
+        return true;
     }
 
     @RequestMapping(value = "/powerSupply/{id}/update", method = RequestMethod.GET)

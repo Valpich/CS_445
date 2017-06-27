@@ -2,6 +2,7 @@ package iit.cs445.controllers.product.dvr;
 
 import iit.cs445.models.products.HybridDVR;
 import iit.cs445.models.products.StorageType;
+import iit.cs445.models.users.Cart;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,6 +30,21 @@ public class HybridDVRController {
         HybridDVR hybridDVR = new HybridDVR();
         model.addAttribute("hybridDVRForm", hybridDVR);
         return "productForm";
+    }
+
+    @RequestMapping(value = "/hybridDVR/{id}/cart", method = RequestMethod.GET)
+    public String addHybridDVRToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
+        HybridDVR hybridDVR = new HybridDVR().findById(id);
+        saveCart(request, hybridDVR);
+        model.addAttribute("hybridDVR", hybridDVR);
+        return "index";
+    }
+
+    private boolean saveCart(HttpServletRequest request, HybridDVR hybridDVR) {
+        HttpSession session = request.getSession();
+        Cart cart = (Cart) session.getAttribute("cart");
+        cart.add(hybridDVR);
+        return true;
     }
 
     @RequestMapping(value = "/hybridDVR/{id}/update", method = RequestMethod.GET)

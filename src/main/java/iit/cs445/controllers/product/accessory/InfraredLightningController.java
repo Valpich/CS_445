@@ -1,6 +1,7 @@
 package iit.cs445.controllers.product.accessory;
 
 import iit.cs445.models.products.InfraredLightning;
+import iit.cs445.models.users.Cart;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -25,6 +28,21 @@ public class InfraredLightningController {
         InfraredLightning infraredLightning = new InfraredLightning();
         model.addAttribute("infraredLightningForm", infraredLightning);
         return "productForm";
+    }
+
+    @RequestMapping(value = "/infraredLightning/{id}/cart", method = RequestMethod.GET)
+    public String addInfraredLightningToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
+        InfraredLightning infraredLightning = new InfraredLightning().findById(id);
+        saveCart(request, infraredLightning);
+        model.addAttribute("bracket", infraredLightning);
+        return "index";
+    }
+
+    private boolean saveCart(HttpServletRequest request, InfraredLightning infraredLightning) {
+        HttpSession session = request.getSession();
+        Cart cart = (Cart) session.getAttribute("cart");
+        cart.add(infraredLightning);
+        return true;
     }
 
     @RequestMapping(value = "/infraredLightning/{id}/update", method = RequestMethod.GET)

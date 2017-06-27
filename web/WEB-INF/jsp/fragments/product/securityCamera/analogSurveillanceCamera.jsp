@@ -36,11 +36,12 @@
                 <td>${analogSurveillanceCamera.id}</td>
                 <td>${analogSurveillanceCamera.price}</td>
 
+                <spring:url value="/analogSurveillanceCamera/${analogSurveillanceCamera.id}/cart" var="cartUrl" />
                 <spring:url value="/analogSurveillanceCamera/${analogSurveillanceCamera.id}/update" var="updateUrl" />
                 <spring:url value="/analogSurveillanceCamera/${analogSurveillanceCamera.id}/delete" var="deleteUrl" />
 
                 <td>
-                    <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
+                    <button class="btn btn-primary" onclick="location.href='${cartUrl}'">Add Cart</button>
                     <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
                     <button class="btn btn-danger" onclick="location.href='${deleteUrl}'">Delete</button>
                 </td>

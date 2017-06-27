@@ -2,6 +2,7 @@ package iit.cs445.controllers.product.accessory;
 
 import iit.cs445.models.products.Microphone;
 import iit.cs445.models.products.MicrophoneType;
+import iit.cs445.models.users.Cart;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -26,6 +29,21 @@ public class MicrophoneController {
         Microphone microphone = new Microphone();
         model.addAttribute("microphoneForm", microphone);
         return "productForm";
+    }
+
+    @RequestMapping(value = "/microphone/{id}/cart", method = RequestMethod.GET)
+    public String addMicrophoneToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
+        Microphone microphone = new Microphone().findById(id);
+        saveCart(request, microphone);
+        model.addAttribute("microphone", microphone);
+        return "index";
+    }
+
+    private boolean saveCart(HttpServletRequest request, Microphone microphone) {
+        HttpSession session = request.getSession();
+        Cart cart = (Cart) session.getAttribute("cart");
+        cart.add(microphone);
+        return true;
     }
 
     @RequestMapping(value = "/microphone/{id}/update", method = RequestMethod.GET)

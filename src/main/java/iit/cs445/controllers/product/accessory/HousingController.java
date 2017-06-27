@@ -1,6 +1,7 @@
 package iit.cs445.controllers.product.accessory;
 
 import iit.cs445.models.products.Housing;
+import iit.cs445.models.users.Cart;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -25,6 +28,21 @@ public class HousingController {
         Housing housing = new Housing();
         model.addAttribute("housingForm", housing);
         return "productForm";
+    }
+
+    @RequestMapping(value = "/housing/{id}/cart", method = RequestMethod.GET)
+    public String addHousingToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
+        Housing housing = new Housing().findById(id);
+        saveCart(request, housing);
+        model.addAttribute("housing", housing);
+        return "index";
+    }
+
+    private boolean saveCart(HttpServletRequest request, Housing housing) {
+        HttpSession session = request.getSession();
+        Cart cart = (Cart) session.getAttribute("cart");
+        cart.add(housing);
+        return true;
     }
 
     @RequestMapping(value = "/housing/{id}/update", method = RequestMethod.GET)

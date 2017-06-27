@@ -1,6 +1,7 @@
 package iit.cs445.controllers.product.securityCamera;
 
 import iit.cs445.models.products.DigitalSurveillanceCamera;
+import iit.cs445.models.users.Cart;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -25,6 +28,21 @@ public class DigitalSurveillanceCameraController {
         DigitalSurveillanceCamera digitalSurveillanceCamera = new DigitalSurveillanceCamera();
         model.addAttribute("digitalSurveillanceCameraForm", digitalSurveillanceCamera);
         return "productForm";
+    }
+
+    @RequestMapping(value = "/digitalSurveillanceCamera/{id}/cart", method = RequestMethod.GET)
+    public String addDigitalSurveillanceCameraToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
+        DigitalSurveillanceCamera digitalSurveillanceCamera = new DigitalSurveillanceCamera().findById(id);
+        saveCart(request, digitalSurveillanceCamera);
+        model.addAttribute("digitalSurveillanceCamera", digitalSurveillanceCamera);
+        return "index";
+    }
+
+    private boolean saveCart(HttpServletRequest request, DigitalSurveillanceCamera digitalSurveillanceCamera) {
+        HttpSession session = request.getSession();
+        Cart cart = (Cart) session.getAttribute("cart");
+        cart.add(digitalSurveillanceCamera);
+        return true;
     }
 
     @RequestMapping(value = "/digitalSurveillanceCamera/{id}/update", method = RequestMethod.GET)

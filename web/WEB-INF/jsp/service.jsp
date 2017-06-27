@@ -22,19 +22,7 @@
             </div>
         </c:if>
 
-        <c:if test="${empty customServices}">
-            <div>
-                <jsp:include page="fragments/service/customService.jsp" />
-            </div>
-        </c:if>
-
         <c:if test="${not empty securitySystemInstallations}">
-            <div>
-                <jsp:include page="fragments/service/securitySystemInstallation.jsp" />
-            </div>
-        </c:if>
-
-        <c:if test="${empty securitySystemInstallations}">
             <div>
                 <jsp:include page="fragments/service/securitySystemInstallation.jsp" />
             </div>
@@ -46,19 +34,7 @@
             </div>
         </c:if>
 
-        <c:if test="${empty surveillanceDesigns}">
-            <div>
-                <jsp:include page="fragments/service/surveillanceDesign.jsp" />
-            </div>
-        </c:if>
-
         <c:if test="${not empty surveillanceSystemRepairs}">
-            <div>
-                <jsp:include page="fragments/service/surveillanceSystemRepair.jsp" />
-            </div>
-        </c:if>
-
-        <c:if test="${empty surveillanceSystemRepairs}">
             <div>
                 <jsp:include page="fragments/service/surveillanceSystemRepair.jsp" />
             </div>

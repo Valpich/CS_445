@@ -1,6 +1,7 @@
 package iit.cs445.controllers.service;
 
 import iit.cs445.models.services.SecuritySystemInstallation;
+import iit.cs445.models.users.Cart;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -25,6 +28,21 @@ public class SecuritySystemInstallationController {
         SecuritySystemInstallation securitySystemInstallation = new SecuritySystemInstallation();
         model.addAttribute("securitySystemInstallationForm", securitySystemInstallation);
         return "serviceForm";
+    }
+
+    @RequestMapping(value = "/securitySystemInstallation/{id}/cart", method = RequestMethod.GET)
+    public String addSecuritySystemInstallationToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
+        SecuritySystemInstallation securitySystemInstallation = new SecuritySystemInstallation().findById(id);
+        saveCart(request, securitySystemInstallation);
+        model.addAttribute("securitySystemInstallation", securitySystemInstallation);
+        return "index";
+    }
+
+    private boolean saveCart(HttpServletRequest request, SecuritySystemInstallation securitySystemInstallation) {
+        HttpSession session = request.getSession();
+        Cart cart = (Cart) session.getAttribute("cart");
+        cart.add(securitySystemInstallation);
+        return true;
     }
 
     @RequestMapping(value = "/securitySystemInstallation/{id}/update", method = RequestMethod.GET)

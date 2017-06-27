@@ -1,6 +1,7 @@
 package iit.cs445.controllers.product.accessory;
 
 import iit.cs445.models.products.Cable;
+import iit.cs445.models.users.Cart;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -25,6 +28,21 @@ public class CableController {
         Cable cable = new Cable();
         model.addAttribute("cableForm", cable);
         return "productForm";
+    }
+
+    @RequestMapping(value = "/cable/{id}/cart", method = RequestMethod.GET)
+    public String addCableToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
+        Cable cable = new Cable().findById(id);
+        saveCart(request, cable);
+        model.addAttribute("cable", cable);
+        return "index";
+    }
+
+    private boolean saveCart(HttpServletRequest request, Cable cable) {
+        HttpSession session = request.getSession();
+        Cart cart = (Cart) session.getAttribute("cart");
+        cart.add(cable);
+        return true;
     }
 
     @RequestMapping(value = "/cable/{id}/update", method = RequestMethod.GET)

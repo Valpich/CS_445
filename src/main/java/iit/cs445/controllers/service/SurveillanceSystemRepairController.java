@@ -1,6 +1,7 @@
 package iit.cs445.controllers.service;
 
 import iit.cs445.models.services.SurveillanceSystemRepair;
+import iit.cs445.models.users.Cart;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -25,6 +28,21 @@ public class SurveillanceSystemRepairController {
         SurveillanceSystemRepair surveillanceSystemRepair = new SurveillanceSystemRepair();
         model.addAttribute("surveillanceSystemRepairForm", surveillanceSystemRepair);
         return "serviceForm";
+    }
+
+    @RequestMapping(value = "/surveillanceSystemRepair/{id}/cart", method = RequestMethod.GET)
+    public String addSurveillanceSystemRepairToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
+        SurveillanceSystemRepair surveillanceSystemRepair = new SurveillanceSystemRepair().findById(id);
+        saveCart(request, surveillanceSystemRepair);
+        model.addAttribute("surveillanceSystemRepair", surveillanceSystemRepair);
+        return "index";
+    }
+
+    private boolean saveCart(HttpServletRequest request, SurveillanceSystemRepair surveillanceSystemRepair) {
+        HttpSession session = request.getSession();
+        Cart cart = (Cart) session.getAttribute("cart");
+        cart.add(surveillanceSystemRepair);
+        return true;
     }
 
     @RequestMapping(value = "/surveillanceSystemRepair/{id}/update", method = RequestMethod.GET)
