@@ -28,20 +28,29 @@
     </thead>
 
     <c:forEach var="lens" items="${lenses}">
-        <tr>
-            <td>${lens.description}</td>
-            <td>${lens.focal}</td>
-            <td>${lens.magnification}</td>
-            <td>${lens.id}</td>
-            <td>${lens.price}</td>
 
-            <spring:url value="/lens/${lens.id}/update" var="updateUrl" />
+        <c:if test="${lens.deleted == false}">
 
-            <td>
-                <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
-                <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
-            </td>
-        </tr>
+            <tr>
+                <td>${lens.description}</td>
+                <td>${lens.focal}</td>
+                <td>${lens.magnification}</td>
+                <td>${lens.id}</td>
+                <td>${lens.price}</td>
+
+                <spring:url value="/lens/${lens.id}/cart" var="cartUrl" />
+                <spring:url value="/lens/${lens.id}/update" var="updateUrl" />
+                <spring:url value="/lens/${lens.id}/delete" var="deleteUrl" />
+
+                <td>
+                    <button class="btn btn-primary" onclick="location.href='${cartUrl}'">Add Cart</button>
+                    <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
+                    <button class="btn btn-info" onclick="location.href='${deleteUrl}'">Delete</button>
+                </td>
+            </tr>
+
+        </c:if>
+
     </c:forEach>
 </table>
 

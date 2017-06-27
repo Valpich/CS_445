@@ -1,5 +1,6 @@
 package iit.cs445.controllers;
 
+import iit.cs445.models.services.CustomService;
 import iit.cs445.models.users.Address;
 import iit.cs445.models.users.User;
 import org.springframework.stereotype.Controller;
@@ -10,6 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Controller
 public class IndexController {

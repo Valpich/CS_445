@@ -13,13 +13,13 @@
     <c:choose>
         <c:when test="${not empty powerSupplyForm}">
             <h1>Add Power Supply</h1><br>
+            <spring:url value="/powerSupply" var="powerSupply"/>
         </c:when>
         <c:otherwise>
             <h1>Update Power Supply</h1><br>
+            <spring:url value="/powerSupplyUpdate" var="powerSupply"/>
         </c:otherwise>
     </c:choose>
-
-    <spring:url value="/powerSupply" var="powerSupply"/>
 
     <form action='${powerSupply}' method="POST">
 
@@ -32,6 +32,7 @@
                 </c:when>
                 <c:otherwise>
                     <input type="text" name="description" value="${powerSupplyFormUpdate.description}" placeholder="">
+                    <input hidden type="text" name="id" value="${powerSupplyFormUpdate.id}" >
                 </c:otherwise>
             </c:choose>
 

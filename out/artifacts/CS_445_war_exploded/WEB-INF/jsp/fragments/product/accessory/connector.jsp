@@ -26,18 +26,27 @@
     </thead>
 
     <c:forEach var="connector" items="${connectors}">
-        <tr>
-            <td>${connector.description}</td>
-            <td>${connector.id}</td>
-            <td>${connector.price}</td>
 
-            <spring:url value="/connector/${connector.id}/update" var="updateUrl" />
+        <c:if test="${connector.deleted == false}">
 
-            <td>
-                <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
-                <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
-            </td>
-        </tr>
+            <tr>
+                <td>${connector.description}</td>
+                <td>${connector.id}</td>
+                <td>${connector.price}</td>
+
+                <spring:url value="/connector/${connector.id}/cart" var="cartUrl" />
+                <spring:url value="/connector/${connector.id}/update" var="updateUrl" />
+                <spring:url value="/connector/${connector.id}/delete" var="deleteUrl" />
+
+                <td>
+                    <button class="btn btn-primary" onclick="location.href='${cartUrl}'">Add Cart</button>
+                    <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
+                    <button class="btn btn-danger" onclick="location.href='${deleteUrl}'">Delete</button>
+                </td>
+            </tr>
+
+        </c:if>
+
     </c:forEach>
 </table>
 

@@ -13,13 +13,13 @@
     <c:choose>
         <c:when test="${not empty connectorForm}">
             <h1>Add Connector</h1><br>
+            <spring:url value="/connector" var="connector"/>
         </c:when>
         <c:otherwise>
             <h1>Update Connector</h1><br>
+            <spring:url value="/connectorUpdate" var="connector"/>
         </c:otherwise>
     </c:choose>
-
-    <spring:url value="/connector" var="connector"/>
 
     <form action='${connector}' method="POST">
 
@@ -32,6 +32,7 @@
                 </c:when>
                 <c:otherwise>
                     <input type="text" name="description" value="${connectorFormUpdate.description}" placeholder="">
+                    <input hidden type="text" name="id" value="${connectorFormUpdate.id}" >
                 </c:otherwise>
             </c:choose>
 

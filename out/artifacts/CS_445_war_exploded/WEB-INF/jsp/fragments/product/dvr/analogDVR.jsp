@@ -29,21 +29,30 @@
     </thead>
 
     <c:forEach var="analogDVR" items="${analogsDVR}">
-        <tr>
-            <td>${analogDVR.description}</td>
-            <td>${analogDVR.storageTypes}</td>
-            <td>${analogDVR.analogRecordFormats}</td>
-            <td>${analogDVR.id}</td>
-            <td>${analogDVR.price}</td>
 
-            <spring:url value="/analogDVR/${analogDVR.id}/delete" var="deleteUrl" />
-            <spring:url value="/analogDVR/${analogDVR.id}/update" var="updateUrl" />
+            <c:if test="${analogDVR.deleted == false}">
 
-            <td>
-                <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
-                <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
-            </td>
-        </tr>
+                <tr>
+                    <td>${analogDVR.description}</td>
+                    <td>${analogDVR.storageTypes}</td>
+                    <td>${analogDVR.analogRecordFormats}</td>
+                    <td>${analogDVR.id}</td>
+                    <td>${analogDVR.price}</td>
+
+                    <spring:url value="/analogDVR/${analogDVR.id}/cart" var="cartUrl" />
+                    <spring:url value="/analogDVR/${analogDVR.id}/update" var="updateUrl" />
+                    <spring:url value="/analogDVR/${analogDVR.id}/delete" var="deleteUrl" />
+
+                    <td>
+                        <button class="btn btn-primary" onclick="location.href='${cartUrl}'">Add Cart</button>
+                        <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
+                        <button class="btn btn-danger" onclick="location.href='${deleteUrl}'">Delete</button>
+                    </td>
+                </tr>
+
+            </c:if>
+
+
     </c:forEach>
 </table>
 

@@ -15,10 +15,11 @@
             <jsp:include page="fragments/leftbar.jsp" />
         </div>
         <div class="col-sm-8">
-                <c:if test="${not empty analogsDVR}">
-                    <div>
-                        <jsp:include page="fragments/product/dvr/analogDVR.jsp" />
-                    </div>
+
+            <c:if test="${not empty analogsDVR}">
+                <div>
+                    <jsp:include page="fragments/product/dvr/analogDVR.jsp" />
+                </div>
             </c:if>
 
             <c:if test="${not empty digitalsDVR}">

@@ -13,13 +13,13 @@
     <c:choose>
         <c:when test="${not empty housingForm}">
             <h1>Add Housing</h1><br>
+            <spring:url value="/housing" var="housing"/>
         </c:when>
         <c:otherwise>
             <h1>Update Housing</h1><br>
+            <spring:url value="/housingUpdate" var="housing"/>
         </c:otherwise>
     </c:choose>
-
-    <spring:url value="/housing" var="housing"/>
 
     <form action='${housing}' method="POST">
 
@@ -32,6 +32,7 @@
                 </c:when>
                 <c:otherwise>
                     <input type="text" name="description" value="${housingFormUpdate.description}" placeholder="">
+                    <input hidden type="text" name="id" value="${housingFormUpdate.id}" >
                 </c:otherwise>
             </c:choose>
 

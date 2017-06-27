@@ -26,18 +26,27 @@
     </thead>
 
     <c:forEach var="infraredLightning" items="${infraredLightnings}">
-        <tr>
-            <td>${infraredLightning.description}</td>
-            <td>${infraredLightning.id}</td>
-            <td>${infraredLightning.price}</td>
 
-            <spring:url value="/infraredLightning/${infraredLightning.id}/update" var="updateUrl" />
+        <c:if test="${infraredLightning.deleted == false}">
 
-            <td>
-                <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
-                <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
-            </td>
-        </tr>
+            <tr>
+                <td>${infraredLightning.description}</td>
+                <td>${infraredLightning.id}</td>
+                <td>${infraredLightning.price}</td>
+
+                <spring:url value="/infraredLightning/${infraredLightning.id}/cart" var="cartUrl" />
+                <spring:url value="/infraredLightning/${infraredLightning.id}/update" var="updateUrl" />
+                <spring:url value="/infraredLightning/${infraredLightning.id}/delete" var="deleteUrl" />
+
+                <td>
+                    <button class="btn btn-primary" onclick="location.href='${cartUrl}'">Add Cart</button>
+                    <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
+                    <button class="btn btn-danger" onclick="location.href='${deleteUrl}'">Delete</button>
+                </td>
+            </tr>
+
+        </c:if>
+
     </c:forEach>
 </table>
 
