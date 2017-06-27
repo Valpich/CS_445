@@ -1,65 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b515210d-be3c-4260-980b-0d9ee0718f50" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/CartController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/CartController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/BracketController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/BracketController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/CableController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/CableController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/ConnectorController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/ConnectorController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/HousingController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/HousingController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/InfraredLightningController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/InfraredLightningController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/LensController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/LensController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/MicrophoneController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/MicrophoneController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/MonitorController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/MonitorController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/PowerSupplyController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/PowerSupplyController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/dvr/AnalogDVRController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/dvr/AnalogDVRController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/dvr/DigitalDVRController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/dvr/DigitalDVRController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/dvr/HybridDVRController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/dvr/HybridDVRController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/securityCamera/AnalogSurveillanceCameraController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/securityCamera/AnalogSurveillanceCameraController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/securityCamera/DigitalSurveillanceCameraController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/securityCamera/DigitalSurveillanceCameraController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/securityCamera/IpSurveillanceCameraController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/securityCamera/IpSurveillanceCameraController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/service/CustomServiceController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/service/CustomServiceController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/service/SecuritySystemInstallationController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/service/SecuritySystemInstallationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/service/SurveillanceDesignController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/service/SurveillanceDesignController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/service/SurveillanceSystemRepairController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/service/SurveillanceSystemRepairController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/Order.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/Order.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/Service.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/services/Service.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/Cart.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/Cart.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/messages.xml" afterPath="$PROJECT_DIR$/src/main/resources/messages.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/validation.properties" afterPath="$PROJECT_DIR$/src/main/resources/validation.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/BaseEntityTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/BaseEntityTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/orders/OrderServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/orders/OrderServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/orders/OrderTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/orders/OrderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/AnalogDVRTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/AnalogDVRTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/AnalogSurveillanceCameraTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/AnalogSurveillanceCameraTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/BracketTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/BracketTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/CableTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/CableTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/ConnectorTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/ConnectorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/DVRTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/DVRTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/DigitalDVRTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/DigitalDVRTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/DigitalSurveillanceCameraTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/DigitalSurveillanceCameraTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/HousingTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/HousingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/HybridDVRTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/HybridDVRTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/IPSurveillanceCameraTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/IPSurveillanceCameraTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/InfraredLightningTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/InfraredLightningTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/InstallableTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/InstallableTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/LensTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/LensTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/MicrophoneTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/MicrophoneTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/MonitorTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/MonitorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/PowerSupplyTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/PowerSupplyTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/ProductTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/ProductTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/RepairableTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/RepairableTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/SecurityCameraTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/SecurityCameraTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/CustomServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/CustomServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/SecuritySystemInstallationTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/SecuritySystemInstallationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/ServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/ServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/SurveillanceDesignTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/SurveillanceDesignTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/SurveillanceSystemRepairTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/SurveillanceSystemRepairTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/users/AddressTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/users/AddressTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/users/CartTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/users/CartTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/users/OrderAddressTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/users/OrderAddressTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/users/UserTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/users/UserTest.java" />
-    </list>
+    <list default="true" id="b515210d-be3c-4260-980b-0d9ee0718f50" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -119,8 +61,8 @@
       <file leaf-file-name="CartTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/users/CartTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+            <state relative-caret-position="270">
+              <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
               <folding>
                 <element signature="e#1236#1360#0" expanded="true" />
                 <element signature="e#1359#1360#0" expanded="true" />
@@ -606,6 +548,80 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cs445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cs445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1440,7 +1456,7 @@
       <workItem from="1498501372273" duration="13049000" />
       <workItem from="1498518328440" duration="657000" />
       <workItem from="1498519018064" duration="42000" />
-      <workItem from="1498519165149" duration="9952000" />
+      <workItem from="1498519165149" duration="10147000" />
     </task>
     <servers />
   </component>
@@ -1477,11 +1493,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140164000" />
+    <option name="totallyTimeSpent" value="140359000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1508,7 +1523,7 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30416667" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30416667" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1971,8 +1986,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/users/CartTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+        <state relative-caret-position="270">
+          <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
           <folding>
             <element signature="e#1236#1360#0" expanded="true" />
             <element signature="e#1359#1360#0" expanded="true" />
