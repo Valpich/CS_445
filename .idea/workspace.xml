@@ -2,25 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b515210d-be3c-4260-980b-0d9ee0718f50" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/DebugController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/DebugController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/DVRTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/MonitorTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/ProductTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/RepairableTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/SecurityCameraTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/BracketController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/BracketController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/CableController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/CableController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/ConnectorController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/ConnectorController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/HousingController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/HousingController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/InfraredLightningController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/InfraredLightningController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/LensController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/LensController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/MicrophoneController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/MicrophoneController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/MonitorController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/MonitorController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/PowerSupplyController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/accessory/PowerSupplyController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/dvr/AnalogDVRController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/dvr/AnalogDVRController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/dvr/DigitalDVRController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/dvr/DigitalDVRController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/dvr/HybridDVRController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/dvr/HybridDVRController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/securityCamera/AnalogSurveillanceCameraController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/securityCamera/AnalogSurveillanceCameraController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/securityCamera/DigitalSurveillanceCameraController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/securityCamera/DigitalSurveillanceCameraController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/securityCamera/IpSurveillanceCameraController.class" afterPath="$PROJECT_DIR$/target/classes/iit/cs445/controllers/product/securityCamera/IpSurveillanceCameraController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/PowerSupplyController.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/PowerSupplyController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/PowerSupply.java" afterPath="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/PowerSupply.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/AnalogDVRTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/AnalogDVRTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/AnalogSurveillanceCameraTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/AnalogSurveillanceCameraTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/BracketTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/BracketTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/CableTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/CableTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/ConnectorTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/ConnectorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/DigitalDVRTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/DigitalDVRTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/DigitalSurveillanceCameraTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/DigitalSurveillanceCameraTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/HousingTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/HousingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/HybridDVRTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/HybridDVRTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/IPSurveillanceCameraTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/IPSurveillanceCameraTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/InfraredLightningTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/InfraredLightningTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/InstallableTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/InstallableTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/LensTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/LensTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/MicrophoneTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/MicrophoneTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/PowerSupplyTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/PowerSupplyTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/fragments/product/accessory/powerSupply.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/fragments/product/accessory/powerSupply.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,15 +36,18 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/CS_445$OrderServiceTest_and_1_more.coverage" NAME="OrderServiceTest and 1 more Coverage Results" MODIFIED="1498523105015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/CS_445$GlassFish_Embedded_3_1__All_in_CS_445.coverage" NAME="GlassFish Embedded 3.1: All in CS_445 Coverage Results" MODIFIED="1498525849852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/CS_445$GlassFish_Embedded_3_1__All_in_CS_445.coverage" NAME="GlassFish Embedded 3.1: All in CS_445 Coverage Results" MODIFIED="1498527997373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/CS_445$GlassFish_Embedded_3_1__AnalogDVRTest.coverage" NAME="GlassFish Embedded 3.1: AnalogDVRTest Coverage Results" MODIFIED="1498523813611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>iit.cs445.models.products.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/CS_445$GlassFish_Embedded_3_1__OrderTest.coverage" NAME="GlassFish Embedded 3.1: OrderTest Coverage Results" MODIFIED="1498523111697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>iit.cs445.models.orders.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/CS_445$iit_cs445_in_CS_445.coverage" NAME="iit.cs445 in CS_445 Coverage Results" MODIFIED="1498525661256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/CS_445$iit_cs445_in_CS_445.coverage" NAME="iit.cs445 in CS_445 Coverage Results" MODIFIED="1498526960435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>iit.cs445.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CS_445$GlassFish_Embedded_3_1__RepairableTest_repairEquipments.coverage" NAME="GlassFish Embedded 3.1: RepairableTest.repairEquipments Coverage Results" MODIFIED="1498527798017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>iit.cs445.models.products.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/CS_445$CS_445_Server.coverage" NAME="CS_445_Server Coverage Results" MODIFIED="1497816526360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
@@ -51,81 +57,108 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HybridDVRTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/HybridDVRTest.java">
+      <file leaf-file-name="Accessory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Accessory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="31" column="42" lean-forward="false" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+            <state relative-caret-position="75">
+              <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InfraredLightningTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/InfraredLightningTest.java">
+      <file leaf-file-name="DVR.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/DVR.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+            <state relative-caret-position="75">
+              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InstallableTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/InstallableTest.java">
+      <file leaf-file-name="DVRTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/DVRTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="32" column="80" lean-forward="false" selection-start-line="32" selection-start-column="80" selection-end-line="32" selection-end-column="80" />
+            <state relative-caret-position="630">
+              <caret line="55" column="45" lean-forward="false" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IPSurveillanceCameraTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/IPSurveillanceCameraTest.java">
+      <file leaf-file-name="SecurityCamera.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/SecurityCamera.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="36" column="29" lean-forward="false" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+            <state relative-caret-position="75">
+              <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LensTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/LensTest.java">
+      <file leaf-file-name="SecurityCameraTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/SecurityCameraTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="58" column="34" lean-forward="false" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+            <state relative-caret-position="185">
+              <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MicrophoneTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/MicrophoneTest.java">
+      <file leaf-file-name="MonitorTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/MonitorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+            <state relative-caret-position="780">
+              <caret line="62" column="40" lean-forward="false" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PowerSupplyTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/PowerSupplyTest.java">
+      <file leaf-file-name="Equipment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Equipment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="60" column="9" lean-forward="true" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+            <state relative-caret-position="30">
+              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HousingTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/HousingTest.java">
+      <file leaf-file-name="RepairableTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/RepairableTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="31" column="40" lean-forward="false" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+            <state relative-caret-position="389">
+              <caret line="65" column="58" lean-forward="false" selection-start-line="65" selection-start-column="58" selection-end-line="65" selection-end-column="58" />
+              <folding>
+                <element signature="e#719#720#0" expanded="true" />
+                <element signature="e#760#761#0" expanded="true" />
+                <element signature="e#810#811#0" expanded="true" />
+                <element signature="e#851#852#0" expanded="true" />
+                <element signature="e#916#917#0" expanded="true" />
+                <element signature="e#968#969#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Repairable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Repairable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/ProductTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1200">
+              <caret line="91" column="36" lean-forward="false" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -142,9 +175,9 @@
         <option value="FxmlFile" />
         <option value="Jsp File" />
         <option value="Class" />
-        <option value="Arquillian JUnit Test Class" />
         <option value="JavaScript File" />
         <option value="Aspect" />
+        <option value="Arquillian JUnit Test Class" />
       </list>
     </option>
   </component>
@@ -168,12 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/iit/cs445/models/BaseEntityTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/exceptions/DuplicateEmailException.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iit/cs445/exceptions/DuplicateEmailExceptionTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/validators/UserFormValidator.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iit/cs445/models/orders/OrderStatusTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Housing.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Lens.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Microphone.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Monitor.java" />
@@ -219,6 +246,12 @@
         <option value="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/PowerSupplyTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/MicrophoneTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/InstallableTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/MonitorTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/ProductTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/PowerSupplyController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/DVRTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/SecurityCameraTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/RepairableTest.java" />
       </list>
     </option>
   </component>
@@ -539,44 +572,6 @@
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CS_445" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CS_445" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cs445" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -609,40 +604,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="products" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CS_445" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CS_445" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cs445" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="orders" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -970,30 +931,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="iit.cs445.models.products" />
       <recent name="iit.cs445.models.users" />
       <recent name="iit.cs445.models.services" />
-      <recent name="iit.cs445.models.products" />
       <recent name="iit.cs445.models.orders" />
       <recent name="iit.cs445.exceptions" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/WEB-INF/jsp/users" />
-      <recent name="$PROJECT_DIR$/web/WEB-INF/jsp" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="iit.cs445.models" />
-      <recent name="iit.cs445.model.products" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="iit.cs445.models.users" />
-      <recent name="iit.cs445.models.services" />
-      <recent name="iit.cs445.controllers" />
-      <recent name="iit.cs445.model.services" />
       <recent name="iit.cs445.model.products" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -1002,6 +950,19 @@
       <recent name="$PROJECT_DIR$/web/static" />
       <recent name="$PROJECT_DIR$/src/main/java/iit/cs445/model/orders" />
       <recent name="$PROJECT_DIR$/src/main/java/iit/cs445/controller" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="iit.cs445.models.users" />
+      <recent name="iit.cs445.models.services" />
+      <recent name="iit.cs445.controllers" />
+      <recent name="iit.cs445.model.services" />
+      <recent name="iit.cs445.model.products" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/WEB-INF/jsp/users" />
+      <recent name="$PROJECT_DIR$/web/WEB-INF/jsp" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1031,37 +992,6 @@
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="GlassFish Embedded 3.1: OrderTest" type="ArquillianJUnit" factoryName="" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="iit.cs445.models.orders.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="CS_445" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="GlassFish Embedded 3.1" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="iit.cs445.models.orders" />
-      <option name="MAIN_CLASS_NAME" value="iit.cs445.models.orders.OrderTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -1149,6 +1079,37 @@
       <option name="PACKAGE_NAME" value="iit.cs445.models.products" />
       <option name="MAIN_CLASS_NAME" value="iit.cs445.models.products.InstallableTest" />
       <option name="METHOD_NAME" value="installPrice" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="GlassFish Embedded 3.1: RepairableTest.repairEquipments" type="ArquillianJUnit" factoryName="" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="iit.cs445.models.products.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="CS_445" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="GlassFish Embedded 3.1" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="iit.cs445.models.products" />
+      <option name="MAIN_CLASS_NAME" value="iit.cs445.models.products.RepairableTest" />
+      <option name="METHOD_NAME" value="repairEquipments" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PARAMETERS" value="" />
@@ -1723,18 +1684,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="GlassFish Server.CS_445_Server" />
       <item index="1" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: All in CS_445" />
-      <item index="2" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: OrderTest" />
-      <item index="3" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: AnalogDVRTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.iit.cs445 in CS_445" />
-      <item index="5" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: InstallableTest.installPrice" />
+      <item index="2" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: AnalogDVRTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.iit.cs445 in CS_445" />
+      <item index="4" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: InstallableTest.installPrice" />
+      <item index="5" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: RepairableTest.repairEquipments" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: All in CS_445" />
-        <item index="1" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: InstallableTest.installPrice" />
+        <item index="1" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: RepairableTest.repairEquipments" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.iit.cs445 in CS_445" />
-        <item index="3" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: AnalogDVRTest" />
-        <item index="4" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: OrderTest" />
+        <item index="3" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: InstallableTest.installPrice" />
+        <item index="4" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: AnalogDVRTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1772,48 +1733,47 @@
       <workItem from="1498501372273" duration="13049000" />
       <workItem from="1498518328440" duration="657000" />
       <workItem from="1498519018064" duration="42000" />
-      <workItem from="1498519165149" duration="4521000" />
+      <workItem from="1498519165149" duration="6727000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GlassFish_Embedded_3_1__All_in_CS_445 - 2017.06.26 at 19h 37m 41s.xml">
+    <history-entry file="GlassFish_Embedded_3_1__All_in_CS_445 - 2017.06.26 at 20h 30m 34s.xml">
       <configuration name="GlassFish Embedded 3.1: All in CS_445" configurationId="ArquillianJUnit" />
     </history-entry>
-    <history-entry file="GlassFish_Embedded_3_1__All_in_CS_445 - 2017.06.26 at 20h 08m 18s.xml">
+    <history-entry file="GlassFish_Embedded_3_1__All_in_CS_445 - 2017.06.26 at 20h 37m 45s.xml">
       <configuration name="GlassFish Embedded 3.1: All in CS_445" configurationId="ArquillianJUnit" />
     </history-entry>
-    <history-entry file="GlassFish_Embedded_3_1__All_in_CS_445 - 2017.06.26 at 20h 09m 57s.xml">
+    <history-entry file="GlassFish_Embedded_3_1__All_in_CS_445 - 2017.06.26 at 20h 41m 49s.xml">
       <configuration name="GlassFish Embedded 3.1: All in CS_445" configurationId="ArquillianJUnit" />
     </history-entry>
-    <history-entry file="GlassFish_Embedded_3_1__AnalogDVRTest - 2017.06.26 at 19h 37m 00s.xml">
-      <configuration name="GlassFish Embedded 3.1: AnalogDVRTest" configurationId="ArquillianJUnit" />
+    <history-entry file="GlassFish_Embedded_3_1__All_in_CS_445 - 2017.06.26 at 20h 41m 55s.xml">
+      <configuration name="GlassFish Embedded 3.1: All in CS_445" configurationId="ArquillianJUnit" />
     </history-entry>
-    <history-entry file="GlassFish_Embedded_3_1__InstallableTest_installPrice - 2017.06.26 at 20h 10m 48s.xml">
-      <configuration name="GlassFish Embedded 3.1: InstallableTest.installPrice" configurationId="ArquillianJUnit" />
+    <history-entry file="GlassFish_Embedded_3_1__All_in_CS_445 - 2017.06.26 at 20h 43m 04s.xml">
+      <configuration name="GlassFish Embedded 3.1: All in CS_445" configurationId="ArquillianJUnit" />
     </history-entry>
-    <history-entry file="GlassFish_Embedded_3_1__OrderTest - 2017.06.26 at 19h 24m 46s.xml">
-      <configuration name="GlassFish Embedded 3.1: OrderTest" configurationId="ArquillianJUnit" />
+    <history-entry file="GlassFish_Embedded_3_1__All_in_CS_445 - 2017.06.26 at 20h 44m 41s.xml">
+      <configuration name="GlassFish Embedded 3.1: All in CS_445" configurationId="ArquillianJUnit" />
     </history-entry>
-    <history-entry file="GlassFish_Embedded_3_1__OrderTest - 2017.06.26 at 19h 25m 19s.xml">
-      <configuration name="GlassFish Embedded 3.1: OrderTest" configurationId="ArquillianJUnit" />
+    <history-entry file="GlassFish_Embedded_3_1__All_in_CS_445 - 2017.06.26 at 20h 47m 31s.xml">
+      <configuration name="GlassFish Embedded 3.1: All in CS_445" configurationId="ArquillianJUnit" />
     </history-entry>
-    <history-entry file="OrderServiceTest_and_1_more - 2017.06.26 at 19h 24m 58s.xml">
-      <configuration name="OrderServiceTest and 1 more" configurationId="JUnit" />
+    <history-entry file="GlassFish_Embedded_3_1__RepairableTest_repairEquipments - 2017.06.26 at 20h 43m 29s.xml">
+      <configuration name="GlassFish Embedded 3.1: RepairableTest.repairEquipments" configurationId="ArquillianJUnit" />
     </history-entry>
-    <history-entry file="OrderServiceTest_and_1_more - 2017.06.26 at 19h 25m 06s.xml">
-      <configuration name="OrderServiceTest and 1 more" configurationId="JUnit" />
+    <history-entry file="iit_cs445_in_CS_445 - 2017.06.26 at 20h 29m 15s.xml">
+      <configuration name="iit.cs445 in CS_445" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="iit_cs445_in_CS_445 - 2017.06.26 at 20h 07m 42s.xml">
+    <history-entry file="iit_cs445_in_CS_445 - 2017.06.26 at 20h 29m 23s.xml">
       <configuration name="iit.cs445 in CS_445" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134733000" />
+    <option name="totallyTimeSpent" value="136939000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1835,8 +1795,8 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29191092" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29191092" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4097222" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -1879,99 +1839,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/services/SecuritySystemInstallationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/services/SurveillanceDesignTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="33" column="15" lean-forward="false" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/services/SurveillanceSystemRepairTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/users/AddressTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/users/OrderAddress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/users/OrderAddressTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1020">
-          <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/users/UserManagerTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/users/UserServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" column="45" lean-forward="false" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/users/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/SecurityCamera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/DVR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Accessory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/product.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/static/js/cart-update.js" />
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/orders/listAll.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -2090,7 +1957,7 @@
         <state relative-caret-position="255">
           <caret line="145" column="31" lean-forward="true" selection-start-line="145" selection-start-column="31" selection-end-line="145" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2099,14 +1966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="73" column="5" lean-forward="false" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="28" column="35" lean-forward="false" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -2167,22 +2026,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/DigitalDVRTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/DigitalSurveillanceCameraTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="31" column="58" lean-forward="false" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/HousingTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -2237,15 +2080,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/PowerSupplyTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="60" column="9" lean-forward="true" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/MicrophoneTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+          <caret line="60" column="9" lean-forward="false" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -2269,11 +2104,154 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Monitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/MicrophoneTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="27" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/InstallableTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="32" column="80" lean-forward="false" selection-start-line="32" selection-start-column="80" selection-end-line="32" selection-end-column="80" />
+          <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="37" selection-end-column="81" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/product/accessory/PowerSupplyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="81" column="31" lean-forward="false" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/StorageType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/DigitalDVRTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/DigitalSurveillanceCameraTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="31" column="58" lean-forward="false" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Accessory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/DVR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/SecurityCamera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Equipment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/ProductTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="91" column="36" lean-forward="false" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/MonitorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="62" column="40" lean-forward="false" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/DVRTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="55" column="45" lean-forward="false" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/SecurityCameraTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Repairable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/products/RepairableTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="65" column="58" lean-forward="false" selection-start-line="65" selection-start-column="58" selection-end-line="65" selection-end-column="58" />
+          <folding>
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
+            <element signature="e#968#969#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

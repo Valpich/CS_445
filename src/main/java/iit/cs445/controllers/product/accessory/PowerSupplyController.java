@@ -79,7 +79,7 @@ public class PowerSupplyController {
 
         PowerSupply powerSupply = new PowerSupply();
         powerSupply.setPrice(Float.parseFloat(price));
-        powerSupply.setMaximum_output(maximumOutput);
+        powerSupply.setMaximumOutput(maximumOutput);
         powerSupply.setVoltage(Float.parseFloat(voltage));
         powerSupply.setDescription(description);
         powerSupply.setDeleted(false);
