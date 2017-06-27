@@ -34,6 +34,15 @@ public class MonitorController {
         return "productForm";
     }
 
+    @RequestMapping(value = "/monitor/{id}/delete", method = RequestMethod.GET)
+    public String deleteMonitory(@PathVariable("id") Long id, Model model) {
+        Monitor monitor = new Monitor().findById(id);
+        monitor.setDeleted(true);
+        monitor.update();
+        model.addAttribute("monitorForm", monitor);
+        return "index";
+    }
+
     @RequestMapping(value = "/monitor", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description ,
                                @RequestParam("size") String size,
@@ -43,12 +52,37 @@ public class MonitorController {
         return "index";
     }
 
+    @RequestMapping(value = "/monitorUpdate", method = RequestMethod.POST)
+    public String checkoutPost(@RequestParam("id") String id,
+                                @RequestParam("description") String description ,
+                                @RequestParam("size") String size,
+                                @RequestParam("max_resolution")  String maxResolution,
+                                @RequestParam("price") String price ) {
+        updateMonitor(id, description, size, maxResolution, price);
+        return "index";
+    }
+
     private void saveMonitor(String description, String size, String maxResolution, String price) {
         Monitor monitor = new Monitor();
         monitor.setPrice(Float.parseFloat(price));
         monitor.setSize(Float.parseFloat(size));
         monitor.setMaxResolution(maxResolution);
         monitor.setDescription(description);
+        monitor.setDeleted(false);
+        monitor.saveNew();
+    }
+
+    private void updateMonitor(String id, String description, String size, String maxResolution, String price) {
+        Monitor monitorOld = new Monitor().findById(Long.parseLong(id));
+        monitorOld.setDeleted(true);
+        monitorOld.update();
+
+        Monitor monitor = new Monitor();
+        monitor.setPrice(Float.parseFloat(price));
+        monitor.setSize(Float.parseFloat(size));
+        monitor.setMaxResolution(maxResolution);
+        monitor.setDescription(description);
+        monitor.setDeleted(false);
         monitor.saveNew();
     }
 

@@ -34,6 +34,15 @@ public class LensController {
         return "productForm";
     }
 
+    @RequestMapping(value = "/lens/{id}/delete", method = RequestMethod.GET)
+    public String deleteLens(@PathVariable("id") Long id, Model model) {
+        Lens lens = new Lens().findById(id);
+        lens.setDeleted(true);
+        lens.update();
+        model.addAttribute("lensForm", lens);
+        return "index";
+    }
+
     @RequestMapping(value = "/lens", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description ,
                                @RequestParam("focal") String focal,
@@ -43,12 +52,38 @@ public class LensController {
         return "index";
     }
 
+    @RequestMapping(value = "/lensUpdate", method = RequestMethod.POST)
+    public String checkoutPost(@RequestParam("id") String id,
+                                @RequestParam("description") String description ,
+                                @RequestParam("focal") String focal,
+                                @RequestParam("magnification") String magnification,
+                                @RequestParam("price") String price ) {
+        updateLens(id, description, focal, magnification, price);
+        return "index";
+    }
+
+
     private void saveLens(String description, String focal, String magnification, String price) {
         Lens lens = new Lens();
         lens.setPrice(Float.parseFloat(price));
         lens.setFocal(Float.parseFloat(focal));
         lens.setMagnification(Float.parseFloat(magnification));
         lens.setDescription(description);
+        lens.setDeleted(false);
+        lens.saveNew();
+    }
+
+    private void updateLens(String id, String description, String focal, String magnification, String price) {
+        Lens lensOld = new Lens().findById(Long.parseLong(id));
+        lensOld.setDeleted(true);
+        lensOld.update();
+
+        Lens lens = new Lens();
+        lens.setPrice(Float.parseFloat(price));
+        lens.setFocal(Float.parseFloat(focal));
+        lens.setMagnification(Float.parseFloat(magnification));
+        lens.setDescription(description);
+        lens.setDeleted(false);
         lens.saveNew();
     }
 

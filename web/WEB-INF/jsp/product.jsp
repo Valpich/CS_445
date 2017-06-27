@@ -15,13 +15,25 @@
             <jsp:include page="fragments/leftbar.jsp" />
         </div>
         <div class="col-sm-8">
-                <c:if test="${not empty analogsDVR}">
-                    <div>
+            <c:if test="${not empty analogsDVR}">
+                <div>
                         <jsp:include page="fragments/product/dvr/analogDVR.jsp" />
-                    </div>
+                </div>
+            </c:if>
+
+            <c:if test="${empty analogsDVR}">
+                <div>
+                    <jsp:include page="fragments/product/dvr/analogDVR.jsp" />
+                </div>
             </c:if>
 
             <c:if test="${not empty digitalsDVR}">
+                <div>
+                    <jsp:include page="fragments/product/dvr/digitalDVR.jsp" />
+                </div>
+            </c:if>
+
+            <c:if test="${empty digitalsDVR}">
                 <div>
                     <jsp:include page="fragments/product/dvr/digitalDVR.jsp" />
                 </div>
@@ -33,7 +45,19 @@
                 </div>
             </c:if>
 
+            <c:if test="${empty hybridsDVR}">
+                <div>
+                    <jsp:include page="fragments/product/dvr/hybridDVR.jsp" />
+                </div>
+            </c:if>
+
             <c:if test="${not empty analogSurveillanceCameras}">
+                <div>
+                    <jsp:include page="fragments/product/securityCamera/analogSurveillanceCamera.jsp" />
+                </div>
+            </c:if>
+
+            <c:if test="${empty analogSurveillanceCameras}">
                 <div>
                     <jsp:include page="fragments/product/securityCamera/analogSurveillanceCamera.jsp" />
                 </div>
@@ -45,7 +69,19 @@
                 </div>
             </c:if>
 
+            <c:if test="${empty digitalSurveillanceCameras}">
+                <div>
+                    <jsp:include page="fragments/product/securityCamera/digitalSurveillanceCamera.jsp" />
+                </div>
+            </c:if>
+
             <c:if test="${not empty ipSurveillanceCameras}">
+                <div>
+                    <jsp:include page="fragments/product/securityCamera/ipSurveillanceCamera.jsp" />
+                </div>
+            </c:if>
+
+            <c:if test="${empty ipSurveillanceCameras}">
                 <div>
                     <jsp:include page="fragments/product/securityCamera/ipSurveillanceCamera.jsp" />
                 </div>
@@ -57,7 +93,19 @@
                 </div>
             </c:if>
 
+            <c:if test="${empty brackets}">
+                <div>
+                    <jsp:include page="fragments/product/accessory/bracket.jsp" />
+                </div>
+            </c:if>
+
             <c:if test="${not empty cables}">
+                <div>
+                    <jsp:include page="fragments/product/accessory/cable.jsp" />
+                </div>
+            </c:if>
+
+            <c:if test="${empty cables}">
                 <div>
                     <jsp:include page="fragments/product/accessory/cable.jsp" />
                 </div>
@@ -69,7 +117,19 @@
                 </div>
             </c:if>
 
+            <c:if test="${empty conenctors}">
+                <div>
+                    <jsp:include page="fragments/product/accessory/connector.jsp" />
+                </div>
+            </c:if>
+
             <c:if test="${not empty housings}">
+                <div>
+                    <jsp:include page="fragments/product/accessory/housing.jsp" />
+                </div>
+            </c:if>
+
+            <c:if test="${empty housings}">
                 <div>
                     <jsp:include page="fragments/product/accessory/housing.jsp" />
                 </div>
@@ -81,7 +141,19 @@
                 </div>
             </c:if>
 
+            <c:if test="${empty infraredLightnings}">
+                <div>
+                    <jsp:include page="fragments/product/accessory/infraredLightning.jsp" />
+                </div>
+            </c:if>
+
             <c:if test="${not empty lenses}">
+                <div>
+                    <jsp:include page="fragments/product/accessory/lens.jsp" />
+                </div>
+            </c:if>
+
+            <c:if test="${empty lenses}">
                 <div>
                     <jsp:include page="fragments/product/accessory/lens.jsp" />
                 </div>
@@ -93,7 +165,19 @@
                 </div>
             </c:if>
 
+            <c:if test="${empty microphones}">
+                <div>
+                    <jsp:include page="fragments/product/accessory/microphone.jsp" />
+                </div>
+            </c:if>
+
             <c:if test="${not empty monitors}">
+                <div>
+                    <jsp:include page="fragments/product/accessory/monitor.jsp" />
+                </div>
+            </c:if>
+
+            <c:if test="${empty monitors}">
                 <div>
                     <jsp:include page="fragments/product/accessory/monitor.jsp" />
                 </div>
@@ -104,6 +188,13 @@
                     <jsp:include page="fragments/product/accessory/powerSupply.jsp" />
                 </div>
             </c:if>
+
+            <c:if test="${empty powerSupplies}">
+                <div>
+                    <jsp:include page="fragments/product/accessory/powerSupply.jsp" />
+                </div>
+            </c:if>
+
 
         </div>
     </div>

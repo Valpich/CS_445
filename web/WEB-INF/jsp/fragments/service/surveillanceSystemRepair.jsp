@@ -6,14 +6,15 @@
 
 <html>
 <head>
-    <title>Connector</title>
+    <title>Surveillance System Repair</title>
 </head>
 <body>
 
-<h1>Connector</h1>
+<h1>Surveillance System Repair</h1>
 
-<spring:url value="/product/accessory/connector/add" var="connector"/>
-<button class="btn btn-primary" onclick="location.href='${connector}'">Add Connector</button>
+
+<spring:url value="/service/surveillanceSystemRepair/add" var="surveillanceSystemRepair"/>
+<button class="btn btn-primary" onclick="location.href='${surveillanceSystemRepair}'">Add Surveillance System Repair</button>
 
 <table class="table table-striped">
     <thead>
@@ -25,17 +26,17 @@
     </tr>
     </thead>
 
-    <c:forEach var="connector" items="${connectors}">
+    <c:forEach var="surveillanceSystemRepair" items="${surveillanceSystemRepairs}">
 
-        <c:if test="${connector.deleted == false}">
+        <c:if test="${surveillanceSystemRepair.deleted == false}">
 
             <tr>
-                <td>${connector.description}</td>
-                <td>${connector.id}</td>
-                <td>${connector.price}</td>
+                <td>${surveillanceSystemRepair.description}</td>
+                <td>${surveillanceSystemRepair.id}</td>
+                <td>${surveillanceSystemRepair.price}</td>
 
-                <spring:url value="/connector/${connector.id}/update" var="updateUrl" />
-                <spring:url value="/connector/${connector.id}/delete" var="deleteUrl" />
+                <spring:url value="/surveillanceSystemRepair/${surveillanceSystemRepair.id}/delete" var="deleteUrl" />
+                <spring:url value="/surveillanceSystemRepair/${surveillanceSystemRepair.id}/update" var="updateUrl" />
 
                 <td>
                     <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
@@ -45,6 +46,7 @@
             </tr>
 
         </c:if>
+
 
     </c:forEach>
 </table>

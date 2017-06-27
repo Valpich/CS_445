@@ -34,6 +34,15 @@ public class DigitalSurveillanceCameraController {
         return "productForm";
     }
 
+    @RequestMapping(value = "/digitalSurveillanceCamera/{id}/delete", method = RequestMethod.GET)
+    public String deleteDigitalSurveillanceCamera(@PathVariable("id") Long id, Model model) {
+        DigitalSurveillanceCamera digitalSurveillanceCamera = new DigitalSurveillanceCamera().findById(id);
+        digitalSurveillanceCamera.setDeleted(true);
+        digitalSurveillanceCamera.update();
+        model.addAttribute("digitalSurveillanceCameraForm", digitalSurveillanceCamera);
+        return "index";
+    }
+
     @RequestMapping(value = "/digitalSurveillanceCamera", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description ,
                                @RequestParam("resolution") String resolution ,
@@ -42,11 +51,34 @@ public class DigitalSurveillanceCameraController {
         return "index";
     }
 
+    @RequestMapping(value = "/digitalSurveillanceCameraUpdate", method = RequestMethod.POST)
+    public String checkoutPost(@RequestParam("id") String id,
+                                @RequestParam("description") String description ,
+                                @RequestParam("resolution") String resolution ,
+                                @RequestParam("price") String price ) {
+        updateDigitalSurveillanceCamera(id, description, resolution, price);
+        return "index";
+    }
+
     private void saveDigitalSurveillanceCamera(String description, String resolution, String price) {
         DigitalSurveillanceCamera digitalSurveillanceCamera = new DigitalSurveillanceCamera();
         digitalSurveillanceCamera.setPrice(Float.parseFloat(price));
         digitalSurveillanceCamera.setResolution(resolution);
         digitalSurveillanceCamera.setDescription(description);
+        digitalSurveillanceCamera.setDeleted(false);
+        digitalSurveillanceCamera.saveNew();
+    }
+
+    private void updateDigitalSurveillanceCamera(String id, String description, String resolution, String price) {
+        DigitalSurveillanceCamera digitalSurveillanceCameraOld = new DigitalSurveillanceCamera().findById(Long.parseLong(id));
+        digitalSurveillanceCameraOld.setDeleted(true);
+        digitalSurveillanceCameraOld.update();
+
+        DigitalSurveillanceCamera digitalSurveillanceCamera = new DigitalSurveillanceCamera();
+        digitalSurveillanceCamera.setPrice(Float.parseFloat(price));
+        digitalSurveillanceCamera.setResolution(resolution);
+        digitalSurveillanceCamera.setDescription(description);
+        digitalSurveillanceCamera.setDeleted(false);
         digitalSurveillanceCamera.saveNew();
     }
 

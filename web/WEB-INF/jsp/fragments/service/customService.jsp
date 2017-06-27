@@ -6,14 +6,15 @@
 
 <html>
 <head>
-    <title>Connector</title>
+    <title>Custom Service</title>
 </head>
 <body>
 
-<h1>Connector</h1>
+<h1>Custom Service</h1>
 
-<spring:url value="/product/accessory/connector/add" var="connector"/>
-<button class="btn btn-primary" onclick="location.href='${connector}'">Add Connector</button>
+
+<spring:url value="/service/customService/add" var="customService"/>
+<button class="btn btn-primary" onclick="location.href='${customService}'">Add Custom Service</button>
 
 <table class="table table-striped">
     <thead>
@@ -25,17 +26,17 @@
     </tr>
     </thead>
 
-    <c:forEach var="connector" items="${connectors}">
+    <c:forEach var="customService" items="${customServices}">
 
-        <c:if test="${connector.deleted == false}">
+        <c:if test="${customService.deleted == false}">
 
             <tr>
-                <td>${connector.description}</td>
-                <td>${connector.id}</td>
-                <td>${connector.price}</td>
+                <td>${customService.description}</td>
+                <td>${customService.id}</td>
+                <td>${customService.price}</td>
 
-                <spring:url value="/connector/${connector.id}/update" var="updateUrl" />
-                <spring:url value="/connector/${connector.id}/delete" var="deleteUrl" />
+                <spring:url value="/customService/${customService.id}/delete" var="deleteUrl" />
+                <spring:url value="/customService/${customService.id}/update" var="updateUrl" />
 
                 <td>
                     <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
@@ -45,6 +46,7 @@
             </tr>
 
         </c:if>
+
 
     </c:forEach>
 </table>

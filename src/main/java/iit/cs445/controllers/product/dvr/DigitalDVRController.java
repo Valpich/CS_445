@@ -1,6 +1,7 @@
 package iit.cs445.controllers.product.dvr;
 
 import iit.cs445.models.products.DigitalDVR;
+import iit.cs445.models.products.DigitalSurveillanceCamera;
 import iit.cs445.models.products.StorageType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,11 +37,29 @@ public class DigitalDVRController {
         return "productForm";
     }
 
+    @RequestMapping(value = "/digitalDVR/{id}/delete", method = RequestMethod.GET)
+    public String deleteDigitalDVR(@PathVariable("id") Long id, Model model) {
+        DigitalDVR digitalDVR = new DigitalDVR().findById(id);
+        digitalDVR.setDeleted(true);
+        digitalDVR.update();
+        model.addAttribute("digitalDVRForm", digitalDVR);
+        return "index";
+    }
+
     @RequestMapping(value = "/digitalDVR", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description ,
                                @RequestParam("storage_types") String storageTypes ,
                                @RequestParam("price") String price ) {
         saveDigitalDVR(description, storageTypes, price);
+        return "index";
+    }
+
+    @RequestMapping(value = "/digitalDVRUpdate", method = RequestMethod.POST)
+    public String checkoutPost(@RequestParam("id") String id,
+                                @RequestParam("description") String description ,
+                                @RequestParam("storage_types") String storageTypes ,
+                                @RequestParam("price") String price ) {
+        updateDigitalDVR(id, description, storageTypes, price);
         return "index";
     }
 
@@ -61,6 +80,32 @@ public class DigitalDVRController {
         }
         digitalDVR.setStorageTypes(storageTypes);
         digitalDVR.setDescription(description);
+        digitalDVR.setDeleted(false);
+        digitalDVR.saveNew();
+    }
+
+    private void updateDigitalDVR(String id, String description, String storage, String price) {
+        DigitalDVR digitalDVROld = new DigitalDVR().findById(Long.parseLong(id));
+        digitalDVROld.setDeleted(true);
+        digitalDVROld.update();
+
+        DigitalDVR digitalDVR = new DigitalDVR();
+        digitalDVR.setPrice(Float.parseFloat(price));
+        List<StorageType> storageTypes = new ArrayList<>();
+        if(storage.equals("DISK_DRIVE")) {
+            storageTypes.add(StorageType.DISK_DRIVE);
+        } else if(storage.equals("USB")) {
+            storageTypes.add(StorageType.USB);
+        } else if (storage.equals("SSD")) {
+            storageTypes.add(StorageType.SSD);
+        } else if (storage.equals("SD_MEMORY_CARD")) {
+            storageTypes.add(StorageType.SD_MEMORY_CARD);
+        } else {
+            storageTypes.add(StorageType.OTHER);
+        }
+        digitalDVR.setStorageTypes(storageTypes);
+        digitalDVR.setDescription(description);
+        digitalDVR.setDeleted(false);
         digitalDVR.saveNew();
     }
 

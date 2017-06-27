@@ -35,6 +35,15 @@ public class IpSurveillanceCameraController {
         return "productForm";
     }
 
+    @RequestMapping(value = "/ipSurveillanceCamera/{id}/delete", method = RequestMethod.GET)
+    public String deleteIpSurveillanceCamera(@PathVariable("id") Long id, Model model) {
+        IPSurveillanceCamera ipSurveillanceCamera = new IPSurveillanceCamera().findById(id);
+        ipSurveillanceCamera.setDeleted(true);
+        ipSurveillanceCamera.update();
+        model.addAttribute("ipSurveillanceCameraForm", ipSurveillanceCamera);
+        return "index";
+    }
+
     @RequestMapping(value = "/ipSurveillanceCamera", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description ,
                                @RequestParam("resolution") String resolution ,
@@ -43,11 +52,34 @@ public class IpSurveillanceCameraController {
         return "index";
     }
 
+    @RequestMapping(value = "/ipSurveillanceCameraUpdate", method = RequestMethod.POST)
+    public String checkoutPost(@RequestParam("id") String id,
+                                @RequestParam("description") String description ,
+                                @RequestParam("resolution") String resolution ,
+                                @RequestParam("price") String price ) {
+        updateIpSurveillanceCamera(id, description, resolution, price);
+        return "index";
+    }
+
     private void saveIpSurveillanceCamera(String description, String resolution, String price) {
         IPSurveillanceCamera ipSurveillanceCamera = new IPSurveillanceCamera();
         ipSurveillanceCamera.setPrice(Float.parseFloat(price));
         ipSurveillanceCamera.setResolution(resolution);
         ipSurveillanceCamera.setDescription(description);
+        ipSurveillanceCamera.setDeleted(false);
+        ipSurveillanceCamera.saveNew();
+    }
+
+    private void updateIpSurveillanceCamera(String id, String description, String resolution, String price) {
+        IPSurveillanceCamera ipSurveillanceCameraOld = new IPSurveillanceCamera().findById(Long.parseLong(id));
+        ipSurveillanceCameraOld.setDeleted(true);
+        ipSurveillanceCameraOld.update();
+
+        IPSurveillanceCamera ipSurveillanceCamera = new IPSurveillanceCamera();
+        ipSurveillanceCamera.setPrice(Float.parseFloat(price));
+        ipSurveillanceCamera.setResolution(resolution);
+        ipSurveillanceCamera.setDescription(description);
+        ipSurveillanceCamera.setDeleted(false);
         ipSurveillanceCamera.saveNew();
     }
 

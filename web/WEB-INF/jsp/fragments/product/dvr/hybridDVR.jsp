@@ -27,19 +27,27 @@
     </thead>
 
     <c:forEach var="hybridDVR" items="${hybridsDVR}">
-        <tr>
-            <td>${hybridDVR.description}</td>
-            <td>${hybridDVR.storageTypes}</td>
-            <td>${hybridDVR.id}</td>
-            <td>${hybridDVR.price}</td>
 
-            <spring:url value="/hybridDVR/${hybridDVR.id}/update" var="updateUrl" />
+        <c:if test="${hybridDVR.deleted == false}">
 
-            <td>
-                <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
-                <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
-            </td>
-        </tr>
+                <tr>
+                    <td>${hybridDVR.description}</td>
+                    <td>${hybridDVR.storageTypes}</td>
+                    <td>${hybridDVR.id}</td>
+                    <td>${hybridDVR.price}</td>
+
+                    <spring:url value="/hybridDVR/${hybridDVR.id}/update" var="updateUrl" />
+                    <spring:url value="/hybridDVR/${hybridDVR.id}/delete" var="deleteUrl" />
+
+                    <td>
+                        <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
+                        <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
+                        <button class="btn btn-danger" onclick="location.href='${deleteUrl}'">Delete</button>
+                    </td>
+                </tr>
+
+        </c:if>
+
     </c:forEach>
 </table>
 

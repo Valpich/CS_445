@@ -13,14 +13,13 @@
     <c:choose>
         <c:when test="${not empty analogDVRForm}">
             <h1>Add Analog DVR</h1><br>
+            <spring:url value="/analogDVR" var="analog"/>
         </c:when>
         <c:otherwise>
             <h1>Update Analog DVR</h1><br>
+            <spring:url value="/analogDVRUpdate" var="analog"/>
         </c:otherwise>
     </c:choose>
-
-
-    <spring:url value="/analogDVR" var="analog"/>
 
     <form action='${analog}' method="POST">
 
@@ -33,6 +32,7 @@
                 </c:when>
                 <c:otherwise>
                     <input type="text" name="description" value="${analogDVRFormUpdate.description}" placeholder="">
+                    <input type="hidden" name="id" value="${analogDVRFormUpdate.id}">
                 </c:otherwise>
             </c:choose>
 

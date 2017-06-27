@@ -26,18 +26,26 @@
     </thead>
 
     <c:forEach var="housing" items="${housings}">
-        <tr>
-            <td>${housing.description}</td>
-            <td>${housing.id}</td>
-            <td>${housing.price}</td>
 
-            <spring:url value="/housing/${housing.id}/update" var="updateUrl" />
+        <c:if test="${housing.deleted == false}">
 
-            <td>
-                <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
-                <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
-            </td>
-        </tr>
+                <tr>
+                    <td>${housing.description}</td>
+                    <td>${housing.id}</td>
+                    <td>${housing.price}</td>
+
+                    <spring:url value="/housing/${housing.id}/update" var="updateUrl" />
+                    <spring:url value="/housing/${housing.id}/delete" var="deleteUrl" />
+
+                    <td>
+                        <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Add Cart</button>
+                        <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
+                        <button class="btn btn-danger" onclick="location.href='${deleteUrl}'">Delete</button>
+                    </td>
+                </tr>
+
+        </c:if>
+
     </c:forEach>
 </table>
 

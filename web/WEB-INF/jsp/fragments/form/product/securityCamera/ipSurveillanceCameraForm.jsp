@@ -13,13 +13,13 @@
     <c:choose>
         <c:when test="${not empty ipSurveillanceCameraForm}">
             <h1>Add Ip Surveillance Camera</h1><br>
+            <spring:url value="/ipSurveillanceCamera" var="ipSurveillanceCamera"/>
         </c:when>
         <c:otherwise>
             <h1>Update Ip Surveillance Camera</h1><br>
+            <spring:url value="/ipSurveillanceCameraUpdate" var="ipSurveillanceCamera"/>
         </c:otherwise>
     </c:choose>
-
-    <spring:url value="/ipSurveillanceCamera" var="ipSurveillanceCamera"/>
 
     <form action='${ipSurveillanceCamera}' method="POST">
 
@@ -32,6 +32,7 @@
                 </c:when>
                 <c:otherwise>
                     <input type="text" name="description" value="${ipSurveillanceCameraFormUpdate.description}" placeholder="">
+                    <input hidden type="text" name="id" value="${ipSurveillanceCameraFormUpdate.id}">
                 </c:otherwise>
             </c:choose>
 

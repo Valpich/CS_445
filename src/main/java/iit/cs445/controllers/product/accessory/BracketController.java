@@ -34,6 +34,15 @@ public class BracketController {
         return "productForm";
     }
 
+    @RequestMapping(value = "/bracket/{id}/delete", method = RequestMethod.GET)
+    public String deleteBracket(@PathVariable("id") Long id, Model model) {
+        Bracket bracket = new Bracket().findById(id);
+        bracket.setDeleted(true);
+        bracket.update();
+        model.addAttribute("bracketForm", bracket);
+        return "index";
+    }
+
     @RequestMapping(value = "/bracket", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description ,
                                @RequestParam("price") String price ) {
@@ -41,10 +50,31 @@ public class BracketController {
         return "index";
     }
 
+    @RequestMapping(value = "/bracketUpdate", method = RequestMethod.POST)
+    public String checkoutPost(@RequestParam("id") String id,
+                                @RequestParam("description") String description ,
+                                @RequestParam("price") String price ) {
+        updateBracket(id, description, price);
+        return "index";
+    }
+
     private void saveBracket(String description, String price) {
         Bracket bracket = new Bracket();
         bracket.setPrice(Float.parseFloat(price));
         bracket.setDescription(description);
+        bracket.setDeleted(false);
+        bracket.saveNew();
+    }
+
+    private void updateBracket(String id, String description, String price) {
+        Bracket bracketOld = new Bracket().findById(Long.parseLong(id));
+        bracketOld.setDeleted(true);
+        bracketOld.update();
+
+        Bracket bracket = new Bracket();
+        bracket.setPrice(Float.parseFloat(price));
+        bracket.setDescription(description);
+        bracket.setDeleted(false);
         bracket.saveNew();
     }
 

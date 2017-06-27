@@ -34,6 +34,15 @@ public class ConnectorController {
         return "productForm";
     }
 
+    @RequestMapping(value = "/connector/{id}/delete", method = RequestMethod.GET)
+    public String deleteConnector(@PathVariable("id") Long id, Model model) {
+        Connector connector = new Connector().findById(id);
+        connector.setDeleted(true);
+        connector.update();
+        model.addAttribute("connectorForm", connector);
+        return "index";
+    }
+
     @RequestMapping(value = "/connector", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description ,
                                @RequestParam("price") String price ) {
@@ -41,10 +50,31 @@ public class ConnectorController {
         return "index";
     }
 
+    @RequestMapping(value = "/connectorUpdate", method = RequestMethod.POST)
+    public String checkoutPost(@RequestParam("id") String id,
+                                @RequestParam("description") String description ,
+                                @RequestParam("price") String price ) {
+        updateConnector(id, description, price);
+        return "index";
+    }
+
     private void saveConnector(String description, String price) {
         Connector connector = new Connector();
         connector.setPrice(Float.parseFloat(price));
         connector.setDescription(description);
+        connector.setDeleted(false);
+        connector.saveNew();
+    }
+
+    private void updateConnector(String id, String description, String price) {
+        Connector connectorOld = new Connector().findById(Long.parseLong(id));
+        connectorOld.setDeleted(true);
+        connectorOld.update();
+
+        Connector connector = new Connector();
+        connector.setPrice(Float.parseFloat(price));
+        connector.setDescription(description);
+        connector.setDeleted(false);
         connector.saveNew();
     }
 

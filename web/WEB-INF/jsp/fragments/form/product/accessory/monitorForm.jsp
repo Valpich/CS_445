@@ -13,9 +13,11 @@
     <c:choose>
         <c:when test="${not empty monitorForm}">
             <h1>Add Monitor</h1><br>
+            <spring:url value="/monitor" var="monitor"/>
         </c:when>
         <c:otherwise>
             <h1>Update Monitor</h1><br>
+            <spring:url value="/monitorUpdate" var="monitor"/>
         </c:otherwise>
     </c:choose>
 
@@ -32,6 +34,7 @@
                 </c:when>
                 <c:otherwise>
                     <input type="text" name="description" value="${monitorFormUpdate.description}" placeholder="">
+                    <input hidden type="text" name="id" value="${monitorFormUpdate.id}" >
                 </c:otherwise>
             </c:choose>
 
