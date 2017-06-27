@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b515210d-be3c-4260-980b-0d9ee0718f50" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/ServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/iit/cs445/models/products/RepairableTest.class" afterPath="$PROJECT_DIR$/target/test-classes/iit/cs445/models/products/RepairableTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/iit/cs445/models/services/CustomServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/iit/cs445/models/services/CustomServiceTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/iit/cs445/models/services/SecuritySystemInstallationTest.class" afterPath="$PROJECT_DIR$/target/test-classes/iit/cs445/models/services/SecuritySystemInstallationTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/iit/cs445/models/services/SurveillanceDesignTest.class" afterPath="$PROJECT_DIR$/target/test-classes/iit/cs445/models/services/SurveillanceDesignTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/iit/cs445/models/services/SurveillanceSystemRepairTest.class" afterPath="$PROJECT_DIR$/target/test-classes/iit/cs445/models/services/SurveillanceSystemRepairTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/BaseEntityTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/RepairableTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/RepairableTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/CustomServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/CustomServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/SecuritySystemInstallationTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/SecuritySystemInstallationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/SurveillanceDesignTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/SurveillanceDesignTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/SurveillanceSystemRepairTest.java" afterPath="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/SurveillanceSystemRepairTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,7 +16,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/CS_445$OrderServiceTest_and_1_more.coverage" NAME="OrderServiceTest and 1 more Coverage Results" MODIFIED="1498523105015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/CS_445$GlassFish_Embedded_3_1__All_in_CS_445.coverage" NAME="GlassFish Embedded 3.1: All in CS_445 Coverage Results" MODIFIED="1498528809147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/CS_445$GlassFish_Embedded_3_1__All_in_CS_445.coverage" NAME="GlassFish Embedded 3.1: All in CS_445 Coverage Results" MODIFIED="1498529671751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/CS_445$GlassFish_Embedded_3_1__AnalogDVRTest.coverage" NAME="GlassFish Embedded 3.1: AnalogDVRTest Coverage Results" MODIFIED="1498523813611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>iit.cs445.models.products.*</FILTER>
     </SUITE>
@@ -64,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddressTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AddressTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/users/AddressTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -104,12 +94,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseEntity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseEntity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/BaseEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+            <state relative-caret-position="185">
+              <caret line="76" column="49" lean-forward="false" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="49" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseEntityTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/BaseEntityTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1860">
+              <caret line="142" column="43" lean-forward="false" selection-start-line="142" selection-start-column="43" selection-end-line="142" selection-end-column="43" />
+              <folding>
+                <element signature="class#BaseEntityClassTest#0;class#BaseEntityTest#0" expanded="false" />
+                <element signature="e#631#632#0" expanded="true" />
+                <element signature="e#666#667#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -181,7 +185,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Microphone.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/products/Monitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/users/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/iit/cs445/models/BaseEntity.java" />
@@ -232,6 +235,7 @@
         <option value="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/SurveillanceSystemRepairTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/iit/cs445/models/services/ServiceTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/iit/cs445/models/products/RepairableTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iit/cs445/models/BaseEntityTest.java" />
       </list>
     </option>
   </component>
@@ -545,7 +549,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cs445" />
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS_445" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -579,71 +605,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cs445" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CS_445" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CS_445" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cs445" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CS_445" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CS_445" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cs445" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -945,11 +911,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="iit.cs445.models" />
       <recent name="iit.cs445.models.services" />
       <recent name="iit.cs445.models.products" />
       <recent name="iit.cs445.models.users" />
       <recent name="iit.cs445.models.orders" />
-      <recent name="iit.cs445.exceptions" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -1006,37 +972,6 @@
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="GlassFish Embedded 3.1: AnalogDVRTest" type="ArquillianJUnit" factoryName="" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="iit.cs445.models.products.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="CS_445" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="GlassFish Embedded 3.1" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="iit.cs445.models.products" />
-      <option name="MAIN_CLASS_NAME" value="iit.cs445.models.products.AnalogDVRTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -1125,6 +1060,37 @@
       <option name="MAIN_CLASS_NAME" value="iit.cs445.models.products.RepairableTest" />
       <option name="METHOD_NAME" value="repairEquipments" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="GlassFish Embedded 3.1: BaseEntityTest" type="ArquillianJUnit" factoryName="" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="iit.cs445.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="CS_445" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="GlassFish Embedded 3.1" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="iit.cs445.models" />
+      <option name="MAIN_CLASS_NAME" value="iit.cs445.models.BaseEntityTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -1698,18 +1664,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="GlassFish Server.CS_445_Server" />
       <item index="1" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: All in CS_445" />
-      <item index="2" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: AnalogDVRTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.iit.cs445 in CS_445" />
-      <item index="4" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: InstallableTest.installPrice" />
-      <item index="5" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: RepairableTest.repairEquipments" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.iit.cs445 in CS_445" />
+      <item index="3" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: InstallableTest.installPrice" />
+      <item index="4" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: RepairableTest.repairEquipments" />
+      <item index="5" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: BaseEntityTest" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: All in CS_445" />
-        <item index="1" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: RepairableTest.repairEquipments" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.iit.cs445 in CS_445" />
-        <item index="3" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: InstallableTest.installPrice" />
-        <item index="4" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: AnalogDVRTest" />
+        <item index="1" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: BaseEntityTest" />
+        <item index="2" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: RepairableTest.repairEquipments" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.iit.cs445 in CS_445" />
+        <item index="4" class="java.lang.String" itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: InstallableTest.installPrice" />
       </list>
     </recent_temporary>
   </component>
@@ -1747,20 +1713,11 @@
       <workItem from="1498501372273" duration="13049000" />
       <workItem from="1498518328440" duration="657000" />
       <workItem from="1498519018064" duration="42000" />
-      <workItem from="1498519165149" duration="7616000" />
+      <workItem from="1498519165149" duration="8329000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GlassFish_Embedded_3_1__All_in_CS_445 - 2017.06.26 at 20h 30m 34s.xml">
-      <configuration name="GlassFish Embedded 3.1: All in CS_445" configurationId="ArquillianJUnit" />
-    </history-entry>
-    <history-entry file="GlassFish_Embedded_3_1__All_in_CS_445 - 2017.06.26 at 20h 37m 45s.xml">
-      <configuration name="GlassFish Embedded 3.1: All in CS_445" configurationId="ArquillianJUnit" />
-    </history-entry>
-    <history-entry file="GlassFish_Embedded_3_1__All_in_CS_445 - 2017.06.26 at 20h 41m 49s.xml">
-      <configuration name="GlassFish Embedded 3.1: All in CS_445" configurationId="ArquillianJUnit" />
-    </history-entry>
     <history-entry file="GlassFish_Embedded_3_1__All_in_CS_445 - 2017.06.26 at 20h 41m 55s.xml">
       <configuration name="GlassFish Embedded 3.1: All in CS_445" configurationId="ArquillianJUnit" />
     </history-entry>
@@ -1779,12 +1736,21 @@
     <history-entry file="GlassFish_Embedded_3_1__All_in_CS_445 - 2017.06.26 at 21h 01m 08s.xml">
       <configuration name="GlassFish Embedded 3.1: All in CS_445" configurationId="ArquillianJUnit" />
     </history-entry>
+    <history-entry file="GlassFish_Embedded_3_1__All_in_CS_445 - 2017.06.26 at 21h 15m 04s.xml">
+      <configuration name="GlassFish Embedded 3.1: All in CS_445" configurationId="ArquillianJUnit" />
+    </history-entry>
+    <history-entry file="GlassFish_Embedded_3_1__BaseEntityTest - 2017.06.26 at 21h 11m 54s.xml">
+      <configuration name="GlassFish Embedded 3.1: BaseEntityTest" configurationId="ArquillianJUnit" />
+    </history-entry>
+    <history-entry file="GlassFish_Embedded_3_1__BaseEntityTest - 2017.06.26 at 21h 13m 38s.xml">
+      <configuration name="GlassFish Embedded 3.1: BaseEntityTest" configurationId="ArquillianJUnit" />
+    </history-entry>
     <history-entry file="GlassFish_Embedded_3_1__RepairableTest_repairEquipments - 2017.06.26 at 20h 43m 29s.xml">
       <configuration name="GlassFish Embedded 3.1: RepairableTest.repairEquipments" configurationId="ArquillianJUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137828000" />
+    <option name="totallyTimeSpent" value="138541000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1854,14 +1820,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/controllers/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/orders/Order.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
@@ -2233,14 +2191,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/users/AddressTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/users/CartTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -2275,8 +2225,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/iit/cs445/models/BaseEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        <state relative-caret-position="185">
+          <caret line="76" column="49" lean-forward="false" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/BaseEntityTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1860">
+          <caret line="142" column="43" lean-forward="false" selection-start-line="142" selection-start-column="43" selection-end-line="142" selection-end-column="43" />
+          <folding>
+            <element signature="class#BaseEntityClassTest#0;class#BaseEntityTest#0" expanded="false" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iit/cs445/models/users/AddressTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
