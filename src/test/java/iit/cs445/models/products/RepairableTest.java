@@ -63,7 +63,7 @@ public class RepairableTest {
         equipments.add(Equipment.AMMETER);
         repairableImplementationTest.setEquipments(equipments);
         assertEquals(equipments, repairableImplementationTest.repairEquipments());
-        assertEquals(null, repairableImplementationTestTwo.repairEquipments());
+        assertEquals(new ArrayList<>(), repairableImplementationTestTwo.repairEquipments());
 
     }
 

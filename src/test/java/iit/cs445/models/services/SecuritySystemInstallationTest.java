@@ -29,6 +29,7 @@ public class SecuritySystemInstallationTest {
 
     @Test
     public void toStringTest() throws Exception {
+        assertNotNull(securitySystemInstallation.toString());
     }
 
     @Deployment

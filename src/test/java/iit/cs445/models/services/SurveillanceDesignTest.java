@@ -29,6 +29,7 @@ public class SurveillanceDesignTest {
 
     @Test
     public void toStringTest() throws Exception {
+        assertNotNull(surveillanceDesign.toString());
     }
 
     @Deployment

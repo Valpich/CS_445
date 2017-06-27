@@ -29,6 +29,7 @@ public class SurveillanceSystemRepairTest {
 
     @Test
     public void toStringTest() throws Exception {
+        assertNotNull(surveillanceSystemRepair.toString());
     }
 
     @Deployment

@@ -29,6 +29,7 @@ public class CustomServiceTest {
 
     @Test
     public void toStringTest() throws Exception {
+        assertNotNull(customService.toString());
     }
 
     @Deployment
