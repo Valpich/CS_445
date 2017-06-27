@@ -19,7 +19,7 @@ public class ConnectorController {
     @RequestMapping(value = "/product/accessory/connector", method = RequestMethod.GET)
     public String listAll(Model model) {
         List<Connector> list = new Connector().listAll();
-        model.addAttribute("conenctors", list);
+        model.addAttribute("connectors", list);
         return "product";
     }
 

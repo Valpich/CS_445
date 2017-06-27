@@ -64,7 +64,7 @@
                 </div>
             </c:if>
 
-            <c:if test="${not empty conenctors}">
+            <c:if test="${not empty connectors}">
                 <div>
                     <jsp:include page="fragments/product/accessory/connector.jsp" />
                 </div>
