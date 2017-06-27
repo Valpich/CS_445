@@ -1,0 +1,360 @@
+[2017-06-27T16:06:04.873-0500] [glassfish 4.1] [INFO] [] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498597564873] [levelValue: 800] [[
+  Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Jun 27 16:06:02 CDT 2017]; root of context hierarchy]]
+
+[2017-06-27T16:06:05.115-0500] [glassfish 4.1] [SEVERE] [] [] [tid: _ThreadID=44 _ThreadName=Thread-9] [timeMillis: 1498597565115] [levelValue: 1000] [[
+  Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.]]
+
+[2017-06-27T16:06:05.115-0500] [glassfish 4.1] [INFO] [] [org.springframework.jdbc.datasource.DriverManagerDataSource] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498597565115] [levelValue: 800] [[
+  Loaded JDBC driver: com.mysql.jdbc.Driver]]
+
+[2017-06-27T16:06:05.755-0500] [glassfish 4.1] [INFO] [] [org.hibernate.Version] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498597565755] [levelValue: 800] [[
+  HHH000412: Hibernate Core {5.2.9.Final}]]
+
+[2017-06-27T16:06:05.759-0500] [glassfish 4.1] [INFO] [] [org.hibernate.cfg.Environment] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498597565759] [levelValue: 800] [[
+  HHH000206: hibernate.properties not found]]
+
+[2017-06-27T16:06:05.946-0500] [glassfish 4.1] [INFO] [] [org.hibernate.annotations.common.Version] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498597565946] [levelValue: 800] [[
+  HCANN000001: Hibernate Commons Annotations {5.0.1.Final}]]
+
+[2017-06-27T16:06:06.723-0500] [glassfish 4.1] [INFO] [] [org.hibernate.dialect.Dialect] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498597566723] [levelValue: 800] [[
+  HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect]]
+
+[2017-06-27T16:06:08.841-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568841] [levelValue: 800] [[
+  Hibernate: drop table if exists `AnalogDVR_analogRecordFormats`]]
+
+[2017-06-27T16:06:08.860-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568860] [levelValue: 800] [[
+  Hibernate: drop table if exists `AnalogDVR_storageTypes`]]
+
+[2017-06-27T16:06:08.861-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568861] [levelValue: 800] [[
+  Hibernate: drop table if exists `DigitalDVR_storageTypes`]]
+
+[2017-06-27T16:06:08.862-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568862] [levelValue: 800] [[
+  Hibernate: drop table if exists `HybridDVR_storageTypes`]]
+
+[2017-06-27T16:06:08.863-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568863] [levelValue: 800] [[
+  Hibernate: drop table if exists `addresses`]]
+
+[2017-06-27T16:06:08.864-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568864] [levelValue: 800] [[
+  Hibernate: drop table if exists `analog_dvr`]]
+
+[2017-06-27T16:06:08.865-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568865] [levelValue: 800] [[
+  Hibernate: drop table if exists `analog_surveillance_camera`]]
+
+[2017-06-27T16:06:08.866-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568866] [levelValue: 800] [[
+  Hibernate: drop table if exists `bracket`]]
+
+[2017-06-27T16:06:08.867-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568867] [levelValue: 800] [[
+  Hibernate: drop table if exists `cable`]]
+
+[2017-06-27T16:06:08.868-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568868] [levelValue: 800] [[
+  Hibernate: drop table if exists `connector`]]
+
+[2017-06-27T16:06:08.869-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568869] [levelValue: 800] [[
+  Hibernate: drop table if exists `digital_dvr`]]
+
+[2017-06-27T16:06:08.870-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568870] [levelValue: 800] [[
+  Hibernate: drop table if exists `digital_surveillance_camera`]]
+
+[2017-06-27T16:06:08.871-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568871] [levelValue: 800] [[
+  Hibernate: drop table if exists `hibernate_sequence`]]
+
+[2017-06-27T16:06:08.872-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568872] [levelValue: 800] [[
+  Hibernate: drop table if exists `housing`]]
+
+[2017-06-27T16:06:08.873-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568873] [levelValue: 800] [[
+  Hibernate: drop table if exists `hybrid_dvr`]]
+
+[2017-06-27T16:06:08.875-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568875] [levelValue: 800] [[
+  Hibernate: drop table if exists `infrared_lightning`]]
+
+[2017-06-27T16:06:08.876-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568876] [levelValue: 800] [[
+  Hibernate: drop table if exists `ip_surveillance_camera`]]
+
+[2017-06-27T16:06:08.877-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568877] [levelValue: 800] [[
+  Hibernate: drop table if exists `lens`]]
+
+[2017-06-27T16:06:08.878-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568878] [levelValue: 800] [[
+  Hibernate: drop table if exists `microphone`]]
+
+[2017-06-27T16:06:08.879-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568879] [levelValue: 800] [[
+  Hibernate: drop table if exists `monitor`]]
+
+[2017-06-27T16:06:08.880-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568880] [levelValue: 800] [[
+  Hibernate: drop table if exists `order`]]
+
+[2017-06-27T16:06:08.881-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568881] [levelValue: 800] [[
+  Hibernate: drop table if exists `order_address`]]
+
+[2017-06-27T16:06:08.882-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568882] [levelValue: 800] [[
+  Hibernate: drop table if exists `ordered_products`]]
+
+[2017-06-27T16:06:08.883-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568883] [levelValue: 800] [[
+  Hibernate: drop table if exists `ordered_services`]]
+
+[2017-06-27T16:06:08.883-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568883] [levelValue: 800] [[
+  Hibernate: drop table if exists `other_service`]]
+
+[2017-06-27T16:06:08.884-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568884] [levelValue: 800] [[
+  Hibernate: drop table if exists `power_supply`]]
+
+[2017-06-27T16:06:08.885-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568885] [levelValue: 800] [[
+  Hibernate: drop table if exists `product`]]
+
+[2017-06-27T16:06:08.886-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568886] [levelValue: 800] [[
+  Hibernate: drop table if exists `security_system_installation`]]
+
+[2017-06-27T16:06:08.887-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568887] [levelValue: 800] [[
+  Hibernate: drop table if exists `service`]]
+
+[2017-06-27T16:06:08.887-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568887] [levelValue: 800] [[
+  Hibernate: drop table if exists `surveillance_design`]]
+
+[2017-06-27T16:06:08.888-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568888] [levelValue: 800] [[
+  Hibernate: drop table if exists `surveillance_system_repair`]]
+
+[2017-06-27T16:06:08.889-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568889] [levelValue: 800] [[
+  Hibernate: drop table if exists `user_account`]]
+
+[2017-06-27T16:06:08.890-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568890] [levelValue: 800] [[
+  Hibernate: drop table if exists `user_address`]]
+
+[2017-06-27T16:06:08.891-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568891] [levelValue: 800] [[
+  Hibernate: drop table if exists `user_order`]]
+
+[2017-06-27T16:06:08.898-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568898] [levelValue: 800] [[
+  Hibernate: create table `AnalogDVR_analogRecordFormats` (`AnalogDVR_product_id` bigint not null, `record_format` integer) engine=MyISAM]]
+
+[2017-06-27T16:06:08.945-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568945] [levelValue: 800] [[
+  Hibernate: create table `AnalogDVR_storageTypes` (`AnalogDVR_product_id` bigint not null, `storage_types` integer) engine=MyISAM]]
+
+[2017-06-27T16:06:08.959-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568959] [levelValue: 800] [[
+  Hibernate: create table `DigitalDVR_storageTypes` (`DigitalDVR_product_id` bigint not null, `storage_types` integer) engine=MyISAM]]
+
+[2017-06-27T16:06:08.976-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568976] [levelValue: 800] [[
+  Hibernate: create table `HybridDVR_storageTypes` (`HybridDVR_product_id` bigint not null, `storage_types` integer) engine=MyISAM]]
+
+[2017-06-27T16:06:08.991-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597568991] [levelValue: 800] [[
+  Hibernate: create table `addresses` (`address_id` bigint not null, `creation_time` datetime not null, `modification_time` datetime not null, `version` bigint not null, `city` varchar(255), `country` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `phone_number` varchar(255), `state` varchar(255), `street_address` varchar(255), `zip_code` varchar(255), primary key (`address_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.013-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569013] [levelValue: 800] [[
+  Hibernate: create table `analog_dvr` (`product_id` bigint not null, primary key (`product_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.027-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569027] [levelValue: 800] [[
+  Hibernate: create table `analog_surveillance_camera` (`resolution` varchar(255), `product_id` bigint not null, primary key (`product_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.043-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569043] [levelValue: 800] [[
+  Hibernate: create table `bracket` (`product_id` bigint not null, primary key (`product_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.057-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569057] [levelValue: 800] [[
+  Hibernate: create table `cable` (`length` float, `product_id` bigint not null, primary key (`product_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.085-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569085] [levelValue: 800] [[
+  Hibernate: create table `connector` (`product_id` bigint not null, primary key (`product_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.098-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569098] [levelValue: 800] [[
+  Hibernate: create table `digital_dvr` (`product_id` bigint not null, primary key (`product_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.109-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569109] [levelValue: 800] [[
+  Hibernate: create table `digital_surveillance_camera` (`resolution` varchar(255), `product_id` bigint not null, primary key (`product_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.121-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569121] [levelValue: 800] [[
+  Hibernate: create table `hibernate_sequence` (`next_val` bigint) engine=MyISAM]]
+
+[2017-06-27T16:06:09.135-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569135] [levelValue: 800] [[
+  Hibernate: insert into `hibernate_sequence` values ( 1 )]]
+
+[2017-06-27T16:06:09.136-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569136] [levelValue: 800] [[
+  Hibernate: insert into `hibernate_sequence` values ( 1 )]]
+
+[2017-06-27T16:06:09.137-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569137] [levelValue: 800] [[
+  Hibernate: insert into `hibernate_sequence` values ( 1 )]]
+
+[2017-06-27T16:06:09.138-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569138] [levelValue: 800] [[
+  Hibernate: insert into `hibernate_sequence` values ( 1 )]]
+
+[2017-06-27T16:06:09.138-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569138] [levelValue: 800] [[
+  Hibernate: insert into `hibernate_sequence` values ( 1 )]]
+
+[2017-06-27T16:06:09.139-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569139] [levelValue: 800] [[
+  Hibernate: insert into `hibernate_sequence` values ( 1 )]]
+
+[2017-06-27T16:06:09.140-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569140] [levelValue: 800] [[
+  Hibernate: create table `housing` (`product_id` bigint not null, primary key (`product_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.151-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569151] [levelValue: 800] [[
+  Hibernate: create table `hybrid_dvr` (`product_id` bigint not null, primary key (`product_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.164-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569164] [levelValue: 800] [[
+  Hibernate: create table `infrared_lightning` (`product_id` bigint not null, primary key (`product_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.176-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569176] [levelValue: 800] [[
+  Hibernate: create table `ip_surveillance_camera` (`resolution` varchar(255), `product_id` bigint not null, primary key (`product_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.189-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569189] [levelValue: 800] [[
+  Hibernate: create table `lens` (`focal` float, `magnification` float, `product_id` bigint not null, primary key (`product_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.201-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569201] [levelValue: 800] [[
+  Hibernate: create table `microphone` (`battery` bit, `microphone_type` integer, `product_id` bigint not null, primary key (`product_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.213-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569213] [levelValue: 800] [[
+  Hibernate: create table `monitor` (`max_resolution` varchar(255), `size` float, `product_id` bigint not null, primary key (`product_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.225-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569225] [levelValue: 800] [[
+  Hibernate: create table `order` (`order_id` bigint not null, `creation_time` datetime not null, `modification_time` datetime not null, `version` bigint not null, `status` integer, primary key (`order_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.239-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569239] [levelValue: 800] [[
+  Hibernate: create table `order_address` (`address_id` bigint not null, `order_id` bigint not null, primary key (`address_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.253-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569253] [levelValue: 800] [[
+  Hibernate: create table `ordered_products` (`order_id` bigint not null, `product_id` bigint not null) engine=MyISAM]]
+
+[2017-06-27T16:06:09.266-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569266] [levelValue: 800] [[
+  Hibernate: create table `ordered_services` (`order_id` bigint not null, `service_id` bigint not null) engine=MyISAM]]
+
+[2017-06-27T16:06:09.280-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569280] [levelValue: 800] [[
+  Hibernate: create table `other_service` (`service_id` bigint not null, primary key (`service_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.294-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569294] [levelValue: 800] [[
+  Hibernate: create table `power_supply` (`maximum_output` varchar(255), `voltage` float, `product_id` bigint not null, primary key (`product_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.307-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569307] [levelValue: 800] [[
+  Hibernate: create table `product` (`product_id` bigint not null, `creation_time` datetime not null, `modification_time` datetime not null, `version` bigint not null, `deleted` bit, `description` varchar(255), `order_type` integer, `price` float, primary key (`product_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.320-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569320] [levelValue: 800] [[
+  Hibernate: create table `security_system_installation` (`service_id` bigint not null, primary key (`service_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.332-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569332] [levelValue: 800] [[
+  Hibernate: create table `service` (`service_id` bigint not null, `creation_time` datetime not null, `modification_time` datetime not null, `version` bigint not null, `deleted` bit, `description` varchar(255), `price` float, primary key (`service_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.344-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569344] [levelValue: 800] [[
+  Hibernate: create table `surveillance_design` (`service_id` bigint not null, primary key (`service_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.360-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569360] [levelValue: 800] [[
+  Hibernate: create table `surveillance_system_repair` (`service_id` bigint not null, primary key (`service_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.373-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569373] [levelValue: 800] [[
+  Hibernate: create table `user_account` (`user_id` bigint not null, `creation_time` datetime not null, `modification_time` datetime not null, `version` bigint not null, `email` varchar(100) not null, `first_name` varchar(100) not null, `last_name` varchar(100) not null, `password` varchar(255), primary key (`user_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.386-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569386] [levelValue: 800] [[
+  Hibernate: create table `user_address` (`user_id` bigint not null, `address_id` bigint not null, primary key (`address_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.398-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569398] [levelValue: 800] [[
+  Hibernate: create table `user_order` (`user_id` bigint not null, `order_id` bigint not null, primary key (`order_id`)) engine=MyISAM]]
+
+[2017-06-27T16:06:09.412-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569412] [levelValue: 800] [[
+  Hibernate: alter table `user_account` add constraint UK_hl02wv5hym99ys465woijmfib unique (`email`)]]
+
+[2017-06-27T16:06:09.427-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569427] [levelValue: 800] [[
+  Hibernate: alter table `AnalogDVR_analogRecordFormats` add constraint `FKl1e613r5htpiwgfi1uaaaxtaj` foreign key (`AnalogDVR_product_id`) references `analog_dvr` (`product_id`)]]
+
+[2017-06-27T16:06:09.440-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569440] [levelValue: 800] [[
+  Hibernate: alter table `AnalogDVR_storageTypes` add constraint `FKnjxqt8had2f90ucambbbpahll` foreign key (`AnalogDVR_product_id`) references `analog_dvr` (`product_id`)]]
+
+[2017-06-27T16:06:09.453-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569453] [levelValue: 800] [[
+  Hibernate: alter table `DigitalDVR_storageTypes` add constraint `FK9v5607958nrgo34syavtag3iv` foreign key (`DigitalDVR_product_id`) references `digital_dvr` (`product_id`)]]
+
+[2017-06-27T16:06:09.467-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569467] [levelValue: 800] [[
+  Hibernate: alter table `HybridDVR_storageTypes` add constraint `FKfm4k8744avqrwd1syjpkmdglc` foreign key (`HybridDVR_product_id`) references `hybrid_dvr` (`product_id`)]]
+
+[2017-06-27T16:06:09.480-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569480] [levelValue: 800] [[
+  Hibernate: alter table `analog_dvr` add constraint `FKsm5pkv0ljheflfqp5jxo0ikpl` foreign key (`product_id`) references `product` (`product_id`)]]
+
+[2017-06-27T16:06:09.494-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569494] [levelValue: 800] [[
+  Hibernate: alter table `analog_surveillance_camera` add constraint `FKkyrexfcm2dx0vf61diw3rounm` foreign key (`product_id`) references `product` (`product_id`)]]
+
+[2017-06-27T16:06:09.509-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569509] [levelValue: 800] [[
+  Hibernate: alter table `bracket` add constraint `FKefyshv5eugndqo7do5y55pcye` foreign key (`product_id`) references `product` (`product_id`)]]
+
+[2017-06-27T16:06:09.523-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569523] [levelValue: 800] [[
+  Hibernate: alter table `cable` add constraint `FK5s79qabltghqpecx26trusi56` foreign key (`product_id`) references `product` (`product_id`)]]
+
+[2017-06-27T16:06:09.537-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569537] [levelValue: 800] [[
+  Hibernate: alter table `connector` add constraint `FKdudgppr4vi1nh6sa7qsgdt0ce` foreign key (`product_id`) references `product` (`product_id`)]]
+
+[2017-06-27T16:06:09.551-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569551] [levelValue: 800] [[
+  Hibernate: alter table `digital_dvr` add constraint `FK9sd8sinrmkh68waojoy3mptlt` foreign key (`product_id`) references `product` (`product_id`)]]
+
+[2017-06-27T16:06:09.561-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569561] [levelValue: 800] [[
+  Hibernate: alter table `digital_surveillance_camera` add constraint `FKh625yy6tj7pnqdij7x1shqjie` foreign key (`product_id`) references `product` (`product_id`)]]
+
+[2017-06-27T16:06:09.576-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569576] [levelValue: 800] [[
+  Hibernate: alter table `housing` add constraint `FKargr6w7ln6cptm5um5lv0ybi` foreign key (`product_id`) references `product` (`product_id`)]]
+
+[2017-06-27T16:06:09.595-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569595] [levelValue: 800] [[
+  Hibernate: alter table `hybrid_dvr` add constraint `FKmovqw0j96wmfrolp4ffiac9ni` foreign key (`product_id`) references `product` (`product_id`)]]
+
+[2017-06-27T16:06:09.612-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569612] [levelValue: 800] [[
+  Hibernate: alter table `infrared_lightning` add constraint `FKo54uehypktvi578ylj0wm2fph` foreign key (`product_id`) references `product` (`product_id`)]]
+
+[2017-06-27T16:06:09.628-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569628] [levelValue: 800] [[
+  Hibernate: alter table `ip_surveillance_camera` add constraint `FKsvxd54dwq2f9t9rlg9tiv25th` foreign key (`product_id`) references `product` (`product_id`)]]
+
+[2017-06-27T16:06:09.644-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569644] [levelValue: 800] [[
+  Hibernate: alter table `lens` add constraint `FKiiheu8r4jmnuvl94pkuehfxtk` foreign key (`product_id`) references `product` (`product_id`)]]
+
+[2017-06-27T16:06:09.661-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569661] [levelValue: 800] [[
+  Hibernate: alter table `microphone` add constraint `FKef1w4ojxnpq51gaj5duqae9s1` foreign key (`product_id`) references `product` (`product_id`)]]
+
+[2017-06-27T16:06:09.678-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569678] [levelValue: 800] [[
+  Hibernate: alter table `monitor` add constraint `FK6pdkl7k8n8f2d3iq7o95t1l1m` foreign key (`product_id`) references `product` (`product_id`)]]
+
+[2017-06-27T16:06:09.695-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569695] [levelValue: 800] [[
+  Hibernate: alter table `order_address` add constraint `FKawekfnxnjcsjhokh7k8nggyob` foreign key (`address_id`) references `addresses` (`address_id`)]]
+
+[2017-06-27T16:06:09.713-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569713] [levelValue: 800] [[
+  Hibernate: alter table `order_address` add constraint `FK6g0h014gt65nch80r96kbcvvd` foreign key (`order_id`) references `order` (`order_id`)]]
+
+[2017-06-27T16:06:09.731-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569731] [levelValue: 800] [[
+  Hibernate: alter table `ordered_products` add constraint `FK1wrbhh4tf399o49qwqyictndd` foreign key (`product_id`) references `product` (`product_id`)]]
+
+[2017-06-27T16:06:09.748-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569748] [levelValue: 800] [[
+  Hibernate: alter table `ordered_products` add constraint `FK1v38w2vuhi6r9o0ie0nknodtc` foreign key (`order_id`) references `order` (`order_id`)]]
+
+[2017-06-27T16:06:09.762-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569762] [levelValue: 800] [[
+  Hibernate: alter table `ordered_services` add constraint `FKmkcx2o18qkq0nkp4axana15rr` foreign key (`service_id`) references `service` (`service_id`)]]
+
+[2017-06-27T16:06:09.776-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569776] [levelValue: 800] [[
+  Hibernate: alter table `ordered_services` add constraint `FKtoxlwur9ywmfn2x59x1xid6hv` foreign key (`order_id`) references `order` (`order_id`)]]
+
+[2017-06-27T16:06:09.790-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569790] [levelValue: 800] [[
+  Hibernate: alter table `other_service` add constraint `FKbpyb7rb7c1leu5jwnjmibnweq` foreign key (`service_id`) references `service` (`service_id`)]]
+
+[2017-06-27T16:06:09.803-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569803] [levelValue: 800] [[
+  Hibernate: alter table `power_supply` add constraint `FK2h33c450mt1jfytc928wfhncg` foreign key (`product_id`) references `product` (`product_id`)]]
+
+[2017-06-27T16:06:09.817-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569817] [levelValue: 800] [[
+  Hibernate: alter table `security_system_installation` add constraint `FKaoqebs3ilkbbmxy5a78jkbc9` foreign key (`service_id`) references `service` (`service_id`)]]
+
+[2017-06-27T16:06:09.833-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569833] [levelValue: 800] [[
+  Hibernate: alter table `surveillance_design` add constraint `FKhjfhngegro0qk8wonldlqcf9w` foreign key (`service_id`) references `service` (`service_id`)]]
+
+[2017-06-27T16:06:09.848-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569848] [levelValue: 800] [[
+  Hibernate: alter table `surveillance_system_repair` add constraint `FKp6c7lijreed6iguj0pmrebwvi` foreign key (`service_id`) references `service` (`service_id`)]]
+
+[2017-06-27T16:06:09.864-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569864] [levelValue: 800] [[
+  Hibernate: alter table `user_address` add constraint `FKm2yecg667hqnolkgn8uhxnyjx` foreign key (`user_id`) references `user_account` (`user_id`)]]
+
+[2017-06-27T16:06:09.880-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569880] [levelValue: 800] [[
+  Hibernate: alter table `user_address` add constraint `FKqv8ou9k85gw11kjf7gjvxxfar` foreign key (`address_id`) references `addresses` (`address_id`)]]
+
+[2017-06-27T16:06:09.893-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569893] [levelValue: 800] [[
+  Hibernate: alter table `user_order` add constraint `FKp9lpyocsa9rwwdmyte3bg1oi7` foreign key (`user_id`) references `user_account` (`user_id`)]]
+
+[2017-06-27T16:06:09.905-0500] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=44 _ThreadName=Thread-8] [timeMillis: 1498597569905] [levelValue: 800] [[
+  Hibernate: alter table `user_order` add constraint `FKrtt5rijo65gon4wgqj4pv44hj` foreign key (`order_id`) references `order` (`order_id`)]]
+
+[2017-06-27T16:06:09.920-0500] [glassfish 4.1] [INFO] [] [org.hibernate.tool.schema.internal.SchemaCreatorImpl] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498597569920] [levelValue: 800] [[
+  HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@63bbb004']]
+
+[2017-06-27T16:06:10.006-0500] [glassfish 4.1] [INFO] [] [org.springframework.orm.hibernate5.HibernateTransactionManager] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498597570006] [levelValue: 800] [[
+  Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@7726650c] of Hibernate SessionFactory for HibernateTransactionManager]]
+
+[2017-06-27T16:06:10.082-0500] [glassfish 4.1] [INFO] [] [org.springframework.web.servlet.DispatcherServlet] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498597570082] [levelValue: 800] [[
+  FrameworkServlet 'dispatcher': initialization completed in 7874 ms]]
+
+[2017-06-27T16:06:10.083-0500] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498597570083] [levelValue: 800] [[
+  Loading application [CS_445_war_exploded] at [/CS_445_war_exploded]]]
+
+[2017-06-27T16:06:10.128-0500] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=44 _ThreadName=admin-listener(3)] [timeMillis: 1498597570128] [levelValue: 800] [[
+  CS_445_war_exploded was successfully deployed in 9,846 milliseconds.]]
+
