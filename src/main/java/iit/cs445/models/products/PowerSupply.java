@@ -10,17 +10,17 @@ import javax.persistence.Table;
 public class PowerSupply extends Accessory<PowerSupply> implements Installable, Repairable {
 
     @Column(name = "maximum_output")
-    private String maximum_output;
+    private String maximumOutput;
 
     @Column(name = "voltage")
     private Float voltage;
 
-    public String getMaximum_output() {
-        return maximum_output;
+    public String getMaximumOutput() {
+        return maximumOutput;
     }
 
-    public void setMaximum_output(String maximum_output) {
-        this.maximum_output = maximum_output;
+    public void setMaximumOutput(String maximumOutput) {
+        this.maximumOutput = maximumOutput;
     }
 
     public Float getVoltage() {
@@ -34,7 +34,7 @@ public class PowerSupply extends Accessory<PowerSupply> implements Installable, 
     @Override
     public String toString() {
         return "PowerSupply{" +
-                "maximum_output='" + maximum_output + '\'' +
+                "maximum_output='" + maximumOutput + '\'' +
                 ", voltage=" + voltage +
                 "} " + super.toString();
     }

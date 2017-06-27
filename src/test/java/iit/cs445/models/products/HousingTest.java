@@ -29,6 +29,7 @@ public class HousingTest {
 
     @Test
     public void toStringTest() throws Exception {
+        assertNotNull(housing.toString());
     }
 
     @Deployment

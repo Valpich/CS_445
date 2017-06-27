@@ -106,7 +106,7 @@ public class DebugController {
         monitor.saveNew();
 
         PowerSupply powerSupply = new PowerSupply();
-        powerSupply.setMaximum_output("500W");
+        powerSupply.setMaximumOutput("500W");
         powerSupply.setVoltage(110F);
         powerSupply.setPrice(getRandom());
         powerSupply.setDescription("Power supply test");

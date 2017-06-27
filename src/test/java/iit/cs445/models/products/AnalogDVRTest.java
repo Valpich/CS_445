@@ -33,17 +33,29 @@ public class AnalogDVRTest {
     @Test
     public void getAnalogRecordFormats() throws Exception {
         List<AnalogRecordFormat> recordFormats = new ArrayList<>();
-        recordFormats.add(AnalogRecordFormat.NTSC)
+        recordFormats.add(AnalogRecordFormat.NTSC);
         analogDVR.setAnalogRecordFormats(recordFormats);
-        assertEquals(recordFormats, getAnalogRecordFormats();
+        assertEquals(recordFormats, analogDVR.getAnalogRecordFormats());
     }
 
     @Test
     public void setAnalogRecordFormats() throws Exception {
+        List<AnalogRecordFormat> recordFormats = new ArrayList<>();
+        recordFormats.add(AnalogRecordFormat.NTSC);
+        analogDVR.setAnalogRecordFormats(recordFormats);
+        assertEquals(recordFormats, analogDVR.getAnalogRecordFormats());
+        List<AnalogRecordFormat> recordFormatsTwo = new ArrayList<>();
+        recordFormatsTwo.add(AnalogRecordFormat.PAL);
+        analogDVR.setAnalogRecordFormats(recordFormatsTwo);
+        assertEquals(recordFormatsTwo, analogDVR.getAnalogRecordFormats());
     }
 
     @Test
     public void toStringTest() throws Exception {
+        List<AnalogRecordFormat> recordFormats = new ArrayList<>();
+        recordFormats.add(AnalogRecordFormat.NTSC);
+        analogDVR.setAnalogRecordFormats(recordFormats);
+        assertNotNull(analogDVR.toString());
     }
 
     @Deployment

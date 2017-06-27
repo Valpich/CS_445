@@ -29,6 +29,7 @@ public class DigitalDVRTest {
 
     @Test
     public void toStringTest() throws Exception {
+        assertNotNull(digitalDVR.toString());
     }
 
     @Deployment

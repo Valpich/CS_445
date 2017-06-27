@@ -29,22 +29,41 @@ public class LensTest {
 
     @Test
     public void getFocal() throws Exception {
+        Float focal = 2F;
+        lens.setFocal(focal);
+        assertEquals(focal, lens.getFocal());
     }
 
     @Test
     public void setFocal() throws Exception {
+        Float focal = 2F;
+        lens.setFocal(focal);
+        assertEquals(focal, lens.getFocal());
+        Float focalTwo = 3F;
+        lens.setFocal(focalTwo);
+        assertEquals(focalTwo, lens.getFocal());
     }
 
     @Test
     public void getMagnification() throws Exception {
+        Float magnification = 2F;
+        lens.setMagnification(magnification);
+        assertEquals(magnification, lens.getMagnification());
     }
 
     @Test
     public void setMagnification() throws Exception {
+        Float magnification = 2F;
+        lens.setMagnification(magnification);
+        assertEquals(magnification, lens.getMagnification());
+        Float magnificationTwo = 3F;
+        lens.setMagnification(magnificationTwo);
+        assertEquals(magnificationTwo, lens.getMagnification());
     }
 
     @Test
     public void toStringTest() throws Exception {
+        assertNotNull(lens.toString());
     }
 
     @Deployment

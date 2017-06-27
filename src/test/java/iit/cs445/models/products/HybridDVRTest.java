@@ -29,6 +29,7 @@ public class HybridDVRTest {
 
     @Test
     public void toStringTest() throws Exception {
+        assertNotNull(hybridDVR.toString());
     }
 
     @Deployment

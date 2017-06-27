@@ -29,14 +29,24 @@ public class CableTest {
 
     @Test
     public void getLength() throws Exception {
+        Float value = 2F;
+        cable.setLength(value);
+        assertEquals(value, cable.getLength());
     }
 
     @Test
     public void setLength() throws Exception {
+        Float value = 2F;
+        cable.setLength(value);
+        assertEquals(value, cable.getLength());
+        Float valueTwo = 3F;
+        cable.setLength(valueTwo);
+        assertEquals(valueTwo, cable.getLength());
     }
 
     @Test
     public void toStringTest() throws Exception {
+        assertNotNull(cable.toString());
     }
 
     @Deployment

@@ -29,6 +29,7 @@ public class IPSurveillanceCameraTest {
 
     @Test
     public void toStringTest() throws Exception {
+        assertNotNull(ipSurveillanceCamera.toString());
     }
 
     @Deployment

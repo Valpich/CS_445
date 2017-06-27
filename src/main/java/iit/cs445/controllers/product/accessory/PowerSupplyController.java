@@ -46,7 +46,7 @@ public class PowerSupplyController {
     private void savePowerSupply(String description, String maximumOutput, String voltage, String price) {
         PowerSupply powerSupply = new PowerSupply();
         powerSupply.setPrice(Float.parseFloat(price));
-        powerSupply.setMaximum_output(maximumOutput);
+        powerSupply.setMaximumOutput(maximumOutput);
         powerSupply.setVoltage(Float.parseFloat(voltage));
         powerSupply.setDescription(description);
         powerSupply.saveNew();

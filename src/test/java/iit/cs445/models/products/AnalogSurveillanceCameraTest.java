@@ -29,7 +29,7 @@ public class AnalogSurveillanceCameraTest {
 
     @Test
     public void toStringTest() throws Exception {
-
+        assertNotNull(analogSurveillanceCamera.toString());
     }
 
     @Deployment

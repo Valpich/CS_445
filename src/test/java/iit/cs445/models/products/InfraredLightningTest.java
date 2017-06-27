@@ -29,6 +29,7 @@ public class InfraredLightningTest {
 
     @Test
     public void toStringTest() throws Exception {
+        assertNotNull(infraredLightning.toString());
     }
 
     @Deployment

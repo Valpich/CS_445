@@ -30,10 +30,12 @@ public class InstallableTest {
 
     @Test
     public void installPrice() throws Exception {
+        assertEquals(new Float(0F), installableImplementationTest.installPrice());
     }
 
     @Test
     public void installEquipments() throws Exception {
+        assertEquals(0,installableImplementationTest.installEquipments().size());
     }
 
     @Deployment

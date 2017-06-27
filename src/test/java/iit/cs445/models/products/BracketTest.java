@@ -29,6 +29,7 @@ public class BracketTest {
 
     @Test
     public void toStringTest() throws Exception {
+        assertNotNull(bracket.toString());
     }
 
     @Deployment

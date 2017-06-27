@@ -30,6 +30,7 @@ public class ConnectorTest {
 
     @Test
     public void toStringTest() throws Exception {
+        assertNotNull(connector.toString());
     }
 
     @Deployment

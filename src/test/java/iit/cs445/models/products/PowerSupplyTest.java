@@ -28,23 +28,39 @@ public class PowerSupplyTest {
     }
 
     @Test
-    public void getMaximum_output() throws Exception {
+    public void getMaximumOutput() throws Exception {
+        powerSupply.setMaximumOutput("220V");
+        assertEquals("220V", powerSupply.getMaximumOutput());
     }
 
     @Test
-    public void setMaximum_output() throws Exception {
+    public void setMaximumOutput() throws Exception {
+        powerSupply.setMaximumOutput("500W");
+        assertEquals("500W", powerSupply.getMaximumOutput());
+        powerSupply.setMaximumOutput("1000W");
+        assertEquals("1000W", powerSupply.getMaximumOutput());
     }
 
     @Test
     public void getVoltage() throws Exception {
+        Float voltage = 220F;
+        powerSupply.setVoltage(voltage);
+        assertEquals(voltage, powerSupply.getVoltage());
     }
 
     @Test
     public void setVoltage() throws Exception {
+        Float voltage = 220F;
+        powerSupply.setVoltage(voltage);
+        assertEquals(voltage, powerSupply.getVoltage());
+        Float voltageTwo = 110F;
+        powerSupply.setVoltage(voltageTwo);
+        assertEquals(voltageTwo, powerSupply.getVoltage());
     }
 
     @Test
     public void toStringTest() throws Exception {
+        assertNotNull(powerSupply.toString());
     }
 
     @Deployment
