@@ -10,6 +10,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 @RunWith(Arquillian.class)
@@ -29,6 +32,10 @@ public class AnalogDVRTest {
 
     @Test
     public void getAnalogRecordFormats() throws Exception {
+        List<AnalogRecordFormat> recordFormats = new ArrayList<>();
+        recordFormats.add(AnalogRecordFormat.NTSC)
+        analogDVR.setAnalogRecordFormats(recordFormats);
+        assertEquals(recordFormats, getAnalogRecordFormats();
     }
 
     @Test

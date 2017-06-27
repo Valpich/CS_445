@@ -26,7 +26,7 @@ public abstract class Product<Type> extends BaseEntity<Long, Type> {
     private String description;
 
     @Column(name = "deleted")
-    private Boolean deleted;
+    private Boolean deleted = false;
 
     @Override
     public Long getId() {
