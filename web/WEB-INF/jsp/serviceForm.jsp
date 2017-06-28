@@ -27,37 +27,37 @@
             </div>
         </c:if>
 
-        <c:if test="${not empty securitySystemInstallation}">
+        <c:if test="${not empty securitySystemInstallationForm}">
             <div>
                 <jsp:include page="fragments/form/service/securitySystemInstallationForm.jsp" />
             </div>
         </c:if>
 
-        <c:if test="${not empty securitySystemInstallationUpdate}">
+        <c:if test="${not empty securitySystemInstallationFormUpdate}">
             <div>
                 <jsp:include page="fragments/form/service/securitySystemInstallationForm.jsp" />
             </div>
         </c:if>
 
-        <c:if test="${not empty surveillanceDesign}">
+        <c:if test="${not empty surveillanceDesignForm}">
             <div>
                 <jsp:include page="fragments/form/service/surveillanceDesignForm.jsp" />
             </div>
         </c:if>
 
-        <c:if test="${not empty surveillanceDesignUpdate}">
+        <c:if test="${not empty surveillanceDesignUpdateForm}">
             <div>
                 <jsp:include page="fragments/form/service/surveillanceDesignForm.jsp" />
             </div>
         </c:if>
 
-        <c:if test="${not empty surveillanceSystemRepair}">
+        <c:if test="${not empty surveillanceSystemRepairForm}">
             <div>
                 <jsp:include page="fragments/form/service/surveillanceSystemRepairForm.jsp" />
             </div>
         </c:if>
 
-        <c:if test="${not empty surveillanceSystemRepairUpdate}">
+        <c:if test="${not empty surveillanceSystemRepairUpdateForm}">
             <div>
                 <jsp:include page="fragments/form/service/surveillanceSystemRepairForm.jsp" />
             </div>
