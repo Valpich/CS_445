@@ -61,27 +61,32 @@ public class DebugController {
     private void populateAccessories() {
         Bracket bracket = new Bracket();
         bracket.setDescription("Bracket test");
+        bracket.setDeleted(true);
         bracket.saveNew();
 
         Cable cable = new Cable();
         cable.setPrice(getRandom());
         cable.setLength(getRandom());
         cable.setDescription("Cable test");
+        cable.setDeleted(true);
         cable.saveNew();
 
         Connector connector = new Connector();
         connector.setPrice(getRandom());
         connector.setDescription("Connector test");
+        connector.setDeleted(true);
         connector.saveNew();
 
         Housing housing = new Housing();
         housing.setPrice(getRandom());
         housing.setDescription("Housing test");
+        housing.setDeleted(true);
         housing.saveNew();
 
         InfraredLightning infraredLightning = new InfraredLightning();
         infraredLightning.setPrice(getRandom());
         infraredLightning.setDescription("Infrared lighting test");
+        infraredLightning.setDeleted(true);
         infraredLightning.saveNew();
 
         Lens lens = new Lens();
@@ -89,6 +94,7 @@ public class DebugController {
         lens.setFocal(getRandom());
         lens.setMagnification(getRandom());
         lens.setDescription("Lens test");
+        lens.setDeleted(true);
         lens.saveNew();
 
         Microphone microphone = new Microphone();
@@ -96,6 +102,7 @@ public class DebugController {
         microphone.setMicrophoneType(MicrophoneType.CONDENSER);
         microphone.setPrice(getRandom());
         microphone.setDescription("Condenser microphone test");
+        microphone.setDeleted(true);
         microphone.saveNew();
 
         Monitor monitor = new Monitor();
@@ -103,6 +110,7 @@ public class DebugController {
         monitor.setSize(getRandom() * 2);
         monitor.setPrice(getRandom());
         monitor.setDescription("Monitor test");
+        monitor.setDeleted(true);
         monitor.saveNew();
 
         PowerSupply powerSupply = new PowerSupply();
@@ -110,6 +118,7 @@ public class DebugController {
         powerSupply.setVoltage(110F);
         powerSupply.setPrice(getRandom());
         powerSupply.setDescription("Power supply test");
+        powerSupply.setDeleted(true);
         powerSupply.saveNew();
     }
 
@@ -118,18 +127,21 @@ public class DebugController {
         analogSurveillanceCamera.setPrice(getRandom());
         analogSurveillanceCamera.setResolution("720p");
         analogSurveillanceCamera.setDescription("Analog surveillance camera test");
+        analogSurveillanceCamera.setDeleted(true);
         analogSurveillanceCamera.saveNew();
 
         DigitalSurveillanceCamera digitalSurveillanceCamera = new DigitalSurveillanceCamera();
         digitalSurveillanceCamera.setPrice(getRandom());
         digitalSurveillanceCamera.setDescription("Digital surveillance camera test");
         digitalSurveillanceCamera.setResolution("4K");
+        digitalSurveillanceCamera.setDeleted(true);
         digitalSurveillanceCamera.saveNew();
 
         IPSurveillanceCamera ipSurveillanceCamera = new IPSurveillanceCamera();
         ipSurveillanceCamera.setDescription("IP surveillance camera test");
         ipSurveillanceCamera.setPrice(getRandom());
         ipSurveillanceCamera.setResolution("1080p");
+        ipSurveillanceCamera.setDeleted(true);
         ipSurveillanceCamera.saveNew();
     }
 
@@ -143,6 +155,7 @@ public class DebugController {
         storageTypes.add(StorageType.SD_MEMORY_CARD);
         analogDVR.setStorageTypes(storageTypes);
         analogDVR.setDescription("Analog DVR test");
+        analogDVR.setDeleted(true);
         analogDVR.saveNew();
 
         DigitalDVR digitalDVR = new DigitalDVR();
@@ -152,6 +165,7 @@ public class DebugController {
         storageTypesTwo.add(StorageType.DISK_DRIVE);
         digitalDVR.setStorageTypes(storageTypesTwo);
         digitalDVR.setDescription("Digital DVR test");
+        digitalDVR.setDeleted(true);
         digitalDVR.saveNew();
 
         HybridDVR hybridDVR = new HybridDVR();
@@ -162,6 +176,7 @@ public class DebugController {
         storageTypesThree.add(StorageType.OTHER);
         hybridDVR.setStorageTypes(storageTypesThree);
         hybridDVR.setDescription("Digital DVR test");
+        hybridDVR.setDeleted(true);
         hybridDVR.saveNew();
     }
 
@@ -169,21 +184,25 @@ public class DebugController {
         CustomService customService = new CustomService();
         customService.setDescription("Custom service test");
         customService.setPrice(getRandom());
+        customService.setDeleted(true);
         customService.saveNew();
 
         SecuritySystemInstallation securitySystemInstallation = new SecuritySystemInstallation();
         securitySystemInstallation.setPrice(getRandom());
         securitySystemInstallation.setDescription("Security system installation test");
+        securitySystemInstallation.setDeleted(true);
         securitySystemInstallation.saveNew();
 
         SurveillanceDesign surveillanceDesign = new SurveillanceDesign();
         surveillanceDesign.setPrice(getRandom());
         surveillanceDesign.setDescription("Surveillance design test");
+        surveillanceDesign.setDeleted(true);
         surveillanceDesign.saveNew();
 
         SurveillanceSystemRepair surveillanceSystemRepair = new SurveillanceSystemRepair();
         surveillanceSystemRepair.setPrice(getRandom());
         surveillanceSystemRepair.setDescription("Surveillance system repair test");
+        surveillanceSystemRepair.setDeleted(true);
         surveillanceSystemRepair.saveNew();
     }
 
