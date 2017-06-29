@@ -44,6 +44,11 @@ public class User extends BaseEntity<Long, User> implements Serializable {
     @Transient
     private List<Order> orders;
 
+    public User(){
+        addresses = new ArrayList<>();
+        orders = new ArrayList<>();
+    }
+
     @Override
     public Long getId() {
         return id;
@@ -117,6 +122,19 @@ public class User extends BaseEntity<Long, User> implements Serializable {
             }
             session.update(this);
             tx.commit();
+        } catch(OptimisticLockException ole){
+                Logger.getLogger(getClass().getName()).log(Level.WARNING, "OLE caught "+ole.toString());
+                session.close();
+                try {
+                    session = localSessionFactoryBean.getObject().openSession();
+                    Transaction tx = session.beginTransaction();
+                    session.merge(this);
+                    tx.commit();
+                }catch (Exception exc) {
+                    Logger.getLogger(getClass().getName()).log(Level.WARNING, exc.toString());
+                } finally {
+                    session.close();
+                }
         } catch (Exception exc) {
             Logger.getLogger(getClass().getName()).log(Level.WARNING, exc.toString());
         } finally {

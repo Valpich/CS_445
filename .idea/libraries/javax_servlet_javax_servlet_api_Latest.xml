@@ -3,14 +3,10 @@
     <properties maven-id="javax.servlet:javax.servlet-api:LATEST" />
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.0-b07/javax.servlet-api-4.0.0-b07.jar!/" />
-      <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.0-b07/javax.servlet-api-4.0.0-b07.jar!/" />
-      <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.0-b07/javax.servlet-api-4.0.0-b07.jar!/" />
-<<<<<<< HEAD
-      <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.0-b07/javax.servlet-api-4.0.0-b07.jar!/" />
-=======
->>>>>>> 882d3c57cd36269b0ae2642e65a0558d2969ee8d
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.0-b07/javax.servlet-api-4.0.0-b07-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES />
   </library>
 </component>

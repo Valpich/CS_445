@@ -6,10 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 
-import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
-import javax.persistence.Transient;
-import javax.persistence.Version;
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
@@ -92,7 +89,20 @@ public abstract class BaseEntity<ID, Type> {
             Transaction tx = session.beginTransaction();
             session.update(this);
             tx.commit();
-        } catch (Exception exc) {
+        }catch(OptimisticLockException ole){
+            Logger.getLogger(getClass().getName()).log(Level.WARNING, "OLE caught "+ole.toString());
+            session.close();
+            try {
+                session = localSessionFactoryBean.getObject().openSession();
+                Transaction tx = session.beginTransaction();
+                session.merge(this);
+                tx.commit();
+            }catch (Exception exc) {
+                    Logger.getLogger(getClass().getName()).log(Level.WARNING, exc.toString());
+                } finally {
+                    session.close();
+                }
+        }catch (Exception exc) {
             Logger.getLogger(getClass().getName()).log(Level.WARNING, exc.toString());
         } finally {
             session.close();
