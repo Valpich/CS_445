@@ -42,24 +42,29 @@ public class IpSurveillanceCameraController {
         IPSurveillanceCamera ipSurveillanceCamera = new IPSurveillanceCamera().findById(id);
         ipSurveillanceCamera.setDeleted(true);
         ipSurveillanceCamera.update();
-        model.addAttribute("ipSurveillanceCameraForm", ipSurveillanceCamera);
-        return "index";
+        List<IPSurveillanceCamera> list = new IPSurveillanceCamera().listAll();
+        model.addAttribute("ipSurveillanceCameras", list);
+        return "product";
     }
 
     @RequestMapping(value = "/ipSurveillanceCamera", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description,
                                @RequestParam("resolution") String resolution,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         saveIpSurveillanceCamera(description, resolution, price);
-        return "index";
+        List<IPSurveillanceCamera> list = new IPSurveillanceCamera().listAll();
+        model.addAttribute("ipSurveillanceCameras", list);
+        return "product";
     }
 
     @RequestMapping(value = "/ipSurveillanceCamera/{id}/cart", method = RequestMethod.GET)
     public String addIpSurveillanceCameraToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         IPSurveillanceCamera ipSurveillanceCamera = new IPSurveillanceCamera().findById(id);
         saveCart(request, ipSurveillanceCamera);
-        model.addAttribute("ipSurveillanceCamera", ipSurveillanceCamera);
-        return "index";
+        List<IPSurveillanceCamera> list = new IPSurveillanceCamera().listAll();
+        model.addAttribute("ipSurveillanceCameras", list);
+        return "product";
     }
 
     private boolean saveCart(HttpServletRequest request, IPSurveillanceCamera ipSurveillanceCamera) {
@@ -73,9 +78,12 @@ public class IpSurveillanceCameraController {
     public String checkoutPost(@RequestParam("id") String id,
                                @RequestParam("description") String description,
                                @RequestParam("resolution") String resolution,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         updateIpSurveillanceCamera(id, description, resolution, price);
-        return "index";
+        List<IPSurveillanceCamera> list = new IPSurveillanceCamera().listAll();
+        model.addAttribute("ipSurveillanceCameras", list);
+        return "product";
     }
 
     private void saveIpSurveillanceCamera(String description, String resolution, String price) {

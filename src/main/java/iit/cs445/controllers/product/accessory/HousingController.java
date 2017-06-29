@@ -34,8 +34,9 @@ public class HousingController {
     public String addHousingToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         Housing housing = new Housing().findById(id);
         saveCart(request, housing);
-        model.addAttribute("housing", housing);
-        return "index";
+        List<Housing> list = new Housing().listAll();
+        model.addAttribute("housings", list);
+        return "product";
     }
 
     private boolean saveCart(HttpServletRequest request, Housing housing) {
@@ -57,23 +58,30 @@ public class HousingController {
         Housing housing = new Housing().findById(id);
         housing.setDeleted(true);
         housing.update();
-        model.addAttribute("housingForm", housing);
-        return "index";
+        List<Housing> list = new Housing().listAll();
+        model.addAttribute("housings", list);
+        return "product";
     }
 
     @RequestMapping(value = "/housing", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         saveHousing(description, price);
-        return "index";
+        List<Housing> list = new Housing().listAll();
+        model.addAttribute("housings", list);
+        return "product";
     }
 
     @RequestMapping(value = "/housingUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
                                @RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         updateHousing(id, description, price);
-        return "index";
+        List<Housing> list = new Housing().listAll();
+        model.addAttribute("housings", list);
+        return "product";
     }
 
     private void saveHousing(String description, String price) {

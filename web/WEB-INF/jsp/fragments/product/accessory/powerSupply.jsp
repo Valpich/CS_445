@@ -33,7 +33,7 @@
 
             <tr>
                 <td>${powerSupply.description}</td>
-                <td>${powerSupply.maximum_output}</td>
+                <td>${powerSupply.maximumOutput}</td>
                 <td>${powerSupply.voltage}</td>
                 <td>${powerSupply.id}</td>
                 <td>${powerSupply.price}</td>

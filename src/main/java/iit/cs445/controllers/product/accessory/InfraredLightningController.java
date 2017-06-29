@@ -34,8 +34,9 @@ public class InfraredLightningController {
     public String addInfraredLightningToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         InfraredLightning infraredLightning = new InfraredLightning().findById(id);
         saveCart(request, infraredLightning);
-        model.addAttribute("bracket", infraredLightning);
-        return "index";
+        List<InfraredLightning> list = new InfraredLightning().listAll();
+        model.addAttribute("infraredLightnings", list);
+        return "product";
     }
 
     private boolean saveCart(HttpServletRequest request, InfraredLightning infraredLightning) {
@@ -57,23 +58,30 @@ public class InfraredLightningController {
         InfraredLightning infraredLightning = new InfraredLightning().findById(id);
         infraredLightning.setDeleted(true);
         infraredLightning.update();
-        model.addAttribute("infraredLightningForm", infraredLightning);
-        return "index";
+        List<InfraredLightning> list = new InfraredLightning().listAll();
+        model.addAttribute("infraredLightnings", list);
+        return "product";
     }
 
     @RequestMapping(value = "/infraredLightning", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         saveInfraredLightning(description, price);
-        return "index";
+        List<InfraredLightning> list = new InfraredLightning().listAll();
+        model.addAttribute("infraredLightnings", list);
+        return "product";
     }
 
     @RequestMapping(value = "/infraredLightningUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
                                @RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         updateInfraredLightning(id, description, price);
-        return "index";
+        List<InfraredLightning> list = new InfraredLightning().listAll();
+        model.addAttribute("infraredLightnings", list);
+        return "product";
     }
 
     private void saveInfraredLightning(String description, String price) {

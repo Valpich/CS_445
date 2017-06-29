@@ -45,7 +45,7 @@
                 <td>
                     <button class="btn btn-primary" onclick="location.href='${cartUrl}'">Add Cart</button>
                     <button class="btn btn-info" onclick="location.href='${updateUrl}'">Update</button>
-                    <button class="btn btn-info" onclick="location.href='${deleteUrl}'">Delete</button>
+                    <button class="btn btn-danger" onclick="location.href='${deleteUrl}'">Delete</button>
                 </td>
             </tr>
 

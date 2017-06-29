@@ -43,10 +43,10 @@
 
             <c:choose>
                 <c:when test="${not empty cableForm}">
-                    <input type="text" name="length" placeholder="">
+                    <input type="number" step="0.01" name="length" placeholder="">
                 </c:when>
                 <c:otherwise>
-                    <input type="text" name="length" value="${cableFormUpdate.length}" placeholder="">
+                    <input type="number" step="0.01" name="length" value="${cableFormUpdate.length}" placeholder="">
                 </c:otherwise>
             </c:choose>
 
@@ -57,10 +57,10 @@
 
             <c:choose>
                 <c:when test="${not empty cableForm}">
-                    <input type="text" name="price" placeholder="">
+                    <input type="number" step="0.01" name="price" placeholder="">
                 </c:when>
                 <c:otherwise>
-                    <input type="text" name="price" value="${cableFormUpdate.price}" placeholder="">
+                    <input type="number" step="0.01" name="price" value="${cableFormUpdate.price}" placeholder="">
                 </c:otherwise>
             </c:choose>
 

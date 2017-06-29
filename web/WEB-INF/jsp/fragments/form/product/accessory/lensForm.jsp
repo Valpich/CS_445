@@ -45,10 +45,10 @@
 
             <c:choose>
                 <c:when test="${not empty lensForm}">
-                    <input type="text" name="focal" placeholder="">
+                    <input type="number" step="0.01" name="focal" placeholder="">
                 </c:when>
                 <c:otherwise>
-                    <input type="text" name="focal" value="${lensFormUpdate.focal}" placeholder="">
+                    <input type="number" step="0.01" name="focal" value="${lensFormUpdate.focal}" placeholder="">
                 </c:otherwise>
             </c:choose>
 
@@ -59,10 +59,10 @@
 
             <c:choose>
                 <c:when test="${not empty lensForm}">
-                    <input type="text" name="magnification" placeholder="">
+                    <input type="number" step="0.01" name="magnification" placeholder="">
                 </c:when>
                 <c:otherwise>
-                    <input type="text" name="description" value="${lensFormUpdate.magnification}" placeholder="">
+                    <input type="number" step="0.01" name="description" value="${lensFormUpdate.magnification}" placeholder="">
                 </c:otherwise>
             </c:choose>
 
@@ -73,10 +73,10 @@
 
             <c:choose>
                 <c:when test="${not empty lensForm}">
-                    <input type="text" name="price" placeholder="">
+                    <input type="number" step="0.01" name="price" placeholder="">
                 </c:when>
                 <c:otherwise>
-                    <input type="text" name="price" value="${lensFormUpdate.price}" placeholder="">
+                    <input type="number" step="0.01" name="price" value="${lensFormUpdate.price}" placeholder="">
                 </c:otherwise>
             </c:choose>
 

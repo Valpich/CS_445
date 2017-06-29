@@ -34,8 +34,9 @@ public class MonitorController {
     public String addMonitorToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         Monitor monitor = new Monitor().findById(id);
         saveCart(request, monitor);
-        model.addAttribute("monitor", monitor);
-        return "index";
+        List<Monitor> list = new Monitor().listAll();
+        model.addAttribute("monitors", list);
+        return "product";
     }
 
     private boolean saveCart(HttpServletRequest request, Monitor monitor) {
@@ -57,17 +58,21 @@ public class MonitorController {
         Monitor monitor = new Monitor().findById(id);
         monitor.setDeleted(true);
         monitor.update();
-        model.addAttribute("monitorForm", monitor);
-        return "index";
+        List<Monitor> list = new Monitor().listAll();
+        model.addAttribute("monitors", list);
+        return "product";
     }
 
     @RequestMapping(value = "/monitor", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description,
                                @RequestParam("size") String size,
                                @RequestParam("max_resolution") String maxResolution,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         saveMonitor(description, size, maxResolution, price);
-        return "index";
+        List<Monitor> list = new Monitor().listAll();
+        model.addAttribute("monitors", list);
+        return "product";
     }
 
     @RequestMapping(value = "/monitorUpdate", method = RequestMethod.POST)
@@ -75,9 +80,12 @@ public class MonitorController {
                                @RequestParam("description") String description,
                                @RequestParam("size") String size,
                                @RequestParam("max_resolution") String maxResolution,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         updateMonitor(id, description, size, maxResolution, price);
-        return "index";
+        List<Monitor> list = new Monitor().listAll();
+        model.addAttribute("monitors", list);
+        return "product";
     }
 
     private void saveMonitor(String description, String size, String maxResolution, String price) {

@@ -34,8 +34,9 @@ public class CustomServiceController {
     public String addCustomServiceToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         CustomService customService = new CustomService().findById(id);
         saveCart(request, customService);
-        model.addAttribute("customService", customService);
-        return "index";
+        List<CustomService> list = new CustomService().listAll();
+        model.addAttribute("customServices", list);
+        return "service";
     }
 
     private boolean saveCart(HttpServletRequest request, CustomService customService) {
@@ -57,23 +58,30 @@ public class CustomServiceController {
         CustomService customService = new CustomService().findById(id);
         customService.setDeleted(true);
         customService.update();
-        model.addAttribute("customServiceForm", customService);
-        return "index";
+        List<CustomService> list = new CustomService().listAll();
+        model.addAttribute("customServices", list);
+        return "service";
     }
 
     @RequestMapping(value = "/customService", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         saveCustomService(description, price);
-        return "index";
+        List<CustomService> list = new CustomService().listAll();
+        model.addAttribute("customServices", list);
+        return "service";
     }
 
     @RequestMapping(value = "/customServiceUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
                                @RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         updateCustomService(id, description, price);
-        return "index";
+        List<CustomService> list = new CustomService().listAll();
+        model.addAttribute("customServices", list);
+        return "service";
     }
 
     private void saveCustomService(String description, String price) {

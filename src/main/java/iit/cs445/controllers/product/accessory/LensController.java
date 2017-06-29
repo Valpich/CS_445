@@ -34,8 +34,9 @@ public class LensController {
     public String addLensToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         Lens lens = new Lens().findById(id);
         saveCart(request, lens);
-        model.addAttribute("lens", lens);
-        return "index";
+        List<Lens> list = new Lens().listAll();
+        model.addAttribute("lenses", list);
+        return "product";
     }
 
     private boolean saveCart(HttpServletRequest request, Lens lens) {
@@ -57,17 +58,21 @@ public class LensController {
         Lens lens = new Lens().findById(id);
         lens.setDeleted(true);
         lens.update();
-        model.addAttribute("lensForm", lens);
-        return "index";
+        List<Lens> list = new Lens().listAll();
+        model.addAttribute("lenses", list);
+        return "product";
     }
 
     @RequestMapping(value = "/lens", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description,
                                @RequestParam("focal") String focal,
                                @RequestParam("magnification") String magnification,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         saveLens(description, focal, magnification, price);
-        return "index";
+        List<Lens> list = new Lens().listAll();
+        model.addAttribute("lenses", list);
+        return "product";
     }
 
     @RequestMapping(value = "/lensUpdate", method = RequestMethod.POST)
@@ -75,9 +80,12 @@ public class LensController {
                                @RequestParam("description") String description,
                                @RequestParam("focal") String focal,
                                @RequestParam("magnification") String magnification,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         updateLens(id, description, focal, magnification, price);
-        return "index";
+        List<Lens> list = new Lens().listAll();
+        model.addAttribute("lenses", list);
+        return "product";
     }
 
 

@@ -34,8 +34,9 @@ public class PowerSupplyController {
     public String addPowerSupplyToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         PowerSupply powerSupply = new PowerSupply().findById(id);
         saveCart(request, powerSupply);
-        model.addAttribute("powerSupply", powerSupply);
-        return "index";
+        List<PowerSupply> list = new PowerSupply().listAll();
+        model.addAttribute("powerSupplies", list);
+        return "product";
     }
 
     private boolean saveCart(HttpServletRequest request, PowerSupply powerSupply) {
@@ -57,17 +58,21 @@ public class PowerSupplyController {
         PowerSupply powerSupply = new PowerSupply().findById(id);
         powerSupply.setDeleted(true);
         powerSupply.update();
-        model.addAttribute("powerSupplyForm", powerSupply);
-        return "index";
+        List<PowerSupply> list = new PowerSupply().listAll();
+        model.addAttribute("powerSupplies", list);
+        return "product";
     }
 
     @RequestMapping(value = "/powerSupply", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description,
                                @RequestParam("maximum_output") String maximumOutput,
                                @RequestParam("voltage") String voltage,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         savePowerSupply(description, maximumOutput, voltage, price);
-        return "index";
+        List<PowerSupply> list = new PowerSupply().listAll();
+        model.addAttribute("powerSupplies", list);
+        return "product";
     }
 
     @RequestMapping(value = "/powerSupplyUpdate", method = RequestMethod.POST)
@@ -75,9 +80,12 @@ public class PowerSupplyController {
                                @RequestParam("description") String description,
                                @RequestParam("maximum_output") String maximumOutput,
                                @RequestParam("voltage") String voltage,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         updatePowerSupply(id, description, maximumOutput, voltage, price);
-        return "index";
+        List<PowerSupply> list = new PowerSupply().listAll();
+        model.addAttribute("powerSupplies", list);
+        return "product";
     }
 
     private void savePowerSupply(String description, String maximumOutput, String voltage, String price) {

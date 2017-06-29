@@ -36,8 +36,9 @@ public class HybridDVRController {
     public String addHybridDVRToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         HybridDVR hybridDVR = new HybridDVR().findById(id);
         saveCart(request, hybridDVR);
-        model.addAttribute("hybridDVR", hybridDVR);
-        return "index";
+        List<HybridDVR> list = new HybridDVR().listAll();
+        model.addAttribute("hybridsDVR", list);
+        return "product";
     }
 
     private boolean saveCart(HttpServletRequest request, HybridDVR hybridDVR) {
@@ -59,25 +60,32 @@ public class HybridDVRController {
         HybridDVR hybridDVR = new HybridDVR().findById(id);
         hybridDVR.setDeleted(true);
         hybridDVR.update();
-        model.addAttribute("hybridDVRForm", hybridDVR);
-        return "index";
+        List<HybridDVR> list = new HybridDVR().listAll();
+        model.addAttribute("hybridsDVR", list);
+        return "product";
     }
 
     @RequestMapping(value = "/hybridDVR", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description,
                                @RequestParam("storage_types") String storageTypes,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         saveHybridDVR(description, storageTypes, price);
-        return "index";
+        List<HybridDVR> list = new HybridDVR().listAll();
+        model.addAttribute("hybridsDVR", list);
+        return "product";
     }
 
     @RequestMapping(value = "/hybridDVRUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
                                @RequestParam("description") String description,
                                @RequestParam("storage_types") String storageTypes,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         updateHybridDVR(id, description, storageTypes, price);
-        return "index";
+        List<HybridDVR> list = new HybridDVR().listAll();
+        model.addAttribute("hybridsDVR", list);
+        return "product";
     }
 
     private void saveHybridDVR(String description, String storage, String price) {

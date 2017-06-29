@@ -291,7 +291,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label" for="cvv">Card CVV</label>
                             <div class="col-sm-3">
-                                <input type="text" class="form-control" name="cvv" id="cvv" placeholder="Security Code">
+                                <input type="number" class="form-control" name="cvv" id="cvv" placeholder="Security Code">
                             </div>
                         </div>
                         <div class="form-group">

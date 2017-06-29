@@ -36,8 +36,9 @@ public class DigitalDVRController {
     public String addDigitalDVRToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         DigitalDVR digitalDVR = new DigitalDVR().findById(id);
         saveCart(request, digitalDVR);
-        model.addAttribute("digitalDVR", digitalDVR);
-        return "index";
+        List<DigitalDVR> list = new DigitalDVR().listAll();
+        model.addAttribute("digitalsDVR", list);
+        return "product";
     }
 
     private boolean saveCart(HttpServletRequest request, DigitalDVR digitalDVR) {
@@ -59,25 +60,32 @@ public class DigitalDVRController {
         DigitalDVR digitalDVR = new DigitalDVR().findById(id);
         digitalDVR.setDeleted(true);
         digitalDVR.update();
-        model.addAttribute("digitalDVRForm", digitalDVR);
-        return "index";
+        List<DigitalDVR> list = new DigitalDVR().listAll();
+        model.addAttribute("digitalsDVR", list);
+        return "product";
     }
 
     @RequestMapping(value = "/digitalDVR", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description,
                                @RequestParam("storage_types") String storageTypes,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         saveDigitalDVR(description, storageTypes, price);
-        return "index";
+        List<DigitalDVR> list = new DigitalDVR().listAll();
+        model.addAttribute("digitalsDVR", list);
+        return "product";
     }
 
     @RequestMapping(value = "/digitalDVRUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
                                @RequestParam("description") String description,
                                @RequestParam("storage_types") String storageTypes,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         updateDigitalDVR(id, description, storageTypes, price);
-        return "index";
+        List<DigitalDVR> list = new DigitalDVR().listAll();
+        model.addAttribute("digitalsDVR", list);
+        return "product";
     }
 
     private void saveDigitalDVR(String description, String storage, String price) {

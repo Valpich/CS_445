@@ -34,8 +34,9 @@ public class BracketController {
     public String addBracketToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         Bracket bracket = new Bracket().findById(id);
         saveCart(request, bracket);
-        model.addAttribute("bracket", bracket);
-        return "index";
+        List<Bracket> list = new Bracket().listAll();
+        model.addAttribute("brackets", list);
+        return "product";
     }
 
     private boolean saveCart(HttpServletRequest request, Bracket bracket) {
@@ -57,23 +58,30 @@ public class BracketController {
         Bracket bracket = new Bracket().findById(id);
         bracket.setDeleted(true);
         bracket.update();
-        model.addAttribute("bracketForm", bracket);
-        return "index";
+        List<Bracket> list = new Bracket().listAll();
+        model.addAttribute("brackets", list);
+        return "product";
     }
 
     @RequestMapping(value = "/bracket", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         saveBracket(description, price);
-        return "index";
+        List<Bracket> list = new Bracket().listAll();
+        model.addAttribute("brackets", list);
+        return "product";
     }
 
     @RequestMapping(value = "/bracketUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
                                @RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         updateBracket(id, description, price);
-        return "index";
+        List<Bracket> list = new Bracket().listAll();
+        model.addAttribute("brackets", list);
+        return "product";
     }
 
     private void saveBracket(String description, String price) {

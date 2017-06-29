@@ -34,8 +34,9 @@ public class SurveillanceDesignController {
     public String addSurveillanceDesignToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         SurveillanceDesign surveillanceDesign = new SurveillanceDesign().findById(id);
         saveCart(request, surveillanceDesign);
-        model.addAttribute("surveillanceDesign", surveillanceDesign);
-        return "index";
+        List<SurveillanceDesign> list = new SurveillanceDesign().listAll();
+        model.addAttribute("surveillanceDesigns", list);
+        return "service";
     }
 
     private boolean saveCart(HttpServletRequest request, SurveillanceDesign surveillanceDesign) {
@@ -57,23 +58,30 @@ public class SurveillanceDesignController {
         SurveillanceDesign surveillanceDesign = new SurveillanceDesign().findById(id);
         surveillanceDesign.setDeleted(true);
         surveillanceDesign.update();
-        model.addAttribute("surveillanceDesignForm", surveillanceDesign);
-        return "index";
+        List<SurveillanceDesign> list = new SurveillanceDesign().listAll();
+        model.addAttribute("surveillanceDesigns", list);
+        return "service";
     }
 
     @RequestMapping(value = "/surveillanceDesign", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         saveSurveillanceDesign(description, price);
-        return "index";
+        List<SurveillanceDesign> list = new SurveillanceDesign().listAll();
+        model.addAttribute("surveillanceDesigns", list);
+        return "service";
     }
 
     @RequestMapping(value = "/surveillanceDesignUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
                                @RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         updateSurveillanceDesign(id, description, price);
-        return "index";
+        List<SurveillanceDesign> list = new SurveillanceDesign().listAll();
+        model.addAttribute("surveillanceDesigns", list);
+        return "service";
     }
 
     private void saveSurveillanceDesign(String description, String price) {

@@ -35,8 +35,9 @@ public class MicrophoneController {
     public String addMicrophoneToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         Microphone microphone = new Microphone().findById(id);
         saveCart(request, microphone);
-        model.addAttribute("microphone", microphone);
-        return "index";
+        List<Microphone> list = new Microphone().listAll();
+        model.addAttribute("microphones", list);
+        return "product";
     }
 
     private boolean saveCart(HttpServletRequest request, Microphone microphone) {
@@ -58,17 +59,21 @@ public class MicrophoneController {
         Microphone microphone = new Microphone().findById(id);
         microphone.setDeleted(true);
         microphone.update();
-        model.addAttribute("microphoneForm", microphone);
-        return "index";
+        List<Microphone> list = new Microphone().listAll();
+        model.addAttribute("microphones", list);
+        return "product";
     }
 
     @RequestMapping(value = "/microphone", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description,
                                @RequestParam("battery") Boolean battery,
                                @RequestParam("microphone_type") String microphoneType,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         saveMicrophone(description, battery, microphoneType, price);
-        return "index";
+        List<Microphone> list = new Microphone().listAll();
+        model.addAttribute("microphones", list);
+        return "product";
     }
 
     @RequestMapping(value = "/microphoneUpdate", method = RequestMethod.POST)
@@ -76,9 +81,12 @@ public class MicrophoneController {
                                @RequestParam("description") String description,
                                @RequestParam("battery") Boolean battery,
                                @RequestParam("microphone_type") String microphoneType,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         updateMicrophone(id, description, battery, microphoneType, price);
-        return "index";
+        List<Microphone> list = new Microphone().listAll();
+        model.addAttribute("microphones", list);
+        return "product";
     }
 
 

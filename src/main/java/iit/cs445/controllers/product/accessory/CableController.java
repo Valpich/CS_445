@@ -34,8 +34,9 @@ public class CableController {
     public String addCableToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         Cable cable = new Cable().findById(id);
         saveCart(request, cable);
-        model.addAttribute("cable", cable);
-        return "index";
+        List<Cable> list = new Cable().listAll();
+        model.addAttribute("cables", list);
+        return "product";
     }
 
     private boolean saveCart(HttpServletRequest request, Cable cable) {
@@ -57,25 +58,32 @@ public class CableController {
         Cable cable = new Cable().findById(id);
         cable.setDeleted(true);
         cable.update();
-        model.addAttribute("cableForm", cable);
-        return "index";
+        List<Cable> list = new Cable().listAll();
+        model.addAttribute("cables", list);
+        return "product";
     }
 
     @RequestMapping(value = "/cable", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description,
                                @RequestParam("length") String length,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         saveCable(description, length, price);
-        return "index";
+        List<Cable> list = new Cable().listAll();
+        model.addAttribute("cables", list);
+        return "product";
     }
 
     @RequestMapping(value = "/cableUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
                                @RequestParam("description") String description,
                                @RequestParam("length") String length,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         updateCable(id, description, length, price);
-        return "index";
+        List<Cable> list = new Cable().listAll();
+        model.addAttribute("cables", list);
+        return "product";
     }
 
     private void saveCable(String description, String length, String price) {

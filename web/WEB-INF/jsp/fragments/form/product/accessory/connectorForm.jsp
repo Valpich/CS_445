@@ -43,10 +43,10 @@
 
             <c:choose>
                 <c:when test="${not empty connectorForm}">
-                    <input type="text" name="price" placeholder="">
+                    <input type="number" step="0.01" name="price" placeholder="">
                 </c:when>
                 <c:otherwise>
-                    <input type="text" name="price" value="${connectorFormUpdate.price}" placeholder="">
+                    <input type="number" step="0.01" name="price" value="${connectorFormUpdate.price}" placeholder="">
                 </c:otherwise>
             </c:choose>
 

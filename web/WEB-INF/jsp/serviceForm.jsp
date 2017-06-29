@@ -45,7 +45,7 @@
             </div>
         </c:if>
 
-        <c:if test="${not empty surveillanceDesignUpdateForm}">
+        <c:if test="${not empty surveillanceDesignFormUpdate}">
             <div>
                 <jsp:include page="fragments/form/service/surveillanceDesignForm.jsp" />
             </div>
@@ -57,7 +57,7 @@
             </div>
         </c:if>
 
-        <c:if test="${not empty surveillanceSystemRepairUpdateForm}">
+        <c:if test="${not empty surveillanceSystemRepairFormUpdate}">
             <div>
                 <jsp:include page="fragments/form/service/surveillanceSystemRepairForm.jsp" />
             </div>

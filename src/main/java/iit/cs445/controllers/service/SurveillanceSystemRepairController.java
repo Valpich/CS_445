@@ -34,8 +34,9 @@ public class SurveillanceSystemRepairController {
     public String addSurveillanceSystemRepairToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         SurveillanceSystemRepair surveillanceSystemRepair = new SurveillanceSystemRepair().findById(id);
         saveCart(request, surveillanceSystemRepair);
-        model.addAttribute("surveillanceSystemRepair", surveillanceSystemRepair);
-        return "index";
+        List<SurveillanceSystemRepair> list = new SurveillanceSystemRepair().listAll();
+        model.addAttribute("surveillanceSystemRepairs", list);
+        return "service";
     }
 
     private boolean saveCart(HttpServletRequest request, SurveillanceSystemRepair surveillanceSystemRepair) {
@@ -57,23 +58,30 @@ public class SurveillanceSystemRepairController {
         SurveillanceSystemRepair surveillanceSystemRepair = new SurveillanceSystemRepair().findById(id);
         surveillanceSystemRepair.setDeleted(true);
         surveillanceSystemRepair.update();
-        model.addAttribute("surveillanceSystemRepairForm", surveillanceSystemRepair);
-        return "index";
+        List<SurveillanceSystemRepair> list = new SurveillanceSystemRepair().listAll();
+        model.addAttribute("surveillanceSystemRepairs", list);
+        return "service";
     }
 
     @RequestMapping(value = "/surveillanceSystemRepair", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         saveSurveillanceSystemRepair(description, price);
-        return "index";
+        List<SurveillanceSystemRepair> list = new SurveillanceSystemRepair().listAll();
+        model.addAttribute("surveillanceSystemRepairs", list);
+        return "service";
     }
 
     @RequestMapping(value = "/surveillanceSystemRepairUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
                                @RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         updateSurveillanceSystemRepair(id, description, price);
-        return "index";
+        List<SurveillanceSystemRepair> list = new SurveillanceSystemRepair().listAll();
+        model.addAttribute("surveillanceSystemRepairs", list);
+        return "service";
     }
 
     private void saveSurveillanceSystemRepair(String description, String price) {

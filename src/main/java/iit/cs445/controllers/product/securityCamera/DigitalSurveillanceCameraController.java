@@ -34,8 +34,9 @@ public class DigitalSurveillanceCameraController {
     public String addDigitalSurveillanceCameraToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         DigitalSurveillanceCamera digitalSurveillanceCamera = new DigitalSurveillanceCamera().findById(id);
         saveCart(request, digitalSurveillanceCamera);
-        model.addAttribute("digitalSurveillanceCamera", digitalSurveillanceCamera);
-        return "index";
+        List<DigitalSurveillanceCamera> list = new DigitalSurveillanceCamera().listAll();
+        model.addAttribute("digitalSurveillanceCameras", list);
+        return "product";
     }
 
     private boolean saveCart(HttpServletRequest request, DigitalSurveillanceCamera digitalSurveillanceCamera) {
@@ -57,25 +58,32 @@ public class DigitalSurveillanceCameraController {
         DigitalSurveillanceCamera digitalSurveillanceCamera = new DigitalSurveillanceCamera().findById(id);
         digitalSurveillanceCamera.setDeleted(true);
         digitalSurveillanceCamera.update();
-        model.addAttribute("digitalSurveillanceCameraForm", digitalSurveillanceCamera);
-        return "index";
+        List<DigitalSurveillanceCamera> list = new DigitalSurveillanceCamera().listAll();
+        model.addAttribute("digitalSurveillanceCameras", list);
+        return "product";
     }
 
     @RequestMapping(value = "/digitalSurveillanceCamera", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description,
                                @RequestParam("resolution") String resolution,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         saveDigitalSurveillanceCamera(description, resolution, price);
-        return "index";
+        List<DigitalSurveillanceCamera> list = new DigitalSurveillanceCamera().listAll();
+        model.addAttribute("digitalSurveillanceCameras", list);
+        return "product";
     }
 
     @RequestMapping(value = "/digitalSurveillanceCameraUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
                                @RequestParam("description") String description,
                                @RequestParam("resolution") String resolution,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         updateDigitalSurveillanceCamera(id, description, resolution, price);
-        return "index";
+        List<DigitalSurveillanceCamera> list = new DigitalSurveillanceCamera().listAll();
+        model.addAttribute("digitalSurveillanceCameras", list);
+        return "product";
     }
 
     private void saveDigitalSurveillanceCamera(String description, String resolution, String price) {

@@ -34,8 +34,9 @@ public class AnalogSurveillanceCameraController {
     public String addAnalogSurveillanceCameraToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         AnalogSurveillanceCamera analogSurveillanceCamera = new AnalogSurveillanceCamera().findById(id);
         saveCart(request, analogSurveillanceCamera);
-        model.addAttribute("analogSurveillanceCamera", analogSurveillanceCamera);
-        return "index";
+        List<AnalogSurveillanceCamera> list = new AnalogSurveillanceCamera().listAll();
+        model.addAttribute("analogSurveillanceCameras", list);
+        return "product";
     }
 
     private boolean saveCart(HttpServletRequest request, AnalogSurveillanceCamera analogSurveillanceCamera) {
@@ -57,25 +58,32 @@ public class AnalogSurveillanceCameraController {
         AnalogSurveillanceCamera analogSurveillanceCamera = new AnalogSurveillanceCamera().findById(id);
         analogSurveillanceCamera.setDeleted(true);
         analogSurveillanceCamera.update();
-        model.addAttribute("analogSurveillanceCameraForm", analogSurveillanceCamera);
-        return "index";
+        List<AnalogSurveillanceCamera> list = new AnalogSurveillanceCamera().listAll();
+        model.addAttribute("analogSurveillanceCameras", list);
+        return "product";
     }
 
     @RequestMapping(value = "/analogSurveillanceCamera", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description,
                                @RequestParam("resolution") String resolution,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         saveAnalogSurveillanceCamera(description, resolution, price);
-        return "index";
+        List<AnalogSurveillanceCamera> list = new AnalogSurveillanceCamera().listAll();
+        model.addAttribute("analogSurveillanceCameras", list);
+        return "product";
     }
 
     @RequestMapping(value = "/analogSurveillanceCameraUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
                                @RequestParam("description") String description,
                                @RequestParam("resolution") String resolution,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         updateAnalogSurveillanceCamera(id, description, resolution, price);
-        return "index";
+        List<AnalogSurveillanceCamera> list = new AnalogSurveillanceCamera().listAll();
+        model.addAttribute("analogSurveillanceCameras", list);
+        return "product";
     }
 
     private void saveAnalogSurveillanceCamera(String description, String resolution, String price) {

@@ -34,8 +34,9 @@ public class ConnectorController {
     public String addConnectorToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         Connector connector = new Connector().findById(id);
         saveCart(request, connector);
-        model.addAttribute("connector", connector);
-        return "index";
+        List<Connector> list = new Connector().listAll();
+        model.addAttribute("connectors", list);
+        return "product";
     }
 
     private boolean saveCart(HttpServletRequest request, Connector connector) {
@@ -57,23 +58,30 @@ public class ConnectorController {
         Connector connector = new Connector().findById(id);
         connector.setDeleted(true);
         connector.update();
-        model.addAttribute("connectorForm", connector);
-        return "index";
+        List<Connector> list = new Connector().listAll();
+        model.addAttribute("connectors", list);
+        return "product";
     }
 
     @RequestMapping(value = "/connector", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         saveConnector(description, price);
-        return "index";
+        List<Connector> list = new Connector().listAll();
+        model.addAttribute("connectors", list);
+        return "product";
     }
 
     @RequestMapping(value = "/connectorUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
                                @RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         updateConnector(id, description, price);
-        return "index";
+        List<Connector> list = new Connector().listAll();
+        model.addAttribute("connectors", list);
+        return "product";
     }
 
     private void saveConnector(String description, String price) {

@@ -34,8 +34,9 @@ public class SecuritySystemInstallationController {
     public String addSecuritySystemInstallationToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         SecuritySystemInstallation securitySystemInstallation = new SecuritySystemInstallation().findById(id);
         saveCart(request, securitySystemInstallation);
-        model.addAttribute("securitySystemInstallation", securitySystemInstallation);
-        return "index";
+        List<SecuritySystemInstallation> list = new SecuritySystemInstallation().listAll();
+        model.addAttribute("securitySystemInstallations", list);
+        return "service";
     }
 
     private boolean saveCart(HttpServletRequest request, SecuritySystemInstallation securitySystemInstallation) {
@@ -57,23 +58,30 @@ public class SecuritySystemInstallationController {
         SecuritySystemInstallation securitySystemInstallation = new SecuritySystemInstallation().findById(id);
         securitySystemInstallation.setDeleted(true);
         securitySystemInstallation.update();
-        model.addAttribute("securitySystemInstallationForm", securitySystemInstallation);
-        return "index";
+        List<SecuritySystemInstallation> list = new SecuritySystemInstallation().listAll();
+        model.addAttribute("securitySystemInstallations", list);
+        return "service";
     }
 
     @RequestMapping(value = "/securitySystemInstallation", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         saveSecuritySystemInstallation(description, price);
-        return "index";
+        List<SecuritySystemInstallation> list = new SecuritySystemInstallation().listAll();
+        model.addAttribute("securitySystemInstallations", list);
+        return "service";
     }
 
     @RequestMapping(value = "/securitySystemInstallationUpdate", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("id") String id,
                                @RequestParam("description") String description,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         updateSecuritySystemInstallation(id, description, price);
-        return "index";
+        List<SecuritySystemInstallation> list = new SecuritySystemInstallation().listAll();
+        model.addAttribute("securitySystemInstallations", list);
+        return "service";
     }
 
     private void saveSecuritySystemInstallation(String description, String price) {

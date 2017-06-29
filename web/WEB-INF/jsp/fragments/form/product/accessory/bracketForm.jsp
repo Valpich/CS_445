@@ -43,10 +43,10 @@
 
             <c:choose>
                 <c:when test="${not empty bracketForm}">
-                    <input type="text" name="price" placeholder="">
+                    <input type="number" step="0.01" name="price" placeholder="">
                 </c:when>
                 <c:otherwise>
-                    <input type="text" name="price" value="${bracketFormUpdate.price}" placeholder="">
+                    <input type="number" step="0.01" name="price" value="${bracketFormUpdate.price}" placeholder="">
                 </c:otherwise>
             </c:choose>
 

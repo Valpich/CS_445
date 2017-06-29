@@ -37,8 +37,9 @@ public class AnalogDVRController {
     public String addAnalogDVRToCart(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         AnalogDVR analogDVR = new AnalogDVR().findById(id);
         saveCart(request, analogDVR);
-        model.addAttribute("analogDVR", analogDVR);
-        return "index";
+        List<AnalogDVR> list = new AnalogDVR().listAll();
+        model.addAttribute("analogsDVR", list);
+        return "product";
     }
 
     private boolean saveCart(HttpServletRequest request, AnalogDVR analogDVR) {
@@ -60,17 +61,21 @@ public class AnalogDVRController {
         AnalogDVR analogDVR = new AnalogDVR().findById(id);
         analogDVR.setDeleted(true);
         analogDVR.update();
-        model.addAttribute("analogDVRForm", analogDVR);
-        return "index";
+        List<AnalogDVR> list = new AnalogDVR().listAll();
+        model.addAttribute("analogsDVR", list);
+        return "product";
     }
 
     @RequestMapping(value = "/analogDVR", method = RequestMethod.POST)
     public String checkoutPost(@RequestParam("description") String description,
                                @RequestParam("analog_record_formats") String analogRecord,
                                @RequestParam("storage_types") String storageTypes,
-                               @RequestParam("price") String price) {
+                               @RequestParam("price") String price,
+                               Model model) {
         saveAnalogDVR(description, analogRecord, storageTypes, price);
-        return "index";
+        List<AnalogDVR> list = new AnalogDVR().listAll();
+        model.addAttribute("analogsDVR", list);
+        return "product";
     }
 
     @RequestMapping(value = "/analogDVRUpdate", method = RequestMethod.POST)
@@ -78,9 +83,12 @@ public class AnalogDVRController {
                                      @RequestParam("description") String description,
                                      @RequestParam("analog_record_formats") String analogRecord,
                                      @RequestParam("storage_types") String storageTypes,
-                                     @RequestParam("price") String price) {
+                                     @RequestParam("price") String price,
+                                     Model model) {
         updateAnalogDVR(id, description, analogRecord, storageTypes, price);
-        return "index";
+        List<AnalogDVR> list = new AnalogDVR().listAll();
+        model.addAttribute("analogsDVR", list);
+        return "product";
     }
 
     private void saveAnalogDVR(String description, String analogRecord, String storage, String price) {
